@@ -1,0 +1,384 @@
+@import "icon-colors";
+@import "icon-font";
+
+// OPEN/CLOSE SLECTOR OF FOLDERS
+.header.list-item:before {
+  color: @color-default;
+}
+
+
+// FOLDERS
+.name.icon.icon-file-directory {
+
+  // TEXT
+  background: none;
+  border: none;
+  color: @color-default;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0px 0px 0px 2px;
+  position: relative;
+  top: -1px;
+
+  // ICON
+  &:before {
+    color: @color-default;
+    content: '\e613';
+    display: inline-block;
+    font-family: icomoon;
+    font-size: 13px;
+    left: -2px;
+    position: relative;
+    top: 1px;
+  }
+}
+
+
+// DEFAULT / FALLBACK ICON
+.name.icon {
+  position: relative;
+  display: inline-block;
+  top: -2px;
+  padding: 0;
+
+  &:before {
+    font-family: icomoon;
+    content: '\e612';
+    font-size: 18px;
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    left: -4px;
+    color: @color-default;
+  }
+
+}
+
+
+// CSS
+.name.icon.file-icon-css {
+
+  position: relative;
+  display: inline-block;
+  top: -4px;
+  padding: 0;
+
+  &.icon-file-text:before {
+    font-family: icomoon;
+    content: '\e614';
+    font-size: 22px;
+    position: relative;
+    top: 6px;
+    left: -5px;
+    color: @color-css;
+  }
+
+}
+
+
+// HANDLEBARS
+.name.icon.file-icon-hbs {
+
+  position: relative;
+  display: inline-block;
+  top: -6px;
+  padding: 0;
+
+  &.icon-file-text:before {
+    font-family: icomoon;
+    content: '\e60f';
+    font-size: 22px;
+    position: relative;
+    top: 6px;
+    left: -5px;
+    color: @color-handlebars;
+  }
+}
+
+
+// HIDDEN FILES - .GITIGNORE, CONFIG, DS_STORE
+.name.icon.file-icon-gitignore, .name.icon.file-icon-config, .name.icon.file-icon-DS_Store {
+  position: relative;
+  display: inline-block;
+  top:-5px;
+  padding: 0;
+  color: @color-hidden;
+
+  &:before {
+    font-family: icomoon;
+    content: '\e615';
+    font-size: 22px;
+    position: relative;
+    top: 6px;
+    left: -5px;
+    color: @color-hidden;
+  }
+}
+
+
+// HTML
+.name.icon.file-icon-html {
+
+  position: relative;
+  display: inline-block;
+  top: -6px;
+  padding: 0;
+
+  &.icon-file-text:before {
+    font-family: icomoon;
+    content: '\e60e';
+    font-size: 22px;
+    position: relative;
+    top: 6px;
+    left: -5px;
+    color: @color-html;
+  }
+}
+
+
+// IMAGES
+.name.icon.file-icon-ai,
+.name.icon.file-icon-png,
+.name.icon.file-icon-jpg,
+.name.icon.file-icon-jpeg,
+.name.icon.file-icon-svg,
+.name.icon.file-icon-svgx,
+.name.icon.file-icon-psd,
+.name.icon.file-icon-gif {
+
+  position: relative;
+  display: inline-block;
+  top: -2px;
+  padding: 0;
+
+  &:before {
+    font-family: icomoon;
+    content: '\e60d';
+    font-size: 18px;
+    position: relative;
+    top: 5px;
+    left: -2px;
+    color: @color-img;
+  }
+}
+
+
+// JADE
+.name.icon.file-icon-jade {
+
+  position: relative;
+  display: inline-block;
+  top: -6px;
+  padding: 0;
+
+  &.icon-file-text:before {
+    font-family: icomoon;
+    content: '\e60e';
+    font-size: 22px;
+    position: relative;
+    top: 6px;
+    left: -5px;
+    color: @color-jade;
+  }
+}
+
+
+// JAVASCRIPT
+.name.icon.file-icon-js {
+
+  position: relative;
+  display: inline-block;
+  top: -6px;
+  padding: 0;
+
+  &.icon-file-text:before {
+    font-family: icomoon;
+    content: '\e60c';
+    font-size: 22px;
+    position: relative;
+    top: 7px;
+    left: -5px;
+    color: @color-js;
+  }
+}
+
+
+// JSON
+.name.icon.file-icon-json {
+
+  position: relative;
+  display: inline-block;
+  top: -6px;
+  padding: 0;
+
+  &.icon-file-text:before {
+    font-family: icomoon;
+    content: '\e60b';
+    font-size: 22px;
+    position: relative;
+    top: 7px;
+    left: -5px;
+    color: @color-json;
+  }
+}
+
+
+// LESS
+.name.icon.file-icon-less {
+
+  position: relative;
+  display: inline-block;
+  top: -4px;
+  padding: 0;
+
+  &.icon-file-text:before {
+    font-family: icomoon;
+    content: '\e614';
+    font-size: 22px;
+    position: relative;
+    top: 6px;
+    left: -5px;
+    color: @color-less;
+  }
+
+}
+
+
+// MARKDOWN
+.name.icon.file-icon-md {
+
+  position: relative;
+  display: inline-block;
+  top: -4px;
+  padding: 0;
+
+  &:before {
+    font-family: icomoon;
+    content: '\e609';
+    font-size: 22px;
+    position: relative;
+    top: 6px;
+    left: -5px;
+    color: @color-md;
+  }
+}
+
+
+// MUSTACHE
+.name.icon.file-icon-mustache {
+
+  position: relative;
+  display: inline-block;
+  top: -6px;
+  padding: 0;
+
+  &.icon-file-text:before {
+    font-family: icomoon;
+    content: '\e60f';
+    font-size: 22px;
+    position: relative;
+    top: 6px;
+    left: -5px;
+    color: @color-mustache;
+  }
+}
+
+
+// PHP
+.name.icon.file-icon-php {
+
+  position: relative;
+  display: inline-block;
+  top: -6px;
+  padding: 0;
+
+  &.icon-file-text:before {
+    font-family: icomoon;
+    content: '\e608';
+    font-size: 22px;
+    position: relative;
+    top: 6px;
+    left: -5px;
+    color: @color-php;
+  }
+}
+
+
+// PYTHON
+.name.icon.file-icon-py {
+
+  position: relative;
+  display: inline-block;
+  top: -6px;
+  padding: 0;
+
+  &.icon-file-text:before {
+    font-family: icomoon;
+    content: '\e606';
+    font-size: 22px;
+    position: relative;
+    top: 6px;
+    left: -5px;
+    color: @color-python;
+  }
+}
+
+
+// RUBY
+.name.icon.file-icon-rb {
+
+  position: relative;
+  display: inline-block;
+  top: -6px;
+  padding: 0;
+
+  &.icon-file-text:before {
+    font-family: icomoon;
+    content: '\e604';
+    font-size: 22px;
+    position: relative;
+    top: 6px;
+    left: -5px;
+    color: @color-ruby;
+  }
+}
+
+
+// SASS
+.name.icon.file-icon-scss {
+
+  position: relative;
+  display: inline-block;
+  top: -6px;
+  padding: 0;
+
+  &.icon-file-text:before {
+    font-family: icomoon;
+    content: '\e603';
+    font-size: 22px;
+    position: relative;
+    top: 6px;
+    left: -5px;
+    color: @color-sass;
+  }
+}
+
+
+// STYLUS
+.name.icon.file-icon-styl {
+
+  position: relative;
+  display: inline-block;
+  top: -6px;
+  padding: 0;
+
+  &.icon-file-text:before {
+    font-family: icomoon;
+    content: '\e600';
+    font-size: 22px;
+    position: relative;
+    top: 6px;
+    left: -5px;
+    color: @color-styl;
+  }
+}
