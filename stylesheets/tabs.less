@@ -1,0 +1,150 @@
+@modified-icon-width: 8px;
+
+@tab-border: none;
+
+@tab-highlight-color: rgb(79,153,211);
+@tab-background: rgb(30,35,38);
+@tab-background-active: rgb(16,17,18);
+@tab-bar-bottom-border-color: rgb(16,17,18);
+@tab-bar-background-color: rgb(38,43,48);
+
+@tab-height: 40px;
+@tab-top-padding: 0px;
+@tab-bottom-border-height: 0px;
+
+.tab-bar {
+  height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+  background: @tab-bar-background-color;
+  padding: 0 10px 0 10px;
+  box-sizing: border-box;
+  border: none;
+
+  &:after {
+    background: @tab-background-active;
+    border: 0;
+    height: 4px;
+  }
+
+  .tab {
+    position: relative;
+    top: @tab-top-padding;
+    height: @tab-height;
+    line-height: @tab-height;
+    color: @text-color;
+    padding-left: 0;
+    margin-left: 15px;
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-transform: none;
+    transition: color .1s ease-in;
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+    border-bottom: solid 4px @tab-bar-bottom-border-color;
+
+    &, &:before {
+      background: @tab-background;
+    }
+
+    &:before {
+      background: @tab-background;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -16px;
+      height: @tab-height;
+      width: 16px;
+      border-radius: 0;
+      border-top-right-radius: 0;
+      -webkit-transform: none;
+      border: none;
+      border-bottom: solid 4px @tab-bar-bottom-border-color;
+      border-left: solid 1px @tab-bar-bottom-border-color;
+      box-shadow: none;
+    }
+
+
+    .close-icon {
+      z-index: 3;
+      line-height: @tab-height;
+      -webkit-transform: none;
+      color: @text-color;
+      margin-top: -3px;
+
+      &:hover {
+        color: inherit;
+      }
+    }
+    &.modified:not(:hover) .close-icon {
+      top: @tab-height/2 - @modified-icon-width/2 + 1px;
+      right: 14px;
+      width: @modified-icon-width;
+      height: @modified-icon-width;
+    }
+
+    &.modified:hover .close-icon:hover {
+      color: @text-color-highlight;
+    }
+
+    .title{
+      -webkit-transform: none;
+      margin-top: -2px;
+    }
+
+    &:first-child {
+      margin-left: 0px;
+    }
+  }
+
+  .tab.active {
+    z-index: 1;
+    line-height: @tab-height - 2px;
+    color: @text-color-highlight;
+    box-shadow: none;
+    border: none;
+    border-bottom: solid 4px @tab-highlight-color;
+
+    .title{
+      position: relative;
+      top: 0px;
+      margin-top: -1px;
+    }
+
+    .close-icon {
+      line-height: @tab-height - 1px;
+      color: @text-color;
+    }
+
+    &, &:before {
+      background: @tab-background-active;
+      height: @tab-height + 0px;
+    }
+
+    &:before {
+      border: none;
+      border-bottom: solid 4px @tab-highlight-color;
+      box-shadow: none;
+    }
+
+  }
+
+
+  .tab:hover {
+    color: @text-color-highlight;
+  }
+
+  .tab.active:hover .close-icon {
+    color: @text-color;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+
+  .placeholder {
+    height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+    &:after {
+      top: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import "ui-variables";
+
+.tree-view {
+  font-size: @font-size;
+  background: @tree-view-background-color !important;
+
+  .selected {
+    // padding: 20px;
+  }
+  .selected:before {
+    background: rgba(255,255,255, 0.05);
+    box-shadow: none;
+    // padding: 20px;
+  }
+}
+
+.focusable-panel {
+  opacity: 1;
+  background: #303030;
+  box-shadow: none;
+  border: 0;
+
+  &:focus {
+    background: #282828;
+
+    .selected:before {
+      background: rgb(85,181,219);
+    }
+
+    .selected > .name,
+    .selected > .name:before,
+    .selected > .list-item > .name,
+    .selected > .list-item > .name:before {
+      color: #fff !important;
+    }
+  }
+}
