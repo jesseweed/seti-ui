@@ -1,0 +1,11 @@
+{
+  "name": "seti-ui",
+  "theme": "ui",
+  "version": "0.0.0",
+  "description": "A subtle dark colored syntax theme for Atom",
+  "license": "MIT",
+  "repository": "https://github.com/jesseweed/seti-ui",
+  "engines": {
+    "atom": ">0.99.0"
+  }
+}
