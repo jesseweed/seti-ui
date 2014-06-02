@@ -1,5 +1,32 @@
 @import "ui-variables";
+@import "icon-colors";
 @import "ui-mixins";
+
+
+.editor .gutter .line-number.git-line-ignored {
+  border-color: @color-status-ignored;
+  opacity: 1;
+}
+
+.editor .gutter .line-number.git-line-added {
+  border-color: @color-status-added;
+  opacity: 1;
+}
+
+.editor .gutter .line-number.git-line-renamed {
+  border-color: @color-status-renamed;
+  opacity: 1;
+}
+
+.editor .gutter .line-number.git-line-modified {
+  border-color: @color-status-modified;
+  opacity: 1;
+}
+
+.editor .gutter .line-number.git-line-removed {
+  border-color: @color-status-removed;
+  opacity: 1;
+}
 
 .editor.mini {
   color: @text-color-highlight;

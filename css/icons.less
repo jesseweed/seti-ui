@@ -424,24 +424,24 @@
 // - - - - - - - - - - - - - - - - -
 
 
-// GULP
-.name.icon[data-name*="GULPFILE.js"],
-.name.icon[data-name*="Gulpfile.js"],
-.name.icon[data-name*="gulpfile.js"] {
+// BOWER
+.name.icon[data-name*="BOWER.json"],
+.name.icon[data-name*="Bower.json"],
+.name.icon[data-name*="bower.json"] {
 
-  position: relative;
   display: inline-block;
-  top: -5px;
   padding: 0;
+  position: relative;
+  top: -6px;
 
   &.icon-file-text:before {
+    color: @color-license;
+    content: '\e61a';
     font-family: icomoon;
-    content: '\e610';
     font-size: 22px;
+    left: -5px;
     position: relative;
     top: 6px;
-    left: -5px;
-    color: @color-gulp;
   }
 }
 
@@ -467,6 +467,70 @@
   }
 }
 
+
+// GULP
+.name.icon[data-name*="GULPFILE.js"],
+.name.icon[data-name*="Gulpfile.js"],
+.name.icon[data-name*="gulpfile.js"] {
+
+  position: relative;
+  display: inline-block;
+  top: -5px;
+  padding: 0;
+
+  &.icon-file-text:before {
+    font-family: icomoon;
+    content: '\e610';
+    font-size: 22px;
+    position: relative;
+    top: 6px;
+    left: -5px;
+    color: @color-gulp;
+  }
+}
+
+// LICENSE
+.name.icon[data-name*="LICENSE"],
+.name.icon[data-name*="License"],
+.name.icon[data-name*="license"] {
+
+  position: relative;
+  display: inline-block;
+  top: -6px;
+  padding: 0;
+
+  &.icon-file-text:before {
+    color: @color-license;
+    content: '\e60a';
+    font-family: icomoon;
+    font-size: 22px;
+    left: -5px;
+    position: relative;
+    top: 6px;
+  }
+}
+
+
+// NPM
+.name.icon[data-name*=".npmignore"] {
+
+  display: inline-block;
+  padding: 0;
+  position: relative;
+  top: -6px;
+
+  &.icon-file-text:before {
+    color: @color-npm;
+    content: '\e616';
+    font-family: icomoon;
+    font-size: 22px;
+    left: -5px;
+    position: relative;
+    top: 6px;
+  }
+}
+
+
 // PROCFILE
 .name.icon[data-name*="PROCFILE"],
 .name.icon[data-name*="Procfile"],
@@ -489,25 +553,29 @@
 }
 
 
-// LICENSE
-.name.icon[data-name*="LICENSE"],
-.name.icon[data-name*="License"],
-.name.icon[data-name*="license"] {
+// XML
+.name.icon[data-name*=".xml"] {
 
-  position: relative;
   display: inline-block;
-  top: -6px;
   padding: 0;
+  position: relative;
+  top: -6px;
 
   &.icon-file-text:before {
+    color: @color-xml;
+    content: '\e619';
     font-family: icomoon;
-    content: '\e60a';
     font-size: 22px;
+    left: -5px;
     position: relative;
     top: 6px;
-    left: -5px;
   }
 }
+
+
+
+
+
 
 
 // - - - - - - -
