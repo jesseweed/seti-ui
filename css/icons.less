@@ -1,6 +1,32 @@
 @import "icon-colors";
 @import "icon-font";
 
+
+
+// PROJECT / REPO
+.name.icon.icon-repo {
+
+  // TEXT
+  color: #29A8DE;
+  font-weight: bold;
+  padding: 0px 0px 0px 5px;
+  position: relative;
+  top: -1px;
+
+  // ICON
+  &:before {
+    color: #29A8DE;
+    content: '\e601';
+    display: inline-block;
+    font-family: icomoon;
+    font-size: 20px;
+    left: -5px;
+    position: relative;
+    top: 5px;
+  }
+}
+
+
 // OPEN/CLOSE SLECTOR OF FOLDERS
 .header.list-item:before {
   color: @color-default;
