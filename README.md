@@ -1,6 +1,6 @@
 # Seti UI
 
-A dark colored UI theme for Atom with custom file icons. [Seti Syntax](https://github.com/jesseweed/seti-syntax) also available.
+A dark colored UI theme for Atom with custom file icons. [Seti Syntax](https://atom.io/themes/seti-syntax) also available.
 
 ![Screenshot](https://github.com/jesseweed/seti-ui/raw/master/screenshot.png)
 
