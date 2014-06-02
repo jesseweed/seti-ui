@@ -1,5 +1,0 @@
-#blah
-
-foo
-
-bar
