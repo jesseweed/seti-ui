@@ -6,8 +6,7 @@
   color: @color-default;
 }
 
-
-// FOLDERS
+// DIRECTORY ICONS
 .name.icon.icon-file-directory {
 
   // TEXT
@@ -55,8 +54,14 @@
 }
 
 
+
+// - - - - - - - - - - - - - - -
+// ICONS BASED ON FILE EXTENSION
+// - - - - - - - - - - - - - - -
+
+
 // CSS
-.name.icon.file-icon-css {
+.name.icon[data-name*=".css"] {
 
   position: relative;
   display: inline-block;
@@ -77,7 +82,7 @@
 
 
 // HANDLEBARS
-.name.icon.file-icon-hbs {
+.name.icon[data-name*=".hbs"] {
 
   position: relative;
   display: inline-block;
@@ -97,7 +102,7 @@
 
 
 // HIDDEN FILES - .GITIGNORE, CONFIG, DS_STORE
-.name.icon.file-icon-gitignore, .name.icon.file-icon-config, .name.icon.file-icon-DS_Store {
+.name.icon[data-name*=".gitignore"], .name.icon[data-name*="config"], .name.icon[data-name*=".DS_Store"],{
   position: relative;
   display: inline-block;
   top:-5px;
@@ -117,7 +122,7 @@
 
 
 // HTML
-.name.icon.file-icon-html {
+.name.icon[data-name*=".html"], .name.icon[data-name*=".htm"] {
 
   position: relative;
   display: inline-block;
@@ -137,14 +142,14 @@
 
 
 // IMAGES
-.name.icon.file-icon-ai,
-.name.icon.file-icon-png,
-.name.icon.file-icon-jpg,
-.name.icon.file-icon-jpeg,
-.name.icon.file-icon-svg,
-.name.icon.file-icon-svgx,
-.name.icon.file-icon-psd,
-.name.icon.file-icon-gif {
+.name.icon[data-name*=".ai"],
+.name.icon[data-name*=".gif"],
+.name.icon[data-name*=".jpeg"],
+.name.icon[data-name*=".jpg"],
+.name.icon[data-name*=".png"],
+.name.icon[data-name*=".psd"],
+.name.icon[data-name*=".svg"],
+.name.icon[data-name*=".svgx"] {
 
   position: relative;
   display: inline-block;
@@ -164,7 +169,7 @@
 
 
 // JADE
-.name.icon.file-icon-jade {
+.name.icon[data-name*=".jade"] {
 
   position: relative;
   display: inline-block;
@@ -184,7 +189,7 @@
 
 
 // JAVASCRIPT
-.name.icon.file-icon-js {
+.name.icon[data-name*=".js"] {
 
   position: relative;
   display: inline-block;
@@ -204,7 +209,7 @@
 
 
 // JSON
-.name.icon.file-icon-json {
+.name.icon[data-name*=".json"] {
 
   position: relative;
   display: inline-block;
@@ -224,7 +229,7 @@
 
 
 // LESS
-.name.icon.file-icon-less {
+.name.icon[data-name*=".less"] {
 
   position: relative;
   display: inline-block;
@@ -245,7 +250,7 @@
 
 
 // MARKDOWN
-.name.icon.file-icon-md {
+.name.icon[data-name*=".md"] {
 
   position: relative;
   display: inline-block;
@@ -265,7 +270,7 @@
 
 
 // MUSTACHE
-.name.icon.file-icon-mustache {
+.name.icon[data-name*=".mustache"] {
 
   position: relative;
   display: inline-block;
@@ -285,7 +290,7 @@
 
 
 // PHP
-.name.icon.file-icon-php {
+.name.icon[data-name*=".php"] {
 
   position: relative;
   display: inline-block;
@@ -305,7 +310,7 @@
 
 
 // PYTHON
-.name.icon.file-icon-py {
+.name.icon[data-name*=".py"] {
 
   position: relative;
   display: inline-block;
@@ -325,7 +330,7 @@
 
 
 // RUBY
-.name.icon.file-icon-rb {
+.name.icon[data-name*=".rb"] {
 
   position: relative;
   display: inline-block;
@@ -345,7 +350,7 @@
 
 
 // SASS
-.name.icon.file-icon-scss {
+.name.icon[data-name*=".scss"] {
 
   position: relative;
   display: inline-block;
@@ -365,7 +370,7 @@
 
 
 // STYLUS
-.name.icon.file-icon-styl {
+.name.icon[data-name*=".styl"] {
 
   position: relative;
   display: inline-block;
@@ -382,3 +387,299 @@
     color: @color-styl;
   }
 }
+
+
+
+
+// - - - - - - - - - - - - - - - - -
+//  ICONS BASED ON NAME VS EXTENSION
+// - - - - - - - - - - - - - - - - -
+
+
+// GULP
+.name.icon[data-name*="GULPFILE.js"],
+.name.icon[data-name*="Gulpfile.js"],
+.name.icon[data-name*="gulpfile.js"] {
+
+  position: relative;
+  display: inline-block;
+  top: -5px;
+  padding: 0;
+
+  &.icon-file-text:before {
+    font-family: icomoon;
+    content: '\e610';
+    font-size: 22px;
+    position: relative;
+    top: 6px;
+    left: -5px;
+    color: @color-gulp;
+  }
+}
+
+
+// GRUNT
+.name.icon[data-name*="GRUNTFILE.js"],
+.name.icon[data-name*="Gruntfile.js"],
+.name.icon[data-name*="gruntfile.js"] {
+
+  position: relative;
+  display: inline-block;
+  top: -6px;
+  padding: 0;
+
+  &.icon-file-text:before {
+    font-family: icomoon;
+    content: '\e611';
+    font-size: 22px;
+    position: relative;
+    top: 6px;
+    left: -5px;
+    color: @color-grunt;
+  }
+}
+
+// PROCFILE
+.name.icon[data-name*="PROCFILE"],
+.name.icon[data-name*="Procfile"],
+.name.icon[data-name*="procfile"] {
+
+  position: relative;
+  display: inline-block;
+  top: -4px;
+  padding: 0;
+
+  &.icon-file-text:before {
+    font-family: icomoon;
+    content: '\e607';
+    font-size: 20px;
+    position: relative;
+    top: 5px;
+    left: -3px;
+    color: @color-procfile;
+  }
+}
+
+
+// LICENSE
+.name.icon[data-name*="LICENSE"],
+.name.icon[data-name*="License"],
+.name.icon[data-name*="license"] {
+
+  position: relative;
+  display: inline-block;
+  top: -6px;
+  padding: 0;
+
+  &.icon-file-text:before {
+    font-family: icomoon;
+    content: '\e60a';
+    font-size: 22px;
+    position: relative;
+    top: 6px;
+    left: -5px;
+  }
+}
+
+
+// - - - - - - -
+// STATUS COLORS
+// - - - - - - -
+
+// STATUS: ADDED
+.directory.entry.list-nested-item.status-added {
+
+  // OPEN/CLOSE SELECTOR
+  .header.list-item {
+    &:before {
+      color: @color-status-added;
+    }
+  }
+
+  // DIRECTORY
+  .name.icon.icon-file-directory {
+
+    // TEXT
+    color: @color-status-added;
+
+    // ICON
+    &:before {
+      color: @color-status-added;
+    }
+  }
+
+}
+
+  .file.entry.list-item.status-added {
+
+    .name.icon {
+
+      // TEXT
+      color: @color-status-added;
+
+      // ICON
+      &:before {
+        color: @color-status-added !important;
+      }
+
+      &.icon-file-text:before {
+        color: @color-status-added;
+      }
+    }
+  }
+
+
+// STATUS: MODIFIED
+.directory.entry.list-nested-item.status-modified {
+
+  // OPEN/CLOSE SELECTOR
+  .header.list-item {
+    &:before {
+      color: @color-status-modified;
+    }
+  }
+
+  // DIRECTORY
+  .name.icon.icon-file-directory {
+
+    // TEXT
+    color: @color-status-modified;
+
+    // ICON
+    &:before {
+      color: @color-status-modified;
+    }
+  }
+
+}
+
+
+  .file.entry.list-item.status-modified {
+    .name.icon {
+
+      // TEXT
+      color: @color-status-modified;
+
+      // ICON
+      &:before {
+        color: @color-status-modified;
+      }
+    }
+  }
+
+
+// STATUS: IGNORED
+.directory.entry.list-nested-item.status-ignored {
+
+  // OPEN/CLOSE SELECTOR
+  .header.list-item {
+    &:before {
+      color: @color-status-ignored;
+    }
+  }
+
+  // DIRECTORY
+  .name.icon.icon-file-directory {
+
+    // TEXT
+    color: @color-status-ignored;
+
+    // ICON
+    &:before {
+      color: @color-status-ignored;
+    }
+  }
+
+}
+
+
+  .file.entry.list-item.status-ignored {
+    .name.icon {
+
+      // TEXT
+      color: @color-status-ignored;
+
+      // ICON
+      &:before {
+        color: @color-status-ignored;
+      }
+    }
+  }
+
+
+// STATUS: REMOVED
+.directory.entry.list-nested-item.status-removed {
+
+  // OPEN/CLOSE SELECTOR
+  .header.list-item {
+    &:before {
+      color: @color-status-removed;
+    }
+  }
+
+  // DIRECTORY
+  .name.icon.icon-file-directory {
+
+    // TEXT
+    color: @color-status-removed;
+
+    // ICON
+    &:before {
+      color: @color-status-removed;
+    }
+  }
+
+}
+
+  // FILE
+  .file.entry.list-item.status-removed {
+    .name.icon {
+
+      // TEXT
+      color: @color-status-removed;
+
+      // ICON
+      &:before {
+        color: @color-status-removed;
+      }
+    }
+  }
+
+
+// STATUS: RENAMED
+.directory.entry.list-nested-item.status-renamed {
+
+  // OPEN/CLOSE SELECTOR
+  .header.list-item {
+    &:before {
+      color: @color-status-renamed;
+    }
+  }
+
+  // DIRECTORY
+  .name.icon.icon-file-directory {
+
+    // TEXT
+    color: @color-status-renamed;
+
+    // ICON
+    &:before {
+      color: @color-status-renamed;
+    }
+  }
+
+}
+
+  // FILE
+  .file.entry.list-item.status-renamed {
+    .name.icon {
+
+      // TEXT
+      color: @color-status-renamed;
+
+      // ICON
+      &:before {
+        color: @color-status-renamed;
+      }
+    }
+  }
