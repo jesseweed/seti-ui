@@ -1,9 +1,11 @@
-# Atom Dark UI theme
+# Seti UI
 
-Default dark UI theme for Atom.
+A dark colored UI theme for Atom with custom file icons. [Seti Syntax](https://github.com/jesseweed/seti-syntax) also available.
 
-This theme is installed by default with Atom and can be activated by going to
-the _Themes_ section in the Settings view (`cmd-,`) and selecting it from the
-_UI Themes_ drop-down menu.
+![Screenshot](https://github.com/jesseweed/seti-ui/raw/master/screenshot.png)
 
-![](https://f.cloud.github.com/assets/671378/2265086/c6897dba-9e7b-11e3-945d-551cac610717.png)
+
+### Custom App Icons
+[ ![Screenshot](https://github.com/jesseweed/seti-syntax/raw/master/_icons/circular/circular-128x128.png) ](_icons/circular/)
+[ ![Screenshot](https://github.com/jesseweed/seti-syntax/raw/master/_icons/rounded/rounded-128x128.png) ](_icons/rounded/)
+[ ![Screenshot](https://github.com/jesseweed/seti-syntax/raw/master/_icons/squared/squared-128x128.png) ](_icons/squared/)
