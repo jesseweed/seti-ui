@@ -217,7 +217,8 @@
 
 
 // JAVASCRIPT
-.name.icon[data-name*=".js"] {
+.name.icon[data-name*=".js"],
+.name.icon[data-name*=".coffee"] {
 
   position: relative;
   display: inline-block;
@@ -235,9 +236,32 @@
   }
 }
 
+/*
+
+// COFFEESCRIPT
+.name.icon[data-name*=".coffee"] {
+
+  position: relative;
+  display: inline-block;
+  top: -6px;
+  padding: 0;
+
+  &.icon-file-text:before {
+    font-family: icomoon;
+    content: '\e61b';
+    font-size: 22px;
+    position: relative;
+    top: 6px;
+    left: -5px;
+    color: @color-coffee;
+  }
+}
+
+*/
 
 // JSON
-.name.icon[data-name*=".json"] {
+.name.icon[data-name*=".json"],
+.name.icon[data-name*=".cson"] {
 
   position: relative;
   display: inline-block;
@@ -427,7 +451,10 @@
 // BOWER
 .name.icon[data-name*="BOWER.json"],
 .name.icon[data-name*="Bower.json"],
-.name.icon[data-name*="bower.json"] {
+.name.icon[data-name*="bower.json"],
+.name.icon[data-name*="BOWER.cson"],
+.name.icon[data-name*="Bower.cson"],
+.name.icon[data-name*="bower.cson"] {
 
   display: inline-block;
   padding: 0;
@@ -449,7 +476,10 @@
 // GRUNT
 .name.icon[data-name*="GRUNTFILE.js"],
 .name.icon[data-name*="Gruntfile.js"],
-.name.icon[data-name*="gruntfile.js"] {
+.name.icon[data-name*="gruntfile.js"],
+.name.icon[data-name*="GRUNTFILE.coffee"],
+.name.icon[data-name*="Gruntfile.coffee"],
+.name.icon[data-name*="gruntfile.coffee"] {
 
   position: relative;
   display: inline-block;
@@ -471,7 +501,10 @@
 // GULP
 .name.icon[data-name*="GULPFILE.js"],
 .name.icon[data-name*="Gulpfile.js"],
-.name.icon[data-name*="gulpfile.js"] {
+.name.icon[data-name*="gulpfile.js"],
+.name.icon[data-name*="GULPFILE.coffee"],
+.name.icon[data-name*="Gulpfile.coffee"],
+.name.icon[data-name*="gulpfile.coffee"] {
 
   position: relative;
   display: inline-block;
