@@ -29,20 +29,20 @@
 }
 
 .editor.mini {
-  color: @text-color-highlight;
-  background-color: @input-background-color;
+  color: @input-text-color;
+  background-color: @input-background-color-selected;
   border: 1px solid @input-border-color;
-  box-shadow:
-    inset 0 1px 1px rgba(0, 0, 0, .075);
+  box-shadow: none;
   border-radius: @component-border-radius;
   padding-left: @component-padding/2;
 
-  .cursor { border-color: #fff; }
-  .selection .region { background-color: lighten(@input-background-color, 10%); }
+  .cursor { border-color: @input-text-color; }
+  .selection .region { background-color: darken(@input-background-color, 10%); }
 }
 
 .editor.editor-colors.mini.is-focused {
-  background-color: lighten(@input-background-color, 5%);
+  background-color: @input-background-color;
+  color: @input-text-color-selected;
   .selection .region { background-color: desaturate(@background-color-info, 50%); }
 }
 

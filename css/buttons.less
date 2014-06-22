@@ -2,22 +2,32 @@
 @import "ui-mixins";
 
 .btn-background (@color, @hover-color, @selected-color, @text-color) {
-  color: @text-color;
+  color: @button-text-color;
   background-color: transparent;
-  background-image: -webkit-linear-gradient(@color, darken(@color, 5%));
+  background-color: @color;
 
   &:hover {
     color: @text-color-highlight;
-    background-image: -webkit-linear-gradient(@hover-color, darken(@hover-color, 5%));
+    background-color: @hover-color;
   }
   &.selected,
   &.selected:hover {
     color: @text-color-highlight;
-    background-image: -webkit-linear-gradient(darken(@selected-color, 5%), @selected-color);
+    background-color: @selected-color;
     &:hover {
-      background-image: -webkit-linear-gradient(@selected-color, darken(@selected-color, 5%));
+      background-color: @selected-color;
     }
   }
+}
+
+.find-and-replace .btn-group-find.btn-group .btn,
+.find-and-replace .btn-group-replace.btn-group .btn {
+  width: 49%;
+}
+
+.find-and-replace .btn-group-find.btn-group .btn:last-child,
+.find-and-replace .btn-group-replace.btn-group .btn:last-child {
+  float: right;
 }
 
 .btn-group > .btn {
