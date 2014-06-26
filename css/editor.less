@@ -44,7 +44,6 @@
   background-color: @input-background-color;
   color: @input-text-color-selected;
   .selection .region { background-color: desaturate(@background-color-info, 50%); }
-  padding: 10px;
 }
 
 // FIXME: these should go in syntax themes?
@@ -66,5 +65,9 @@
 .select-list.command-palette.overlay.from-top {
   .error-message {
     padding: 3px 0px 0px 6px;
+  }
+
+  .editor.editor-colors.mini.is-focused {
+    padding: 10px;
   }
 }
