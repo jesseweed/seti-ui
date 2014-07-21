@@ -613,13 +613,11 @@
 // - - - - - - -
 
 // STATUS: ADDED
-.directory.entry.list-nested-item.status-added {
+.directory.entry.list-nested-item.status-added > .header.list-item:first-child {
 
   // OPEN/CLOSE SELECTOR
-  .header.list-item {
-    &:before {
-      color: @color-status-added;
-    }
+  &:before {
+    color: @color-status-added;
   }
 
   // DIRECTORY
@@ -656,13 +654,11 @@
 
 
 // STATUS: MODIFIED
-.directory.entry.list-nested-item.status-modified {
+.directory.entry.list-nested-item.status-modified > .header.list-item:first-child {
 
   // OPEN/CLOSE SELECTOR
-  .header.list-item {
-    &:before {
-      color: @color-status-modified;
-    }
+  &:before {
+    color: @color-status-modified;
   }
 
   // DIRECTORY
