@@ -14,6 +14,7 @@
   }
 }
 
+
 .focusable-panel {
   opacity: 1;
   background: #303030;
@@ -31,7 +32,38 @@
     .selected > .name:before,
     .selected > .list-item > .name,
     .selected > .list-item > .name:before {
-      color: #fff !important;
+      color: #fff;
     }
   }
+}
+
+
+.file-list-view, .list-view {
+  background: rgb(21,23,24);
+  color: #FFF;
+  padding: 10px;
+
+  .file.selected {
+    .filename {
+      background: #262b30;
+    }
+    color: fff;
+  }
+
+  .selected {
+    text-shadow: none;
+    background: #333;
+  }
+
+  .selected:before {
+    background: rgb(85,181,219);
+  }
+
+}
+
+
+.list-inline.tab-bar.inset-panel {
+  background: #262b30;
+  height: auto;
+  margin-bottom: 0px;
 }
