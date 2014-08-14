@@ -1,0 +1,5 @@
+- Add icons to tabs
+- Add additional file types
+- Fix bug in command pallet introducted with 0.121.0
+- Update Screenshots
+- A few minor UI tweaks
