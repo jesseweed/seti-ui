@@ -354,3 +354,202 @@ default = '', '', 20px, 6px, 0px, -5px, -4px */
 .icon-tree('GulpFile.coffee', 'gulp', 20px, 6px, -3px, -5px, -4px);
 .icon-tab('GULPFILE.coffee', 'gulp', 20px, 6px, -3px, -5px, -4px);
 .icon-tree('GULPFILE.coffee', 'gulp', 20px, 6px, -3px, -5px, -4px);
+
+
+// - - - - - - -
+// STATUS COLORS
+// - - - - - - -
+
+// STATUS: ADDED
+.directory.entry.list-nested-item.status-added > .header.list-item {
+
+  // OPEN/CLOSE SELECTOR
+  &:before {
+    color: @color-status-added;
+  }
+
+  // DIRECTORY
+  .name.icon.icon-file-directory {
+
+    // TEXT
+    color: @color-status-added;
+
+    // ICON
+    &:before {
+      color: @color-status-added;
+    }
+  }
+
+}
+
+  .file.entry.list-item.status-added {
+
+    .name.icon {
+
+      // TEXT
+      color: @color-status-added;
+
+      // ICON
+      &:before {
+        color: @color-status-added !important;
+      }
+
+      &.icon-file-text:before {
+        color: @color-status-added;
+      }
+    }
+  }
+
+
+// STATUS: MODIFIED
+.directory.entry.list-nested-item.status-modified > .header.list-item {
+
+  // OPEN/CLOSE SELECTOR
+  &:before {
+    color: @color-status-modified;
+  }
+
+  // DIRECTORY
+  .name.icon.icon-file-directory {
+
+    // TEXT
+    color: @color-status-modified;
+
+    // ICON
+    &:before {
+      color: @color-status-modified;
+    }
+  }
+
+}
+
+
+  .file.entry.list-item.status-modified {
+    .name.icon {
+
+      // TEXT
+      color: @color-status-modified;
+
+      // ICON
+      &:before {
+        color: @color-status-modified;
+      }
+    }
+  }
+
+
+// STATUS: IGNORED
+.directory.entry.list-nested-item.status-ignored {
+
+  // OPEN/CLOSE SELECTOR
+  .header.list-item {
+    &:before {
+      color: @color-status-ignored;
+    }
+  }
+
+  // DIRECTORY
+  .name.icon.icon-file-directory {
+
+    // TEXT
+    color: @color-status-ignored;
+
+    // ICON
+    &:before {
+      color: @color-status-ignored;
+    }
+  }
+
+}
+
+
+  .file.entry.list-item.status-ignored {
+    .name.icon {
+
+      // TEXT
+      color: @color-status-ignored;
+
+      // ICON
+      &:before {
+        color: @color-status-ignored;
+      }
+    }
+  }
+
+
+// STATUS: REMOVED
+.directory.entry.list-nested-item.status-removed {
+
+  // OPEN/CLOSE SELECTOR
+  .header.list-item {
+    &:before {
+      color: @color-status-removed;
+    }
+  }
+
+  // DIRECTORY
+  .name.icon.icon-file-directory {
+
+    // TEXT
+    color: @color-status-removed;
+
+    // ICON
+    &:before {
+      color: @color-status-removed;
+    }
+  }
+
+}
+
+  // FILE
+  .file.entry.list-item.status-removed {
+    .name.icon {
+
+      // TEXT
+      color: @color-status-removed;
+
+      // ICON
+      &:before {
+        color: @color-status-removed;
+      }
+    }
+  }
+
+
+// STATUS: RENAMED
+.directory.entry.list-nested-item.status-renamed {
+
+  // OPEN/CLOSE SELECTOR
+  .header.list-item {
+    &:before {
+      color: @color-status-renamed;
+    }
+  }
+
+  // DIRECTORY
+  .name.icon.icon-file-directory {
+
+    // TEXT
+    color: @color-status-renamed;
+
+    // ICON
+    &:before {
+      color: @color-status-renamed;
+    }
+  }
+
+}
+
+  // FILE
+  .file.entry.list-item.status-renamed {
+    .name.icon {
+
+      // TEXT
+      color: @color-status-renamed;
+
+      // ICON
+      &:before {
+        color: @color-status-renamed;
+      }
+    }
+  }
