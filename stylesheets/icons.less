@@ -112,6 +112,25 @@
   top: -2px;
 }
 
+// HIDDEN / IGNORED STYLES
+
+.status-ignored {
+
+  .header.list-item:before {
+    color: @text-color-ignored;
+  }
+
+  .name.icon {
+    color: @text-color-ignored;
+
+    &:before {
+      color: @text-color-ignored;
+    }
+
+  }
+
+}
+
 
 /* .icon-tab(extension, type, font-size, top, right, left, offset)
 default = '', '', 20px, 6px, -3px, -5px, -4px
