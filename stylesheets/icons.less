@@ -108,6 +108,7 @@
   }
 }
 
+
 .tab-bar .tab.active .title {
   top: -2px;
 }
@@ -137,6 +138,27 @@ default = '', '', 20px, 6px, -3px, -5px, -4px
 
 .icon-tree(extension, type, font-size, top, right, left, offset)
 default = '', '', 20px, 6px, 0px, -5px, -4px */
+
+
+
+.tab-bar .tab .title.icon-tools {
+  position: relative;
+  display: inline-block;
+  top: 2px;
+  padding: 0;
+  width: 100%;
+
+  &:before {
+    font-family: icomoon;
+    content: @icon-settings;
+    font-size: 22px;
+    position: relative;
+    top: 6px;
+    left: -2px;
+    margin-right: 5px;
+    color: @color-settings;
+  }
+}
 
 
 // CSS
@@ -237,6 +259,10 @@ default = '', '', 20px, 6px, 0px, -5px, -4px */
 .icon-tree('.sass', 'sass', 20px, 5px, 4px, -3px, -4px);
 .icon-tab('.scss', 'sass', 20px, 4px, -3px, -5px, -4px);
 .icon-tree('.scss', 'sass', 20px, 5px, 4px, -3px, -4px);
+
+// Settings
+.icon-tab('.svgx', 'img', 15px, 3px, 4px, 0px, -2px);
+.icon-tree('.svgx', 'img', 15px, 3px, 2px, -3px, -4px);
 
 // Stylus
 .icon-tab('.styl', 'styl', 20px, 5px, -2px, -5px, -4px);
