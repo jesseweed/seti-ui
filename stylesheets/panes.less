@@ -10,8 +10,7 @@
 
 .panes {
   .pane {
-    background-color: lighten(@app-background-color, 4%);
-
+    background-color: lighten(@app-background-color, 40%);
     &:focus {
       background-color: @app-background-color;
     }
@@ -25,5 +24,21 @@
   .pane-column > * {
     border-bottom: 1px solid @pane-item-border-color;
     &:last-child { border-bottom: none; }
+  }
+}
+
+// Inactive Pane
+.pane:not(.active) {
+  opacity: 0.8;
+
+  .editor {
+    background-color: lighten(@app-background-color, 2%);
+  }
+
+  .tab.active {
+    border-bottom: solid 4px darken(@tab-highlight-color, 20%);
+    &:before {
+      border-bottom: solid 4px darken(@tab-highlight-color, 20%);
+    }
   }
 }
