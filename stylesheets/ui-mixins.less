@@ -36,15 +36,17 @@
     top: @offset;
     padding: 0;
 
-    &.icon-file-text:before {
-      font-family: icomoon;
-      content: "@{icon-@{type}}";
-      font-size: @font;
-      position: relative;
-      top: @top;
-      left: @left;
-      margin-right: @right;
-      color: ~"@{color-@{type}}";
+    &.icon-file-text, &.icon-file-media, &.icon-book {
+      &:before {
+        font-family: icomoon;
+        content: "@{icon-@{type}}";
+        font-size: @font;
+        position: relative;
+        top: @top;
+        left: @left;
+        margin-right: @right;
+        color: ~"@{color-@{type}}";
+      }
     }
 
   }
