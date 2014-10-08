@@ -14,5 +14,14 @@
 @import "stylesheets/text";
 @import "stylesheets/tooltips";
 @import "stylesheets/tree-view";
-@import "stylesheets/icons";
 @import "stylesheets/utilities";
+
+.icons(@icons) when (@icons = true) {
+  @import "stylesheets/icons";
+}
+/**
+ * Set below to false to not import Seti-UI icons.
+ * Requries View -> Reload after changing value.
+ * Mainly to use with file-icons package.
+*/
+.icons(true);
