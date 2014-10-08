@@ -3,7 +3,7 @@
 
 .icon-tab( @extension: ''; @type: ''; @font: 20px; @top: 6px; @right: -3px; @left: -5px; @offset: -6px) {
 
-  .tab-bar .tab .title[data-name*="@{extension}"] {
+  .tab-bar .tab .title[data-name$="@{extension}"] {
     position: relative;
     display: inline-block;
     top: @offset;
@@ -21,7 +21,7 @@
     }
   }
 
-  .tab-bar .tab.active .title[data-name*="@{extension}"] {
+  .tab-bar .tab.active .title[data-name$="@{extension}"] {
     top: @offset;
   }
 
@@ -29,22 +29,24 @@
 
 .icon-tree( @extension: ''; @type: ''; @font: 20px; @top: 6px; @right: 0px; @left: -5px; @offset: -6px) {
 
-  .name.icon[data-name*="@{extension}"] {
+  .name.icon[data-name$="@{extension}"] {
 
     position: relative;
     display: inline-block;
     top: @offset;
     padding: 0;
 
-    &.icon-file-text:before {
-      font-family: icomoon;
-      content: "@{icon-@{type}}";
-      font-size: @font;
-      position: relative;
-      top: @top;
-      left: @left;
-      margin-right: @right;
-      color: ~"@{color-@{type}}";
+    &.icon-file-text, &.icon-file-media, &.icon-book {
+      &:before {
+        font-family: icomoon;
+        content: "@{icon-@{type}}";
+        font-size: @font;
+        position: relative;
+        top: @top;
+        left: @left;
+        margin-right: @right;
+        color: ~"@{color-@{type}}";
+      }
     }
 
   }
