@@ -16,3 +16,36 @@ A dark colored UI theme for Atom with custom file icons. [Seti Syntax](https://a
 cd ~/.atom/packages
 git clone https://github.com/jesseweed/seti-ui --depth=1
 ```
+
+
+### Currently Supported File Icons
+* Bower
+* Coffescript
+* CSS
+* EJS
+* Favicon
+* Grunt
+* Gulp
+* Handlebars
+* HTML
+* Image
+* Jade
+* Javascript
+* JSON
+* Julia
+* Less
+* LICENSE
+* Markdown
+* Mustache
+* PHP
+* Procfile
+* Python
+* React
+* Ruby
+* Sass
+* Stache
+* Stylus
+* Text
+* Typescript
+* XML
+* YML
