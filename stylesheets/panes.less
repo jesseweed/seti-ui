@@ -8,30 +8,30 @@
   }
 }
 
-.panes {
-  .pane {
+atom-pane-container {
+  atom-pane {
     background-color: lighten(@app-background-color, 5%);
     &:focus {
       background-color: @app-background-color;
     }
   }
 
-  .pane-row > * {
+  atom-pane-axis.horizontal > * {
     border-right: 1px solid @pane-item-border-color;
     &:last-child { border-right: none; }
   }
 
-  .pane-column > * {
+  atom-pane-axis.vertical > * {
     border-bottom: 1px solid @pane-item-border-color;
     &:last-child { border-bottom: none; }
   }
 }
 
 // Inactive Pane
-.pane:not(.active) {
+atom-pane:not(.active) {
   opacity: 0.8;
 
-  .editor {
+  atom-text-editor {
     background-color: lighten(@app-background-color, 2%);
   }
 

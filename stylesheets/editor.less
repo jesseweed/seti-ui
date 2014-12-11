@@ -3,32 +3,37 @@
 @import "ui-mixins";
 
 
-.editor .gutter .line-number.git-line-ignored {
+atom-text-editor .gutter .line-number.git-line-ignored,
+atom-text-editor::shadow .gutter .line-number.git-line-ignored {
   border-color: @color-status-ignored;
   opacity: 1;
 }
 
-.editor .gutter .line-number.git-line-added {
+atom-text-editor .gutter .line-number.git-line-added,
+atom-text-editor::shadow .gutter .line-number.git-line-added {
   border-color: @color-status-added;
   opacity: 1;
 }
 
-.editor .gutter .line-number.git-line-renamed {
+atom-text-editor .gutter .line-number.git-line-renamed,
+atom-text-editor::shadow .gutter .line-number.git-line-renamed {
   border-color: @color-status-renamed;
   opacity: 1;
 }
 
-.editor .gutter .line-number.git-line-modified {
+atom-text-editor .gutter .line-number.git-line-modified,
+atom-text-editor::shadow .gutter .line-number.git-line-modified {
   border-color: @color-status-modified;
   opacity: 1;
 }
 
-.editor .gutter .line-number.git-line-removed {
+atom-text-editor .gutter .line-number.git-line-removed,
+atom-text-editor::shadow .gutter .line-number.git-line-removed {
   border-color: @color-status-removed;
   opacity: 1;
 }
 
-.editor.mini {
+atom-text-editor[mini] {
   color: @input-text-color;
   background-color: @input-background-color-selected;
   border: 1px solid @input-border-color;
@@ -40,14 +45,15 @@
   .selection .region { background-color: darken(@input-background-color, 10%); }
 }
 
-.editor.editor-colors.mini.is-focused {
+atom-text-editor.editor-colors.mini.is-focused {
   background-color: @input-background-color;
   color: @input-text-color-selected;
   .selection .region { background-color: desaturate(@background-color-info, 50%); }
 }
 
 // FIXME: these should go in syntax themes?
-.editor .gutter.drop-shadow {
+atom-text-editor .gutter.drop-shadow,
+atom-text-editor::shadow .gutter.drop-shadow {
   -webkit-box-shadow: -2px 0 10px 2px #222;
 }
 
@@ -56,7 +62,8 @@
   to { background-color: null; }
 }
 
-.editor .highlighted.selection .region {
+atom-text-editor .highlighted.selection .region,
+atom-text-editor::shadow .highlighted.selection .region {
   -webkit-animation-name: highlight;
   -webkit-animation-duration: 1s;
   -webkit-animation-iteration-count: 1;

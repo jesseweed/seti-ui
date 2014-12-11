@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.4.0
+- Update theme to support the new Shadow DOM implementation.
+
 ## 0.3.6
 - Update CSS to match only file extensions vs the whole file name
 - Add ability to turn off icons
