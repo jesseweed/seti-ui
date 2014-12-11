@@ -2,6 +2,16 @@
 
 ## 0.4.0
 - Update theme to support the new Shadow DOM implementation.
+- Add Illustrator source file for icons
+- Add addition icon support:
+  - .ejs (EJS)
+  - .ico (Favicons)
+  - .jl (Julia)
+  - .jsx (React)
+  - .stache (Stache)
+  - .ts (Typescript)
+- Update README.md
+- Fix drag file from pane to pane
 
 ## 0.3.6
 - Update CSS to match only file extensions vs the whole file name
