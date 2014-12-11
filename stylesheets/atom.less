@@ -4,22 +4,22 @@
 	box-sizing: border-box;
 }
 
-.workspace {
+atom-workspace {
   background-color: @app-background-color;
 }
 
 .scrollbars-visible-always {
-  ::-webkit-scrollbar {
+  /deep/ ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
   }
 
-  ::-webkit-scrollbar-track,
-  ::-webkit-scrollbar-corner {
+  /deep/ ::-webkit-scrollbar-track,
+  /deep/ ::-webkit-scrollbar-corner {
     background: @scrollbar-background-color;
   }
 
-  ::-webkit-scrollbar-thumb {
+  /deep/ ::-webkit-scrollbar-thumb {
     background: @scrollbar-color;
     border-radius: 5px;
     box-shadow: 0 0 1px black inset;
