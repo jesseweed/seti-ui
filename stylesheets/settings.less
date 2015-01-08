@@ -1,0 +1,19 @@
+@import "ui-variables";
+
+.settings-view {
+
+  select.form-control {
+    border: none;
+    color: @text-color-selected;
+  }
+
+  atom-text-editor .placeholder-text, // <-- deprecated
+  atom-text-editor::shadow .placeholder-text {
+    color: lighten(@text-color-subtle, 15%);
+  }
+
+  .available-package-view .meta-user .author {
+    color: lighten(@text-color-subtle, 10%);
+  }
+
+}
