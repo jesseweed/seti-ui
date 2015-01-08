@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.2
+- Update for new settings view
+
+## 0.5.1
+- Fix width on find & replace buttons
+- Update screenshot
+
 ## 0.5.0
 - Add Illustrator source file for icons
 - Add additional icon support:
