@@ -1,6 +1,9 @@
 # Changelog
 
-## 0.5.2
+## 0.6.1
+- Update changelog
+
+## 0.6.0
 - Update for new settings view
 
 ## 0.5.1
