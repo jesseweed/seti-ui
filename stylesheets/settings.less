@@ -7,6 +7,17 @@
     color: @text-color-selected;
   }
 
+  input[type="checkbox"] {
+    &:checked {
+      background-color: @checkbox-background-color;
+    }
+
+    &:before,
+    &:after {
+      background-color: @checkbox-tick-color;
+    }
+  }
+
   atom-text-editor .placeholder-text, // <-- deprecated
   atom-text-editor::shadow .placeholder-text {
     color: lighten(@text-color-subtle, 15%);
