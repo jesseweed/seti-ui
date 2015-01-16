@@ -45,9 +45,9 @@ atom-text-editor[mini] {
   .selection .region { background-color: darken(@input-background-color, 10%); }
 }
 
-atom-text-editor.editor-colors.mini.is-focused {
-  background-color: @input-background-color;
+atom-text-editor[mini].is-focused {
   color: @input-text-color-selected;
+  background-color: @input-background-color;
   .selection .region { background-color: desaturate(@background-color-info, 50%); }
 }
 
@@ -74,7 +74,7 @@ atom-text-editor::shadow .highlighted.selection .region {
     padding: 3px 0px 0px 6px;
   }
 
-  .editor.editor-colors.mini.is-focused {
+  atom-text-editor[mini].is-focused {
     padding: 1px;
   }
 }
