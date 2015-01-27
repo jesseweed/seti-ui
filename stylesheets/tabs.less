@@ -12,19 +12,25 @@
 @tab-top-padding: 0px;
 @tab-bottom-border-height: 0px;
 
-.tab-bar {
+tabs-bar, .tab-bar {
   height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
   background: @tab-bar-background-color;
   padding: 0 10px 0 10px;
   box-sizing: border-box;
   border-bottom: solid 4px @tab-bar-bottom-border-color;
+  // left: 16px;
 
   &:after {
     background: @tab-background-active;
     border: 0;
   }
 
-  .tab {
+
+  tabs-tab {
+    left: 16px;
+  }
+
+  tabs-tab, .tab {
     position: relative;
     top: @tab-top-padding;
     height: @tab-height;
@@ -95,7 +101,7 @@
     }
   }
 
-  .tab.active {
+  tabs-tab.active, .tab.active {
     z-index: 1;
     line-height: @tab-height - 2px;
     color: @text-color-highlight;
@@ -128,11 +134,11 @@
   }
 
 
-  .tab:hover {
+  tabs-tab:hover, .tab:hover {
     color: @text-color-highlight;
   }
 
-  .tab.active:hover .close-icon {
+  tabs-tab.active:hover .close-icon, .tab.active:hover .close-icon {
     color: @text-color;
 
     &:hover {
