@@ -12,7 +12,7 @@
 @tab-top-padding: 0px;
 @tab-bottom-border-height: 0px;
 
-tabs-bar {
+.tab-bar {
   height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
   background: @tab-bar-background-color;
   padding: 0 10px 0 10px;
@@ -25,7 +25,7 @@ tabs-bar {
     border: 0;
   }
 
-  tabs-tab {
+  .tab {
     position: relative;
     top: @tab-top-padding;
     height: @tab-height;
@@ -42,6 +42,7 @@ tabs-bar {
     border: none;
     border-bottom: solid 4px @tab-bar-bottom-border-color;
     left: 16px;
+    background: red;
 
     &, &:before {
       background: @tab-background;
@@ -97,7 +98,7 @@ tabs-bar {
     }
   }
 
-  tabs-tab.active {
+  .tab.active {
     z-index: 1;
     line-height: @tab-height - 2px;
     color: @text-color-highlight;
@@ -130,11 +131,11 @@ tabs-bar {
   }
 
 
-  tabs-tab:hover {
+  .tab:hover {
     color: @text-color-highlight;
   }
 
-  tabs-tab.active:hover .close-icon {
+  .tab.active:hover .close-icon {
     color: @text-color;
 
     &:hover {
