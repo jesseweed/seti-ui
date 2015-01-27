@@ -89,7 +89,7 @@
 }
 
 // DEFAULT TAB ICON
-tabs-bar tabs-tab .title {
+tabs-bar tabs-tab .title, .tab-bar .tab .title {
   position: relative;
   display: inline-block;
   top: -2px;
@@ -109,7 +109,7 @@ tabs-bar tabs-tab .title {
 }
 
 
-tabs-bar tabs-tab.active .title {
+tabs-bar tabs-tab.active .title, .tab-bar .tab.active .title {
   top: -2px;
 }
 
@@ -141,7 +141,7 @@ default = '', '', 20px, 6px, 0px, -5px, -4px */
 
 
 
-tabs-bar tabs-tab .title.icon-tools {
+tabs-bar tabs-tab .title.icon-tools, .tab-bar .tab .title.icon-tools {
   position: relative;
   display: inline-block;
   top: 2px;
@@ -230,7 +230,7 @@ tabs-bar tabs-tab .title.icon-tools {
 .icon-tree('.md', 'md', 20px, 5px, 2px, -5px, -2px);
 
 // Override for Markdown package
-tabs-bar tabs-tab .title.icon-markdown[data-name*=".md"] {
+tabs-bar tabs-tab .title.icon-markdown[data-name*=".md"], .tab-bar .tab .title.icon-markdown[data-name*=".md"] {
   top: 0;
 }
 
