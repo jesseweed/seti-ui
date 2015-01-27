@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.6.3
+- Make tab updates backwards compatible
+
+## 0.6.2
+- Adjust line number padding
+- Fix deprecation errors
+- Add icon support for coffee-react files
+- Enhance appearance of checkboxes in settings view
+- Add checkbox background color & checkbox tick color
+
 ## 0.6.1
 - Update changelog
 
