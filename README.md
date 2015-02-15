@@ -1,5 +1,7 @@
 # Seti UI
 
+[![Join the chat at https://gitter.im/jesseweed/seti-ui](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jesseweed/seti-ui?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A dark colored UI theme for Atom with custom file icons. [Seti Syntax](https://atom.io/themes/seti-syntax) also available.
 
 ![Screenshot](https://github.com/jesseweed/seti-ui/raw/master/screenshot.png)
