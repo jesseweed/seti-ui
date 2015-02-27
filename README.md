@@ -5,11 +5,6 @@
 ![Screenshot](https://github.com/kryptonianson/seti-ui-red/raw/master/screenshot.png)
 
 
-### Custom App Icons
-[ ![Screenshot](https://github.com/kryptonianson/seti-ui-red/raw/master/_icons/circular/circular-128x128.png) ](https://github.com/kryptonianson/seti-ui-red/tree/master/_icons/circular)
-[ ![Screenshot](https://github.com/kryptonianson/seti-ui-red/raw/master/_icons/rounded/rounded-128x128.png) ](https://github.com/kryptonianson/seti-ui-red/tree/master/_icons/rounded/)
-[ ![Screenshot](https://github.com/kryptonianson/seti-ui-red/raw/master/_icons/squared/squared-128x128.png) ](https://github.com/kryptonianson/seti-ui-red/tree/master/_icons/squared/)
-
 ### Installation
 
 ```
