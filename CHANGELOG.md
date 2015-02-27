@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.0
+- initial release for seti-ui-red [fork of the beautiful seti-ui by Jesse Weed]
+
+#######################################
+
 ## 0.6.3
 - Make tab updates backwards compatible
 
