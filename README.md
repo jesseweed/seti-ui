@@ -4,7 +4,7 @@
 
 ![Screenshot](https://github.com/kryptonianson/seti-ui-red/raw/master/screenshot.png)
 
-
+  
 ### Installation
 
 ```
