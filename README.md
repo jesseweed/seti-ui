@@ -1,5 +1,6 @@
-# Seti UI Red - [Fork of the beautiful seti-ui theme by Jesse Weed]
+# Seti UI Red
 
+[Fork of the beautiful seti-ui theme by Jesse Weed]
 
 ![Screenshot](https://github.com/kryptonianson/seti-ui-red/raw/master/screenshot.png)
 
