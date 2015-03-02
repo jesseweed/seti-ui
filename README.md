@@ -1,10 +1,10 @@
 # Seti UI Red
 
-[Fork of the beautiful seti-ui theme by Jesse Weed]
+A dark colored UI theme for Atom with custom file icons. [Fork of the beautiful seti-ui theme by Jesse Weed] [Seti Syntax](https://atom.io/themes/seti-syntax) also available.
 
 ![Screenshot](https://github.com/kryptonianson/seti-ui-red/raw/master/screenshot.png)
 
-  
+
 ### Installation
 
 ```

@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.13.0
+- minor backend configuration enhancments
+
 ## 0.1.0
 - initial release for seti-ui-red [fork of the beautiful seti-ui by Jesse Weed]
 
