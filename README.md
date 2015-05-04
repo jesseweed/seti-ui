@@ -26,6 +26,7 @@ git clone https://github.com/jesseweed/seti-ui --depth=1
 * CSS
 * EJS
 * Favicon
+* Go
 * Grunt
 * Gulp
 * Handlebars
