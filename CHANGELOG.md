@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.7.0
+- Store package style sheets in the styles/ directory instead of stylesheets/ in the color-picker package
+
 ## 0.6.3
 - Make tab updates backwards compatible
 
