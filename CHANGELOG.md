@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.7.1
+- Fix broken icons
+
 ## 0.7.0
 - Store package style sheets in the styles/ directory instead of stylesheets/ in the color-picker package
 
