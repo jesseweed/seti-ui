@@ -57,7 +57,7 @@ progress::-webkit-progress-bar {
   border-radius: 2px;
   background-size: 25px @progress-height, 100% 100%, 100% 100%;
   -webkit-animation: animate-stripes 5s linear infinite;
-  animation: animate-stripes 5s linear infinite;
+  animation: animate-stripes 5s linear 6; // stop animation after 6 runs (30s) to limit CPU usage
 }
 
 progress::-webkit-progress-value {
@@ -68,7 +68,7 @@ progress::-webkit-progress-value {
 
 progress[value]::-webkit-progress-bar {
   background-image: @progress-shine-gradient;
-  animation: none;
+  -webkit-animation: none;
 }
 
 @-webkit-keyframes animate-stripes {
