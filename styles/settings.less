@@ -8,7 +8,12 @@ atom-pane-container atom-pane .item-views .pane-item {
 
   .btn, .btn.icon {
     background: lighten(@background, 5%);
-    transition: background ease 0.2s;
+    transition: background ease 0.4s;
+    outline: none;
+
+    &.selected {
+      background: @blue;
+    }
 
     &:hover {
       background: lighten(@background, 9%);
@@ -54,10 +59,10 @@ atom-pane-container atom-pane .item-views .pane-item {
   .package-card, .package-card.deprecated {
     background-color: lighten(@background, 2%);
     border-color: darken(@background, 3%);
-    transition: background ease 0.2s;
+    transition: background ease 0.4s;
 
     &:hover {
-      background-color: @background;
+      background-color: lighten(@background, 5%);
     }
 
   }
