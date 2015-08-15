@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.8.0
+- Update settings view
+- Limit CPU usage of <progress> elements
+- Add .yaml as extension for YAML file icon
+- Alias .es and .es6 to js
+
 ## 0.7.1
 - Fix broken icons
 
