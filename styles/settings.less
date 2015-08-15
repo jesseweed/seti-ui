@@ -1,6 +1,75 @@
 @import "ui-variables";
 
+atom-pane-container atom-pane .item-views .pane-item {
+  background-color: lighten(@tree-view-background-color, 1%);
+}
+
 .settings-view {
+
+  .btn, .btn.icon {
+    background: lighten(@background, 5%);
+    transition: background ease 0.2s;
+
+    &:hover {
+      background: lighten(@background, 9%);
+    }
+  }
+
+  // LEFT PANEL
+  .config-menu {
+    background-color: @background;
+    min-width: 220px;
+
+    .nav > li > a:hover {
+      background-color: darken(@tree-view-background-color, 0%);
+    }
+
+    .nav > li.active > a {
+      background-color: darken(@tree-view-background-color, 0%);
+    }
+
+  }
+
+  .alert-info {
+    background-color: darken(@tree-view-background-color, 0%);
+    border-color: darken(@background, 3%);
+    color: #fff;
+    // margin: 10px 0px 10px 0px;
+    margin: 0px;
+  }
+
+  .package-container {
+    margin-top: 10px;
+  }
+
+  .packages .search-message, .packages .featured-message {
+    margin: 10px 0px 10px 0px;
+  }
+
+  // FORMS
+  input[type="checkbox"] {
+    background-color: lighten(@tree-view-background-color, 10%);
+  }
+
+  .package-card, .package-card.deprecated {
+    background-color: lighten(@background, 2%);
+    border-color: darken(@background, 3%);
+    transition: background ease 0.2s;
+
+    &:hover {
+      background-color: @background;
+    }
+
+  }
+
+  select.form-control, .settings-view select.form-control:focus {
+    background-color: lighten(@background, 5%);
+
+    &:hover {
+      background-color: lighten(@background, 8%);
+    }
+
+  }
 
   select.form-control {
     border: none;
