@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.9.0
+## 0.8.1
 - Fix tree-view background color
 - Add apm installation steps to README
 - Fix issues with tab bar
