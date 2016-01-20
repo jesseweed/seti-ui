@@ -1,7 +1,7 @@
 {
   "name": "run-time-ui",
   "theme": "ui",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A dark colored UI theme for Atom with custom file icons (including Elm).",
   "license": "MIT",
   "repository": "https://github.com/run-time/run-time-ui",
