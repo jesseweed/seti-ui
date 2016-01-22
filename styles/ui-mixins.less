@@ -1,4 +1,5 @@
 @import "ui-variables";
+@import "icon-variables";
 
 // Generate CSS for status coloring
 .status-gen( @status-state: 'ignored'; ) {
@@ -9,14 +10,14 @@
   // FOLDERS
   @status-color-folder-class {
     &:before {
-      color: @status-color-name;
+      color: @status-color-name !important;
     }
     .name.icon.icon-file-directory {
       // text
-      color: @status-color-name;
+      color: @status-color-name !important;
       // icon
       &:before {
-        color: @status-color-name;
+        color: @status-color-name !important;
       }
     }
   }
@@ -25,7 +26,7 @@
   @status-color-file-class {
     .name.icon {
       // text
-      color: @status-color-name;
+      color: @status-color-name !important;
     }
   }
 }
