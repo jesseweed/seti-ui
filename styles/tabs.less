@@ -68,7 +68,7 @@ tabs-bar, .tab-bar {
       color: @text-color-highlight;
     }
 
-    .title{
+    .title {
       -webkit-transform: none;
       margin-top: -2px;
     }
@@ -116,6 +116,11 @@ tabs-bar, .tab-bar {
 
   tabs-tab:hover, .tab:hover {
     color: @text-color-highlight;
+
+    .title:before {
+      opacity: 1.0;
+      margin-top: 10px;
+    }
   }
 
   tabs-tab.active:hover .close-icon, .tab.active:hover .close-icon {
@@ -131,5 +136,10 @@ tabs-bar, .tab-bar {
     &:after {
       top: @tab-height + @tab-top-padding + @tab-bottom-border-height;
     }
+  }
+
+  .tab.active .title:before {
+    opacity: 1.0;
+    margin-top: 10px;
   }
 }
