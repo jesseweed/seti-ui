@@ -114,8 +114,9 @@ tabs-bar tabs-tab .title.icon-tools, .tab-bar .tab .title.icon-tools {
 .icon-gen('.json', 'json');
 
 // React
-.icon-gen('.jsx', 'jsx');
-.icon-gen('.cjsx', 'jsx');
+@jsx: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAA5FBMVEUjIyMiIiIiIiIiIiIiIiIiIiJJk6csQEYtQkctQkgtQ0kxTVU2XGY3X2k6Z3Q9cX9BfY1CgZFIkKQjJiZKlapLmq9UtM8qOj4zU1xIkqY1WGJKlqtLma42W2VMnLJQqMApNzs9coA+c4FEhpgrO0AyT1gyUFhFiJpFiJsmLjAnMDM0VV4lLC44ZG9Dg5QsP0Q3X2okKStQqcErPEFXvdlh2vtIkKNAeYlLmK5Ae4slKy0lKyw5Z3M+dYRJk6hLm7BJlKhMnbNNoLZOo7pQp79Sr8hTsco/doZWudRWu9ZGip1JlakvrxjoAAAABXRSTlNJSuTm5/uA3x0AAAC1SURBVHheVc1FgoNAAERRCFTj7h51dxl3u/99BpJekNrV23yG4VAbd/39VhNotvoXARDY4mA2G4h2AKCCOANSD8hiCso9QkJC6MoVxqdvzzdNP/05jCtQI/l52NWW3d9EjtQSngBtL+12UqIBXglEwPxltN2O3uYQHktYWe7HVxtoP3y61upSEWxjXRTvBlnQ7ETF+fV4B3VCoadjk+cb6D0Kjks602mH/DkVcLgZz7B8HRrsPwT5Etm77vs7AAAAAElFTkSuQmCC';
+.icon-gen('.jsx', 'jsx', @jsx);
+.icon-gen('.cjsx', 'jsx', @jsx);
 
 // LESS
 .icon-gen('.less', 'less');
