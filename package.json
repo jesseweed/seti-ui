@@ -2,7 +2,7 @@
   "name": "run-time-ui",
   "theme": "ui",
   "version": "2.0.0",
-  "description": "An acute yet obtuse Dark Atom UI theme (with file type icons for Elm and LiveScript)",
+  "description": "An acute yet obtuse Dark Atom UI theme with colorful file type icons",
   "license": "MIT",
   "repository": "https://github.com/run-time/run-time-ui",
   "engines": {
