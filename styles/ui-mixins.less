@@ -1,51 +1,42 @@
 @import "ui-variables";
 
 
-.icon-tab( @extension: ''; @type: ''; @font: 20px; @top: 6px; @right: -3px; @left: -5px; @offset: -6px) {
+.icon-tab( @extension: ''; @type: ''; @icon: ''; ) {
 
   tabs-bar tabs-tab .title[data-name$="@{extension}"],
   .tab-bar .tab .title[data-name$="@{extension}"] {
-    position: relative;
-    display: inline-block;
-    top: @offset;
     padding: 0;
 
     &:before {
-      position: relative;
-      top: @top;
-      left: @left;
-      background: #963;
+      color: ~"@{color-@{type}}";
+      content: "";
+      width: 16px;
+      height: 16px;
+      float: left;
+      margin-right: 4px;
+      background: url('@{icon}') 0 0 no-repeat;
     }
   }
 
   tabs-bar tabs-tab.active .title[data-name$="@{extension}"],
   tab-bar .tab.active .title[data-name$="@{extension}"] {
-    top: @offset;
+
   }
 
 }
 
-.icon-tree( @extension: ''; @type: ''; @font: 20px; @top: 6px; @right: 0px; @left: -5px; @offset: -6px) {
+.icon-tree( @extension: ''; @type: ''; @icon: ''; ) {
 
   .name.icon[data-name$="@{extension}"] {
-
-    position: relative;
-    display: inline-block;
-    top: @offset;
-    padding: 0;
 
     &.icon-file-text,
     &.icon-file-media,
     &.icon-book {
       &:before {
-        position: relative;
-        top: @top;
-        left: @left;
-        margin-right: @right;
         color: ~"@{color-@{type}}";
         width: 16px;
         height: 16px;
-        background: url(@{icon-@{type}});
+        background: url(@{icon});
       }
     }
 
