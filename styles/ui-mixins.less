@@ -1,7 +1,6 @@
 @import "ui-variables";
 
-
-.icon-tab( @extension: ''; @type: ''; @icon: ''; ) {
+.icon-gen( @extension: ''; @type: ''; @icon: ''; ) {
 
   tabs-bar tabs-tab .title[data-name$="@{extension}"],
   .tab-bar .tab .title[data-name$="@{extension}"] {
@@ -28,10 +27,6 @@
     }
   }
 
-}
-
-.icon-tree( @extension: ''; @type: ''; @icon: ''; ) {
-
   .name.icon[data-name$="@{extension}"] {
 
     &.icon-file-text,
@@ -52,7 +47,6 @@
   }
 
 }
-
 
 .list-group li:not(.list-nested-item).selected > span,
 .list-tree li:not(.list-nested-item).selected > span,

@@ -2,28 +2,16 @@
 @import "icon-font";
 @import "ui-mixins";
 
-
-
 // - - - - - - - - - - - - - - -
 // ICONS BASED ON FILE EXTENSION
 // - - - - - - - - - - - - - - -
 
-
-
 // PROJECT / REPO ICON
 .name.icon.icon-repo {
-
   // TEXT
   font-weight: bold;
   padding: 0px 0px 0px 5px;
-
-  // ICON
-  &:before {
-
-  }
-
 }
-
 
 // OPEN/CLOSE SELECTOR FOR FOLDERS
 .header.list-item:before {
@@ -32,7 +20,6 @@
 
 // DIRECTORY ICONS
 .name.icon.icon-file-directory {
-
   // TEXT
   background: none;
   border: none;
@@ -50,55 +37,32 @@
 // DEFAULT / FALLBACK ICON
 .name.icon {
   padding: 0;
-
   &:before {
     color: @color-default;
   }
-
 }
 
 // DEFAULT TAB ICON
 tabs-bar tabs-tab .title, .tab-bar .tab .title {
   padding: 0;
   width: 100%;
-
   &:before {
     color: @color-default;
   }
 }
 
-
-tabs-bar tabs-tab.active .title, .tab-bar .tab.active .title {
-
-}
-
 // HIDDEN / IGNORED STYLES
-
 .status-ignored {
-
   .header.list-item:before {
     color: @text-color-ignored;
   }
-
   .name.icon {
     color: @text-color-ignored;
-
     &:before {
       color: @text-color-ignored;
     }
-
   }
-
 }
-
-
-/* .icon-tab(extension, type, font-size, top, right, left, offset)
-default = '', '', 20px, 6px, -3px, -5px, -4px
-
-.icon-tree(extension, type, font-size, top, right, left, offset)
-default = '', '', 20px, 6px, 0px, -5px, -4px */
-
-
 
 tabs-bar tabs-tab .title.icon-tools, .tab-bar .tab .title.icon-tools {
   padding: 0;
@@ -110,263 +74,166 @@ tabs-bar tabs-tab .title.icon-tools, .tab-bar .tab .title.icon-tools {
   }
 }
 
-
 // CSS
-.icon-tab('.css', 'css');
-.icon-tree('.css', 'css');
+.icon-gen('.css', 'css');
 
 // CSON
-.icon-tab('.cson', 'json');
-.icon-tree('.cson', 'json');
+.icon-gen('.cson', 'json');
 
 // Handlebars
-.icon-tab('.hbs', 'handlebars');
-.icon-tree('.hbs', 'handlebars');
-.icon-tab('.handlebars', 'handlebars');
-.icon-tree('.handlebars', 'handlebars');
-.icon-tab('.hjs', 'handlebars');
-.icon-tree('.hjs', 'handlebars');
+.icon-gen('.hbs', 'handlebars');
+.icon-gen('.handlebars', 'handlebars');
+.icon-gen('.hjs', 'handlebars');
 
 // Hidden files
-.icon-tab('.gitignore', 'hidden');
-.icon-tree('.gitignore', 'hidden');
-
-.icon-tab('.gitmodules', 'hidden');
-.icon-tree('.gitmodules', 'hidden');
-
-.icon-tab('.config', 'hidden');
-.icon-tree('.config', 'hidden');
-
-.icon-tab('.DS_Store', 'hidden');
-.icon-tree('.DS_Store', 'hidden');
+.icon-gen('.gitignore', 'hidden');
+.icon-gen('.gitmodules', 'hidden');
+.icon-gen('.config', 'hidden');
+.icon-gen('.DS_Store', 'hidden');
 
 
 // HTML - source: http://www.w3.org/html/logo/
 @html: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACCElEQVR42p2Sz0sUYRzGt1NQf4KXIH3f2VU08iB08dJFaHdmlXLDNrUlMQIVIe2i0M0fQVCRXoToEHQxiE6aUJAGYQZFYUGpM7O7szPabi3ij3Se3ve1fXdnBwl64Rlm3vl+P/N9n3kCejRYY6gE/6F9AIEAv7CH9cMKfyRCPjnxIH9nSICpkmXR0FIDM1bvUa63watrdQygcMCSBOgR+pIDUuP9cBzHo/K1OXUTdpsCUyMzxSNo5DEHJIc6RJP9cRGZ2Wmh3fdzHv26FUXmogA8LAXcE4D+ZgGwnkxID7JXQz5ZreIII8UjaFVDvNhMNB5MsLSA9NSo0Naz+x7lrp9G6jyFEaE3Siagib8m/sMDF9muEFItFMz4yxKwpirhwsjJgZhH+dvtQu5PB27OFkcwowRrKjkrAavqyTMFQOb1DOy3r3weuLvb2DO+8Hu+zyF1EpDWlBMSsPCCjW4jNXwFZusp5HoasDnZB75+f34jgiRqz5EKCUBT5VEJmJ0uemClAXdfOrAz/xQbnSKFvPVIAVD4lfkDI6uRHIzBenQH9rt57K18wPbzSeTH4sh212K9PcgNtHiPFxAh3wRAyp+DjY4gywDl+598AF2lnWyKOV0lO6UA+5KC9AXKkwf2kS0eYZaBtnKAlBWvPZ5UK8OmRh/oEfLd0Kq+MtBdI0yaFsP1x8rr/wBADrURGehn9gAAAABJRU5ErkJggg==';
-.icon-tab('.html', 'html', @html);
-.icon-tree('.html', 'html', @html);
+.icon-gen('.html', 'html', @html);
 
 // Jade
-.icon-tab('.jade', 'jade');
-.icon-tree('.jade', 'jade');
+@jade: '';
+.icon-gen('.jade', 'jade', @jade);
 
 // JavaScript
 @js: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABgklEQVR42t2Qu0uCURjG/XsiEgU1r6Sl8pX6nbALBTm0BBEUSQVdlobGmgJpcugyRA4GQZYU0VRW1hCE1yTDlrS8FDQ8nfcjKGuwy9bwcF7ec57fed5Xlo+5XIWYmOPCD5UjrywfF2+p8RuRV0bFX/TfAeUUQyn1XlfSJOqx2oCHuAjffBNWfc14zjAcBO0YGdRhYliPo20Bj4kaAHrQ3aGWTJkzJ0wmJQb6G9HXo8HspBHFJKsNoMfj/MfLwzY0yOVYWjDj/orupITfA3iHdNLc02MG1NXL4WYqhNZtb3v4CuDRRDxdM5TTIjy9GozyEV6y7VIvHLDDw6FqtQKnYYEWWw0oJkQprn/RgmTEAeZUYcqrR3RPwNyMCdlzJy1TShJcthK0GkBRdzfsUGsU0OuVdPJfbTgOCbCYlTAaFNBqFehya5A6cVJaCXD3eYSL/VYE/C2I7AiUiqJygwObK1ZsrdlwEyUzA3k5wNXJi8JHSCnJKB4Zq8ajXoWLFkwe8r4CcNTnV38Qt9YAAAAASUVORK5CYII=';
-.icon-tab('.js', 'js', @js);
-.icon-tree('.js', 'js', @js);
-.icon-tab('.es', 'js', @js);
-.icon-tree('.es', 'js', @js);
-.icon-tab('.es6', 'js', @js);
-.icon-tree('.es6', 'js', @js);
+.icon-gen('.js', 'js', @js);
+.icon-gen('.es', 'js', @js);
+.icon-gen('.es6', 'js', @js);
 
 // Coffescript
-.icon-tab('.coffee', 'coffee');
-.icon-tree('.coffee', 'coffee');
+.icon-gen('.coffee', 'coffee');
 
 // JSON
-.icon-tab('.json', 'json');
-.icon-tree('.json', 'json');
+.icon-gen('.json', 'json');
 
 // React
-.icon-tab('.jsx', 'jsx');
-.icon-tree('.jsx', 'jsx');
-.icon-tab('.cjsx', 'jsx');
-.icon-tree('.cjsx', 'jsx');
+.icon-gen('.jsx', 'jsx');
+.icon-gen('.cjsx', 'jsx');
 
 // LESS
-.icon-tab('.less', 'less');
-.icon-tree('.less', 'less');
+.icon-gen('.less', 'less');
 
 // LICENSE
-.icon-tab('LICENSE', 'license');
-.icon-tree('LICENSE', 'license');
-.icon-tab('License', 'license');
-.icon-tree('License', 'license');
-.icon-tab('license', 'license');
-.icon-tree('license', 'license');
+.icon-gen('LICENSE', 'license');
+.icon-gen('License', 'license');
+.icon-gen('license', 'license');
 
 // Markdown
-.icon-tab('.md', 'md');
-.icon-tree('.md', 'md');
-
-// Override for Markdown package
-tabs-bar tabs-tab .title.icon-markdown[data-name*=".md"],
-.tab-bar .tab .title.icon-markdown[data-name*=".md"] {
-
-}
+.icon-gen('.md', 'md');
 
 // Mustache
-.icon-tab('.mustache', 'mustache');
-.icon-tree('.mustache', 'mustache');
-.icon-tab('.mu', 'mustache');
-.icon-tree('.mu', 'mustache');
-.icon-tab('.stache', 'mustache');
-.icon-tree('.stache', 'mustache');
+.icon-gen('.mustache', 'mustache');
+.icon-gen('.mu', 'mustache');
+.icon-gen('.stache', 'mustache');
 
 // NPM
-.icon-tab('npm-debug.log', 'npm');
-.icon-tree('npm-debug.log', 'npm');
-.icon-tab('.npmignore', 'npm');
-.icon-tree('.npmignore', 'npm');
+.icon-gen('npm-debug.log', 'npm');
+.icon-gen('.npmignore', 'npm');
 
 // PHP
-.icon-tab('.php', 'php');
-.icon-tree('.php', 'php');
+.icon-gen('.php', 'php');
 
 // Procfile
-.icon-tab('procfile', 'procfile');
-.icon-tree('procfile', 'procfile');
-.icon-tab('Procfile', 'procfile');
-.icon-tree('Procfile', 'procfile');
-.icon-tab('PROCFILE', 'procfile');
-.icon-tree('PROCFILE', 'procfile');
-
+.icon-gen('procfile', 'procfile');
+.icon-gen('Procfile', 'procfile');
+.icon-gen('PROCFILE', 'procfile');
 
 // Python
-.icon-tab('.py', 'py');
-.icon-tree('.py', 'py');
+.icon-gen('.py', 'py');
 
 // Ruby
-.icon-tab('.rb', 'rb');
-.icon-tree('.rb', 'rb');
+.icon-gen('.rb', 'rb');
 
 // Sass
-.icon-tab('.sass', 'sass');
-.icon-tree('.sass', 'sass');
-.icon-tab('.scss', 'sass');
-.icon-tree('.scss', 'sass');
+.icon-gen('.sass', 'sass');
+.icon-gen('.scss', 'sass');
 
 // Settings
-.icon-tab('.svgx', 'img');
-.icon-tree('.svgx', 'img');
+.icon-gen('.svgx', 'img');
 
 // Stache
-.icon-tab('.stache', 'stache');
-.icon-tree('.stache', 'stache');
+.icon-gen('.stache', 'stache');
 
 // Stylus
-.icon-tab('.styl', 'styl');
-.icon-tree('.styl', 'styl');
+.icon-gen('.styl', 'styl');
 
 // TypeScript
-.icon-tab('.ts', 'ts');
-.icon-tree('.ts', 'ts');
+.icon-gen('.ts', 'ts');
 
 // XML
-.icon-tab('.xml', 'xml');
-.icon-tree('.xml', 'xml');
+.icon-gen('.xml', 'xml');
 
 // YML
-.icon-tab('.yml', 'yml');
-.icon-tree('.yml', 'yml');
-.icon-tab('.yaml', 'yml');
-.icon-tree('.yaml', 'yml');
+.icon-gen('.yml', 'yml');
+.icon-gen('.yaml', 'yml');
 
 // Golang
-.icon-tab('.go', 'go');
-.icon-tree('.go', 'go');
+.icon-gen('.go', 'go');
 
 // Julia
-.icon-tab('.jl', 'jl');
-.icon-tree('.jl', 'jl');
+.icon-gen('.jl', 'jl');
 
 // EJS
-.icon-tab('.ejs', 'ejs');
-.icon-tree('.ejs', 'ejs');
+.icon-gen('.ejs', 'ejs');
 
 // Favicon
-.icon-tab('.ico', 'ico');
-.icon-tree('.ico', 'ico');
+.icon-gen('.ico', 'ico');
 
 // Elm
-.icon-tab('.elm', 'elm');
-.icon-tree('.elm', 'elm');
+.icon-gen('.elm', 'elm');
 
 // LiveScript
-.icon-tab('.ls', 'ls');
-.icon-tree('.ls', 'ls');
+.icon-gen('.ls', 'ls');
+
+// .txt
+@txt: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAVlpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KTMInWQAAAipJREFUOBFNk72LE2EQxvfdL5NgcSDBThut0qhRG0E4QSwCFoIpBLHxErRIa5Eiia1/QeI/oBFsxDs4U9mIYGNnY5so4RBBWLO3H/6e93bjvjCZmWdmnp2Z941xOOPx+C7qFRIZY4I8z1HGKIbtYGboAPcRuXMkRGLFXf2QcBH1E7mBfdt13VtJkuxi74LdRHfQR/V6/fVkMrmv4l6vJ0LH109xfhD4VjpVDX4afz+KokPI3+B3kP35fO5ZArVMgmWcTqfBYrHIRNBqtQyJSRiG9TiOr1P8ktx3jUbjPfi1brf7pRxBBLmKNpuNq0LJcrk0+sp6vf5D6C3Fe+hPdPKbse4ovzqCXdpgMNgoUJ7ZbCYzQp6XGHuwxfKrIyQCaO1FgWuMbWfY6janq2d04mFLTghoxwDaEcB2CrwkKK/xDHjYbred1WqVZllmO7Y7SNOU2Paok6rEcKvTPt11+v3+MXbIQu0H7QiFYxkJ/kKE25tAKzHkFmzL2GVHMrcPSVNk2jjYJeQKcrnQV9EtrvIjHdzD1uv0VSC7XKLersu9pmz4A7hG0/NVUkYsxdY7KR9a2d0JAQGdjC/U0A9JPoXWW29SvDcajQ6wq2dLYJdIEjW5A8Ff9FN28pjsJ8gD/M/VysI+tgU4dgS0GJvD4fC853lrbiXlz2RqtZrGOAvxOeVA7HF9R3ywCQ70fwffsS8EQfCVWs1qfN93IFGOdmD3QbF8gTtgqnH+AV0xCOryVOqHAAAAAElFTkSuQmCC';
+.icon-gen('.txt', 'txt', @txt);
 
 // IMAGES
-.icon-tab('.ai', 'img');
-.icon-tree('.ai', 'img');
-
-.icon-tab('.bpm', 'img');
-.icon-tree('.bpm', 'img');
-
-.icon-tab('.gif', 'img');
-.icon-tree('.gif', 'img');
-
-.icon-tab('.jpeg', 'img');
-.icon-tree('.jpeg', 'img');
-
-.icon-tab('.jpg', 'img');
-.icon-tree('.jpg', 'img');
-
-.icon-tab('.png', 'img');
-.icon-tree('.png', 'img');
-
-.icon-tab('.psd', 'img');
-.icon-tree('.psd', 'img');
-
-.icon-tab('.svg', 'img');
-.icon-tree('.svg', 'img');
-
-.icon-tab('.svgx', 'img');
-.icon-tree('.svgx', 'img');
-
-
+.icon-gen('.ai', 'img');
+.icon-gen('.bpm', 'img');
+.icon-gen('.gif', 'img');
+.icon-gen('.jpeg', 'img');
+.icon-gen('.jpg', 'img');
+.icon-gen('.png', 'img');
+.icon-gen('.psd', 'img');
+.icon-gen('.svg', 'img');
+.icon-gen('.svgx', 'img');
 
 
 // THESE NEED TO COME LAST SO THE DON'T GET OVERRIDEN!
 
 // Bower
-.icon-tab('bower.json', 'bower');
-.icon-tree('bower.json', 'bower');
-.icon-tab('Bower.json', 'bower');
-.icon-tree('Bower.json', 'bower');
-.icon-tab('BOWER.json', 'bower');
-.icon-tree('BOWER.json', 'bower');
-.icon-tab('.bowerrc', 'bower');
-.icon-tree('.bowerrc', 'bower');
-
+.icon-gen('bower.json', 'bower');
+.icon-gen('Bower.json', 'bower');
+.icon-gen('BOWER.json', 'bower');
+.icon-gen('.bowerrc', 'bower');
 
 // Grunt
-.icon-tab('gruntfile.js', 'grunt');
-.icon-tree('gruntfile.js', 'grunt');
-.icon-tab('Gruntfile.js', 'grunt');
-.icon-tree('Gruntfile.js', 'grunt');
-.icon-tab('GruntFile.js', 'grunt');
-.icon-tree('GruntFile.js', 'grunt');
-.icon-tab('GRUNTFILE.js', 'grunt');
-.icon-tree('GRUNTFILE.js', 'grunt');
-.icon-tab('gruntfile.coffee', 'grunt');
-.icon-tree('gruntfile.coffee', 'grunt');
-.icon-tab('Gruntfile.coffee', 'grunt');
-.icon-tree('Gruntfile.coffee', 'grunt');
-.icon-tab('GruntFile.coffee', 'grunt');
-.icon-tree('GruntFile.coffee', 'grunt');
-.icon-tab('GRUNTFILE.coffee', 'grunt');
-.icon-tree('GRUNTFILE.coffee', 'grunt');
-
+.icon-gen('gruntfile.js', 'grunt');
+.icon-gen('Gruntfile.js', 'grunt');
+.icon-gen('GruntFile.js', 'grunt');
+.icon-gen('GRUNTFILE.js', 'grunt');
+.icon-gen('gruntfile.coffee', 'grunt');
+.icon-gen('Gruntfile.coffee', 'grunt');
+.icon-gen('GruntFile.coffee', 'grunt');
+.icon-gen('GRUNTFILE.coffee', 'grunt');
 
 // Gulp
-.icon-tab('gulpfile.js', 'gulp');
-.icon-tree('gulpfile.js', 'gulp');
-.icon-tab('Gulpfile.js', 'gulp');
-.icon-tree('Gulpfile.js', 'gulp');
-.icon-tab('GulpFile.js', 'gulp');
-.icon-tree('GulpFile.js', 'gulp');
-.icon-tab('GULPFILE.js', 'gulp');
-.icon-tree('GULPFILE.js', 'gulp');
-.icon-tab('gulpfile.coffee', 'gulp');
-.icon-tree('gulpfile.coffee', 'gulp');
-.icon-tab('Gulpfile.coffee', 'gulp');
-.icon-tree('Gulpfile.coffee', 'gulp');
-.icon-tab('GulpFile.coffee', 'gulp');
-.icon-tree('GulpFile.coffee', 'gulp');
-.icon-tab('GULPFILE.coffee', 'gulp');
-.icon-tree('GULPFILE.coffee', 'gulp');
-
+.icon-gen('gulpfile.js', 'gulp');
+.icon-gen('Gulpfile.js', 'gulp');
+.icon-gen('GulpFile.js', 'gulp');
+.icon-gen('GULPFILE.js', 'gulp');
+.icon-gen('gulpfile.coffee', 'gulp');
+.icon-gen('Gulpfile.coffee', 'gulp');
+.icon-gen('GulpFile.coffee', 'gulp');
+.icon-gen('GULPFILE.coffee', 'gulp');
 
 // - - - - - - -
 // STATUS COLORS
