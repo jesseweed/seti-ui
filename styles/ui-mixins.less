@@ -4,7 +4,7 @@
 // Generate CSS for status coloring
 .status-gen( @status-state: 'ignored'; ) {
   @status-color-name: ~'@color-status-@{status-state}';
-  @status-color-folder-class: ~'.directory.entry.list-nested-item.status-@{status-state} > .header.list-item';
+  @status-color-folder-class: ~'.directory.entry.list-nested-item.status-@{status-state}, .directory.entry.list-nested-item.status-@{status-state} > .header.list-item';
   @status-color-file-class: ~'.file.entry.list-item.status-@{status-state}';
 
   // FOLDERS
