@@ -2,26 +2,30 @@
 
 // Generate CSS for status coloring
 .status-gen( @status-state: 'ignored'; ) {
+  @status-color-name: ~'@color-status-@{status-state}';
+  @status-color-folder-class: ~'.directory.entry.list-nested-item.status-@{status-state} > .header.list-item';
+  @status-color-file-class: ~'.file.entry.list-item.status-@{status-state}';
+
   // FOLDERS
-  .directory.entry.list-nested-item.status-@status-state > .header.list-item {
+  @status-color-folder-class {
     &:before {
-      color: @color-status-@status-state;
+      color: @status-color-name;
     }
     .name.icon.icon-file-directory {
       // text
-      color: @color-status-@status-state;
+      color: @status-color-name;
       // icon
       &:before {
-        color: @color-status-@status-state;
+        color: @status-color-name;
       }
     }
   }
 
   // FILES
-  .file.entry.list-item.status-@status-state {
+  @status-color-file-class {
     .name.icon {
       // text
-      color: @color-status-@status-state;
+      color: @status-color-name;
     }
   }
 }
