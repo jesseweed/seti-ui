@@ -45,11 +45,23 @@
         float: left;
         margin: 4px 6px 0 0;
         background: url('@{icon}') 0 0 no-repeat;
+        opacity: 0.4;
       }
     }
 
   }
 
+  .file .entry .list-item .selected {
+    .name.icon[data-name$="@{extension}"] {
+      &.icon-file-text,
+      &.icon-file-media,
+      &.icon-book {
+        &:before {
+          opacity: 1.0;
+        }
+      }
+    }
+  }
 
 }
 
