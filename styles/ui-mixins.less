@@ -1,5 +1,37 @@
 @import "ui-variables";
 
+.status-gen( @status-col: ''; ) {
+  // Folders
+  .directory.entry.list-nested-item.status-modified > .header.list-item {
+    &:before {
+      color: @status-col;
+    }
+    .name.icon.icon-file-directory {
+      // TEXT
+      color: @status-col;
+      // ICON
+      &:before {
+        color: @status-col;
+      }
+    }
+  }
+
+  // Files
+  .file.entry.list-item.status-modified {
+    .name.icon {
+      // TEXT
+      color: @status-col;
+      // ICON
+      &:before {
+        color: @status-col;
+      }
+    }
+  }
+
+}
+
+
+
 .icon-gen( @extension: ''; @type: ''; @icon: ''; ) {
 
   tabs-bar tabs-tab .title[data-name$="@{extension}"],
