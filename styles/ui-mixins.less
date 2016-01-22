@@ -4,9 +4,7 @@
 .icon-tab( @extension: ''; @type: ''; @icon: ''; ) {
 
   tabs-bar tabs-tab .title[data-name$="@{extension}"],
-  .tab-bar .tab .title[data-name$="@{extension}"],
-  tabs-bar tabs-tab.active .title[data-name$="@{extension}"],
-  tab-bar .tab.active .title[data-name$="@{extension}"] {
+  .tab-bar .tab .title[data-name$="@{extension}"] {
     padding: 0;
 
     &:before {
@@ -23,7 +21,9 @@
 
   tabs-bar tabs-tab.active .title[data-name$="@{extension}"],
   tab-bar .tab.active .title[data-name$="@{extension}"] {
-    opacity: 1.0;
+    &:before {
+      opacity: 1.0;
+    }
   }
 
 }
