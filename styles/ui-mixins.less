@@ -1,41 +1,34 @@
 @import "ui-variables";
 
-/*
-**************************************************
-** Generate CSS for status coloring
-**************************************************
-*/
-.status-gen( @status-state: ''; ) {
+// Generate CSS for status coloring
+.status-gen( @status-state: 'ignored'; ) {
   // FOLDERS
-  .directory.entry.list-nested-item.status-@{status-state} > .header.list-item {
+  .directory.entry.list-nested-item.status-@status-state > .header.list-item {
     &:before {
-      color: @color-status-@{status-state};
+      color: @color-status-@status-state;
     }
     .name.icon.icon-file-directory {
       // text
-      color: @color-status-@{status-state};
+      color: @color-status-@status-state;
       // icon
       &:before {
-        color: @color-status-@{status-state};
+        color: @color-status-@status-state;
       }
     }
   }
 
   // FILES
-  .file.entry.list-item.status-@{status-state} {
+  .file.entry.list-item.status-@status-state {
     .name.icon {
       // text
-      color: @color-status-@{status-state};
+      color: @color-status-@status-state;
     }
   }
 }
 
 
-/*
-**************************************************
-** Generate CSS for file type icons
-**************************************************
-*/
+
+// Generate CSS for file type icons
 .icon-gen( @extension: ''; @type: ''; @icon: ''; ) {
 
   tabs-bar tabs-tab .title[data-name$="@{extension}"],
