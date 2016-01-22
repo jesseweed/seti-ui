@@ -246,12 +246,24 @@ tabs-bar tabs-tab .title.icon-tools, .tab-bar .tab .title.icon-tools {
 .icon-gen('GulpFile.coffee', 'gulp');
 .icon-gen('GULPFILE.coffee', 'gulp');
 
-// - - - - - - -
-// STATUS COLORS
-// - - - - - - -
+/*
+**************************************************
+** STATUS COLORS
+**************************************************
+*/
 
-// STATUS: ADDED
-.directory.entry.list-nested-item.status-added > .header.list-item {
+@color-status-added: #9fca56;
+@color-status-modified: #dccd69;
+@color-status-ignored: #40535b;
+@color-status-removed: #ce4045;
+@color-status-renamed: #4f99d3;
+
+
+/*
+** ADDED
+*/
+.directory.entry.list-nested-item.status-added > .header.list-item,
+.file.entry.list-item.status-added {
 
   // OPEN/CLOSE SELECTOR
   &:before {
@@ -259,36 +271,13 @@ tabs-bar tabs-tab .title.icon-tools, .tab-bar .tab .title.icon-tools {
   }
 
   // DIRECTORY
-  .name.icon.icon-file-directory {
-
-    // TEXT
+  .name.icon,
+  .name.icon.icon-file-directory,
+  &:before {
     color: @color-status-added;
-
-    // ICON
-    &:before {
-      color: @color-status-added;
-    }
   }
 
 }
-
-  .file.entry.list-item.status-added {
-
-    .name.icon {
-
-      // TEXT
-      color: @color-status-added;
-
-      // ICON
-      &:before {
-        color: @color-status-added !important;
-      }
-
-      &.icon-file-text:before {
-        color: @color-status-added;
-      }
-    }
-  }
 
 
 // STATUS: MODIFIED
