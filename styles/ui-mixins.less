@@ -13,7 +13,7 @@
       width: 16px;
       height: 16px;
       float: left;
-      margin-right: 4px;
+      margin: 11px 4px 0 0;
       background: url('@{icon}') 0 0 no-repeat;
     }
   }
@@ -34,9 +34,12 @@
     &.icon-book {
       &:before {
         color: ~"@{color-@{type}}";
+        content: "";
         width: 16px;
         height: 16px;
-        background: url(@{icon});
+        float: left;
+        margin: 5px 4px 0 0;
+        background: url('@{icon}') 0 0 no-repeat;
       }
     }
 
