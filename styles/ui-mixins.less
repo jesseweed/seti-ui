@@ -17,13 +17,7 @@
     }
   }
 
-  tabs-bar tabs-tab.active .title:before,
-  tab-bar .tab.active .title:before {
-    opacity: 1.0 !important;
-  }
-
   .name.icon[data-name$="@{extension}"] {
-
     &.icon-file-text,
     &.icon-file-media,
     &.icon-book {
@@ -37,19 +31,20 @@
         opacity: 0.4;
       }
     }
-
   }
 
 }
 
-
+// highlight active icons
+tabs-bar tabs-tab.active .title,
+tab-bar .tab.active .title,
 .list-group li:not(.list-nested-item).selected > span,
 .list-tree li:not(.list-nested-item).selected > span,
 .list-group li.list-nested-item.selected > .list-item > span,
 .list-tree li.list-nested-item.selected > .list-item > span {
- &:before {
-   opacity: 1.0 !important;
- }
+  &:before {
+    opacity: 1.0 !important;
+  }
 }
 
 
