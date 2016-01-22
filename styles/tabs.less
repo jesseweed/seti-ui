@@ -17,7 +17,6 @@ tabs-bar, .tab-bar {
   background: @tab-bar-background-color;
   box-sizing: border-box;
   border-bottom: solid 4px @tab-bar-bottom-border-color;
-  // left: 16px;
 
   &:after {
     background: @tab-background-active;
@@ -81,13 +80,13 @@ tabs-bar, .tab-bar {
 
   tabs-tab.active, .tab.active {
     z-index: 1;
-    line-height: @tab-height;
+    line-height: @tab-height - 2px;
     color: @text-color-highlight;
     box-shadow: none;
     border: none;
     border-bottom: solid 4px @tab-highlight-color;
     background: @tab-background-active;
-    height: @tab-height;
+    height: @tab-height + 0px;
 
     .title{
       position: relative;
