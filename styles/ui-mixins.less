@@ -17,13 +17,9 @@
     }
   }
 
-  tabs-bar tabs-tab.active .title[data-name$="@{extension}"],
-  tab-bar .tab.active .title[data-name$="@{extension}"] {
-    padding: 0;
-
-    &:before {
-      opacity: 1.0 !important;
-    }
+  tabs-bar tabs-tab.active .title:before,
+  tab-bar .tab.active .title:before {
+    opacity: 1.0 !important;
   }
 
   .name.icon[data-name$="@{extension}"] {
@@ -45,6 +41,7 @@
   }
 
 }
+
 
 .list-group li:not(.list-nested-item).selected > span,
 .list-tree li:not(.list-nested-item).selected > span,
