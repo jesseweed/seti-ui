@@ -51,18 +51,16 @@
 
   }
 
-  .file .entry .list-item .selected {
-    .name.icon[data-name$="@{extension}"] {
-      &.icon-file-text,
-      &.icon-file-media,
-      &.icon-book {
-        &:before {
-          opacity: 1.0;
-        }
-      }
-    }
-  }
+}
 
+
+.list-group li:not(.list-nested-item).selected > span,
+.list-tree li:not(.list-nested-item).selected > span,
+.list-group li.list-nested-item.selected > .list-item > span,
+.list-tree li.list-nested-item.selected > .list-item > span {
+ &:before {
+   opacity: 1.0;
+ }
 }
 
 
