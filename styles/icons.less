@@ -6,74 +6,6 @@
 // ICONS BASED ON FILE EXTENSION
 // - - - - - - - - - - - - - - -
 
-// PROJECT / REPO ICON
-.name.icon.icon-repo {
-  // TEXT
-  font-weight: bold;
-  padding: 0px 0px 0px 5px;
-}
-
-// OPEN/CLOSE SELECTOR FOR FOLDERS
-.header.list-item:before {
-  color: @color-default;
-}
-
-// DIRECTORY ICONS
-.name.icon.icon-file-directory {
-  // TEXT
-  background: none;
-  border: none;
-  color: @color-default;
-  font-weight: bold;
-  padding: 0px 0px 0px 2px;
-
-  // ICON
-  &:before {
-    color: @color-default;
-  }
-}
-
-
-// DEFAULT / FALLBACK ICON
-.name.icon {
-  padding: 0;
-  &:before {
-    color: @color-default;
-  }
-}
-
-// DEFAULT TAB ICON
-tabs-bar tabs-tab .title, .tab-bar .tab .title {
-  padding: 0;
-  width: 100%;
-  &:before {
-    color: @color-default;
-  }
-}
-
-// HIDDEN / IGNORED STYLES
-.status-ignored {
-  .header.list-item:before {
-    color: @text-color-ignored;
-  }
-  .name.icon {
-    color: @text-color-ignored;
-    &:before {
-      color: @text-color-ignored;
-    }
-  }
-}
-
-tabs-bar tabs-tab .title.icon-tools, .tab-bar .tab .title.icon-tools {
-  padding: 0;
-  width: 100%;
-
-  &:before {
-    position: relative;
-    color: #AAA;
-  }
-}
-
 // CSS
 @css: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACCklEQVR42pWS3UsUYRTGt6ug/oRugmx2tSXTBEuiIAryQsKLLiII+qA7LzRnpvVr3ZQUCoyKwLso6S4iqosEoSDryrWdj9VdXZPU/XAHXJti2XT26T0jM7OzyyYdeIaXM+f83nPOezy1PRG/V5Dxv+IE2QDg8dCHObRqgWeHtAqdDK4RYKUEoM5TsD8go7Ffcan9waZLrSM5tAST8AlS2AHw0kcCdL1YRDabdancRt/8RvPACgOokzbAJygvCdA+FsPrr6suTcf+mPqhGSDjJ3Q09S2D5TwrBTyuNoPzwxum3oULILs5/hMNvQn2Txm1AbWC0k/BzcEovkRTLiUyhik9XwTZpYc51AcWcFiI8CUA+QYDUFn/nAEhqBp/IAaOV646LYiRtt1ayGwa0HTDPNeJUXDd0jkH0CW3WAmT4TV8klMVAKMIaoXOpv+IqNQ7gDtzB62EqdkkK13D9fE4GvpUXLyfw91Xv0A2832LFmlnEzu/HbABNR0Ley0APZ3VfyqTRbEI2z5ECjgTWqc4ytxjAayn1He2UcHlJ3GMvV/GtJrCfHIbE5/z6Hyu48K9DZwaTNMapynHBWDORJUh2jodyqCxd4leQK0AeAXpmo9XplhSoRRwYmAVx3oWaXXp5jytcI0gXSkDODrand7vE+favKL6lOOlJdZanOPlR4duS63Hb73dVx7/FybUyd+lG8OMAAAAAElFTkSuQmCC';
 .icon-gen('.css', 'css', @css);
@@ -257,3 +189,74 @@ tabs-bar tabs-tab .title.icon-tools, .tab-bar .tab .title.icon-tools {
 .status-gen('renamed');
 .status-gen('modified');
 .status-gen('removed');
+
+
+
+
+// PROJECT / REPO ICON
+.name.icon.icon-repo {
+  // TEXT
+  font-weight: bold;
+  padding: 0px 0px 0px 5px;
+}
+
+// OPEN/CLOSE SELECTOR FOR FOLDERS
+.header.list-item:before {
+  color: @color-default;
+}
+
+// DIRECTORY ICONS
+.name.icon.icon-file-directory {
+  // TEXT
+  background: none;
+  border: none;
+  color: @color-default;
+  font-weight: bold;
+  padding: 0px 0px 0px 2px;
+
+  // ICON
+  &:before {
+    color: @color-default;
+  }
+}
+
+
+// DEFAULT / FALLBACK ICON
+.name.icon {
+  padding: 0;
+  &:before {
+    color: @color-default;
+  }
+}
+
+// DEFAULT TAB ICON
+tabs-bar tabs-tab .title, .tab-bar .tab .title {
+  padding: 0;
+  width: 100%;
+  &:before {
+    color: @color-default;
+  }
+}
+
+// HIDDEN / IGNORED STYLES
+.status-ignored {
+  .header.list-item:before {
+    color: @text-color-ignored;
+  }
+  .name.icon {
+    color: @text-color-ignored;
+    &:before {
+      color: @text-color-ignored;
+    }
+  }
+}
+
+tabs-bar tabs-tab .title.icon-tools, .tab-bar .tab .title.icon-tools {
+  padding: 0;
+  width: 100%;
+
+  &:before {
+    position: relative;
+    color: #AAA;
+  }
+}
