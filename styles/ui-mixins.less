@@ -1,7 +1,50 @@
 @import "ui-variables";
 @import "icon-variables";
 
-// Generate CSS for status coloring
+////////////////////////////////////////////////////////////////////////////////
+// GENERATE CSS FOR FILE TYPE ICONS
+////////////////////////////////////////////////////////////////////////////////
+.set-hidden-color (@val) when (@val = 'hidden') {
+  color: @color-status-ignored;
+}
+
+.icon-gen( @extension: ''; @type: ''; @icon: ''; ) {
+  tabs-bar tabs-tab .title[data-name$="@{extension}"],
+  .tab-bar .tab .title[data-name$="@{extension}"] {
+    padding: 0;
+    &:before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      float: left;
+      margin: 11px 6px 0 0;
+      background: url('@{icon}') 0 0 no-repeat;
+      opacity: 0.4;
+    }
+  }
+  .name.icon[data-name$="@{extension}"] {
+    &.icon-file-text,
+    &.icon-file-media,
+    &.icon-book {
+      .set-hidden-color(@type);
+      &:before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        float: left;
+        margin: 4px 6px 0 0;
+        background: url('@{icon}') 0 0 no-repeat;
+        opacity: 0.4;
+      }
+    }
+  }
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+// GENERATE CSS FOR TEXT STATUS COLOR
+////////////////////////////////////////////////////////////////////////////////
 .status-gen( @status-state: 'ignored'; ) {
   @status-color-name: ~'@color-status-@{status-state}';
   @status-color-folder-class: ~'.directory.entry.list-nested-item.status-@{status-state}, .directory.entry.list-nested-item.status-@{status-state} > .header.list-item';
@@ -27,54 +70,15 @@
       color: @status-color-name !important;
     }
   }
-}
-
-
-.set-hidden-color (@val) when (@val = 'hidden') {
-  color: @color-status-ignored;
-}
-
-// Generate CSS for file type icons
-.icon-gen( @extension: ''; @type: ''; @icon: ''; ) {
-
-  tabs-bar tabs-tab .title[data-name$="@{extension}"],
-  .tab-bar .tab .title[data-name$="@{extension}"] {
-    padding: 0;
-
-    &:before {
-      content: "";
-      width: 16px;
-      height: 16px;
-      float: left;
-      margin: 11px 6px 0 0;
-      background: url('@{icon}') 0 0 no-repeat;
-      opacity: 0.4;
-    }
-  }
-
-  .name.icon[data-name$="@{extension}"] {
-    &.icon-file-text,
-    &.icon-file-media,
-    &.icon-book {
-      .set-hidden-color(@type);
-      &:before {
-        content: "";
-        width: 16px;
-        height: 16px;
-        float: left;
-        margin: 4px 6px 0 0;
-        background: url('@{icon}') 0 0 no-repeat;
-        opacity: 0.4;
-      }
-    }
-  }
 
 }
 
 
 
-// Pattern matching; ish is cray.
-// http://lesscss.org/#-pattern-matching-and-guard-expressions
+
+////////////////////////////////////////////////////////////////////////////////
+// PATTERN MATCHING: http://lesscss.org/#-pattern-matching-and-guard-expressions
+////////////////////////////////////////////////////////////////////////////////
 .text(normal) {
   font-weight: normal;
   color: @text-color;
@@ -120,10 +124,9 @@
 
 
 
-
-
-
-// TODO: refactor
+////////////////////////////////////////////////////////////////////////////////
+// TODO: refactor the junk below...
+////////////////////////////////////////////////////////////////////////////////
 atom-text-editor, atom-text-editor::shadow {
   .gutter .line-number {
     padding-left: 10px;

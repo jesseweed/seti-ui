@@ -1,14 +1,28 @@
 @import "ui-mixins";
 
 ////////////////////////////////////////////////////////////////////////////////
-// GENERATE CSS FOR TEXT STATUS COLOR
+// NOTE: This is the only file that needs to change to add new file type icons.
 ////////////////////////////////////////////////////////////////////////////////
-
-.status-gen('ignored');
-.status-gen('added');
-.status-gen('renamed');
-.status-gen('modified');
-.status-gen('removed');
+//
+// STEPS TO ADD A NEW FILE TYPE ICON...
+//
+//     1. Look at the examples below to see they begin with a comment and are in
+//        alphabetical order.
+//
+//     2. All icons must be 16x16 base64 encoded png files.  You can encode your
+//        icon here -- https://www.base64-image.de/ -- (use the copy css button)
+//
+//     3. Store the image CSS string in a new variable
+//
+//     4. Call the .icon-gen mixin passing in the file extension, type, url string
+//
+// That's pretty much it!  Follow the examples below if you need help and keep
+// in mind some icons need to be moved to the bottom of the file in order to
+// overwrite more generic file endings.
+//
+// (i.e. '.js' maps to JavaScript before '.controller.js' maps to Angular
+//
+////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -196,7 +210,7 @@
 
 
 // TypeScript
-@ts: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AEXBwo6E5LQCQAAATxJREFUOMvtkz9IAgEUh7+71LIEg7AhOogoTGkoiMQxaIqWoCm6LcTFNVoLGiMSApGGwsEpaGiIIKIlCERC+iMNEVGWgeZgd+L9awgiA0G0sQ/e8IPHB+89ngAQSqQsmiAuTwhCKJGy4rc0RcgHIi3yL/gDge1nuAh7mZRcNQ33hQqj0RuisxJz/m5002I3XWDl+BkQagVTO3c47SJr0330umyEDx6p6CaRoIeA1EUwlsXWJnAoD5HOKWCUagWKbqHoBopmUtEsCqoBgGV9ldMucpVXCcSyfFRN5OFfI9Rj6/wNVTPZmx+g3+0gmSmyfvoCGI0t0evpIJl5Z3w7y8jmNZLbwcaM1PgVFsd62F8YxOdpx+UQ6bSLqJpZX5Ava7yWte+8epLjoVTlbMnLZcRPUdFZPnoCQGj1nT8BPmxxKKx6n8wAAAAASUVORK5CYII=';
+@ts: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AEXBxEQYR/SRQAAAUtJREFUOMvtkz9IAgEUxn93qWUJBmFDdBBRmNJQEIlj0BQtQVMkNIS4uEZrQVsRCYFEQ9HQJDQ0RBARRBCIhPRHGqKiLAXNwU7xzruGKNISRNd+8IYHj4/3vo8nAHh3wjo1sOEZEgTvTljfuKEmvA4QqZN/ATD8bM59doYlS8nAXSpPf+CawLjEhLMVVdPZiqSYP3wGhFKBkc1bzEaRxdEO2i0GfHuP5FUNv9uGS2rBHYxhaBDY9/QQictQzJQKyKqOrBaRFY28opPKFQHQ9c8yG0UuEzlcwRjvBQ1Pb9kJlVg7S5JTNLYnu+i0mtiNplk6fgGK1ZlotzWxG31jcD1G3+oVktXEyphUfQrTA22Eprpx2BqxmESajSI5RasskMgqvGaV737hKM59psDJrJ0Lv5O0rDJ38PQ7xi+WT5OUmzsTevhzO6Hed/4AWsZ4Q6VSRscAAAAASUVORK5CYII=';
 .icon-gen('.ts', 'ts', @ts);
 
 
@@ -266,3 +280,16 @@
 .icon-gen('LICENSE.md', 'license', @key);
 .icon-gen('License.md', 'license', @key);
 .icon-gen('license.md', 'license', @key);
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+// GENERATE CSS FOR TEXT STATUS COLOR
+////////////////////////////////////////////////////////////////////////////////
+
+.status-gen('ignored');
+.status-gen('added');
+.status-gen('renamed');
+.status-gen('modified');
+.status-gen('removed');
