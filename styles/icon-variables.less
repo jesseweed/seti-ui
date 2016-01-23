@@ -4,9 +4,56 @@
 ************************************************************
 */
 
-@color-default: #D3D6D5;
-@color-status-ignored: #40535B;
-@color-status-added: rgb(159,202,86);
-@color-status-renamed: rgb(79,153,211);
-@color-status-modified: rgb(220,205,105);
-@color-status-removed: rgb(206,64,69);
+@color-default: #d3d6d5;
+@color-status-ignored: #555555;
+@color-status-added: #9fca56;
+@color-status-renamed: #4f99d3;
+@color-status-modified: #dccd69;
+@color-status-removed: #ce4045;
+
+
+// TODO: figure out why these classes have to be typed out manually
+.list-group li:not(.list-nested-item).status-ignored,
+.list-tree li:not(.list-nested-item).status-ignored,
+.list-group li.list-nested-item.status-ignored > .list-item,
+.list-tree li.list-nested-item.status-ignored > .list-item {
+  color: @color-status-ignored;
+}
+
+.list-group li:not(.list-nested-item).status-added,
+.list-tree li:not(.list-nested-item).status-added,
+.list-group li.list-nested-item.status-added > .list-item,
+.list-tree li.list-nested-item.status-added > .list-item {
+  color: @color-status-added !important;
+}
+
+.list-group li:not(.list-nested-item).status-renamed,
+.list-tree li:not(.list-nested-item).status-renamed,
+.list-group li.list-nested-item.status-renamed > .list-item,
+.list-tree li.list-nested-item.status-renamed > .list-item {
+  color: @color-status-renamed !important;
+}
+
+.list-group li:not(.list-nested-item).status-modified,
+.list-tree li:not(.list-nested-item).status-modified,
+.list-group li.list-nested-item.status-modified > .list-item,
+.list-tree li.list-nested-item.status-modified > .list-item {
+  color: @color-status-modified !important;
+}
+
+.list-group li:not(.list-nested-item).status-removed,
+.list-tree li:not(.list-nested-item).status-removed,
+.list-group li.list-nested-item.status-removed > .list-item,
+.list-tree li.list-nested-item.status-removed > .list-item {
+  color: @color-status-removed !important;
+}
+
+// TODO: figure out how to generate these later
+.file.entry.list-item.selected > span[data-name=".config"],
+.file.entry.list-item.selected > span[data-name=".DS_Store"],
+.file.entry.list-item.selected > span[data-name=".env"],
+.file.entry.list-item.selected > span[data-name=".gitignore"],
+.file.entry.list-item.selected > span[data-name=".gitmodules"],
+.file.entry.list-item.selected.status-ignored > span {
+  color: @color-default !important;
+}

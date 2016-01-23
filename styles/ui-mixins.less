@@ -13,9 +13,8 @@
       color: @status-color-name !important;
     }
     .name.icon.icon-file-directory {
-      // text
       color: @status-color-name !important;
-      // icon
+
       &:before {
         color: @status-color-name !important;
       }
@@ -25,13 +24,15 @@
   // FILES
   @status-color-file-class {
     .name.icon {
-      // text
-      color: @status-color-name;
+      color: @status-color-name !important;
     }
   }
 }
 
 
+.set-hidden-color (@val) when (@val = 'hidden') {
+  color: @color-status-ignored;
+}
 
 // Generate CSS for file type icons
 .icon-gen( @extension: ''; @type: ''; @icon: ''; ) {
@@ -55,6 +56,7 @@
     &.icon-file-text,
     &.icon-file-media,
     &.icon-book {
+      .set-hidden-color(@type);
       &:before {
         content: "";
         width: 16px;
@@ -69,15 +71,6 @@
 
 }
 
-// highlight active icons
-.list-group li:not(.list-nested-item).selected > span,
-.list-tree li:not(.list-nested-item).selected > span,
-.list-group li.list-nested-item.selected > .list-item > span,
-.list-tree li.list-nested-item.selected > .list-item > span {
-  &:before {
-    opacity: 1.0 !important;
-  }
-}
 
 
 // Pattern matching; ish is cray.
@@ -87,33 +80,108 @@
   color: @text-color;
   text-shadow: none;
 }
+
 .text(subtle) {
   font-weight: normal;
   color: @text-color-subtle;
   text-shadow: none;
 }
+
 .text(highlight) {
   font-weight: normal;
-  color: @text-color-highlight;
+  color: inherit;
   text-shadow: 0 1px 0 rgba(0,0,0, .5);
 }
+
 .text(selected) {
   .text(highlight)
 }
 
 .text(info) {
-  color: @text-color-info;
+  color: @text-color-info !important;
   text-shadow: none;
 }
+
 .text(success) {
-  color: @text-color-success;
+  color: @text-color-success !important;
   text-shadow: none;
 }
+
 .text(warning) {
-  color: @text-color-warning;
+  color: @text-color-warning !important;
   text-shadow: none;
 }
+
 .text(error) {
-  color: @text-color-error;
+  color: @text-color-error !important;
   text-shadow: none;
+}
+
+
+
+
+
+
+
+// TODO: refactor
+atom-text-editor, atom-text-editor::shadow {
+  .gutter .line-number {
+    padding-left: 10px;
+  }
+
+  .gutter .line-number.git-line-ignored {
+    border-color: @color-status-ignored;
+    opacity: 1;
+    padding-left: 8px;
+  }
+
+  .gutter .line-number.git-line-added {
+    border-color: @color-status-added;
+    opacity: 1;
+    padding-left: 8px;
+  }
+
+  .gutter .line-number.git-line-renamed {
+    border-color: @color-status-renamed;
+    opacity: 1;
+    padding-left: 8px;
+  }
+
+  .gutter .line-number.git-line-modified {
+    border-color: @color-status-modified;
+    opacity: 1;
+    padding-left: 8px;
+  }
+
+  .gutter .line-number.git-line-removed {
+    border-color: @color-status-removed;
+    opacity: 1;
+    padding-left: 8px;
+  }
+
+  // FIXME: these should go in syntax themes?
+  .gutter.drop-shadow {
+    -webkit-box-shadow: -2px 0 10px 2px #222;
+  }
+
+  .highlighted.selection .region {
+    -webkit-animation-name: highlight;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+  }
+}
+
+.select-list.command-palette.atom-panel.modal.from-top {
+  .error-message {
+    padding: 3px 0px 0px 6px;
+  }
+
+  atom-text-editor[mini].is-focused, atom-text-editor[mini].is-focused::shadow {
+    padding: 1px;
+  }
+}
+
+@-webkit-keyframes highlight {
+  from { background-color: rgba(100, 255, 100, 0.7); }
+  to { background-color: transparent; }
 }

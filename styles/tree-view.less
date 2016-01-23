@@ -8,65 +8,76 @@
   font-size: @font-size;
   background: @tree-view-background-color !important;
 
-  .selected {
-    // padding: 20px;
-  }
   .selected:before {
-    background: rgba(255,255,255, 0.05);
+    color: #fff;
+    background: #147;
     box-shadow: none;
-    // padding: 20px;
   }
 }
 
-
 .focusable-panel {
   opacity: 1;
-  background: #303030;
+  background: #222;
   box-shadow: none;
   border: 0;
 
   &:focus {
-    background: #282828;
+    background: #222;
 
     .selected:before {
-      background: #133;
+      color: #fff;
+      background: #147;
     }
 
-    .selected > .name,
-    .selected > .name:before,
-    .selected > .list-item > .name,
-    .selected > .list-item > .name:before {
-      color: #fff;
-    }
+
   }
 }
 
-
 .file-list-view, .list-view {
-  background: rgb(21,23,24);
-  color: #FFF;
+  background: #111;
+  color: #fff;
   padding: 10px;
 
   .file.selected {
     .filename {
-      background: #262b30;
+      background: #222;
     }
-    color: fff;
   }
 
   .selected {
     text-shadow: none;
-    background: #333;
+    background: #222;
   }
 
   .selected:before {
-    background: #133;
+    background: #144;
   }
 
 }
 
-
 .list-inline tabs-bar.inset-panel, .list-inline.tab-bar.inset-panel {
-  background: #262b30;
+  background: #222;
   margin-bottom: 0px;
+}
+
+
+
+
+// highlight active icons
+.list-group li:not(.list-nested-item).selected > span,
+.list-tree li:not(.list-nested-item).selected > span,
+.list-group li.list-nested-item.selected > .list-item > span,
+.list-tree li.list-nested-item.selected > .list-item > span {
+  color: inherit;
+
+  &:before {
+    opacity: 1.0 !important;
+  }
+}
+
+.list-group li:not(.list-nested-item).selected,
+.list-tree li:not(.list-nested-item).selected,
+.list-group li.list-nested-item.selected > .list-item,
+.list-tree li.list-nested-item.selected > .list-item {
+  color: #fff;
 }

@@ -1,10 +1,23 @@
-@import "icon-variables";
-@import "icon-font";
 @import "ui-mixins";
 
-// - - - - - - - - - - - - - - -
-// ICONS BASED ON FILE EXTENSION
-// - - - - - - - - - - - - - - -
+/*
+**************************************************
+** GENERATE STATUS COLOR CSS
+**************************************************
+*/
+
+.status-gen('ignored');
+.status-gen('added');
+.status-gen('renamed');
+.status-gen('modified');
+.status-gen('removed');
+
+
+/*
+**************************************************
+** GENERATE FILE TYPE ICON CSS
+**************************************************
+*/
 
 // CSS
 @css: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACCklEQVR42pWS3UsUYRTGt6ug/oRugmx2tSXTBEuiIAryQsKLLiII+qA7LzRnpvVr3ZQUCoyKwLso6S4iqosEoSDryrWdj9VdXZPU/XAHXJti2XT26T0jM7OzyyYdeIaXM+f83nPOezy1PRG/V5Dxv+IE2QDg8dCHObRqgWeHtAqdDK4RYKUEoM5TsD8go7Ffcan9waZLrSM5tAST8AlS2AHw0kcCdL1YRDabdancRt/8RvPACgOokzbAJygvCdA+FsPrr6suTcf+mPqhGSDjJ3Q09S2D5TwrBTyuNoPzwxum3oULILs5/hMNvQn2Txm1AbWC0k/BzcEovkRTLiUyhik9XwTZpYc51AcWcFiI8CUA+QYDUFn/nAEhqBp/IAaOV646LYiRtt1ayGwa0HTDPNeJUXDd0jkH0CW3WAmT4TV8klMVAKMIaoXOpv+IqNQ7gDtzB62EqdkkK13D9fE4GvpUXLyfw91Xv0A2832LFmlnEzu/HbABNR0Ley0APZ3VfyqTRbEI2z5ECjgTWqc4ytxjAayn1He2UcHlJ3GMvV/GtJrCfHIbE5/z6Hyu48K9DZwaTNMapynHBWDORJUh2jodyqCxd4leQK0AeAXpmo9XplhSoRRwYmAVx3oWaXXp5jytcI0gXSkDODrand7vE+favKL6lOOlJdZanOPlR4duS63Hb73dVx7/FybUyd+lG8OMAAAAAElFTkSuQmCC';
@@ -18,13 +31,6 @@
 .icon-gen('.hbs', 'handlebars');
 .icon-gen('.handlebars', 'handlebars');
 .icon-gen('.hjs', 'handlebars');
-
-// Hidden files
-.icon-gen('.gitignore', 'hidden');
-.icon-gen('.gitmodules', 'hidden');
-.icon-gen('.config', 'hidden');
-.icon-gen('.DS_Store', 'hidden');
-
 
 // HTML - source: http://www.w3.org/html/logo/
 @html: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACCElEQVR42p2Sz0sUYRzGt1NQf4KXIH3f2VU08iB08dJFaHdmlXLDNrUlMQIVIe2i0M0fQVCRXoToEHQxiE6aUJAGYQZFYUGpM7O7szPabi3ij3Se3ve1fXdnBwl64Rlm3vl+P/N9n3kCejRYY6gE/6F9AIEAv7CH9cMKfyRCPjnxIH9nSICpkmXR0FIDM1bvUa63watrdQygcMCSBOgR+pIDUuP9cBzHo/K1OXUTdpsCUyMzxSNo5DEHJIc6RJP9cRGZ2Wmh3fdzHv26FUXmogA8LAXcE4D+ZgGwnkxID7JXQz5ZreIII8UjaFVDvNhMNB5MsLSA9NSo0Naz+x7lrp9G6jyFEaE3Siagib8m/sMDF9muEFItFMz4yxKwpirhwsjJgZhH+dvtQu5PB27OFkcwowRrKjkrAavqyTMFQOb1DOy3r3weuLvb2DO+8Hu+zyF1EpDWlBMSsPCCjW4jNXwFZusp5HoasDnZB75+f34jgiRqz5EKCUBT5VEJmJ0uemClAXdfOrAz/xQbnSKFvPVIAVD4lfkDI6uRHIzBenQH9rt57K18wPbzSeTH4sh212K9PcgNtHiPFxAh3wRAyp+DjY4gywDl+598AF2lnWyKOV0lO6UA+5KC9AXKkwf2kS0eYZaBtnKAlBWvPZ5UK8OmRh/oEfLd0Kq+MtBdI0yaFsP1x8rr/wBADrURGehn9gAAAABJRU5ErkJggg==';
@@ -129,9 +135,16 @@
 // LiveScript
 .icon-gen('.ls', 'ls');
 
-// .txt
+// Text
 @txt: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAVlpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KTMInWQAAAipJREFUOBFNk72LE2EQxvfdL5NgcSDBThut0qhRG0E4QSwCFoIpBLHxErRIa5Eiia1/QeI/oBFsxDs4U9mIYGNnY5so4RBBWLO3H/6e93bjvjCZmWdmnp2Z941xOOPx+C7qFRIZY4I8z1HGKIbtYGboAPcRuXMkRGLFXf2QcBH1E7mBfdt13VtJkuxi74LdRHfQR/V6/fVkMrmv4l6vJ0LH109xfhD4VjpVDX4afz+KokPI3+B3kP35fO5ZArVMgmWcTqfBYrHIRNBqtQyJSRiG9TiOr1P8ktx3jUbjPfi1brf7pRxBBLmKNpuNq0LJcrk0+sp6vf5D6C3Fe+hPdPKbse4ovzqCXdpgMNgoUJ7ZbCYzQp6XGHuwxfKrIyQCaO1FgWuMbWfY6janq2d04mFLTghoxwDaEcB2CrwkKK/xDHjYbred1WqVZllmO7Y7SNOU2Paok6rEcKvTPt11+v3+MXbIQu0H7QiFYxkJ/kKE25tAKzHkFmzL2GVHMrcPSVNk2jjYJeQKcrnQV9EtrvIjHdzD1uv0VSC7XKLersu9pmz4A7hG0/NVUkYsxdY7KR9a2d0JAQGdjC/U0A9JPoXWW29SvDcajQ6wq2dLYJdIEjW5A8Ff9FN28pjsJ8gD/M/VysI+tgU4dgS0GJvD4fC853lrbiXlz2RqtZrGOAvxOeVA7HF9R3ywCQ70fwffsS8EQfCVWs1qfN93IFGOdmD3QbF8gTtgqnH+AV0xCOryVOqHAAAAAElFTkSuQmCC';
 .icon-gen('.txt', 'txt', @txt);
+
+// Hidden
+.icon-gen('.config', 'hidden', @txt);
+.icon-gen('.DS_Store', 'hidden', @txt);
+.icon-gen('.env', 'hidden', @txt);
+.icon-gen('.gitignore', 'hidden', @txt);
+.icon-gen('.gitmodules', 'hidden', @txt);
 
 // .haml
 @haml: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAVlpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KTMInWQAAAiJJREFUOBGdU99r01AU/mrTxKRNUcpGBQuCrKNVBrUouOFvQaYGYSCCD750OAbDf0EFQWHMBwVRwSfBF0GE+uM/cE9DX5zYCYIVZZO5rU2Tpm0ac069wawg6IXcc++55/ty7nfOjXieh3w+4+E/xuJiNRLJ5XZ6qiojkdj6TxSm2YRtt7CFUAJ8oJjHndkrePr4OqSo9FdCgWECiqzXbSx9+ood6RQDjfFRtNsdXtM1jx/Zx+TG+Bhct8t+mgICSYpi4W2FPzowzhyE2/HgOG2ULp3F9OQ5Jt+T24WNDYtCeEQHBpLX4nEFsViU7/SlugLj9CgUOQb40p6fOIpDYyMc/HGpipuzT7D6swZdV2FZDkIXTSa1IItiIYuLF078/k/PTM3cRt20MDi4LfAHGZBHliXOYm3dxKmT+zmIAPTXhXcVTJUMrPxYQ8ftadOXASEoCz2hMZim8st5lF+94T2t525N4+79Z2hYNvtCVyAPKV4sDPEhTcPZDG5cLeH9h89I6nG/5CpaTsevkMsxQRUEgpojO5QRWzx4VMa9h89x7HABibiKF6/nQWJ2u71S9mVAOgz/QUClpXF5Zi4gTaV0KIpfJdjhKlCDjOzdHQR++77Ka1K9VrNYZCo36SRGKINms8V+Up6ErPipUoNR24rWFUBhQ4+p0WhieXldnLHVNAXp9PaQjzbiMUU2P2fTtP1ecPxqUF/EoGky2z4G30HP+RfR2cz72MCSbQAAAABJRU5ErkJggg==';
@@ -177,88 +190,3 @@
 .icon-gen('Gulpfile.coffee', 'gulp');
 .icon-gen('GulpFile.coffee', 'gulp');
 .icon-gen('GULPFILE.coffee', 'gulp');
-
-/*
-**************************************************
-** STATUS COLORS
-**************************************************
-*/
-
-.status-gen('ignored');
-.status-gen('added');
-.status-gen('renamed');
-.status-gen('modified');
-.status-gen('removed');
-
-
-/*
-
-// PROJECT / REPO ICON
-.name.icon.icon-repo {
-  // TEXT
-  font-weight: bold;
-  padding: 0px 0px 0px 5px;
-}
-
-// OPEN/CLOSE SELECTOR FOR FOLDERS
-.header.list-item:before {
-  color: @color-default;
-}
-
-// DIRECTORY ICONS
-.name.icon.icon-file-directory {
-  // TEXT
-  background: none;
-  border: none;
-  color: @color-default;
-  font-weight: bold;
-  padding: 0px 0px 0px 2px;
-
-  // ICON
-  &:before {
-    color: @color-default;
-  }
-}
-
-
-// DEFAULT / FALLBACK ICON
-.name.icon {
-  padding: 0;
-  &:before {
-    color: @color-default;
-  }
-}
-
-// DEFAULT TAB ICON
-tabs-bar tabs-tab .title, .tab-bar .tab .title {
-  padding: 0;
-  width: 100%;
-  &:before {
-    color: @color-default;
-  }
-}
-
-// HIDDEN / IGNORED STYLES
-.status-ignored {
-  .header.list-item:before {
-    color: @text-color-ignored;
-  }
-  .name.icon {
-    color: @text-color-ignored;
-    &:before {
-      color: @text-color-ignored;
-    }
-  }
-}
-
-tabs-bar tabs-tab .title.icon-tools, .tab-bar .tab .title.icon-tools {
-  padding: 0;
-  width: 100%;
-
-  &:before {
-    position: relative;
-    color: #AAA;
-  }
-}
-
-*/

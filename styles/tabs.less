@@ -2,7 +2,7 @@
 
 @tab-border: none;
 
-@tab-highlight-color: rgb(79,153,211);
+@tab-highlight-color: #369;
 @tab-background: rgb(30,35,38);
 @tab-background-active: rgb(16,17,18);
 @tab-bar-bottom-border-color: rgb(16,17,18);
@@ -68,7 +68,7 @@ tabs-bar, .tab-bar {
       color: @text-color-highlight;
     }
 
-    .title {
+    .title{
       -webkit-transform: none;
       margin-top: -2px;
     }
@@ -86,11 +86,11 @@ tabs-bar, .tab-bar {
     border: none;
     border-bottom: solid 4px @tab-highlight-color;
     background: @tab-background-active;
-    height: @tab-height;
+    height: @tab-height + 0px;
 
-    .title {
+    .title{
       position: relative;
-      top: 0;
+      top: 0px;
       margin-top: -1px;
     }
 
@@ -102,7 +102,7 @@ tabs-bar, .tab-bar {
 
     &, &:before {
       background: @tab-background-active;
-      height: @tab-height;
+      height: @tab-height + 0px;
     }
 
     &:before {
@@ -116,10 +116,6 @@ tabs-bar, .tab-bar {
 
   tabs-tab:hover, .tab:hover {
     color: @text-color-highlight;
-
-    &.title:before {
-      opacity: 1.0;
-    }
   }
 
   tabs-tab.active:hover .close-icon, .tab.active:hover .close-icon {
@@ -137,6 +133,7 @@ tabs-bar, .tab-bar {
     }
   }
 
+  // prevents icon from shifting on selected tab
   .tab.active .title:before {
     opacity: 1.0 !important;
     margin-top: 10px !important;
