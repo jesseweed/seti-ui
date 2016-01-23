@@ -133,7 +133,8 @@
 .icon-gen('.jl', 'jl');
 
 // EJS
-.icon-gen('.ejs', 'ejs');
+@ejs: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AEXAyMbHLT3YAAAAEVJREFUOMtjYBi04Oqk3/+xsdEBEyHNxBiCoRCXAQQNIaQIrzxRNuBSR6xmbOqZqBptZHuBKoFIlWjEpZjUQCYpKQ88AADaQIBrWngs/QAAAABJRU5ErkJggg==';
+.icon-gen('.ejs', 'ejs', @ejs);
 
 // Favicon
 .icon-gen('.ico', 'ico');
@@ -160,15 +161,16 @@
 .icon-gen('.haml', 'haml', @haml);
 
 // IMAGES
-.icon-gen('.ai', 'img');
-.icon-gen('.bpm', 'img');
-.icon-gen('.gif', 'img');
-.icon-gen('.jpeg', 'img');
-.icon-gen('.jpg', 'img');
-.icon-gen('.png', 'img');
-.icon-gen('.psd', 'img');
-.icon-gen('.svg', 'img');
-.icon-gen('.svgx', 'img');
+@img: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AEXAy8peNbp7AAAAP1JREFUOMvNU7FKxEAUnH2b3HuilY2fYes3yKGFd59wdeqggYVlswSr1FdeeSlE/ATBP7C/PxCbzYJHrA5y4KGJIE7zePBminkzqqqqyxDCIzNrDECMcSsiUxpDBgBm1m3bPiU7cp7naoiA975jZk34Jf6hQNMssVrdwxgjAFDXBfqzLMvJQYH1eonZbIHNJt6kafpujLnOMou6LpBlFtbaCwBvBwXm8wW89+cAGiJKmfnBe38XwvHEOVckSfKilDrqc5L+4pw7BfCs9V4sbNd1t0Qk33pARK8ATr64k5+aePbnb9zzYGicAUAZYz7GlGnXSBKRqxjjdgxZRKaf33ZS8tpt3+MAAAAASUVORK5CYII=';
+.icon-gen('.ai', 'img', @img);
+.icon-gen('.bpm', 'img', @img);
+.icon-gen('.gif', 'img', @img);
+.icon-gen('.jpeg', 'img', @img);
+.icon-gen('.jpg', 'img', @img);
+.icon-gen('.png', 'img', @img);
+.icon-gen('.psd', 'img', @img);
+.icon-gen('.svg', 'img', @img);
+.icon-gen('.svgx', 'img', @img);
 
 
 // THESE NEED TO COME LAST SO THE DON'T GET OVERRIDEN!
