@@ -11,6 +11,8 @@
 .status-gen('removed');
 
 
+
+
 ////////////////////////////////////////////////////////////////////////////////
 // GENERATE CSS FOR FILE TYPE ICONS
 ////////////////////////////////////////////////////////////////////////////////
@@ -183,8 +185,18 @@
 .icon-gen('.swift', 'swift', @swift);
 
 
+// Text or Hidden Files
+@txt: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAVlpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KTMInWQAAAipJREFUOBFNk72LE2EQxvfdL5NgcSDBThut0qhRG0E4QSwCFoIpBLHxErRIa5Eiia1/QeI/oBFsxDs4U9mIYGNnY5so4RBBWLO3H/6e93bjvjCZmWdmnp2Z941xOOPx+C7qFRIZY4I8z1HGKIbtYGboAPcRuXMkRGLFXf2QcBH1E7mBfdt13VtJkuxi74LdRHfQR/V6/fVkMrmv4l6vJ0LH109xfhD4VjpVDX4afz+KokPI3+B3kP35fO5ZArVMgmWcTqfBYrHIRNBqtQyJSRiG9TiOr1P8ktx3jUbjPfi1brf7pRxBBLmKNpuNq0LJcrk0+sp6vf5D6C3Fe+hPdPKbse4ovzqCXdpgMNgoUJ7ZbCYzQp6XGHuwxfKrIyQCaO1FgWuMbWfY6janq2d04mFLTghoxwDaEcB2CrwkKK/xDHjYbred1WqVZllmO7Y7SNOU2Paok6rEcKvTPt11+v3+MXbIQu0H7QiFYxkJ/kKE25tAKzHkFmzL2GVHMrcPSVNk2jjYJeQKcrnQV9EtrvIjHdzD1uv0VSC7XKLersu9pmz4A7hG0/NVUkYsxdY7KR9a2d0JAQGdjC/U0A9JPoXWW29SvDcajQ6wq2dLYJdIEjW5A8Ff9FN28pjsJ8gD/M/VysI+tgU4dgS0GJvD4fC853lrbiXlz2RqtZrGOAvxOeVA7HF9R3ywCQ70fwffsS8EQfCVWs1qfN93IFGOdmD3QbF8gTtgqnH+AV0xCOryVOqHAAAAAElFTkSuQmCC';
+.icon-gen('.txt', 'txt', @txt);
+.icon-gen('.config', 'hidden', @txt);
+.icon-gen('.DS_Store', 'hidden', @txt);
+.icon-gen('.env', 'hidden', @txt);
+.icon-gen('.gitignore', 'hidden', @txt);
+.icon-gen('.gitmodules', 'hidden', @txt);
+
+
 // TypeScript
-@ts: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wA3ABF4s68UAAAACXBIWXMAAA7AAAAOwAFq1okJAAAAB3RJTUUH4AEXBhIhGi7riwAAATxJREFUOMtjYKg6w8hALqg6w8gIZfwny4A2E0YWGPtDqepsUvQKdN9OTVt8ZjMTA4Vg4A1gQRfYcvsLY8yG5ynsTIyfGBgYGH7++8+3xF9y7tSz701uvf2tz8DIwLDQV2IyTgN8VHn+fyhVnV1z4LUUAwMDQ4uD6LOlVz6yv/r6l+dujhIsoP8R9MKPP/9Zfvz5z8LAwMBgLsX59ennP8qLL39kg0pzkhQGKkJsLAfj5Gb0n3znJD/pbuK///+/kRyI6sJszOdSFHc4K3AfyNn+So6gAf/+MzD++8/AyMDAwLD2+meOlsNv+Zdd+cR88NE3UyNJ9nc4AxEG8s0Er0CZvP7qPG8+/PjI/eDDb+ZVwVILjCU5uEr2vGZgYGBgoCgvpGkybGFkqDrDyNBm8j9t8ZnNZJjxn9KEyAAAQ6lwyniHqmAAAAAASUVORK5CYII=';
+@ts: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwQAADsEBuJFr7QAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTAw9HKhAAAAhUlEQVQ4T2P4TyIAaWCoOkMkQmj48P4jQQRUlrb4zLDT4IQKnj551tzcAmFv3LgJpw1AaQhj5sxZcParl68Ja1i5YqWvry9QG9AqIJewBiC6dfM2kAvUtmvnbsIaIAYDEVDD+nXrCWuYMX0GkA0EfX39QC6KBiIRVAMQAFlEIqgGYsH//wD2VEKXOiwc1wAAAABJRU5ErkJggg==';
 .icon-gen('.ts', 'ts', @ts);
 
 
@@ -203,31 +215,9 @@
 
 
 
-
-
-
-
-
-
-// Text or Hidden Files
-@txt: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAVlpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KTMInWQAAAipJREFUOBFNk72LE2EQxvfdL5NgcSDBThut0qhRG0E4QSwCFoIpBLHxErRIa5Eiia1/QeI/oBFsxDs4U9mIYGNnY5so4RBBWLO3H/6e93bjvjCZmWdmnp2Z941xOOPx+C7qFRIZY4I8z1HGKIbtYGboAPcRuXMkRGLFXf2QcBH1E7mBfdt13VtJkuxi74LdRHfQR/V6/fVkMrmv4l6vJ0LH109xfhD4VjpVDX4afz+KokPI3+B3kP35fO5ZArVMgmWcTqfBYrHIRNBqtQyJSRiG9TiOr1P8ktx3jUbjPfi1brf7pRxBBLmKNpuNq0LJcrk0+sp6vf5D6C3Fe+hPdPKbse4ovzqCXdpgMNgoUJ7ZbCYzQp6XGHuwxfKrIyQCaO1FgWuMbWfY6janq2d04mFLTghoxwDaEcB2CrwkKK/xDHjYbred1WqVZllmO7Y7SNOU2Paok6rEcKvTPt11+v3+MXbIQu0H7QiFYxkJ/kKE25tAKzHkFmzL2GVHMrcPSVNk2jjYJeQKcrnQV9EtrvIjHdzD1uv0VSC7XKLersu9pmz4A7hG0/NVUkYsxdY7KR9a2d0JAQGdjC/U0A9JPoXWW29SvDcajQ6wq2dLYJdIEjW5A8Ff9FN28pjsJ8gD/M/VysI+tgU4dgS0GJvD4fC853lrbiXlz2RqtZrGOAvxOeVA7HF9R3ywCQ70fwffsS8EQfCVWs1qfN93IFGOdmD3QbF8gTtgqnH+AV0xCOryVOqHAAAAAElFTkSuQmCC';
-.icon-gen('.txt', 'txt', @txt);
-.icon-gen('.config', 'hidden', @txt);
-.icon-gen('.DS_Store', 'hidden', @txt);
-.icon-gen('.env', 'hidden', @txt);
-.icon-gen('.gitignore', 'hidden', @txt);
-.icon-gen('.gitmodules', 'hidden', @txt);
-
-
-
-
-
-
-/*
-**************************************************
-** THESE NEED TO COME LAST AS OVERRIDES
-**************************************************
-*/
+////////////////////////////////////////////////////////////////////////////////
+// THE FOLLOWING ICONS NEED TO COME LAST AS OVERRIDES
+////////////////////////////////////////////////////////////////////////////////
 
 // Angular
 @angular: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC3klEQVR42pVT60tTYRg/9bU/IEjsWxTqnDo1LRFKSEupRLpYplhZWWmaVgRmZp+MnFEZXj5YEqnTrTPPZTtnm5eZMCVTREFI0W2nvJQxk6QI+/V4RlZEtwceeF94f8/v8pzD/K6axsY2sB0dmXxnZ4aZzsy/lGFoKOCp05lhMbEG5527s4OFxbAXFkGgs2A0tvHd3Vnc6OjGn0Bms3l9u8NxzMKyrc5792eHCTCVsh9KSDi8RZchZ2XDGhwK2+5kyHn5ECr184LB0M7b7adYlg1kWEnKH9JXwZ28F4puKxQNAbU6eGPiMPN8ANaGhxDDdBBDtBCDNLBoI2BL2IWu8ptolyyFjLGnJ3X4QiFeBWnhiYhW2x2sxczlq3i7sACLLIM/kkHgUIgEVntLMOQTOeC6ulKZ5v7+KFdJ6bKiifAPCI+CJzIGvheDmJVtECv14OrqVBWrA0gJf7F4uZ2wTCOF4qy45VPCIv3sIWGYzivA4tISPNknYU3aA47nIayoCParsJAdoazcJ42PBzKNwLqO6gcTSvQ2Pzv1u2e98I2MYDIxGVJcPPj71eBra/0qQsMhhUeC11dNSIRlGGCt3PCoV4nfCQ+xv845g/fEvkj+59xu0HbArbTVCiH9qCpfjt0Ovq6+t4yw6ipFg6HZszsFHtrAvN0B3/g4ps/mwX06F9LBwxDSDqgK+JoaVYGdtsA1NTUz34rjuIrJ/WmYJs+L+IK523q4NwVhggZKK743B6nsnN2uZuFI2QfObK74/jHZbOdfUnCzmcfxprIKXmLwUqgTFKqkjVBZRV00hNxzEA+lozu/ABxhVgfQZaPFZHrcV1L6cSohEQplofw4QBMGCymxJ+6BWHbjg8Cy9ZzDEfDLv2Dq64uV2tra+kuuffbS40myIBPQlkTA62WfBJPpCT8woGP+VkaXa4etpYV3XboC6crVL0JrK8u5XHHMfxWwxuh0Jgs9PUl/evYVZsj/U5+sArAAAAAASUVORK5CYII=';
