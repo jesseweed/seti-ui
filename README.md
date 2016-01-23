@@ -1,6 +1,6 @@
 # run-time-ui
 
-A dark colored UI theme for Atom with custom file icons.
+An acute yet obtuse Dark Atom UI theme with colorful file type icons
 
 ![Screenshot](https://github.com/run-time/run-time-ui/raw/master/screenshot.png)
 

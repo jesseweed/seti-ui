@@ -1,9 +1,6 @@
-/*
-************************************************************
-** STATUS COLORS (from least important to most important)
-************************************************************
-*/
-
+////////////////////////////////////////////////////////////////////////////////
+// STATUS COLORS (from least important to most important)
+////////////////////////////////////////////////////////////////////////////////
 @color-default: #d3d6d5;
 @color-status-ignored: #555555;
 @color-status-added: #9fca56;
@@ -12,7 +9,10 @@
 @color-status-removed: #ce4045;
 
 
-// TODO: figure out why these classes have to be typed out manually
+
+////////////////////////////////////////////////////////////////////////////////
+// TODO: figure out how to generate the stuff below later
+////////////////////////////////////////////////////////////////////////////////
 .list-group li:not(.list-nested-item).status-ignored,
 .list-tree li:not(.list-nested-item).status-ignored,
 .list-group li.list-nested-item.status-ignored > .list-item,
@@ -48,7 +48,6 @@
   color: @color-status-removed !important;
 }
 
-// TODO: figure out how to generate these later
 .file.entry.list-item.selected > span[data-name=".config"],
 .file.entry.list-item.selected > span[data-name=".DS_Store"],
 .file.entry.list-item.selected > span[data-name=".env"],
