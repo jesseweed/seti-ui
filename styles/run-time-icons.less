@@ -1,26 +1,28 @@
 @import "ui-mixins";
 
 ////////////////////////////////////////////////////////////////////////////////
-// NOTE: This is the only file that needs to change to add new file type icons.
+// NOTE: To add new file type icons this is the only file which needs editing
 ////////////////////////////////////////////////////////////////////////////////
 //
-// STEPS TO ADD A NEW FILE TYPE ICON...
+//   STEPS TO ADD A NEW FILE TYPE ICON...
 //
-//     1. Look at the examples below to see they begin with a comment and are in
-//        alphabetical order.
+//   1. Look at the examples below to see they begin with a comment and are in
+//      alphabetical order.
 //
-//     2. All icons must be 16x16 base64 encoded png files.  You can encode your
-//        icon here -- https://www.base64-image.de/ -- (use the copy css button)
+//   2. All icons must be 16x16 base64 encoded png files.  You can encode your
+//      icon here -- https://www.base64-image.de/ -- (use the copy css button)
 //
-//     3. Store the image CSS string in a new variable
+//   3. Store the image CSS string in a new variable
 //
-//     4. Call the .icon-gen mixin passing in the file extension, type, url string
+//   4. Call the .icon-gen mixin passing in the file extension, type, url string
 //
-// That's pretty much it!  Follow the examples below if you need help and keep
-// in mind some icons need to be moved to the bottom of the file in order to
-// overwrite more generic file endings.
+////////////////////////////////////////////////////////////////////////////////
 //
-// (i.e. '.js' maps to JavaScript before '.controller.js' maps to Angular
+//  That's pretty much it!  Follow the examples below if you need help and keep
+//  in mind some icons need to be moved to the bottom of the file in order to
+//  overwrite more generic file endings.
+//
+//  i.e. '.js' maps to JavaScript before '.controller.js' maps to Angular
 //
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -31,13 +33,12 @@
 // GENERATE CSS FOR FILE TYPE ICONS
 ////////////////////////////////////////////////////////////////////////////////
 
-// C, Objective-C
+// C, C++, Objective-C
 @c: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACFklEQVR42pWSzWsTURTFr0iqLsSFILiq0D+hSxGMTvwqglDjx0JsNR8d7UpaxUqwbWJVqJiI1mQm6RgkIqIiEV1YUFqShVihyWTSYhUKVdqqBV3FmkyO7w4MRmwJ/cGBw7n3nXkPhlairffNep+q97DY02rwKnnJlyhmO7QpsNhzRvXwxfQmf9zQfHGj4olP4uTQhCX2nPGMd5Y5OO7wqLluf8JY6NA+4HQsj9DTaaQyXywFheeMZ7xzVit2GwYa/haouYic/AivWoAc1zFaXETFrMKGPWedWkEUFNFy4x02e1KR2jebXkVH+90cRvRvsJldLGH2ewk2ybEZbOt8gjXH46BjqllbUOIr9jycwlLZRLUKPH47B5FDThTwIPMZV59NYIv3PuiIAhIFQqV/CtrE14dezYCZ//ELZ4YN8K1cV0ax6VQK1BoDHVX5YP2Crz+X4B7MoPGEAtp3DXToNuhwnQJ+QuDRNMQLLC4mXmOt8zIapD6ci47gejqPrf6UePsyBX5VN8Ufh+3n07iTfg+b3Kd5SzaXkmOglpt2gUk27sFsuLH9HsjZhw17Q4g+H8fvcgU27DnbeGAAtLsfdDAMckfDVIODdga6yBVcIJdYcvaiWVYhR14KvRBesTKeWTtSfxdRs4P+Y1ewiVyhYaGy8KAdAUvsOeOZtVMXKSiJ5SztGQCLvZWtiv231onrXmBZfgX+AL1Txm5HMLOrAAAAAElFTkSuQmCC';
-.icon-gen('.h', 'c', @c);
 .icon-gen('.c', 'c', @c);
-.icon-gen('.o', 'c', @c);
-.icon-gen('.m', 'c', @c);
 .icon-gen('.cpp', 'c', @c);
+.icon-gen('.h', 'c', @c);
+.icon-gen('.m', 'c', @c);
 
 
 // CSS
@@ -77,7 +78,7 @@
 
 
 // Handlebars
-@hbs: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wA3ABF4s68UAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH4AEXBSs34jhtOQAAAZ1JREFUOMvt0s9LFGEAxvHnnXdmdsZ1W7PWTIUxD4YFkgSa4qFbhHdx8SCk4qGT2GEFMTqIHqI6BB06iOghCATp6A9UkA4WtoRhkZdt3VVn15KZd37s+M7rwYv3PPr5C748PMCl/0YA4N3blxqzLf9Z6oX4kd5sqrxpJCmlgjnOnHtciFbeqO0mRGI2Y7MNhpFJDQ9KjXfvKU8Gnvokt5+f4UGQvBKv2GLM/sTMbFdpa/6BCDm01mQagWe5X+c7aUSHcr97J56ofi8RMuR7rlEWi78hG2vLQixOQXk8hoJ5CLL6ClGVwgtC+CccPBQoj8hQZQleEELrGj9LX5xAvOc15Fz2D8osC3XfP4JvbyIiU7ASR92dVlTcbt+DCNXi9noi+/MbVCrheOE56ps7sGv78PI5ENM09zJzIzWZ3zu4HtOQaHmEWGefdfVa1QcK5bMA1FCU2syDXI+zMa0fplfw1wlgNLWgvnfqFzkoHt2K6tqoTGlzKMS/UhAsOa43XVOVKJ5fO28WqqO63q/I9CEIKeecf7Edd/LyhxfgFCsLrV5KpvflAAAAAElFTkSuQmCC';
+@hbs: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH4AEXCB8I56wgoAAAAXtJREFUOMvtkjlLA1EAhOftERJXE43GC1Ok8whW8UDEo9HCSjCFRBRFG0UhneBfsFMRRcRGURbSWIqFhYIXYiFeKAkbsu6RIF6Ju+4+q4g/wNKvGmamGgb4529YXpxn8/pie7ziSVUbtHS6Pi5JhZexaKWiqUFV1+seE4kCAJiNTpD1tSUGAEjqSW6yTNPv9hQ/v7+/yereTPvd1fGqTYHG5t6xz5ekcH19teDggGDneMQbmjxjCAl85rJCQZHnnhwe7A+cbw2JLcPbYV1TcbM7LbIMgWVTWDYFALAMQd4LDW6EAeBiZ1TsntwNc6mkhJxh4y4WEeWM+VOs8vLwl/EPlFJ3QjN9+ex4c0SsKXPA+LKhyClwXT192deTOcgZEw6Ogd/Ho3XqqL+ktFxiwacpwISo4dWUlP90pSOW1L+Q1A1UeXk0tXW8EiWdEQSXs5ZjWY9NqWmYpvKRzcWry33G76FlTXcKLleA51gfCOEsy8q8fWRv/y/4B3wDGSGqcKxc8JoAAAAASUVORK5CYII=';
 .icon-gen('.hbs', 'handlebars', @hbs);
 .icon-gen('.handlebars', 'handlebars', @hbs);
 .icon-gen('.hjs', 'handlebars', @hbs);
@@ -144,7 +145,7 @@
 
 
 // Mustache
-@mu: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wA3ABF4s68UAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH4AEXBgIe5orU5wAAAaFJREFUOMvt0r1LG2EAx/Hfc89dzKlRi0QlIucL8a1S7CCigziICEKXIqg4iK0IZhIU4iAohXaJUkqhLQ4iOmQQoWToYIxvLV0K4uJLBl9iejFvIiZ35+Vyebp2b0c/f8KXL/DonxEA+PTRY1XSKX3avcACX/cbmzsahymlTFHV9fBJWHQ+rxskhFPSirJWK0kh99Q4V/+0VRh77dKJfBNZNQ1jqKi45FBR0r7jg7OGrY3gCGMML0ZbNu8T2n3AFxzlaR5eulr9UrP0jSNkQn/QpHxb8XvyY2+bfXnjh2uhD4l4DKtL3yHwFmRNA1nTAGMMFt4KSimypoHJuT4AwPLbHcwsDoCXw9fQdAVezxFC8TPwVICRzaDK7oSjsuI8Z8IW/n1tl5MX4DgOH+Z9qC5vgqqnEI3I4Lt7++Vdb8xxFTtFfp4NUnkTJj09qSelZV4K4ScDLDmWaY9H5cHP7oAYip3iMnqCKrsTbZ1dQRJN3tYUiNZZntJnOcbuMobhV7WHFUeZPfl37Ug8UVEgiq8EnnaDkELTNH+lVe3d44f/wR/YHq8H1T0COgAAAABJRU5ErkJggg==';
+@mu: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH4AEXCCAh/cCS8AAAAX9JREFUOMvtkj1L62AAhc+bNwXbaJNaqyKIVBDqFyhUEJF7BUEEJ8FO4iI4Krj5I9y0CCIOCiIGvMsdBHUQ7CZ4L94rqPhFNTFJU1O/UpO+iVPBH+DoMx3Osx0O8M3XsLQ4T8v5YHOn7kHX2w3TbLvJZisPt/fqNUPv0HO51qvb2xAAzM1OkdWVNAcARHlQe5jrNoZFyXp9fVHPd4/7lRNl2fN8NPfGJ4tPtnD/X12glEPLYGK8KZk44giJvxdtIVQlXpDMwf7YydofuXsymcoZOq5/XcqU8mCsBA8+AIADQbnrnOhKAcDpxj+5b3ogxSt3WTglB2dbp7JlWeBAwFgJYjSCcI14CSBc0B5jZfd3/ViORKvhMheaqoAfGBqxf2c2YVkWAjQAMSbh58zwaCRam6UImD7Aeb5TbWhKYya9t10wC3g085AkCT19P56JZuYFIViR4CkVPd93HdfV3uziTUNtzPk8tGrkKoRgMB7gaQyE8Iyx/MubffZ9wS/gA/crqYyQ6crWAAAAAElFTkSuQmCC';
 .icon-gen('.mu', 'mustache', @mu);
 .icon-gen('.mustache', 'mustache', @mu);
 .icon-gen('.stache', 'mustache', @mu);
