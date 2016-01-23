@@ -86,11 +86,13 @@
 .icon-gen('.stache', 'mustache');
 
 // NPM
-.icon-gen('npm-debug.log', 'npm');
-.icon-gen('.npmignore', 'npm');
+@npm: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAH0lEQVR4AWPYq6xFEqKnhv94AQ00wMXpoWFUwyBMfAB+FJ40qrc8hwAAAABJRU5ErkJggg==';
+.icon-gen('npm-debug.log', 'npm', @npm);
+.icon-gen('.npmignore', 'npm', @npm);
 
 // PHP
-.icon-gen('.php', 'php');
+@php: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAaUlEQVQ4y2NoaNhf0tBw4D95eH8JA/maIZg2Bly/fh2OyTaAgYGBeAPQbUQ2ANkQbC5jgCmGYZgCosXQbYOxiRYbPAZg8y82AwiGAXKIo4c+NnUMxMY5LnUMxKY6XOqokRfIz86NjQeLARPxsHOV//S3AAAAAElFTkSuQmCC';
+.icon-gen('.php', 'php', @php);
 
 // Procfile
 .icon-gen('procfile', 'procfile');
@@ -98,7 +100,7 @@
 .icon-gen('PROCFILE', 'procfile');
 
 // Python
-@py: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB6klEQVQ4y62TO2tUURSFv3tzRTFoEBExksJGxfwAG5EEUUljbQQt0igKIZWFYKEE1EaINhZptPQHRARR2xQ+KkWIioXxgURkZpKZuXutY3FnkjgBbTywOZvD2o+19j4ZPefkzafnUsa05SFFiSUUJaG496PxZWrh7mRrPT7vTZAyph9fHh2Ksv3TElZgCYcuDBQ7bvXiNyZw2jJybe6z5WQFkpBEskCa6MUXvQ+2ZvM875eClIwUk1agCCRtKFiM3ZnbnFpbz1uaUQSKEkenclcDCbuy9O3iE+AYSc/ZnU4Uqd1/2tbMKqhzKwLbODoaSGAgxT6Swa0RPi6N5Q5NdEEKdSqvJak0CFJKkKXbuD2AGqAG5EwVto5qVe3otv/a1tuqGwNOeV+28OjS/Ha0shO3wE1wa7SwJCv6umof2vNrenb85WFgvDMWqoCOaZ3vFXJFPLMqrknxfnb81TBwvBpJCVquzMtrvhqgGkR9PrfaDxUlspBiHtIRSKDmn0GxDO5wVx2idp1y06liqYj729rZoENnbH0lleA2qN3leWONc5PswIsr6/cg27CJi2e/o+Yu1ILUhGiAm4u4Bm6RDX/a+9dVpmykinOjGwyqDXLw3SBkjX/+BVR/gLrB9UosgDf7P1D0XeV/n99twLFWY6NNCAAAAABJRU5ErkJggg==';
+@py: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AEXBCk30cxljAAAAetJREFUOMutkztrVFEUhb97c0UxaBARMUHBRsX8ABuRBFFJY20ELdIoCiGVhWChBNRGUBuLNFr6AyKCqG0KH5UiJIgg8YFEZGaSmbl7rWNxZ5I4AW08sDmbw9qPtfY+GT3n1K3n51PGtOW9ihJLKEpC8eBH48vU/P3J1np83psgZUw/vTK6L8r2T0tYgSUcujhQ7Ljdi9+YwGnLyPXZz5aTFUhCEskCaaIXX/Q+2JrJ87xfClIyUkxagSKQtKFgMXZvdnNqbb1g6a4iUJQ4OpW7GkjYlaVvl54Bx0l6ye50skjt/jO27q6COrcisI2jo4EEBlLsJxncGuHj0lju0EQXpFCn8lqSSoMgpQRZuoPbA6gBakDOVGHrmFbVjm77b229r7ox4JT3ZfNPLs9tRys7cQvcBLdGC0uyoq+r9uE9v6Znxl8fAcY7Y6EK6JjW+V4hV8QLq+KaFAsz42+GgRPVSErQcmVeXvPVANUg6nO51X6sKJGFFHOQjkICNf8MimVwh7vqELUblJtOF0tFPNzWzgYdOmvrK6kEt0HtLs+ba5ybZAdfXV2/B9mGTVw89x01d6EWpCZEA9xcxDVwi2z409BfV5mykSrOjW4wqDbIoQ9DkDX++RdQ/RHqBtcrsQDeHVig6LvG/z6/AW5CsVYO9IwdAAAAAElFTkSuQmCC';
 .icon-gen('.py', 'py', @py);
 
 // Ruby
