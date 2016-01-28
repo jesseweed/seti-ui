@@ -1,35 +1,39 @@
 # Ready to kick your Atom UI up a notch?
 
-### [`run-time-ui`](https://atom.io/themes/run-time-ui) is an acute yet obtuse Dark Atom UI theme
+### `run-time-ui` is an acute yet obtuse Dark Atom UI theme
 
-### [`run-time-ui`](https://atom.io/themes/run-time-ui) is the son of the greatest Sith Lord to ever live [`seti-ui`](https://atom.io/themes/seti-ui)
+### `run-time-ui` is the son of the greatest Sith Lord to ever live [`seti-ui`](https://atom.io/themes/seti-ui)
 
-### [`run-time-ui`](https://atom.io/themes/run-time-ui) comes with colorful file type icons which are easy to modify
+### `run-time-ui` comes with colorful file type icons which are easy to modify
 
-## [`run-time-ui`](https://atom.io/themes/run-time-ui) is so LEET it launched on version `13.3.7`
+## `run-time-ui` is so LEET it launched on version `13.3.7`
 
 # Welcome to Run Time!
-
-
 
 ![Screenshot](https://github.com/run-time/run-time-ui/raw/master/screenshot.png)
 
 
-### Currently Supported File Icons
+# Currently Supported File Icons
+
+![Icons](https://github.com/run-time/run-time-ui/raw/master/icons_screenshot.png)
+
+* Angular (.controller.js, .directive.js, .service.js)
 * Bower
-* Coffescript
+* C, C++, Objective-C
+* CoffeeScript, CoffeeReact, CSON
 * CSS
-* Elm
 * EJS
+* Elm
 * Favicon
 * Go
 * Grunt
 * Gulp
+* Haml
 * Handlebars
 * HTML
 * Image
 * Jade
-* Javascript
+* JavaScript
 * JSON
 * Julia
 * Less
@@ -37,15 +41,17 @@
 * LiveScript
 * Markdown
 * Mustache
+* NPM
 * PHP
 * Procfile
+* PureScript
 * Python
 * React
 * Ruby
 * Sass
-* Stache
 * Stylus
+* Swift
 * Text
-* Typescript
+* TypeScript
 * XML
 * YML
