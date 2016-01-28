@@ -1,14 +1,18 @@
-# Ready to kick your Atom UI up a notch?
+# Kick your Atom UI up a notch!
 
 ### `run-time-ui` is an acute yet obtuse Dark Atom UI theme
 
-### `run-time-ui` is the son of the greatest Sith Lord to ever live [`seti-ui`](https://atom.io/themes/seti-ui)
+### `run-time-ui` comes with colorful file type icons
 
-### `run-time-ui` comes with colorful file type icons which are easy to modify
+### `run-time-ui` icons are easy to add / modify
 
-## `run-time-ui` is so LEET it launched on version `13.3.7`
+### `run-time-ui` is son of the honorable [`seti-ui`](https://atom.io/themes/seti-ui)
 
-# Welcome to Run Time!
+### `run-time-ui` goes perfect with [`run-time-syntax`](https://atom.io/themes/run-time-syntax)
+
+### `run-time-ui` is so LEET it had to start on version `13.37.0`
+
+# It's Run Time!
 
 ![Screenshot](https://github.com/run-time/run-time-ui/raw/master/screenshot.png)
 
