@@ -4,13 +4,37 @@
 ////////////////////////////////////////////////////////////////////////////////
 // GENERATE CSS FOR FILE TYPE ICONS
 ////////////////////////////////////////////////////////////////////////////////
-.set-hidden-color (@val) when (@val = 'hidden') {
+
+
+// @type is a string label used to group together common file icon types
+// the 'hidden' type is used to apply a darker file name color and icon opacity
+.set-hidden-color (@type) when (@type = 'hidden') {
   color: @color-status-ignored;
 }
 
-.icon-gen( @extension: ''; @type: ''; @icon: ''; ) {
-  tabs-bar tabs-tab .title[data-name$="@{extension}"],
-  .tab-bar .tab .title[data-name$="@{extension}"] {
+.set-hidden-opacity (@type) when (@type = 'hidden') {
+  opacity: 0.3;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// .icon-file-*( @match: ''; @type: ''; @icon: ''; )
+////////////////////////////////////////////////////////////////////////////////
+// this function is used to setup the various css pattern matching rules
+// @match is the case sensitive text to look for in the file name
+// @type is a string describing the icon to use (the 'hidden' type is special)
+// @icon is a string representing the 16x16 icon in base64 format
+// * is a string describing where to look for the @match in the file name
+//   'ends-with' looks for @match at the end of the filename (default)
+//   'begins-with' looks for @match at the beginning of the filename
+//   'equals' looks for @match to exactly equal the filename
+//   'contains' looks for @match anywhere in the filename
+////////////////////////////////////////////////////////////////////////////////
+
+
+.icon-file-ends-with( @match: ''; @type: ''; @icon: ''; ) {
+  tabs-bar tabs-tab .title[data-name$="@{match}"],
+  .tab-bar .tab .title[data-name$="@{match}"] {
     padding: 0;
     &:before {
       content: "";
@@ -22,7 +46,7 @@
       opacity: 0.7;
     }
   }
-  .name.icon[data-name$="@{extension}"] {
+  .name.icon[data-name$="@{match}"] {
     &.icon-file-text,
     &.icon-file-media,
     &.icon-book {
@@ -35,11 +59,110 @@
         margin: 4px 6px 0 0;
         background: url('@{icon}') 0 0 no-repeat;
         opacity: 0.7;
+        .set-hidden-opacity(@type);
       }
     }
   }
 }
 
+.icon-file-begins-with( @match: ''; @type: ''; @icon: ''; ) {
+  tabs-bar tabs-tab .title[data-name^="@{match}"],
+  .tab-bar .tab .title[data-name^="@{match}"] {
+    padding: 0;
+    &:before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      float: left;
+      margin: 11px 6px 0 0;
+      background: url('@{icon}') 0 0 no-repeat;
+      opacity: 0.7;
+    }
+  }
+  .name.icon[data-name^="@{match}"] {
+    &.icon-file-text,
+    &.icon-file-media,
+    &.icon-book {
+      .set-hidden-color(@type);
+      &:before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        float: left;
+        margin: 4px 6px 0 0;
+        background: url('@{icon}') 0 0 no-repeat;
+        opacity: 0.7;
+        .set-hidden-opacity(@type);
+      }
+    }
+  }
+}
+
+.icon-file-equals( @match: ''; @type: ''; @icon: ''; ) {
+  tabs-bar tabs-tab .title[data-name="@{match}"],
+  .tab-bar .tab .title[data-name="@{match}"] {
+    padding: 0;
+    &:before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      float: left;
+      margin: 11px 6px 0 0;
+      background: url('@{icon}') 0 0 no-repeat;
+      opacity: 0.7;
+    }
+  }
+  .name.icon[data-name="@{match}"] {
+    &.icon-file-text,
+    &.icon-file-media,
+    &.icon-book {
+      .set-hidden-color(@type);
+      &:before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        float: left;
+        margin: 4px 6px 0 0;
+        background: url('@{icon}') 0 0 no-repeat;
+        opacity: 0.7;
+        .set-hidden-opacity(@type);
+      }
+    }
+  }
+}
+
+.icon-file-contains( @match: ''; @type: ''; @icon: ''; ) {
+  tabs-bar tabs-tab .title[data-name*="@{match}"],
+  .tab-bar .tab .title[data-name*="@{match}"] {
+    padding: 0;
+    &:before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      float: left;
+      margin: 11px 6px 0 0;
+      background: url('@{icon}') 0 0 no-repeat;
+      opacity: 0.7;
+    }
+  }
+  .name.icon[data-name*="@{match}"] {
+    &.icon-file-text,
+    &.icon-file-media,
+    &.icon-book {
+      .set-hidden-color(@type);
+      &:before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        float: left;
+        margin: 4px 6px 0 0;
+        background: url('@{icon}') 0 0 no-repeat;
+        opacity: 0.7;
+        .set-hidden-opacity(@type);
+      }
+    }
+  }
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////
