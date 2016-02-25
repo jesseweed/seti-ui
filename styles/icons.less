@@ -622,12 +622,15 @@ tabs-bar tabs-tab .title.icon-tools, .tab-bar .tab .title.icon-tools {
     
     &:not(.icon-file-directory){
       padding: 1px 0;
-      top: 0;
+      top: -1px;
     }
   }
   
-  .list-group .icon::before,
-  .list-tree .icon::before{
-    margin-right: 7px;
+  .list-group,
+  .list-tree{
+    
+    .icon::before{
+      margin-right: 7px;
+    }
   }
 }
