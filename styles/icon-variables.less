@@ -83,3 +83,10 @@
 @color-xml: #F79451; // XML
 @color-yml: #542d8d; // YML
 @color-go: #6AD7E5; // Go
+
+
+// OVERRIDE CLASS
+@override-class: ~".seti-ui-no-icons";
+@override-element: ~"atom-workspace";
+@icons-enabled:   ~"@{override-element}:not(@{override-class})";
+@icons-disabled:  ~"@{override-element}@{override-class}";
