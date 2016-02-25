@@ -617,9 +617,17 @@ tabs-bar tabs-tab .title.icon-tools, .tab-bar .tab .title.icon-tools {
 // FOR WORKSPACES THAT'VE DISABLED SETI ICONS
 @{icons-disabled}{
   
-  .name.icon:not(.icon-file-directory){
-    padding: 1px 0;
-    top: 0;
+  .name.icon{
+    left: -2px;
+    
+    &:not(.icon-file-directory){
+      padding: 1px 0;
+      top: 0;
+    }
   }
   
+  .list-group .icon::before,
+  .list-tree .icon::before{
+    margin-right: 7px;
+  }
 }
