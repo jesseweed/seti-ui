@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.9.1
+- Forgot to update Changelog like a jerk
+
+## 0.9.0
+- Allow packages to disable theme icons
+
 ## 0.8.1
 - Fix tree-view background color
 - Add apm installation steps to README
