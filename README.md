@@ -28,12 +28,14 @@ git clone https://github.com/jesseweed/seti-ui --depth=1
 ### Currently Supported File Icons
 * Bower
 * Coffescript
+* ColdFusion
 * CSS
 * EJS
 * Favicon
 * Go
 * Grunt
 * Gulp
+* Haml
 * Handlebars
 * HTML
 * Image
