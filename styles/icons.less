@@ -86,7 +86,7 @@
 
 
 @{icons-enabled} {
-  
+
   // DEFAULT TAB ICON
   tabs-bar tabs-tab .title, .tab-bar .tab .title {
     position: relative;
@@ -106,7 +106,7 @@
       color: @color-default;
     }
   }
-  
+
   tabs-bar tabs-tab.active .title, .tab-bar .tab.active .title {
     top: -2px;
   }
@@ -163,7 +163,7 @@ tabs-bar tabs-tab .title.icon-tools, .tab-bar .tab .title.icon-tools {
 
 
 @{icons-enabled} {
-  
+
   // CSS
   .icon-tab('.css', css, 20px, 6px, -1px, -5px, -5px);
   .icon-tree('.css', css, 20px, 5px, 1px, -6px, -3px);
@@ -328,6 +328,12 @@ tabs-bar tabs-tab .title.icon-tools, .tab-bar .tab .title.icon-tools {
   // Favicon
   .icon-tab('.ico', 'ico', 18px, 4px, 3px, -2px, -4px);
   .icon-tree('.ico', 'ico', 18px, 3px, 2px, -4px, -2px);
+
+  // ColdFusion
+  .icon-tab('.cfm', 'coldfusion', 18px, 4px, 3px, -2px, -4px);
+  .icon-tree('.cfm', 'coldfusion', 18px, 3px, 2px, -4px, -2px);
+  .icon-tab('.cfc', 'coldfusion', 18px, 4px, 3px, -2px, -4px);
+  .icon-tree('.cfc', 'coldfusion', 18px, 3px, 2px, -4px, -2px);
 
 
 
@@ -616,19 +622,19 @@ tabs-bar tabs-tab .title.icon-tools, .tab-bar .tab .title.icon-tools {
 
 // FOR WORKSPACES THAT'VE DISABLED SETI ICONS
 @{icons-disabled}{
-  
+
   .name.icon{
     left: -2px;
-    
+
     &:not(.icon-file-directory){
       padding: 1px 0;
       top: -1px;
     }
   }
-  
+
   .list-group,
   .list-tree{
-    
+
     .icon::before{
       margin-right: 7px;
     }
