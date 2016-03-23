@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.2
+- Add cold fusion support
+- Add Haml icon
+
 ## 0.9.1
 - Forgot to update Changelog like a jerk
 
