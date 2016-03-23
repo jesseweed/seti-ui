@@ -86,7 +86,7 @@
 
 
 @{icons-enabled} {
-  
+
   // DEFAULT TAB ICON
   tabs-bar tabs-tab .title, .tab-bar .tab .title {
     position: relative;
@@ -106,7 +106,7 @@
       color: @color-default;
     }
   }
-  
+
   tabs-bar tabs-tab.active .title, .tab-bar .tab.active .title {
     top: -2px;
   }
@@ -163,7 +163,17 @@ tabs-bar tabs-tab .title.icon-tools, .tab-bar .tab .title.icon-tools {
 
 
 @{icons-enabled} {
-  
+
+  // Coffescript
+  .icon-tab('.coffee', 'coffee', 16px, 5px, 4px, 2px, -3px);
+  .icon-tree('.coffee', 'coffee', 15px, 4px, 2px, -1px, -1px);
+
+  // ColdFusion
+  .icon-tab('.cfm', 'coldfusion', 18px, 4px, 3px, -2px, -4px);
+  .icon-tree('.cfm', 'coldfusion', 18px, 3px, 2px, -4px, -2px);
+  .icon-tab('.cfc', 'coldfusion', 18px, 4px, 3px, -2px, -4px);
+  .icon-tree('.cfc', 'coldfusion', 18px, 3px, 2px, -4px, -2px);
+
   // CSS
   .icon-tab('.css', css, 20px, 6px, -1px, -5px, -5px);
   .icon-tree('.css', css, 20px, 5px, 1px, -6px, -3px);
@@ -171,6 +181,22 @@ tabs-bar tabs-tab .title.icon-tools, .tab-bar .tab .title.icon-tools {
   // CSON
   .icon-tab('.cson', 'json', 20px, 6px, -3px, -5px, -4px);
   .icon-tree('.cson', 'json', 20px, 5px, 2px, -5px, -4px);
+
+  // EJS
+  .icon-tab('.ejs', 'ejs', 20px, 5px, -3px, -5px, -5px);
+  .icon-tree('.ejs', 'ejs', 20px, 5px, 2px, -5px, -3px);
+
+  // Favicon
+  .icon-tab('.ico', 'ico', 18px, 4px, 3px, -2px, -4px);
+  .icon-tree('.ico', 'ico', 18px, 3px, 2px, -4px, -2px);
+
+  // Golang
+  .icon-tab('.go', 'go', 16px, 3px, 3px, -3px, -2px);
+  .icon-tree('.go', 'go', 16px, 4px, 2px, -4px, -1px);
+
+  // Haml
+  .icon-tab('.haml', 'haml', 20px, 6px, -3px, -5px, -4px);
+  .icon-tree('.haml', 'haml', 20px, 5px, 2px, -5px, -4px);
 
   // Handlebars
   .icon-tab('.hbs', 'handlebars', 22px, 6px, 0px, -5px );
@@ -193,7 +219,6 @@ tabs-bar tabs-tab .title.icon-tools, .tab-bar .tab .title.icon-tools {
   .icon-tab('.DS_Store', 'hidden', 20px, 6px, -3px, -3px, -5px);
   .icon-tree('.DS_Store', 'hidden', 20px, 6px, 1px, -5px, -4px);
 
-
   // HTML
   .icon-tab('.html', html, 22px, 6px);
   .icon-tree('.html', html, 22px, 5px, 2px, -6px,-5px);
@@ -210,19 +235,13 @@ tabs-bar tabs-tab .title.icon-tools, .tab-bar .tab .title.icon-tools {
   .icon-tab('.es6', 'js', 20px, 6px, -3px, -5px, -5px);
   .icon-tree('.es6', 'js', 20px, 6px, 2px, -6px, -4px);
 
-  // Coffescript
-  .icon-tab('.coffee', 'coffee', 16px, 5px, 4px, 2px, -3px);
-  .icon-tree('.coffee', 'coffee', 15px, 4px, 2px, -1px, -1px);
-
   // JSON
   .icon-tab('.json', 'json', 20px, 5px, -3px, -5px, -5px);
   .icon-tree('.json', 'json', 20px, 5px, 2px, -5px, -3px);
 
-  // React
-  .icon-tab('.jsx', 'jsx', 21px, 6px, -1px, -3px, -4px);
-  .icon-tree('.jsx', 'jsx', 21px, 6px, 3px, -5px, -5px);
-  .icon-tab('.cjsx', 'jsx', 21px, 6px, -1px, -3px, -4px);
-  .icon-tree('.cjsx', 'jsx', 21px, 6px, 3px, -5px, -5px);
+  // Julia
+  .icon-tab('.jl', 'jl', 18px, 4px, 3px, -3px, -3px);
+  .icon-tree('.jl', 'jl', 18px, 4px, 2px, -3px, -1px);
 
   // LESS
   .icon-tab('.less', less, 20px, 6px, -3px, -5px, -5px);
@@ -271,10 +290,15 @@ tabs-bar tabs-tab .title.icon-tools, .tab-bar .tab .title.icon-tools {
   .icon-tab('PROCFILE', 'procfile', 14px, 2px, 3px, 0px, 0px);
   .icon-tree('PROCFILE', 'procfile', 14px, 2px, 3px, -1px, -1px);
 
-
   // Python
   .icon-tab('.py', 'py', 20px, 5px, -3px, -5px, -5px);
   .icon-tree('.py', 'py', 20px, 5px, 3px, -4px, -3px);
+
+  // React
+  .icon-tab('.jsx', 'jsx', 21px, 6px, -1px, -3px, -4px);
+  .icon-tree('.jsx', 'jsx', 21px, 6px, 3px, -5px, -5px);
+  .icon-tab('.cjsx', 'jsx', 21px, 6px, -1px, -3px, -4px);
+  .icon-tree('.cjsx', 'jsx', 21px, 6px, 3px, -5px, -5px);
 
   // Ruby
   .icon-tab('.rb', 'rb', 15px, 3px, -1px, -5px, -2px);
@@ -312,22 +336,6 @@ tabs-bar tabs-tab .title.icon-tools, .tab-bar .tab .title.icon-tools {
   .icon-tab('.yaml', 'yml', 16px, 3px, 3px, 0px, -2px);
   .icon-tree('.yaml', 'yml', 16px, 2px, 2px, -2px, -1px);
 
-  // Golang
-  .icon-tab('.go', 'go', 16px, 3px, 3px, -3px, -2px);
-  .icon-tree('.go', 'go', 16px, 4px, 2px, -4px, -1px);
-
-
-  // Julia
-  .icon-tab('.jl', 'jl', 18px, 4px, 3px, -3px, -3px);
-  .icon-tree('.jl', 'jl', 18px, 4px, 2px, -3px, -1px);
-
-  // EJS
-  .icon-tab('.ejs', 'ejs', 20px, 5px, -3px, -5px, -5px);
-  .icon-tree('.ejs', 'ejs', 20px, 5px, 2px, -5px, -3px);
-
-  // Favicon
-  .icon-tab('.ico', 'ico', 18px, 4px, 3px, -2px, -4px);
-  .icon-tree('.ico', 'ico', 18px, 3px, 2px, -4px, -2px);
 
 
 
@@ -616,19 +624,19 @@ tabs-bar tabs-tab .title.icon-tools, .tab-bar .tab .title.icon-tools {
 
 // FOR WORKSPACES THAT'VE DISABLED SETI ICONS
 @{icons-disabled}{
-  
+
   .name.icon{
     left: -2px;
-    
+
     &:not(.icon-file-directory){
       padding: 1px 0;
       top: -1px;
     }
   }
-  
+
   .list-group,
   .list-tree{
-    
+
     .icon::before{
       margin-right: 7px;
     }
