@@ -3,9 +3,15 @@
   "theme": "ui",
   "version": "0.9.2",
   "description": "A dark colored UI theme for Atom with custom file icons.",
+  "main": "./lib/seti",
   "license": "MIT",
   "repository": "https://github.com/jesseweed/seti-ui",
   "engines": {
     "atom": ">0.99.0"
+  },
+  "dependencies": {
+    "domtastic": "^0.12.0",
+    "es6-dom": "^1.0.0",
+    "jquery": "^2.2.2"
   }
 }

@@ -1,0 +1,21 @@
+{
+  "ui": {
+    "order": 1,
+    "type": "object",
+    "title": "User Interface",
+    "properties": {
+      "largeTabs": {
+        "title": "Use Large Tabs",
+        "description": "Disable this if you would like to go back to the old narrow tab style",
+        "type": "boolean",
+        "default": true
+      },
+      "displayIgnored": {
+        "title": "Display Ignored Files",
+        "description": "Enable this if you would like to not see ignored files at all (as opposed to simple muting the style)",
+        "type": "boolean",
+        "default": true
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+atom-panel-container.left {
+  // PROJECT HEADER
+  .project-root > .header {
+    background: @tree-view-header-color;
+    color: @tree-view-header-text-color;
+    font-size: 15px;
+    font-weight: 100;
+    height: @top-bar;
+    left: 0;
+    padding: 15px 0 0 8px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+
+    &.list-item {
+      &::before {
+        display: none !important;
+        content: '';
+      }
+    }
+
+    .icon-repo {
+      &::before {
+        background: url('atom://seti-ui/icons/icon_Project.svg') no-repeat;
+        content: '';
+        height: 30px;
+        margin-bottom: -10px;
+        width: 30px;
+      }
+    }
+
+    // OVERRIDE DEFAULT HEIGHT IF SMALL TAB REQUESTED
+    &.small-tab {
+      font-size: 13px;
+      height: @top-bar-small;
+      padding: 7px 0 0 5px;
+
+      .icon-repo {
+        &::before {
+          // display: none;
+          background: url('atom://seti-ui/icons/icon_Project.svg') no-repeat;
+          content: '';
+          height: 25px;
+          margin-bottom: -7px;
+          width: 25px;
+        }
+      }
+
+    }
+
+  }
+}
