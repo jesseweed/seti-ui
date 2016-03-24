@@ -1,0 +1,64 @@
+.tabs-bar, .tab-bar {
+
+  // TAB BAR
+  height: @top-bar;
+  background: @tab-bar-background-color;
+
+  // SINGLE TAB
+  .tab {
+    background: @tab-background-color;
+    color: @tab-text-color;
+    height: @top-bar;
+    padding: 20px 10px;
+    border-bottom: solid 3px @black;
+    border-right: solid 1px @tab-border-color;
+
+    .title {
+      margin-right: 20px;
+      &::before {
+        background: url('atom://seti-ui/icons/icon_default.svg') no-repeat;
+        display: inline-block;
+        content: '';
+        height: 17px;
+        margin: 0 5px -4px 0;
+        width: 17px;
+      }
+    }
+
+    @import "icons";
+
+    // ACTIVE TAB
+    &.active {
+      background: #111213;
+      border-bottom: solid 3px @blue;
+    }
+
+    // SETTINGS TAB
+    &[data-type="SettingsView"] {
+      background: @blue;
+      padding: 18px 10px;
+      .icon-tools {
+        &::before {
+          background: url('atom://seti-ui/icons/icon_settings.svg');
+          content: '';
+          height: 25px;
+          margin: 0 2px -9px 0;
+          width: 25px;
+          opacity: 0.7;
+        }
+      }
+    }
+
+  }
+
+  // OVERRIDE DEFAULT TAB SIZE
+  &.small-tab, &.small-tab .tab {
+    height: @top-bar-small;
+  }
+
+  // CLOSE ICON
+  .close-icon {
+    top: 22px;
+  }
+
+}
