@@ -1,0 +1,65 @@
+// SIDEBAR
+atom-panel-container.left {
+  // margin: 0;
+  margin-top: @top-bar;
+  // display: none;
+
+  // border-right: solid 1px pink;
+
+  .panel-left {
+    border: none;
+  }
+
+  &.small-tab { margin-top: @top-bar-small; }
+
+  // FILE LIST CONTAINER
+  .entries.list-tree {
+
+    // LIST ITEMS
+    .directory.entry.list-nested-item, .file.entry.list-item {
+      padding-top: 5px;
+      padding-botom: 5px;
+
+      color: @tree-view-text-color;
+
+      // SELECTED STATE
+      &.selected {
+        &::before {
+          background: @tree-view-highlight;
+        }
+      }
+
+      &.status-added {
+        color: @text-color-success;
+      }
+
+      &.status-modified {
+        color: @text-color-warning;
+      }
+
+      &.status-ignored {
+        color: @text-color-ignored;
+        &.seti-hide {
+          display: none;
+        }
+      }
+
+    }
+
+
+    // LIST ITEM - DIRECTORY ONLY
+    .directory.entry.list-nested-item {
+      // border-bottom: 1px solid pink;
+      &.selected.status-added {
+        // color: @status-added;
+      }
+    }
+
+    // LIST ITEM - DIRECTORY ONLY
+    .file.entry.list-item {
+    }
+
+
+  }
+
+}
