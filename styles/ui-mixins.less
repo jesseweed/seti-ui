@@ -1,0 +1,14 @@
+.icon-tab( @extension: ''; @file: ''; ) {
+
+  .title[data-name$="@{extension}"],
+  &.icon-file-text[data-name$="@{extension}"],
+  &.icon-file-media[data-name$="@{extension}"] {
+    &::before {
+      background: url('atom://seti-ui/icons/icon_@{file}.svg');
+      height: 20px;
+      margin: 0 5px -5px 0;
+      width: 20px;
+    }
+  }
+
+}

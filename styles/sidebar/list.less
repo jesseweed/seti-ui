@@ -49,14 +49,57 @@ atom-panel-container.left {
 
     // LIST ITEM - DIRECTORY ONLY
     .directory.entry.list-nested-item {
-      // border-bottom: 1px solid pink;
+      // HIDDEN
+      &.status-ignored {
+        .icon-file-directory, {
+          &::before {
+            background: url('atom://seti-ui/icons/icon_ignored.svg');
+            content: '';
+            height: 24px;
+            margin: 0 0px -8px -7px;
+            width: 24px;
+          }
+        }
+      }
+
+      // GIT FOLDER
+      .icon-file-directory[data-name$=".git"], {
+        &::before {
+          background: url('atom://seti-ui/icons/icon_git-folder.svg');
+          content: '';
+          height: 24px;
+          margin: 0 0px -8px -7px;
+          width: 24px;
+        }
+      }
+
       &.selected.status-added {
         // color: @status-added;
       }
     }
 
+    // .icon-file-directory::before {
+    //   &::before {
+    //     background: url('atom://seti-ui/icons/icon_git.svg');
+    //     height: 20px;
+    //     margin: 0 5px -5px 0;
+    //     width: 20px;
+    //   }
+    // }
+
+
     // LIST ITEM - DIRECTORY ONLY
     .file.entry.list-item {
+      .icon-file-text {
+        &::before {
+          // background: url('atom://seti-ui/icons/icon_default.svg') no-repeat;
+          content: '';
+          height: 17px;
+          margin-bottom: -2px;
+          width: 17px;
+        }
+        @import "workspace/icons";
+      }
     }
 
 

@@ -15,9 +15,14 @@
 @purple: #a074c4;
 @white: #d4d7d6;
 
+// BASE COLORS
+@base-background-color: @black;
+@base-border-color: #060708;
+@app-background-color: @black;
+
 // SIDEBAR
 @tree-view-background-color: #0e1112;
-@tree-view-border-color: #060708;
+@tree-view-border-color: @base-border-color;
 @tree-view-highlight: #14191c;
 @tree-view-header-color: #090b0d;
 @tree-view-header-text-color: @white;
@@ -26,10 +31,11 @@
 // TAB
 @top-bar: 60px;
 @top-bar-small: 40px;
-@tab-bar-background-color: @base-background-color;
+@tab-bar-background-color: @tree-view-header-color;
 @tab-bar-border-color: @base-border-color;
-@tab-background-color: @base-background-color;
-@tab-background-color-active: @base-background-color;
+@tab-background-color: #1f2326;
+@tab-text-color: #d4d7d6;
+@tab-background-color-active: #111213;
 @tab-border-color: @base-border-color;
 
 
@@ -46,11 +52,6 @@
 @ui-site-color-3: @purple;
 @ui-site-color-4: @yellow;
 @ui-site-color-5: @red;
-
-// BASE COLORS
-@base-background-color: @black;
-@base-border-color: #000;
-@app-background-color: @black;
 
 
 // Text colors
