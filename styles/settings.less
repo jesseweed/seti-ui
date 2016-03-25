@@ -1,0 +1,49 @@
+atom-pane-container atom-pane .item-views .pane-item {
+  background: @black;
+  color: @white;
+
+  // FONTS
+  .section-heading {
+    font-family: 'Roboto-Thin';
+    font-size: 3em;
+    font-weight: 100;
+
+    &::before {
+      content: '';
+      background: url('atom://seti-ui/icons/icon_settings.svg');
+      height: 50px;
+      width: 50px;
+      margin: 0 0 -12px -15px;
+    }
+  }
+
+  .setting-title {
+    font-family: 'Roboto-Thin';
+    font-size: 1.5em;
+    font-weight: 100;
+    margin: -3px 0 5px 0 ;
+  }
+
+  .setting-description {
+    color: rgba(255,255,255,0.5);
+    font-family: 'Roboto-Thin';
+    font-size: 13px;
+  }
+
+  .config-menu {
+    font-weight: 100;
+    a.icon {
+      color: @white;
+    }
+  }
+
+
+}
+
+
+
+// INPUTS
+
+.settings-view input[type="checkbox"]:checked {
+  background-color: @blue;
+}
