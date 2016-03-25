@@ -1,26 +1,21 @@
 // SIDEBAR
 atom-panel-container.left {
-  // margin: 0;
   margin-top: @top-bar;
-  // display: none;
 
-  // border-right: solid 1px pink;
+  @import "workspace/icons";
 
   .panel-left {
     border: none;
   }
-
-  &.small-tab { margin-top: @top-bar-small; }
 
   // FILE LIST CONTAINER
   .entries.list-tree {
 
     // LIST ITEMS
     .directory.entry.list-nested-item, .file.entry.list-item {
+      color: @tree-view-text-color;
       padding-top: 5px;
       padding-botom: 5px;
-
-      color: @tree-view-text-color;
 
       // SELECTED STATE
       &.selected {
@@ -29,6 +24,7 @@ atom-panel-container.left {
         }
       }
 
+      // STATUS COLORS
       &.status-added {
         color: @text-color-success;
       }
@@ -46,10 +42,24 @@ atom-panel-container.left {
 
     }
 
+    .file.entry.list-item {
+      .icon-book,
+      .icon-file-text,
+      .icon-file-media {
+        &::before {
+          content: '';
+          height: 18px;
+          margin-bottom: -4px;
+          width: 18px;
+        }
+      }
+    }
 
-    // LIST ITEM - DIRECTORY ONLY
+
+    // DIRECTORIES
     .directory.entry.list-nested-item {
-      // HIDDEN
+
+      // IGNORED FILES
       &.status-ignored {
         .icon-file-directory, {
           &::before {
@@ -72,37 +82,19 @@ atom-panel-container.left {
           width: 24px;
         }
       }
-
-      &.selected.status-added {
-        // color: @status-added;
-      }
     }
-
-    // .icon-file-directory::before {
-    //   &::before {
-    //     background: url('atom://seti-ui/icons/icon_git.svg');
-    //     height: 20px;
-    //     margin: 0 5px -5px 0;
-    //     width: 20px;
-    //   }
-    // }
-
-
-    // LIST ITEM - DIRECTORY ONLY
-    .file.entry.list-item {
-      .icon-file-text {
-        &::before {
-          // background: url('atom://seti-ui/icons/icon_default.svg') no-repeat;
-          content: '';
-          height: 17px;
-          margin-bottom: -2px;
-          width: 17px;
-        }
-        @import "workspace/icons";
-      }
-    }
-
 
   }
+
+
+  // - - - - - - - - - - -
+  //  USER MODIFIED STYLES
+  // - - - - - - - - - - -
+
+  &.seti-no-icons {
+    
+  }
+
+  &.small-tab { margin-top: @top-bar-small; }
 
 }

@@ -4,11 +4,23 @@
     "type": "object",
     "title": "User Interface",
     "properties": {
+      "fileIcons": {
+        "title": "Display file icons",
+        "description": "Disable this if you are using file-icons or another atom file icon package (or simply don't want icons)",
+        "type": "boolean",
+        "default": true
+      },
       "largeTabs": {
         "title": "Use Large Tabs",
         "description": "Disable this if you would like to go back to the old narrow tab style",
         "type": "boolean",
         "default": true
+      },
+      "hideTabs": {
+        "title": "Hide Tabs",
+        "description": "Enable this if you prefer to rely on the sidebar for nagivation and don't want to see tabs at all.",
+        "type": "boolean",
+        "default": false
       },
       "displayIgnored": {
         "title": "Display Ignored Files",

@@ -1,5 +1,7 @@
 .tabs-bar, .tab-bar {
 
+  @import "icons";
+
   // TAB BAR
   height: @top-bar;
   background: @tab-bar-background-color;
@@ -13,7 +15,8 @@
     border-bottom: solid 3px @black;
     border-right: solid 1px @tab-border-color;
 
-    .title {
+    // ICONS
+    &> .title {
       margin-right: 20px;
       &::before {
         background: url('atom://seti-ui/icons/icon_default.svg') no-repeat;
@@ -23,9 +26,13 @@
         margin: 0 5px -4px 0;
         width: 17px;
       }
+
     }
 
-    @import "icons";
+    &:hover {
+      background: #111213;
+      transition: background 0.5s ease;
+    }
 
     // ACTIVE TAB
     &.active {
@@ -36,7 +43,11 @@
     // SETTINGS TAB
     &[data-type="SettingsView"] {
       background: @blue;
-      padding: 18px 10px;
+      padding: 17px 10px;
+
+      &.active {
+        background: @black;
+      }
       .icon-tools {
         &::before {
           background: url('atom://seti-ui/icons/icon_settings.svg');
@@ -47,18 +58,82 @@
           opacity: 0.7;
         }
       }
+
     }
 
-  }
-
-  // OVERRIDE DEFAULT TAB SIZE
-  &.small-tab, &.small-tab .tab {
-    height: @top-bar-small;
   }
 
   // CLOSE ICON
   .close-icon {
     top: 22px;
+    right: 10px;
+  }
+
+  // MODIFIED TAB
+  .modified {
+
+    &:hover .close-icon {
+      color: @red;
+    }
+
+    &:not(:hover) .close-icon {
+      border-color: @yellow;
+      top: 26px;
+      right: 14px;
+    }
+
+  }
+
+
+  // - - - - - - - - - - -
+  //  USER MODIFIED STYLES
+  // - - - - - - - - - - -
+
+  &.seti-hide-tabs {
+    display: none;
+  }
+
+  // SMALL TABS
+  &.small-tab {
+    height: @top-bar-small;
+    .tab, .tab[data-type="SettingsView"] {
+      height: @top-bar-small;
+      padding: 8px 8px;
+    }
+
+    .tab > .title,
+    .icon-file-text,
+    .icon-book,
+    .icon-file-media {
+      &::before {
+        margin: 3px 3px -7px 0;
+        height: 20px;
+        width: 20px;
+      }
+    }
+
+    // CLOSE ICON
+    .close-icon {
+      top: 11px;
+      right: 5px;
+    }
+
+    .modified {
+
+      .close-icon {
+        top: 1px;
+        right: 5px;
+      }
+
+      &:not(:hover) {
+        .close-icon {
+          border-color: @blue;
+          top: 15px;
+          right: 9px;
+        }
+      }
+
+    }
   }
 
 }
