@@ -1,4 +1,12 @@
 atom-panel-container.left {
+
+  // HOVER TEXT FOR EXPENSED STATE
+  .project-root.expanded {
+     > .header:hover:after {
+       content: 'close';
+     }
+  }
+
   // PROJECT HEADER
   .project-root > .header {
     background: @tree-view-header-color;
@@ -12,6 +20,23 @@ atom-panel-container.left {
     right: 0;
     top: 0;
     z-index: 1;
+
+    &:hover {
+      background: #000;
+      cursor: pointer;
+      transition: 0.5s ease all;
+
+      &:after {
+        color: #40525a;
+        content: 'open';
+        font-size: 11px;
+        font-weight: 500;
+        margin-left: 10px;
+        position: relative;
+        top: -1px;
+        opacity: 0.5;
+      }
+    }
 
     &.list-item {
       &::before {
