@@ -1,33 +1,110 @@
 atom-pane-container atom-pane .item-views .pane-item {
   background: @black;
   color: @white;
+  font-weight: 100;
+
+  .editor.mini {
+    height: 45px;
+    max-height: 60px;
+    padding: 10px;
+    color: @white;
+  }
+
+  // LEFT MENU
+  .config-menu {
+    background: @tree-view-header-color;
+    border: 0;
+    color: #848c89;
+    padding: 0;
+
+    li {
+
+      a {
+        transition: ease 0.5s background;
+        &:hover {
+          background: lighten(@black, 5%);
+        }
+      }
+
+      &.active a {
+        background: @black;
+        cursor: default;
+        a:hover {
+          // background: @black;
+        }
+      }
+
+    }
+
+  }
 
   // FONTS
   .section-heading {
     font-family: 'Roboto-Thin';
-    font-size: 3em;
+    font-size: 3.5em;
     font-weight: 100;
+    color: @white;
+
+    &-count {
+      background: @blue;
+      color: @white;
+      font-size: 0.5em;
+    }
+
+    &-title {
+      color: @white;
+      font-family: 'Roboto-Thin';
+      font-size: 1.5em;
+      font-weight: 100;
+      margin: -3px 0 5px 0 ;
+    }
+
+    &-description {
+      color: @white;
+      color: rgba(255,255,255,0.5);
+      font-family: 'Roboto-Thin';
+      font-size: 13px;
+    }
 
     &::before {
-      content: '';
-      background: url('atom://seti-ui/icons/icon_settings.svg');
-      height: 50px;
-      width: 50px;
-      margin: 0 0 -12px -15px;
+      // content: '';
+      // background: url('atom://seti-ui/icons/icon_settings.svg');
+      height: 35px;
+      width: 35px;
+      position: relative;
+      // margin: -10 0 -12px -15px;
+      top: -3px;
+      font-size: 35px;
+      color: @grey;
     }
   }
 
-  .setting-title {
+  .sub-section-heading {
     font-family: 'Roboto-Thin';
-    font-size: 1.5em;
+    color: @white;
+    font-size: 2em;
     font-weight: 100;
-    margin: -3px 0 5px 0 ;
+
+    &::before {
+      height: 25px;
+      width: 25px;
+      font-size: 25px;
+      color: @grey;
+    }
   }
 
-  .setting-description {
-    color: rgba(255,255,255,0.5);
-    font-family: 'Roboto-Thin';
-    font-size: 13px;
+  // PACKAGE CONTAINERS
+  .package {
+    &-container {
+    }
+    &-card {
+      background: @grey-dark;
+      border: none;
+      .card-name a {
+        color: @blue;
+      }
+    }
+
   }
 
   .config-menu {
@@ -37,6 +114,45 @@ atom-pane-container atom-pane .item-views .pane-item {
     }
   }
 
+  button.btn {
+    border: 0;
+    margin-right: 2px;
+    // BUTTON FOR THEME SETTINGS
+    &.active-theme-settings.icon-gear {
+      background: none;
+      &::before {
+        font-size: 22px;
+        margin-top: 5px;
+        margin-left: -2px;
+        transition: 0.25s background;
+      }
+      &:hover::before {
+        color: @blue;
+      }
+    }
+    &.settings {
+      // background: @purple;
+    }
+    &.uninstall-button {
+      background: @red;
+    }
+    &.install-button {
+      // font-weight: 500;
+      background: darken(@blue, 5%);
+      color: @white;
+    }
+    // DISABLE
+    &.icon-playback-pause.enablement {
+      button.status-indicator {
+        background: blue;
+      }
+    }
+    // ENABLE BUTTON
+    &.icon-playback-play.enablement {
+      // background: darken(@red, 25%);
+    }
+
+  }
 
 }
 
@@ -46,4 +162,25 @@ atom-pane-container atom-pane .item-views .pane-item {
 
 .settings-view input[type="checkbox"]:checked {
   background-color: @blue;
+}
+
+.control-label {
+  font-weight: 100;
+  .setting-title.themes-label {
+    font-size: 1.5em;
+    font-weight: 100;
+    margin-bottom: 3px;
+  }
+}
+
+.settings-view {
+  .select-container .form-control {
+    background: @grey;
+    transition: 0.25s background;
+    &:hover {
+      background: @grey-dark;
+      cursor: pointer;
+    }
+  }
+
 }
