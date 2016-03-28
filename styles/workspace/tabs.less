@@ -4,20 +4,47 @@
 
   // TAB BAR
   height: @top-bar;
-  background: @tab-bar-background-color;
+  border-bottom: solid 2px rgba(0,0,0,0.3);
+  background: lighten(@tree-view-header-color, 7%);
+
+  // TAB PLACEHOLDER MARKER (FOR DRAG & DROP)
+  .placeholder {
+    background-color: @blue;
+    height: @top-bar;
+    &::after {
+      background-color: @blue;
+      top: @top-bar;
+    }
+  }
 
   // SINGLE TAB
   .tab {
-    background: @tab-background-color;
+    background-color: @tab-background-color;
     color: @tab-text-color;
     height: @top-bar;
     padding: 20px 10px;
-    border-bottom: solid 3px @black;
-    border-right: solid 1px @tab-border-color;
+    border-bottom: solid 2px rgba(0,0,0,0.4);
+    border-right: solid 1px rgba(0,0,0,0.4);
+    font-weight: 100;
+    letter-spacing: 0.05em;
+    transition: linear 0.25s background;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 10%;
+      height: 2px;
+      z-index: 999;
+      bottom: -2px;
+      left: 45%;
+      opacity: 0;
+      transition: linear 0.25s width, linear 0.25s left, linear 0.4s opacity;
+    }
 
     // ICONS
-    &> .title {
-      margin-right: 20px;
+    & > .title {
+      margin-right: 18px;
+      // box-shadow: inset -5px 0px 1px 0px @tab-background-color; // horiz, vert, blur, spread, color
       &::before {
         background: url('atom://seti-ui/icons/icon_default.svg') no-repeat;
         display: inline-block;
@@ -29,20 +56,23 @@
 
     }
 
-    &:hover {
-      background: #111213;
-      transition: background 0.5s ease;
-    }
-
     // ACTIVE TAB
     &.active {
       background: #111213;
-      border-bottom: solid 3px @blue;
+      border-right: solid 1px rgba(0,0,0,0.2);
+      z-index: 1;
+      height: @top-bar;
+
+      &::after {
+        width: 100%;
+        left: 0px;
+        opacity: 1;
+        background: @blue;
+      }
     }
 
     // SETTINGS TAB
     &[data-type="SettingsView"] {
-      background: @blue;
       padding: 17px 10px;
 
       &.active {
@@ -94,11 +124,12 @@
   }
 
   // SMALL TABS
-  &.small-tab {
+  &.seti-compact {
     height: @top-bar-small;
     .tab, .tab[data-type="SettingsView"] {
       height: @top-bar-small;
       padding: 8px 8px;
+      letter-spacing: inherit;
     }
 
     .tab > .title,

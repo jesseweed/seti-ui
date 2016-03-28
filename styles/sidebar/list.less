@@ -11,11 +11,46 @@ atom-panel-container.left {
   // FILE LIST CONTAINER
   .entries.list-tree {
 
+    .directory.entry.list-nested-item {
+      &:hover::before {
+        background: @tree-view-highlight;
+        content: '';
+        display: inline-block;
+        height: 25px;
+        left: 0px;
+        position: absolute;
+        z-index: -1;
+        transition: ease 0.5s background;
+        opacity: 0.25;
+        width: 100%;
+      }
+    }
+
+     .file.entry.list-item {
+      cursor: pointer;
+      &::after {
+        display: inline-block;
+        content: '';
+        height: 25px;
+        width: 100%;
+        left: 0px;
+        position: absolute;
+        z-index: -1;
+        transition: ease 0.5s background;
+      }
+
+      &:hover::after {
+        background: @tree-view-highlight;
+      }
+    }
+
     // LIST ITEMS
     .directory.entry.list-nested-item, .file.entry.list-item {
       color: @tree-view-text-color;
-      padding-top: 5px;
-      padding-botom: 5px;
+      font-weight: 100;
+      letter-spacing: 0.1em;
+      padding-top: 3px;
+      padding-bottom: 3px;
 
       // SELECTED STATE
       &.selected {
@@ -84,6 +119,12 @@ atom-panel-container.left {
       }
     }
 
+    // &.seti-compact {
+    //   .directory.entry.list-nested-item, .file.entry.list-item {
+    //     padding: 0;
+    //   }
+    // }
+
   }
 
 
@@ -91,10 +132,13 @@ atom-panel-container.left {
   //  USER MODIFIED STYLES
   // - - - - - - - - - - -
 
-  &.seti-no-icons {
-    
+  &.seti-compact {
+    margin-top: @top-bar-small;
+    .entries.list-tree .directory.entry.list-nested-item, .entries.list-tree .file.entry.list-item {
+      padding-bottom: 0;
+      padding-top: 0;
+      letter-spacing: 0.05em;
+    }
   }
-
-  &.small-tab { margin-top: @top-bar-small; }
 
 }

@@ -10,11 +10,11 @@
         "type": "boolean",
         "default": true
       },
-      "largeTabs": {
-        "title": "Use Large Tabs",
-        "description": "Disable this if you would like to go back to the old narrow tab style",
+      "compactView": {
+        "title": "Compact Mode",
+        "description": "Enable this is you prefer less padding in your workspace.",
         "type": "boolean",
-        "default": true
+        "default": false
       },
       "hideTabs": {
         "title": "Hide Tabs",
