@@ -15,9 +15,9 @@ If these are not the droids you're looking for, may I point you in the drection 
 
 + [Emacs](https://github.com/caisah/seti-theme)
 + [iTerm](https://github.com/willmanduffy/seti-iterm)
++ [JetBrains](https://github.com/zchee/Seti_JetBrains)
 + [Sublime Text 3](https://packagecontrol.io/packages/Seti_UI)
 + [Vim](https://github.com/trusktr/seti.vim)
-+ [Webstorm](https://github.com/zchee/Seti_JetBrains)
 
 -----
 
