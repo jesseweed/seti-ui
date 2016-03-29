@@ -141,14 +141,25 @@ atom-workspace-axis.vertical .tab-bar {
     height: @top-bar-small;
     .tab, .tab[data-type="SettingsView"] {
       height: @top-bar-small;
-      padding: 5px 8px;
+      padding: 10px 8px;
       letter-spacing: inherit;
+    }
+
+    .tab[data-type="SettingsView"] {
+      padding-top: 5px;
+    }
+
+    &.seti-no-icons {
+      .tab {
+        padding-top: 3px;
+      }
     }
 
     .tab > .title,
     .icon-file-text,
     .icon-book,
     .icon-file-media {
+
       &::before {
         margin: 3px 3px -7px 0;
         height: 20px;
