@@ -1,37 +1,3 @@
-// HIDE TAB ICONS
-.tab-bar.seti-no-icons {
-  // @import "tabs";
-  .tab > .title {
-    padding: 13px 5px;
-    &::before {
-      display: none !important;
-    }
-  }
-
-  &.seti-compact {
-    .tab > .title {
-      padding: 18px 5px;
-    }
-    .tab[data-type="SettingsView"] > .title {
-      padding: 14px 5px;
-    }
-  }
-}
-
-// HIDE SIDEBAR ICONS
-atom-panel-container.left.seti-no-icons {
-
-  .icon-file-media, .icon-file-text, .icon-book {
-    padding-left: 4px;
-  }
-
-  .icon-file-media, .icon-file-text, .icon-book {
-    &::before {
-      display: none;
-    }
-  }
-}
-
 // - - - - - - - - - - -
 // EXTENSION BASED ICONS
 // - - - - - - - - - - -
@@ -209,9 +175,6 @@ atom-panel-container.left.seti-no-icons {
 .icon-tab('Procfile', 'heroku', @purple);
 .icon-tab('procfile', 'heroku', @purple);
 
-// SETTINGS
-// .icon-tab('Settings', 'settings', @white);
-
 
 // - - - - - - -
 // IGNORED FILES
@@ -219,3 +182,42 @@ atom-panel-container.left.seti-no-icons {
 
 .icon-tab('.DS_Store', 'ignored', @ignore, 25px, 8px, 0px);
 .icon-tab('npm-debug.log', 'npm_ignored', @ignore);
+
+
+// - - - - - - -
+// USER SETTINGS
+// - - - - - - -
+
+// HIDE TAB ICONS
+.tab-bar.seti-no-icons {
+  // @import "tabs";
+  .tab > .title {
+    padding: 13px 5px;
+    &::before {
+      display: none !important;
+    }
+  }
+
+  &.seti-compact {
+    .tab > .title {
+      padding: 18px 5px;
+    }
+    .tab[data-type="SettingsView"] > .title {
+      padding: 14px 5px;
+    }
+  }
+}
+
+// HIDE SIDEBAR ICONS
+atom-panel-container.left.seti-no-icons {
+
+  .icon-file-media, .icon-file-text, .icon-book {
+    padding-left: 4px;
+  }
+
+  .icon-file-media, .icon-file-text, .icon-book {
+    &::before {
+      display: none;
+    }
+  }
+}
