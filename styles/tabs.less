@@ -1,21 +1,9 @@
-.tabs-bar, .tab-bar {
+atom-workspace-axis.vertical .tab-bar {
 
-  @import "icons";
-
-  // TAB BAR
+  // TAB BACKGROUND
   height: @top-bar;
   border-bottom: solid 2px rgba(0,0,0,0.3);
   background: lighten(@tree-view-header-color, 7%);
-
-  // TAB PLACEHOLDER MARKER (FOR DRAG & DROP)
-  .placeholder {
-    background-color: @blue;
-    height: @top-bar;
-    &::after {
-      background-color: @blue;
-      top: @top-bar;
-    }
-  }
 
   // SINGLE TAB
   .tab {
@@ -38,20 +26,20 @@
       bottom: -2px;
       left: 45%;
       opacity: 0;
-      transition: linear 0.25s width, linear 0.25s left, linear 0.4s opacity;
+      transition: linear 0.3s width, linear 0.3s left, linear 0.3s opacity;
     }
 
     // ICONS
     & > .title {
+      .icon('default');
       margin-right: 18px;
-      // box-shadow: inset -5px 0px 1px 0px @tab-background-color; // horiz, vert, blur, spread, color
+      margin-top: -11px;
       &::before {
-        background: url('atom://seti-ui/icons/icon_default.svg') no-repeat;
+        font-size: 22px;
+        height: 22px;
+        position: relative;
         display: inline-block;
-        content: '';
-        height: 17px;
-        margin: 0 5px -4px 0;
-        width: 17px;
+        width: 22px;
       }
 
     }
@@ -67,7 +55,7 @@
         width: 100%;
         left: 0px;
         opacity: 1;
-        background: @blue;
+        background: @seti-primary;
       }
     }
 
@@ -79,18 +67,46 @@
         background: @black;
       }
       .icon-tools {
+        .icon('settings');
+        margin-top: -6px;
         &::before {
-          background: url('atom://seti-ui/icons/icon_settings.svg');
-          content: '';
-          height: 25px;
-          margin: 0 2px -9px 0;
-          width: 25px;
-          opacity: 0.7;
+          font-size: 22px;
+          height: 18px;
+          position: relative;
+          display: inline-block;
+          top: 6px;
+          width: 18px;
         }
       }
 
     }
 
+    // MODIFIED TAB
+    &.modified {
+
+      &:hover .close-icon {
+        color: @red;
+      }
+
+      &:not(:hover) .close-icon {
+        border-color: @yellow;
+        top: 26px;
+        right: 14px;
+      }
+
+    }
+
+
+  }
+
+  // TAB PLACEHOLDER MARKER (FOR DRAG & DROP)
+  .placeholder {
+    background-color: @seti-primary;
+    height: @top-bar;
+    &::after {
+      background-color: @seti-primary;
+      top: @top-bar;
+    }
   }
 
   // CLOSE ICON
@@ -99,25 +115,20 @@
     right: 10px;
   }
 
-  // MODIFIED TAB
-  .modified {
-
-    &:hover .close-icon {
-      color: @red;
-    }
-
-    &:not(:hover) .close-icon {
-      border-color: @yellow;
-      top: 26px;
-      right: 14px;
-    }
-
-  }
-
 
   // - - - - - - - - - - -
   //  USER MODIFIED STYLES
   // - - - - - - - - - - -
+
+  &.seti-theme-purple {
+    .tab > .title.active::after {
+      background: @seti-secondary;
+    }
+    .placeholder {
+      background-color: @seti-secondary;
+      &::after {background-color: @seti-secondary;}
+    }
+  }
 
   &.seti-hide-tabs {
     display: none;
@@ -128,7 +139,7 @@
     height: @top-bar-small;
     .tab, .tab[data-type="SettingsView"] {
       height: @top-bar-small;
-      padding: 8px 8px;
+      padding: 5px 8px;
       letter-spacing: inherit;
     }
 
@@ -158,7 +169,7 @@
 
       &:not(:hover) {
         .close-icon {
-          border-color: @blue;
+          border-color: @seti-primary;
           top: 15px;
           right: 9px;
         }

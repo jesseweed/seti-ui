@@ -1,3 +1,9 @@
-@import "sidebar/background";
-@import "sidebar/header";
-@import "sidebar/list";
+atom-panel-container.left {
+  margin-top: @top-bar;
+  background: @tree-view-background-color;
+  z-index: 1;
+
+  @import "sidebar/background";
+  @import "sidebar/header";
+  @import "sidebar/list";
+}
