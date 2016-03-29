@@ -7,31 +7,27 @@
 .entries.list-tree {
 
   .directory.entry.list-nested-item {
-    &:hover::before {
-      background: @tree-view-highlight;
-      content: '';
-      display: inline-block;
-      height: 25px;
-      left: 0px;
-      position: absolute;
-      z-index: -1;
-      transition: ease 0.5s background;
-      opacity: 0.25;
-      width: 100%;
+    &.selected {
+      &::before {
+        background: @tree-view-highlight;
+        margin-top: -5px;
+        height: 35px;
+      }
     }
   }
 
    .file.entry.list-item {
     cursor: pointer;
     &::after {
-      display: inline-block;
-      content: '';
-      height: 25px;
-      width: 100%;
-      left: 0px;
-      position: absolute;
-      z-index: -1;
-      transition: ease 0.5s background;
+      // display: inline-block;
+      // content: '';
+      // height: 30px;
+      // width: 100%;
+      // margin-top: 3px;
+      // left: 0px;
+      // position: absolute;
+      // z-index: -1;
+      // transition: ease 0.5s background;
     }
 
     &:hover::after {
@@ -51,6 +47,8 @@
     &.selected {
       &::before {
         background: @tree-view-highlight;
+        // margin-top: 5px;
+        height: 35px;
       }
     }
 
