@@ -1,6 +1,7 @@
 # Seti UI
 
 [![Join the chat at https://gitter.im/jesseweed/seti-ui](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jesseweed/seti-ui?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Gratipay User](https://img.shields.io/gratipay/user/Atom-Seti-UI.svg?style=flat-square)](https://gratipay.com/Atom-Seti-UI/)
 
 A dark colored UI theme for Atom with custom file icons. [Seti Syntax](https://atom.io/themes/seti-syntax) also available.
 

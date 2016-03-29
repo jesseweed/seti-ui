@@ -1,0 +1,219 @@
+// HIDE TAB ICONS
+.tab-bar.seti-no-icons {
+  // @import "tabs";
+  .tab > .title {
+    padding: 13px 5px;
+    &::before {
+      display: none !important;
+    }
+  }
+
+  &.seti-compact {
+    .tab > .title {
+      padding: 18px 5px;
+    }
+    .tab[data-type="SettingsView"] > .title {
+      padding: 14px 5px;
+    }
+  }
+}
+
+// HIDE SIDEBAR ICONS
+atom-panel-container.left.seti-no-icons {
+
+  .icon-file-media, .icon-file-text, .icon-book {
+    padding-left: 4px;
+  }
+
+  .icon-file-media, .icon-file-text, .icon-book {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+// - - - - - - - - - - -
+// EXTENSION BASED ICONS
+// - - - - - - - - - - -
+
+// C
+.icon-tab('.c', 'c', @blue);
+
+// C++
+// .icon-tab('.cpp', 'cpp', @blue);
+
+// COLDFUSION
+.icon-tab('.cfc', 'coldfusion', @blue);
+.icon-tab('.cfm', 'coldfusion', @blue);
+
+// COFFEESCRIPT
+.icon-tab('.coffee', 'coffee', @yellow);
+
+// CONFIG
+.icon-tab('.config', 'config', @grey);
+
+// CSON
+.icon-tab('.cson', 'json', @yellow);
+
+// CSS
+.icon-tab('.css', 'css', @blue);
+
+// CSV
+.icon-tab('.csv', 'csv', @green);
+
+// CAKE PHP
+.icon-tab('.ctp', 'cake_php', @red);
+
+// EJS
+.icon-tab('.ejs', 'ejs', @yellow);
+
+// FAVICON
+.icon-tab('.ico', 'favicon', @yellow);
+
+// GITIGNORE
+.icon-tab('.gitignore', 'github', @grey);
+
+// GO
+.icon-tab('.go', 'go', @blue);
+
+// HAML
+.icon-tab('.haml', 'haml', @red);
+
+// HANDLEBARS
+.icon-tab('.handlebars', 'mustache', @orange);
+.icon-tab('.hbs', 'mustache', @orange);
+.icon-tab('.hjs', 'mustache', @orange);
+
+// HTML
+.icon-tab('.html', 'html', @orange);
+
+// IMAGE FILES
+.icon-tab('.png', 'image', @purple);
+.icon-tab('.gif', 'image', @purple);
+.icon-tab('.jpg', 'image', @purple);
+.icon-tab('.jpeg', 'image', @purple);
+.icon-tab('.ai', 'image', @purple);
+.icon-tab('.psd', 'image', @purple);
+.icon-tab('.svg', 'image', @purple);
+.icon-tab('.svgx', 'image', @purple);
+
+// JADE
+.icon-tab('.jade', 'jade', @green);
+
+// JAVASCRIPT
+.icon-tab('.js', 'javascript', @yellow);
+.icon-tab('.es', 'javascript', @yellow);
+.icon-tab('.es5', 'javascript', @yellow);
+.icon-tab('.es6', 'javascript', @yellow);
+.icon-tab('.es7', 'javascript', @yellow);
+
+// JSON
+.icon-tab('.json', 'json', @yellow);
+
+// JULIA
+.icon-tab('.jl', 'julia', @purple);
+
+// KARMA
+.icon-tab('karma.conf.js', 'karma', @green);
+.icon-tab('karma.conf.coffee', 'karma', @green);
+
+// LESS
+.icon-tab('.less', 'less', @blue);
+
+// MARKDOWN
+.icon-tab('.md', 'markdown', @blue);
+
+// MUSTACHE
+.icon-tab('.mustache', 'mustache', @orange);
+.icon-tab('.stache', 'mustache', @orange);
+
+// NPM
+.icon-tab('.npm-debug.log', 'npm', @ignore);
+.icon-tab('.npmignore', 'npm', @red);
+
+// PHP
+.icon-tab('.php', 'php', @purple);
+
+// PYTHON
+.icon-tab('.py', 'python', @blue);
+
+// REACT
+.icon-tab('.jsx', 'react', @blue);
+.icon-tab('.cjsx', 'cjsx', @blue);
+
+// RUBY
+.icon-tab('.rb', 'ruby', @red);
+
+// SASS
+.icon-tab('.sass', 'sass', @pink);
+.icon-tab('.scss', 'sass', @pink);
+
+// SHELL
+.icon-tab('.cmd', 'shell', @grey);
+.icon-tab('.sh', 'shell', @grey);
+.icon-tab('.zsh', 'shell', @grey);
+.icon-tab('.fish', 'shell', @grey);
+.icon-tab('.zshrc', 'shell', @grey);
+
+// STYLUS
+.icon-tab('.styl', 'stylus', @green);
+
+// TEXT
+.icon-tab('.txt', 'default', @white);
+
+// TYPESCRIPT
+.icon-tab('.ts', 'typescript', @blue);
+
+// XML
+.icon-tab('.xml', 'xml', @orange);
+
+// YML
+.icon-tab('.yml', 'yml', @purple);
+.icon-tab('.yaml', 'yml', @purple);
+
+
+// - - - - - - - - -
+//  NAME BASED ICONS
+// - - - - - - - - -
+
+// BOWER
+.icon-tab('bower.json', 'bower', @orange);
+.icon-tab('Bower.json', 'bower', @orange);
+.icon-tab('.bowerrc', 'bower', @orange);
+
+// GRUNT
+.icon-tab('GRUNTFILE.js', 'grunt', @orange);
+.icon-tab('Gruntfile.js', 'grunt', @orange);
+.icon-tab('gruntfile.js', 'grunt', @orange);
+.icon-tab('GRUNTFILE.coffee', 'grunt', @orange);
+.icon-tab('Gruntfile.coffee', 'grunt', @orange);
+.icon-tab('gruntfile.coffee', 'grunt', @orange);
+
+// GULP
+.icon-tab('GULPFILE.js', 'gulp', @red);
+.icon-tab('Gulpfile.js', 'gulp', @red);
+.icon-tab('gulpfile.js', 'gulp', @red);
+.icon-tab('GULPFILE.coffee', 'gulp', @red);
+.icon-tab('Gulpfile.coffee', 'gulp', @red);
+.icon-tab('gulpfile.coffee', 'gulp', @red);
+
+// LICENSE FILE
+.icon-tab('LICENSE', 'license', @yellow);
+.icon-tab('License', 'license', @yellow);
+.icon-tab('license', 'license', @yellow);
+
+// PROCFILE
+.icon-tab('PROCFILE', 'heroku', @purple);
+.icon-tab('Procfile', 'heroku', @purple);
+.icon-tab('procfile', 'heroku', @purple);
+
+// SETTINGS
+// .icon-tab('Settings', 'settings', @white);
+
+
+// - - - - - - -
+// IGNORED FILES
+// - - - - - - -
+
+.icon-tab('.DS_Store', 'ignored', @ignore);
+.icon-tab('npm-debug.log', 'npm_ignored', @ignore);

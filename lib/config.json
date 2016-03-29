@@ -16,6 +16,13 @@
         "type": "boolean",
         "default": false
       },
+      "themeColor": {
+        "title": "Theme Color",
+        "description": "Select your default theme color",
+        "type": "string",
+        "enum": ["Blue", "Green", "Pink", "Purple", "Red", "White", "Yellow"],
+        "default": "Blue"
+      },
       "hideTabs": {
         "title": "Hide Tabs",
         "description": "Enable this if you prefer to rely on the sidebar for nagivation and don't want to see tabs at all.",

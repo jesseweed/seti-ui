@@ -1,16 +1,34 @@
-.icon-tab( @extension: ''; @file: ''; @margin: -2px 2px -7px 0; ) {
+.icon-tab( @extension: ''; @file: ''; @color: @white; @size: 22px; @top: 7px; ) {
 
-  .tab > .title[data-name$="@{extension}"],
-  .icon-file-text[data-name$="@{extension}"],
-  .icon-book[data-name$="@{extension}"],
-  .icon-file-media[data-name$="@{extension}"] {
+  // if ()
+
+  atom-workspace-axis.vertical .tab-bar .tab > .title[data-name$="@{extension}"],
+  .entries.list-tree .file.entry.list-item .icon-file-text[data-name$="@{extension}"],
+  .entries.list-tree .file.entry.list-item .icon-book[data-name$="@{extension}"],
+  .entries.list-tree .file.entry.list-item .icon-file-media[data-name$="@{extension}"]
+  {
+    .icon(@file);
     &::before {
-      background: url('atom://seti-ui/icons/icon_@{file}.svg');
-      content: '';
-      height: 22px;
-      margin: @margin;
-      width: 22px;
+      color: @color;
+      font-size: @size;
+      width: @size;
+      height: @size;
+      top: @top;
     }
   }
 
+}
+
+
+
+.set-theme(@seti-secondary) {
+  &.seti-theme-purple {
+    .tab > .title.active::after {
+      background: @color;
+    }
+    .placeholder {
+      background-color: @color;
+      &::after {background-color: @color;}
+    }
+  }
 }

@@ -1,0 +1,245 @@
+@font-face {
+	font-family: 'seti';
+	src: url('atom://seti-ui/styles/_fonts/seti/seti.eot');
+	src: url('atom://seti-ui/styles/_fonts/seti/seti.eot?#iefix') format('eot'),
+		url('atom://seti-ui/styles/_fonts/seti/seti.woff2') format('woff2'),
+		url('atom://seti-ui/styles/_fonts/seti/seti.woff') format('woff'),
+		url('atom://seti-ui/styles/_fonts/seti/seti.ttf') format('truetype'),
+		url('atom://seti-ui/styles/_fonts/seti/seti.svg#seti') format('svg');
+		font-weight: normal;
+		font-style: normal;
+}
+
+.icon-base-pseudo {
+	font-family: 'seti';
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	text-decoration: none;
+	text-transform: none;
+}
+
+.icon-char(@filename) {
+	@bower: '\E001';
+	@c: '\E002';
+	@cake_php: '\E003';
+	@cjsx: '\E004';
+	@coffee: '\E005';
+	@coffee_erb: '\E006';
+	@coldfusion: '\E007';
+	@config: '\E008';
+	@cpp: '\E009';
+	@css: '\E00A';
+	@csv: '\E00B';
+	@default: '\E00C';
+	@ejs: '\E00D';
+	@favicon: '\E00E';
+	@folder: '\E00F';
+	@git_folder: '\E010';
+	@git_ignore: '\E011';
+	@github: '\E012';
+	@go: '\E013';
+	@grunt: '\E014';
+	@gulp: '\E015';
+	@haml: '\E016';
+	@heroku: '\E017';
+	@html: '\E018';
+	@html_erb: '\E019';
+	@ignored: '\E01A';
+	@image: '\E01B';
+	@jade: '\E01C';
+	@javascript: '\E01D';
+	@js_erb: '\E01E';
+	@json: '\E01F';
+	@julia: '\E020';
+	@karma: '\E021';
+	@less: '\E022';
+	@license: '\E023';
+	@markdown: '\E024';
+	@mustache: '\E025';
+	@npm: '\E026';
+	@npm_ignored: '\E027';
+	@php: '\E028';
+	@project: '\E029';
+	@python: '\E02A';
+	@rails: '\E02B';
+	@react: '\E02C';
+	@ruby: '\E02D';
+	@sass: '\E02E';
+	@settings: '\E02F';
+	@shell: '\E030';
+	@stylus: '\E031';
+	@typescript: '\E032';
+	@xml: '\E033';
+	@yml: '\E034';
+	
+	content: @@filename;
+}
+
+.icon(@filename, @insert: before) {
+	@pseudo-selector: ~':@{insert}';
+
+	&@{pseudo-selector} {
+		&:extend(.icon-base-pseudo);
+		.icon-char(@filename);
+	}
+}
+
+.icon-bower {
+	.icon(bower);
+}
+.icon-c {
+	.icon(c);
+}
+.icon-cake_php {
+	.icon(cake_php);
+}
+.icon-cjsx {
+	.icon(cjsx);
+}
+.icon-coffee {
+	.icon(coffee);
+}
+.icon-coffee_erb {
+	.icon(coffee_erb);
+}
+.icon-coldfusion {
+	.icon(coldfusion);
+}
+.icon-config {
+	.icon(config);
+}
+.icon-cpp {
+	.icon(cpp);
+}
+.icon-css {
+	.icon(css);
+}
+.icon-csv {
+	.icon(csv);
+}
+.icon-default {
+	.icon(default);
+}
+.icon-ejs {
+	.icon(ejs);
+}
+.icon-favicon {
+	.icon(favicon);
+}
+.icon-folder {
+	.icon(folder);
+}
+.icon-git_folder {
+	.icon(git_folder);
+}
+.icon-git_ignore {
+	.icon(git_ignore);
+}
+.icon-github {
+	.icon(github);
+}
+.icon-go {
+	.icon(go);
+}
+.icon-grunt {
+	.icon(grunt);
+}
+.icon-gulp {
+	.icon(gulp);
+}
+.icon-haml {
+	.icon(haml);
+}
+.icon-heroku {
+	.icon(heroku);
+}
+.icon-html {
+	.icon(html);
+}
+.icon-html_erb {
+	.icon(html_erb);
+}
+.icon-ignored {
+	.icon(ignored);
+}
+.icon-image {
+	.icon(image);
+}
+.icon-jade {
+	.icon(jade);
+}
+.icon-javascript {
+	.icon(javascript);
+}
+.icon-js_erb {
+	.icon(js_erb);
+}
+.icon-json {
+	.icon(json);
+}
+.icon-julia {
+	.icon(julia);
+}
+.icon-karma {
+	.icon(karma);
+}
+.icon-less {
+	.icon(less);
+}
+.icon-license {
+	.icon(license);
+}
+.icon-markdown {
+	.icon(markdown);
+}
+.icon-mustache {
+	.icon(mustache);
+}
+.icon-npm {
+	.icon(npm);
+}
+.icon-npm_ignored {
+	.icon(npm_ignored);
+}
+.icon-php {
+	.icon(php);
+}
+.icon-project {
+	.icon(project);
+}
+.icon-python {
+	.icon(python);
+}
+.icon-rails {
+	.icon(rails);
+}
+.icon-react {
+	.icon(react);
+}
+.icon-ruby {
+	.icon(ruby);
+}
+.icon-sass {
+	.icon(sass);
+}
+.icon-settings {
+	.icon(settings);
+}
+.icon-shell {
+	.icon(shell);
+}
+.icon-stylus {
+	.icon(stylus);
+}
+.icon-typescript {
+	.icon(typescript);
+}
+.icon-xml {
+	.icon(xml);
+}
+.icon-yml {
+	.icon(yml);
+}

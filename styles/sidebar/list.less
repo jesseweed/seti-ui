@@ -1,116 +1,102 @@
 // SIDEBAR
-atom-panel-container.left {
-  margin-top: @top-bar;
+.panel-left {
+  border: none;
+}
 
-  @import "workspace/icons";
+// FILE LIST CONTAINER
+.entries.list-tree {
 
-  .panel-left {
-    border: none;
+  .directory.entry.list-nested-item {
+    &:hover::before {
+      background: @tree-view-highlight;
+      content: '';
+      display: inline-block;
+      height: 25px;
+      left: 0px;
+      position: absolute;
+      z-index: -1;
+      transition: ease 0.5s background;
+      opacity: 0.25;
+      width: 100%;
+    }
   }
 
-  // FILE LIST CONTAINER
-  .entries.list-tree {
-
-    .directory.entry.list-nested-item {
-      &:hover::before {
-        background: @tree-view-highlight;
-        content: '';
-        display: inline-block;
-        height: 25px;
-        left: 0px;
-        position: absolute;
-        z-index: -1;
-        transition: ease 0.5s background;
-        opacity: 0.25;
-        width: 100%;
-      }
+   .file.entry.list-item {
+    cursor: pointer;
+    &::after {
+      display: inline-block;
+      content: '';
+      height: 25px;
+      width: 100%;
+      left: 0px;
+      position: absolute;
+      z-index: -1;
+      transition: ease 0.5s background;
     }
 
-     .file.entry.list-item {
-      cursor: pointer;
-      &::after {
-        display: inline-block;
-        content: '';
-        height: 25px;
-        width: 100%;
-        left: 0px;
-        position: absolute;
-        z-index: -1;
-        transition: ease 0.5s background;
-      }
+    &:hover::after {
+      background: @tree-view-highlight;
+    }
+  }
 
-      &:hover::after {
+  // LIST ITEMS
+  .directory.entry.list-nested-item, .file.entry.list-item {
+    color: @tree-view-text-color;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+    // SELECTED STATE
+    &.selected {
+      &::before {
         background: @tree-view-highlight;
       }
     }
 
-    // LIST ITEMS
-    .directory.entry.list-nested-item, .file.entry.list-item {
-      color: @tree-view-text-color;
-      font-weight: 100;
-      letter-spacing: 0.1em;
-      padding-top: 3px;
-      padding-bottom: 3px;
-
-      // SELECTED STATE
-      &.selected {
-        &::before {
-          background: @tree-view-highlight;
-        }
-      }
-
-      // STATUS COLORS
-      &.status-added {
-        color: @text-color-success;
-      }
-
-      &.status-modified {
-        color: @text-color-warning;
-      }
-
-      &.status-ignored {
-        color: @text-color-ignored;
-        &.seti-hide {
-          display: none;
-        }
-      }
-
+    // STATUS COLORS
+    &.status-added {
+      color: @text-color-success;
     }
 
-    .file.entry.list-item {
-      .icon-book,
-      .icon-file-text,
-      .icon-file-media {
-        &::before {
-          content: '';
-          height: 18px;
-          margin-bottom: -4px;
-          width: 18px;
-        }
+    &.status-modified {
+      color: @text-color-warning;
+    }
+
+    &.status-ignored {
+      color: @text-color-ignored;
+      &.seti-hide {
+        display: none;
       }
     }
 
+  }
 
-    // DIRECTORIES
-    .directory.entry.list-nested-item {
+  .icon-book,
+  .icon-file-text,
+  .icon-file-media {
+    .icon('default');
+    &::before {
+      // .icon('icon_bower');
+      // content: '';
+      height: 18px;
+      position: relative;
+      top: 3px;
+      // margin-top: -100px;
+      // margin-bottom: -40px;
+      width: 18px;
+    }
+  }
 
-      // IGNORED FILES
-      &.status-ignored {
-        .icon-file-directory, {
-          &::before {
-            background: url('atom://seti-ui/icons/icon_ignored.svg');
-            content: '';
-            height: 24px;
-            margin: 0 0px -8px -7px;
-            width: 24px;
-          }
-        }
-      }
 
-      // GIT FOLDER
-      .icon-file-directory[data-name$=".git"], {
+  // DIRECTORIES
+  .directory.entry.list-nested-item {
+
+    // IGNORED FILES
+    &.status-ignored {
+      .icon-file-directory, {
         &::before {
-          background: url('atom://seti-ui/icons/icon_git-folder.svg');
+          background: url('atom://seti-ui/icons/icon_ignored.svg');
           content: '';
           height: 24px;
           margin: 0 0px -8px -7px;
@@ -119,26 +105,30 @@ atom-panel-container.left {
       }
     }
 
-    // &.seti-compact {
-    //   .directory.entry.list-nested-item, .file.entry.list-item {
-    //     padding: 0;
-    //   }
-    // }
-
-  }
-
-
-  // - - - - - - - - - - -
-  //  USER MODIFIED STYLES
-  // - - - - - - - - - - -
-
-  &.seti-compact {
-    margin-top: @top-bar-small;
-    .entries.list-tree .directory.entry.list-nested-item, .entries.list-tree .file.entry.list-item {
-      padding-bottom: 0;
-      padding-top: 0;
-      letter-spacing: 0.05em;
+    // GIT FOLDER
+    .icon-file-directory[data-name$=".git"], {
+      &::before {
+        background: url('atom://seti-ui/icons/icon_git-folder.svg');
+        content: '';
+        height: 24px;
+        margin: 0 0px -8px -7px;
+        width: 24px;
+      }
     }
   }
 
+}
+
+
+// - - - - - - - - - - -
+//  USER MODIFIED STYLES
+// - - - - - - - - - - -
+
+&.seti-compact {
+  margin-top: @top-bar-small;
+  .entries.list-tree .directory.entry.list-nested-item, .entries.list-tree .file.entry.list-item {
+    padding-bottom: 0;
+    padding-top: 0;
+    letter-spacing: 0.05em;
+  }
 }
