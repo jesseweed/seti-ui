@@ -75,14 +75,12 @@
   .icon-file-media {
     .icon('default');
     &::before {
-      // .icon('icon_bower');
-      // content: '';
-      height: 18px;
+      font-size: 22px;
+      height: 22px;
+      left: 2px;
       position: relative;
-      top: 3px;
-      // margin-top: -100px;
-      // margin-bottom: -40px;
-      width: 18px;
+      top: 7px;
+      width: 22px;
     }
   }
 
@@ -92,27 +90,52 @@
 
     // IGNORED FILES
     &.status-ignored {
-      .icon-file-directory, {
+      .icon-file-directory[data-name$=".git"], {
+        .icon('github');
+        top: -6px;
+      }
+      &::before {
+        // position: relative;
+        // top: 6px;
+      }
+      .list-item {
         &::before {
-          background: url('atom://seti-ui/icons/icon_ignored.svg');
-          content: '';
-          height: 24px;
-          margin: 0 0px -8px -7px;
-          width: 24px;
+          position: relative;
+          top: -6px;
+        }
+      }
+      height: 35px;
+      position: relative;
+      top: -2px;
+      padding-top: 0;
+      .icon-file-directory, {
+        .icon('ignored');
+        position: relative;
+        top: -7px;
+        &::before {
+          font-size: 27px;
+          height: 22px;
+          top: 10px;
+          left: -7px;
+          // background: url('atom://seti-ui/icons/icon_ignored.svg');
+          // content: '';
+          // height: 24px;
+          // margin: 0 0px -8px -7px;
+          // width: 24px;
         }
       }
     }
 
     // GIT FOLDER
-    .icon-file-directory[data-name$=".git"], {
-      &::before {
-        background: url('atom://seti-ui/icons/icon_git-folder.svg');
-        content: '';
-        height: 24px;
-        margin: 0 0px -8px -7px;
-        width: 24px;
-      }
-    }
+    // .icon-file-directory[data-name$=".git"], {
+    //   &::before {
+    //     background: url('atom://seti-ui/icons/icon_git-folder.svg');
+    //     content: '';
+    //     height: 24px;
+    //     margin: 0 0px -8px -7px;
+    //     width: 24px;
+    //   }
+    // }
   }
 
 }
