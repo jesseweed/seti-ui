@@ -20,7 +20,7 @@
         "title": "Theme Color",
         "description": "Select your default theme color",
         "type": "string",
-        "enum": ["Blue", "Green", "Pink", "Purple", "Red", "White", "Yellow"],
+        "enum": ["Blue", "Green", "Orange", "Pink", "Purple", "Red", "Steel", "Yellow"],
         "default": "Blue"
       },
       "hideTabs": {

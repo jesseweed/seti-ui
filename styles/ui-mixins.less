@@ -3,7 +3,10 @@
   atom-workspace-axis.vertical .tab-bar .tab > .title[data-name$="@{extension}"],
   .entries.list-tree .file.entry.list-item .icon-file-text[data-name$="@{extension}"],
   .entries.list-tree .file.entry.list-item .icon-book[data-name$="@{extension}"],
-  .entries.list-tree .file.entry.list-item .icon-file-media[data-name$="@{extension}"]
+  .entries.list-tree .file.entry.list-item .icon-file-media[data-name$="@{extension}"],
+  atom-panel-container.modal atom-panel.overlay .list-group .two-lines .icon-file-text[data-name$="@{extension}"],
+  atom-panel-container.modal atom-panel.overlay .list-group .two-lines .icon-book[data-name$="@{extension}"],
+  atom-panel-container.modal atom-panel.overlay .list-group .two-lines .icon-file-media[data-name$="@{extension}"]
   {
     .icon(@file);
     &::before {
@@ -20,7 +23,7 @@
 
 
 
-.set-theme(@seti-secondary) {
+.set-theme(@seti-primary-highlight) {
   &.seti-theme-purple {
     .tab > .title.active::after {
       background: @color;
