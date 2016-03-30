@@ -38,43 +38,49 @@
 	@ejs: '\E00E';
 	@favicon: '\E00F';
 	@folder: '\E010';
-	@git_folder: '\E011';
-	@git_ignore: '\E012';
-	@github: '\E013';
-	@go: '\E014';
-	@grunt: '\E015';
-	@gulp: '\E016';
-	@haml: '\E017';
-	@heroku: '\E018';
-	@html: '\E019';
-	@html_erb: '\E01A';
-	@ignored: '\E01B';
-	@image: '\E01C';
-	@jade: '\E01D';
-	@javascript: '\E01E';
-	@js_erb: '\E01F';
-	@json: '\E020';
-	@julia: '\E021';
-	@karma: '\E022';
-	@less: '\E023';
-	@license: '\E024';
-	@markdown: '\E025';
-	@mustache: '\E026';
-	@npm: '\E027';
-	@npm_ignored: '\E028';
-	@php: '\E029';
-	@project: '\E02A';
-	@python: '\E02B';
-	@rails: '\E02C';
-	@react: '\E02D';
-	@ruby: '\E02E';
-	@sass: '\E02F';
-	@settings: '\E030';
-	@shell: '\E031';
-	@stylus: '\E032';
-	@typescript: '\E033';
-	@xml: '\E034';
-	@yml: '\E035';
+	@font: '\E011';
+	@git_folder: '\E012';
+	@git_ignore: '\E013';
+	@github: '\E014';
+	@go: '\E015';
+	@grunt: '\E016';
+	@gulp: '\E017';
+	@haml: '\E018';
+	@heroku: '\E019';
+	@html: '\E01A';
+	@html_erb: '\E01B';
+	@ignored: '\E01C';
+	@illustrator: '\E01D';
+	@image: '\E01E';
+	@jade: '\E01F';
+	@javascript: '\E020';
+	@js_erb: '\E021';
+	@json: '\E022';
+	@julia: '\E023';
+	@karma: '\E024';
+	@less: '\E025';
+	@license: '\E026';
+	@markdown: '\E027';
+	@mustache: '\E028';
+	@npm: '\E029';
+	@npm_ignored: '\E02A';
+	@pdf: '\E02B';
+	@photoshop: '\E02C';
+	@php: '\E02D';
+	@project: '\E02E';
+	@python: '\E02F';
+	@rails: '\E030';
+	@react: '\E031';
+	@ruby: '\E032';
+	@sass: '\E033';
+	@search: '\E034';
+	@settings: '\E035';
+	@shell: '\E036';
+	@stylus: '\E037';
+	@svg: '\E038';
+	@typescript: '\E039';
+	@xml: '\E03A';
+	@yml: '\E03B';
 	
 	content: @@filename;
 }
@@ -136,6 +142,9 @@
 .icon-folder {
 	.icon(folder);
 }
+.icon-font {
+	.icon(font);
+}
 .icon-git_folder {
 	.icon(git_folder);
 }
@@ -168,6 +177,9 @@
 }
 .icon-ignored {
 	.icon(ignored);
+}
+.icon-illustrator {
+	.icon(illustrator);
 }
 .icon-image {
 	.icon(image);
@@ -208,6 +220,12 @@
 .icon-npm_ignored {
 	.icon(npm_ignored);
 }
+.icon-pdf {
+	.icon(pdf);
+}
+.icon-photoshop {
+	.icon(photoshop);
+}
 .icon-php {
 	.icon(php);
 }
@@ -229,6 +247,9 @@
 .icon-sass {
 	.icon(sass);
 }
+.icon-search {
+	.icon(search);
+}
 .icon-settings {
 	.icon(settings);
 }
@@ -237,6 +258,9 @@
 }
 .icon-stylus {
 	.icon(stylus);
+}
+.icon-svg {
+	.icon(svg);
 }
 .icon-typescript {
 	.icon(typescript);

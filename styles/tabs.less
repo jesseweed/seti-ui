@@ -83,6 +83,29 @@ atom-workspace-axis.vertical .tab-bar {
 
     }
 
+    // SETTINGS TAB
+    &[data-type="ResultsPaneView"]:not([data-name="icon-file-directory"]) {
+      padding: 17px 10px;
+
+      &.active {
+        background: @black;
+      }
+      .title.icon-search {
+        .icon('search');
+        margin-top: -6px;
+        &::before {
+          color: @seti-primary;
+          font-size: 22px;
+          height: 18px;
+          position: relative;
+          display: inline-block;
+          top: 6px;
+          width: 18px;
+        }
+      }
+
+    }
+
     // MODIFIED TAB
     &.modified {
 
@@ -156,7 +179,9 @@ atom-workspace-axis.vertical .tab-bar {
     }
 
     .tab > .title,
+    .icon-file-pdf,
     .icon-file-text,
+    .icon-file-binary,
     .icon-book,
     .icon-file-media {
 
