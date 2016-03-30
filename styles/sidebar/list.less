@@ -18,17 +18,6 @@
 
    .file.entry.list-item {
     cursor: pointer;
-    &::after {
-      // display: inline-block;
-      // content: '';
-      // height: 30px;
-      // width: 100%;
-      // margin-top: 3px;
-      // left: 0px;
-      // position: absolute;
-      // z-index: -1;
-      // transition: ease 0.5s background;
-    }
 
     &:hover::after {
       background: @tree-view-highlight;
@@ -70,12 +59,12 @@
 
   }
 
+  // SIEBAR ICONS
   .icon-book,
   .icon-file-binary,
   .icon-file-pdf,
   .icon-file-text,
   .icon-file-media {
-    .icon('default');
     &::before {
       font-size: 22px;
       height: 22px;
@@ -93,12 +82,8 @@
     // IGNORED FILES
     &.status-ignored {
       .icon-file-directory[data-name$=".git"], {
-        .icon('github');
+        .icon('github', @ignore);
         top: -6px;
-      }
-      &::before {
-        // position: relative;
-        // top: 6px;
       }
       .list-item {
         &::before {
@@ -106,12 +91,13 @@
           top: -6px;
         }
       }
-      height: 35px;
-      position: relative;
-      top: -2px;
-      padding-top: 0;
+      &::before {
+        height: 35px;
+        margin-top: 0px;
+      }
+      padding-bottom: 0;
       .icon-file-directory, {
-        .icon('ignored');
+        .icon('ignored', @ignore);
         position: relative;
         top: -7px;
         &::before {
@@ -119,25 +105,9 @@
           height: 22px;
           top: 10px;
           left: -7px;
-          // background: url('atom://seti-ui/icons/icon_ignored.svg');
-          // content: '';
-          // height: 24px;
-          // margin: 0 0px -8px -7px;
-          // width: 24px;
         }
       }
     }
-
-    // GIT FOLDER
-    // .icon-file-directory[data-name$=".git"], {
-    //   &::before {
-    //     background: url('atom://seti-ui/icons/icon_git-folder.svg');
-    //     content: '';
-    //     height: 24px;
-    //     margin: 0 0px -8px -7px;
-    //     width: 24px;
-    //   }
-    // }
   }
 
 }
