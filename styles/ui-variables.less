@@ -61,7 +61,7 @@
 @app-background-color: @black;
 
 // SIDEBAR
-@tree-view-background-color: #0e1112;
+@tree-view-background-color: lighten(@black, 3%);
 @tree-view-border-color: @base-border-color;
 @tree-view-highlight: #090b0d;
 @tree-view-header-color: #090b0d;
@@ -71,12 +71,15 @@
 // TAB
 @top-bar: 60px;
 @top-bar-small: 40px;
-@tab-bar-background-color: #272b30;
+@tab-bar-background-color: lighten(@black, 3%);
 @tab-bar-border-color: @base-border-color;
 @tab-background-color: @grey-dark;
 @tab-text-color: #d4d7d6;
 @tab-background-color-active: #111213;
 @tab-border-color: @base-border-color;
+
+// PANELS
+@panel-background-color: @tab-bar-background-color;
 
 @good: @green;
 @bad: @red;
