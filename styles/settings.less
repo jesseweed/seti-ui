@@ -3,7 +3,25 @@ atom-pane-container atom-pane .item-views .pane-item {
   color: @white;
   font-weight: 100;
 
+  .native-key-bindings.breadcrumb {
+    background: @grey-dark;
+    font-family: 'Roboto-Thin';
+    font-size: 30px;
+    font-weight: 100;
+  }
+
+  a {
+    .link-color();
+    &:before {
+      .link-color();
+    }
+  }
+
   .input();
+
+  .text {
+    line-height: 150%;
+  }
 
   // LEFT MENU
   .config-menu {
@@ -13,23 +31,33 @@ atom-pane-container atom-pane .item-views .pane-item {
     padding: 0;
     font-weight: 100;
 
+    button.btn {
+      background: @seti-primary;
+      color: @seti-primary-text;
+      font-weight: 100;
+    }
+
     li {
 
       a {
         transition: ease 0.5s background;
         &.icon {
           color: @white;
+          &::before {
+            color: @grey;
+            width: 25px;
+          }
         }
         &.icon-settings {
           &::before {
-            font-size: 26px;
-            width: 20px;
+            font-size: 28px;
+            width: 30px;
             height: 30px;
             padding: 0;
             position: relative;
             margin: 0;
-            left: -5px;
-            top: 8px;
+            left: -2px;
+            top: 9px;
           }
         }
         &:hover {
@@ -40,54 +68,60 @@ atom-pane-container atom-pane .item-views .pane-item {
       &.active a {
         background: @black;
         cursor: default;
-        a:hover {
-          // background: @black;
-        }
       }
 
     }
 
   }
 
-  // FONTS
-  .section-heading {
-    font-family: 'Roboto-Thin';
-    font-size: 3.5em;
-    font-weight: 100;
-    color: @white;
-
-    &-count {
-      background: @seti-primary;
-      color: @white;
-      font-size: 0.5em;
+  .section {
+    &-body {
+      .control-group {
+        background: @grey-dark;
+        padding: 10px 20px;
+      }
     }
-
-    &-title {
-      color: @white;
+    &-heading {
       font-family: 'Roboto-Thin';
-      font-size: 1.5em;
+      font-size: 3.5em;
       font-weight: 100;
-      margin: -3px 0 5px 0 ;
-    }
-
-    &-description {
       color: @white;
-      color: rgba(255,255,255,0.5);
-      font-family: 'Roboto-Thin';
-      font-size: 13px;
+
+      &.icon::before {
+        display: none;
+      }
+
+      &-count {
+        background: @seti-primary;
+        color: @white;
+        font-size: 0.5em;
+      }
+
+      &-title {
+        color: @white;
+        font-family: 'Roboto-Thin';
+        font-size: 1.5em;
+        font-weight: 100;
+        margin: -3px 0 5px 0 ;
+      }
+
+      &-description {
+        color: @white;
+        color: rgba(255,255,255,0.5);
+        font-family: 'Roboto-Thin';
+        font-size: 13px;
+      }
+
+      &::before {
+        height: 35px;
+        width: 35px;
+        position: relative;
+        top: -3px;
+        font-size: 35px;
+        color: @grey;
+      }
     }
 
-    &::before {
-      // content: '';
-      // background: url('atom://seti-ui/icons/icon_settings.svg');
-      height: 35px;
-      width: 35px;
-      position: relative;
-      // margin: -10 0 -12px -15px;
-      top: -3px;
-      font-size: 35px;
-      color: @grey;
-    }
   }
 
   .sub-section-heading {
@@ -109,7 +143,7 @@ atom-pane-container atom-pane .item-views .pane-item {
     &-container {
     }
     &-card {
-      background: @grey-dark;
+      background: @black-dark;
       border: none;
       .card-name a {
         color: @seti-primary;
@@ -118,6 +152,32 @@ atom-pane-container atom-pane .item-views .pane-item {
 
     .meta-user {
       a.author {.link-color();}
+    }
+
+    // README
+    &-readme {
+      font-family: 'Roboto-Thin';
+      color: @white;
+      font-weight: 100;
+      h1, h2, h3, h4, h5, h6 {
+        line-height: 150%;
+        color: @white;
+      }
+      p, li {
+        color: darken(@white, 20%);
+        line-height: 150%;
+      }
+      strong {
+        font-family: 'Roboto';
+        font-weight: 500;
+      }
+      code {
+        color: @seti-primary;
+        background: @seti-primary-text;
+        font-size: 12px;
+        font-weight: 100;
+        margin: 0 2px;
+      }
     }
 
   }
@@ -155,19 +215,12 @@ atom-pane-container atom-pane .item-views .pane-item {
         background: blue;
       }
     }
-    // ENABLE BUTTON
-    &.icon-playback-play.enablement {
-      // background: darken(@red, 25%);
-    }
-
   }
-
 }
 
 
 
 // INPUTS
-
 .settings-view input[type="checkbox"]:checked {
   background-color: @seti-primary;
 }

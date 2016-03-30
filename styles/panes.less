@@ -8,6 +8,10 @@ atom-panel-container.modal {
     // MINI EDITOR
     .input();
 
+    .atom-text-editor[mini] {
+      margin-bottom: 0;
+    }
+
     .list-group {
       .two-lines, .event {
         background: @grey-dark;
@@ -23,7 +27,6 @@ atom-panel-container.modal {
         .icon-file-pdf,
         .icon-file-text,
         .icon-file-media {
-          .icon('default');
           &::before {
             font-size: 22px;
             height: 22px;
