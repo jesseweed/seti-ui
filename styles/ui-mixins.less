@@ -10,55 +10,15 @@
 }
 
 // SET ICON FOR VARIOUS LOCATIONS
-.icon-tab( @extension: ''; @file: ''; @color: @white; @size: 22px; @top: 7px; @left: 2px; ) {
+.icon-tab( @extension, @file, @color) {
 
-  // SEARCH PANE
-  atom-panel-container.modal atom-panel.overlay .list-group .two-lines {
-    .icon-file-media, .icon-file-pdf, .icon-file-binary, .icon-file-text, .icon-book, .icon-file-media {
-      &[data-name$="@{extension}"]:not([data-name="icon-file-directory"]) {
-        .icon-style(@file, @color, @size, @top, @left)
-      }
+  .icon-file-binary, .icon-file-pdf, .icon-file-text, .icon-book, .icon-file-media, .title {
+    &[data-name$="@{extension}"] {
+      .icon(@file, @color)
     }
-  }
-
-  // PREVIEW PANE
-  .preview-pane {
-    .icon-file-binary, .icon-file-pdf, .icon-file-text, .icon-book, .icon-file-media {
-      &[data-name$="@{extension}"]:not([data-name="icon-file-directory"]) {
-        .icon-style(@file, @color, @size, @top, 0px)
-      }
-    }
-  }
-
-  // SIDEBAR
-  .entries.list-tree .file.entry.list-item {
-    .icon-file-binary, .icon-file-pdf, .icon-file-text, .icon-book, .icon-file-media {
-      &[data-name$="@{extension}"]:not([data-name="icon-file-directory"]) {
-        .icon-style(@file, @color, @size, @top, @left)
-      }
-    }
-  }
-
-  // TABS
-  atom-workspace-axis.vertical .tab-bar .tab > .title[data-name$="@{extension}"] {
-    .icon-style(@file, @color, @size, @top, @left)
   }
 
 }
-
-// STYLES FOR ICON
-.icon-style(@file, @color, @size, @top, @left) {
-  .icon(@file);
-  &::before {
-    color: @color;
-    font-size: @size;
-    width: @size;
-    height: @size;
-    top: @top;
-    left: @left;
-  }
-}
-
 
 .set-theme(@seti-primary-highlight) {
   &.seti-theme-purple {
