@@ -19,6 +19,14 @@
       &.collapsed {
         border-bottom: solid 1px @black;
       }
+
+      .icon-file-media, .icon-file-pdf, .icon-file-binary, .icon-file-text, .icon-book, .icon-file-media {
+        &::before {
+          font-size: 22px;
+          top:6px;
+          margin-right: 10px;
+        }
+      }
       &.selected {
         .icon-file-media, .icon-file-pdf, .icon-file-binary, .icon-file-text, .icon-book, .icon-file-media {
           &::before {
@@ -28,6 +36,9 @@
         .path-details.list-item {
           background: @seti-primary;
           color: @seti-primary-text;
+          .path-match-number {
+            color: @seti-primary-highlight;
+          }
         }
         &::before {
           display: none;
@@ -41,6 +52,11 @@
         span.path-name {
           font-size: 15px;
         }
+        .path-match-number {
+          color: @seti-primary;
+          font-weight: bold;
+          letter-spacing: 0.075em;
+        }
       }
 
       // GROUP LIST
@@ -50,9 +66,44 @@
         padding: 0;
         .search-result.list-item {
           margin: 0;
+
+          // MATCHED WORD
+          .highlight-info {
+            color: @seti-primary;
+            box-shadow: none;
+          }
+          .highlight-error {
+            color: @text-color-error;
+            box-shadow: none;
+          }
+          .highlight-success {
+            color: @text-color-success;
+            box-shadow: none;
+          }
+
+          &:nth-child(even) {
+            background: rgba(255,255,255,0.02);
+          }
+
           &.selected {
             background: @seti-primary;
             color: @seti-primary-text;
+
+            .highlight-error {
+              color: @white;
+              background: @bad;
+              padding: 2px 4px;
+            }
+            .highlight-success {
+              color: @white;
+              background: @good;
+              padding: 2px 4px;
+            }
+
+            .highlight-info {
+              color: @seti-primary-highlight;
+            }
+
             .line-number {
               color: @seti-primary-text;
             }
