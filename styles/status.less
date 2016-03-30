@@ -1,0 +1,20 @@
+.text-error {
+  color: @text-color-error;
+}
+
+.text-warning, status-modified {
+  color: @text-color-warning;
+}
+
+.text-success, .status-added, icon-diff-added {
+  color: @text-color-success;
+  &::before {
+    color: @text-color-success;
+  }
+}
+
+.git-view {
+  .git-branch {
+    color: @seti-secondary;
+  }
+}
