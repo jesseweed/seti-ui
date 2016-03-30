@@ -27,12 +27,13 @@
 	content: @@filename;
 }
 
-.<%= cssClass%>(@filename, @insert: before) {
+.<%= cssClass%>(@filename, @color: @white, @insert: before) {
 	@pseudo-selector: ~':@{insert}';
 
 	&@{pseudo-selector} {
 		&:extend(.<%= cssClass%>-base-pseudo);
 		.<%= cssClass%>-char(@filename);
+		color: @color;
 	}
 }
 
