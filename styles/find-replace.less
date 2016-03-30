@@ -1,0 +1,32 @@
+.project-find, .find-and-replace {
+
+  // INPUTS
+  .input-small();
+
+  // HEADER
+  .header {
+    &-item.description {
+      color: @white;
+      .subtle-info-message {
+        color: @grey-light;
+      }
+    }
+  }
+
+  // BUTTONS
+  .btn-group {
+    &-find .btn {
+    background: @seti-primary;
+    color: @seti-primary-text;
+    }
+    &-replace .btn {
+      background: darken(@bad, 20%);
+      color: @white;
+    }
+    &-replace-all .btn {
+      background: @bad;
+      color: @white;
+    }
+  }
+
+}
