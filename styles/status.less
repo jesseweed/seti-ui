@@ -2,8 +2,11 @@
   color: @text-color-error;
 }
 
-.text-warning, status-modified {
+.text-warning, .status-modified {
   color: @text-color-warning;
+  &::before {
+    color: @text-color-warning;
+  }
 }
 
 .text-success, .status-added, icon-diff-added {
