@@ -1,6 +1,6 @@
-// - - - - - - - - - - -
-// EXTENSION BASED ICONS
-// - - - - - - - - - - -
+// - - - - - - - - - - - - - -
+// LANGUAGES - EXTENSION BASED
+// - - - - - - - - - - - - - -
 
 .icon-tab('.cpp', 'default', @blue);
 
@@ -8,7 +8,7 @@
 .icon-tab('.c', 'c', @blue);
 
 // C++
-// .icon-tab('.cpp', 'cpp', @blue);
+.icon-tab('.cpp', 'cpp', @blue);
 
 // COLDFUSION
 .icon-tab('.cfc', 'coldfusion', @blue);
@@ -54,16 +54,6 @@
 
 // HTML
 .icon-tab('.html', 'html', @orange);
-
-// IMAGE FILES
-.icon-tab('.png', 'image', @purple);
-.icon-tab('.gif', 'image', @purple);
-.icon-tab('.jpg', 'image', @purple);
-.icon-tab('.jpeg', 'image', @purple);
-.icon-tab('.ai', 'image', @purple);
-.icon-tab('.psd', 'image', @purple);
-.icon-tab('.svg', 'image', @purple);
-.icon-tab('.svgx', 'image', @purple);
 
 // JADE
 .icon-tab('.jade', 'jade', @green);
@@ -116,18 +106,11 @@
 .icon-tab('.sass', 'sass', @pink);
 .icon-tab('.scss', 'sass', @pink);
 
-// SHELL
-.icon-tab('.cmd', 'shell', @grey);
-.icon-tab('.sh', 'shell', @grey);
-.icon-tab('.zsh', 'shell', @grey);
-.icon-tab('.fish', 'shell', @grey);
-.icon-tab('.zshrc', 'shell', @grey);
-
 // STYLUS
 .icon-tab('.styl', 'stylus', @green);
 
 // TEXT
-// .icon-tab('.txt', 'default', @white);
+.icon-tab('.txt', 'default', @white);
 
 // TYPESCRIPT
 .icon-tab('.ts', 'typescript', @blue);
@@ -139,6 +122,44 @@
 .icon-tab('.yml', 'yml', @purple);
 .icon-tab('.yaml', 'yml', @purple);
 
+
+// - - - - - - - - - - - - - - - - - - -
+//  GENERIC FILE TYPES - EXTENSION BASED
+// - - - - - - - - - - - - - - - - - - -
+
+// ADOBE FILE
+.icon-tab('.ai', 'illustrator', @yellow);
+.icon-tab('.psd', 'photoshop', @blue);
+.icon-tab('.pdf', 'pdf', @red);
+
+// FONT FILES
+.icon-tab('.eot', 'font', @red);
+.icon-tab('.ttf', 'font', @red);
+.icon-tab('.woff', 'font', @red);
+.icon-tab('.woff2', 'font', @red);
+
+// IMAGE FILES
+.icon-tab('.png', 'image', @red);
+.icon-tab('.gif', 'image', @red);
+.icon-tab('.jpg', 'image', @red);
+.icon-tab('.jpeg', 'image', @red);
+.icon-tab('.svg', 'svg', @red);
+.icon-tab('.svgx', 'image', @red);
+
+// SHELL
+.icon-tab('.cmd', 'shell', @grey);
+.icon-tab('.sh', 'shell', @grey);
+.icon-tab('.zsh', 'shell', @grey);
+.icon-tab('.fish', 'shell', @grey);
+.icon-tab('.zshrc', 'shell', @grey);
+
+// VIDEO FILES
+.icon-tab('.mov', 'image', @pink);
+.icon-tab('.ogv', 'image', @pink);
+.icon-tab('.webm', 'image', @pink);
+.icon-tab('.avi', 'image', @pink);
+.icon-tab('.mpg', 'image', @pink);
+.icon-tab('.mp4', 'image', @pink);
 
 // - - - - - - - - -
 //  NAME BASED ICONS
@@ -169,6 +190,15 @@
 .icon-tab('GULPFILE.coffee', 'gulp', @red);
 .icon-tab('Gulpfile.coffee', 'gulp', @red);
 .icon-tab('gulpfile.coffee', 'gulp', @red);
+
+// LICENSE FILE
+.icon-tab('.jshintrc', 'javascript', @blue);
+.icon-tab('.jscsrc', 'javascript', @blue);
+
+// MISC SETTING
+.icon-tab('.env', 'settings', @white);
+.icon-tab('.static', 'settings', @white);
+.icon-tab('.editorconfig', 'settings', @blue);
 
 // LICENSE FILE
 .icon-tab('LICENSE', 'license', @yellow);
@@ -216,11 +246,11 @@
 // HIDE SIDEBAR ICONS
 atom-panel-container.left.seti-no-icons {
 
-  .icon-file-media, .icon-file-text, .icon-book {
+  .icon-file-media, .icon-file-text, .icon-file-binary, .icon-file-pdf, .icon-book {
     padding-left: 4px;
   }
 
-  .icon-file-media, .icon-file-text, .icon-book {
+  .icon-file-media, .icon-file-text, .icon-file-binary, .icon-file-pdf, .icon-book {
     &::before {
       display: none;
     }

@@ -1,9 +1,13 @@
 .icon-tab( @extension: ''; @file: ''; @color: @white; @size: 22px; @top: 7px; @left: 2px; ) {
 
   atom-workspace-axis.vertical .tab-bar .tab > .title[data-name$="@{extension}"],
-  .entries.list-tree .file.entry.list-item .icon-file-text[data-name$="@{extension}"],
+  .entries.list-tree .file.entry.list-item .icon-file-binary[data-name$="@{extension}"],
+  .entries.list-tree .file.entry.list-item .icon-file-pdf[data-name$="@{extension}"]:not([data-name="icon-file-directory"]),
+  .entries.list-tree .file.entry.list-item .icon-file-text[data-name$="@{extension}"]:not([data-name="icon-file-directory"]),
   .entries.list-tree .file.entry.list-item .icon-book[data-name$="@{extension}"],
   .entries.list-tree .file.entry.list-item .icon-file-media[data-name$="@{extension}"],
+  atom-panel-container.modal atom-panel.overlay .list-group .two-lines .icon-file-pdf[data-name$="@{extension}"],
+  atom-panel-container.modal atom-panel.overlay .list-group .two-lines .icon-file-binary[data-name$="@{extension}"],
   atom-panel-container.modal atom-panel.overlay .list-group .two-lines .icon-file-text[data-name$="@{extension}"],
   atom-panel-container.modal atom-panel.overlay .list-group .two-lines .icon-book[data-name$="@{extension}"],
   atom-panel-container.modal atom-panel.overlay .list-group .two-lines .icon-file-media[data-name$="@{extension}"]
