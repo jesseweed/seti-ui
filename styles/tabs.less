@@ -83,6 +83,43 @@ atom-workspace-axis.vertical .tab-bar {
 
     }
 
+    // MARKDOWN
+    &[data-type="MarkdownPreviewView"] {
+      .title.icon-markdown {
+        .icon('markdown', @blue);
+      }
+    }
+
+    // DEPRECATION COP
+    &[data-type="DeprecationCopView"] {
+      .title.icon-alert {
+        .icon('deprecation-cop', @yellow);
+        &::before {
+          font-size: 25px;
+          height: 25px;
+          position: relative;
+          display: inline-block;
+          top: 8px;
+          width: 25px;
+        }
+      }
+    }
+
+    &[data-type="TimecopView"] {
+      .title.icon-dashboard {
+        .icon('time-cop', @purple);
+        &::before {
+          font-size: 25px;
+          height: 25px;
+          position: relative;
+          display: inline-block;
+          top: 8px;
+          width: 25px;
+        }
+      }
+    }
+
+
     // SETTINGS TAB
     &[data-type="ResultsPaneView"]:not([data-name="icon-file-directory"]) {
       padding: 17px 10px;

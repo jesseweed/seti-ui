@@ -1,8 +1,11 @@
-.text-error {
+.text-error, .highlight-error {
   color: @text-color-error;
+  &::before {
+    color: @text-color-error;
+  }
 }
 
-.text-warning, .status-modified {
+.text-warning, .status-modified, .highlight-warning {
   color: @text-color-warning;
   &::before {
     color: @text-color-warning;
@@ -25,6 +28,6 @@
 
 .git-view {
   .git-branch {
-    color: @seti-secondary;
+    color: @white;
   }
 }

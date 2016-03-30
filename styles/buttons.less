@@ -1,9 +1,10 @@
 button.btn {
   background-color: @grey;
   color: @white;
-}
+  transition: background 0.3s;
 
-button.btn.purple {
-  background-color: @seti-primary-highlight;
-  color: @white;
+  &:hover {
+    background-color: @grey-light;
+    color: @white;
+  }
 }
