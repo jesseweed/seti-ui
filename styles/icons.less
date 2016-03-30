@@ -2,6 +2,11 @@
 // LANGUAGES - EXTENSION BASED
 // - - - - - - - - - - - - - -
 
+// DEFAULT ICON
+.icon-file-binary, .icon-file-pdf, .icon-file-text, .icon-book, .icon-file-media, .title {
+  .icon('default', @white)
+}
+
 .icon-tab('.cpp', 'default', @blue);
 
 // C
@@ -215,7 +220,7 @@
 // IGNORED FILES
 // - - - - - - -
 
-.icon-tab('.DS_Store', 'ignored', @ignore, 25px, 8px, 0px);
+.icon-tab('.DS_Store', 'ignored', @ignore);
 .icon-tab('npm-debug.log', 'npm_ignored', @ignore);
 
 
