@@ -1,3 +1,176 @@
+.deprecation-cop {
+  .panel-heading {
+    font-family: 'Roboto-Thin';
+    font-size: 30px;
+    font-weight: 100;
+    // .highlight-info {
+    //   color: @seti-primary;
+    // }
+  }
+
+  .list-tree.has-collapsable-children .deprecation.list-nested-item {
+    margin: 10px;
+    // SELECTED STATE
+    // background: @red;
+
+    &.collapsed {
+      border-bottom: solid 1px @black;
+    }
+
+
+    // GROUP HEADER
+    .deprecation-info.list-item {
+      background: @grey-dark;
+      padding: 10px 0px 10px 10px;
+      span.text-highlight {
+        font-size: 15px;
+      }
+      .path-match-number {
+        color: @seti-primary;
+        font-weight: bold;
+        letter-spacing: 0.075em;
+      }
+      &:hover {
+        background: @seti-primary !important;
+        color: @seti-primary-text;
+
+        + ul.list .padded .btn-group button.btn {
+          background: @seti-primary-highlight;
+          color: @seti-primary-text;
+        }
+      }
+    }
+
+    ul.list {
+
+      .padded {
+        padding: 0;
+        .btn-group {
+          float: right;
+          margin-top: -45px;
+          margin-right: 5px;
+        }
+      }
+
+      li.list-item.source-file {
+        margin: 10px 0 0 0;
+        background-color: @grey-dark;
+        // border: solid 1px @grey-dark;
+        a.source-url {
+          font-family: 'Roboto';
+          background: @black-dark;
+          color: @white;
+          display: block;
+          font-weight: 500;
+          padding: 5px 10px;
+        }
+
+        .list-item.deprecation-detail {
+          clear: both;
+          margin: 0;
+          padding: 10px;
+          height: 45px;
+          &:nth-child(odd) {
+            background: lighten(@grey-dark, 5%);
+          }
+        }
+
+        .list-item .btn-toolbar {
+          display: inline-block;
+          margin: 0;
+          padding: 0;
+          float: right;
+          .btn {
+            background: @seti-primary;
+            color: @seti-primary-text;
+            margin: 0;
+          }
+        }
+
+        .deprecation-message {
+          float: left;
+        }
+
+        .text-warning {
+          float: left;
+          margin: 0;
+          &::before {
+            font-size: 25px;
+          }
+        }
+
+        code {
+          color: @seti-primary;
+          background: @seti-primary-text;
+          font-size: 12px;
+          font-weight: 100;
+          margin: 0 2px;
+        }
+      }
+    }
+
+    // GROUP LIST
+    .matches.list-tree {
+      background: @black;
+      margin: 0;
+      padding: 0;
+      .search-result.list-item {
+        margin: 0;
+
+        // MATCHED WORD
+        .highlight-info {
+          color: @seti-primary;
+          box-shadow: none;
+        }
+        .highlight-error {
+          color: @text-color-error;
+          box-shadow: none;
+        }
+        .highlight-success {
+          color: @text-color-success;
+          box-shadow: none;
+        }
+
+        &:nth-child(even) {
+          background: rgba(255,255,255,0.02);
+        }
+
+        &.selected {
+          background: @seti-primary;
+          color: @seti-primary-text;
+
+          .highlight-error {
+            color: @white;
+            background: @bad;
+            padding: 2px 4px;
+          }
+          .highlight-success {
+            color: @white;
+            background: @good;
+            padding: 2px 4px;
+          }
+
+          .highlight-info {
+            color: @seti-primary-highlight;
+          }
+
+          .line-number {
+            color: @seti-primary-text;
+          }
+          &::before {
+            display: none;
+          }
+        }
+        .line-number {
+          color: @seti-primary;
+        }
+      }
+    }
+  }
+
+
+}
+
 .deprecation-cop-status {
   .icon.icon-alert::before {
     // color: @warn !important;

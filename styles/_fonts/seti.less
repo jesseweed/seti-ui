@@ -34,53 +34,55 @@
 	@css: '\E00A';
 	@csv: '\E00B';
 	@default: '\E00C';
-	@docker: '\E00D';
-	@ejs: '\E00E';
-	@favicon: '\E00F';
-	@folder: '\E010';
-	@font: '\E011';
-	@git_folder: '\E012';
-	@git_ignore: '\E013';
-	@github: '\E014';
-	@go: '\E015';
-	@grunt: '\E016';
-	@gulp: '\E017';
-	@haml: '\E018';
-	@heroku: '\E019';
-	@html: '\E01A';
-	@html_erb: '\E01B';
-	@ignored: '\E01C';
-	@illustrator: '\E01D';
-	@image: '\E01E';
-	@jade: '\E01F';
-	@javascript: '\E020';
-	@js_erb: '\E021';
-	@json: '\E022';
-	@julia: '\E023';
-	@karma: '\E024';
-	@less: '\E025';
-	@license: '\E026';
-	@markdown: '\E027';
-	@mustache: '\E028';
-	@npm: '\E029';
-	@npm_ignored: '\E02A';
-	@pdf: '\E02B';
-	@photoshop: '\E02C';
-	@php: '\E02D';
-	@project: '\E02E';
-	@python: '\E02F';
-	@rails: '\E030';
-	@react: '\E031';
-	@ruby: '\E032';
-	@sass: '\E033';
-	@search: '\E034';
-	@settings: '\E035';
-	@shell: '\E036';
-	@stylus: '\E037';
-	@svg: '\E038';
-	@typescript: '\E039';
-	@xml: '\E03A';
-	@yml: '\E03B';
+	@deprecation-cop: '\E00D';
+	@docker: '\E00E';
+	@ejs: '\E00F';
+	@favicon: '\E010';
+	@folder: '\E011';
+	@font: '\E012';
+	@git_folder: '\E013';
+	@git_ignore: '\E014';
+	@github: '\E015';
+	@go: '\E016';
+	@grunt: '\E017';
+	@gulp: '\E018';
+	@haml: '\E019';
+	@heroku: '\E01A';
+	@html: '\E01B';
+	@html_erb: '\E01C';
+	@ignored: '\E01D';
+	@illustrator: '\E01E';
+	@image: '\E01F';
+	@jade: '\E020';
+	@javascript: '\E021';
+	@js_erb: '\E022';
+	@json: '\E023';
+	@julia: '\E024';
+	@karma: '\E025';
+	@less: '\E026';
+	@license: '\E027';
+	@markdown: '\E028';
+	@mustache: '\E029';
+	@npm: '\E02A';
+	@npm_ignored: '\E02B';
+	@pdf: '\E02C';
+	@photoshop: '\E02D';
+	@php: '\E02E';
+	@project: '\E02F';
+	@python: '\E030';
+	@rails: '\E031';
+	@react: '\E032';
+	@ruby: '\E033';
+	@sass: '\E034';
+	@search: '\E035';
+	@settings: '\E036';
+	@shell: '\E037';
+	@stylus: '\E038';
+	@svg: '\E039';
+	@time-cop: '\E03A';
+	@typescript: '\E03B';
+	@xml: '\E03C';
+	@yml: '\E03D';
 	
 	content: @@filename;
 }
@@ -130,6 +132,9 @@
 }
 .icon-default {
 	.icon(default);
+}
+.icon-deprecation-cop {
+	.icon(deprecation-cop);
 }
 .icon-docker {
 	.icon(docker);
@@ -262,6 +267,9 @@
 }
 .icon-svg {
 	.icon(svg);
+}
+.icon-time-cop {
+	.icon(time-cop);
 }
 .icon-typescript {
 	.icon(typescript);

@@ -1,19 +1,20 @@
 atom-panel-container.modal {
-  atom-panel.overlay {
+  atom-panel.modal {
     background-color: rgba(0,0,0,0.8);
     border: solid 1px rgba(0,0,0,0.5);
     color: @white;
     padding: 10px;
 
     // MINI EDITOR
-    .input();
+    .input(@seti-primary-text, @seti-primary-highlight);
 
     .atom-text-editor[mini] {
       margin-bottom: 0;
     }
 
     .list-group {
-      .two-lines, .event {
+      margin: 0;
+      .two-lines, .event, .grammar-selector {
         background: @grey-dark;
         height: 45px;
         margin-bottom: 1px;
