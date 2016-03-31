@@ -3,8 +3,8 @@
   // SET ICON SIZE
   .title::before {
     float: left;
-    font-size: 20px;
-    line-height: 15px;
+    font-size: 21px;
+    line-height: 16px;
   }
 
   // IGNORED FILES
@@ -18,5 +18,11 @@
   .tab-icon("DeprecationCopView", 'deprecation-cop', @seti-primary);
   .tab-icon("TimecopView", 'time-cop', @seti-primary);
   .tab-icon("ResultsPaneView", 'search', @seti-primary);
+
+  // NEW FILES
+  &[data-type="TextEditor"] .title:not([data-name]) {
+    .icon('new-file', @green);
+  }
+
 
 }

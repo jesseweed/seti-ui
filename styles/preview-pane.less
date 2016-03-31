@@ -2,16 +2,21 @@
   .panel-heading {
     .preview-count {
       font-family: @font-family;
+      font-weight: 100;
       font-size: 30px;
+      padding: 10px;
     }
     .highlight-info {
       color: @seti-primary;
     }
   }
   .results-view {
+    padding: 0 20px;
 
     // GROUP
     .path.list-nested-item {
+      margin-bottom: 20px;
+      border: solid 1px @grey-dark;
 
       &.collapsed {
         border-bottom: solid 1px @black;
@@ -32,7 +37,7 @@
       // GROUP HEADER
       .path-details.list-item {
         background: @grey-dark;
-        padding: 10px 10px 10px 10px;
+        padding: 10px;
         span.path-name {
           font-size: 15px;
         }
@@ -47,9 +52,9 @@
       .matches.list-tree {
         background: @black;
         margin: 0;
-        padding: 0;
         .search-result.list-item {
           margin: 0;
+          padding: 10px;
 
           // MATCHED WORD
           .highlight-info {
