@@ -3,6 +3,30 @@ atom-pane-container atom-pane .item-views .pane-item {
   color: @white;
   font-weight: 100;
 
+  .search-container {
+    button.btn {
+      background: @grey-dark;
+      color: @white;
+      font-weight: 100;
+      height: 43px;
+      padding: 10px 20px;
+      transition: background 0.3s;
+
+      &.selected {
+        background: @seti-primary;
+        color: @seti-primary-text;
+        &:hover {
+          background-color: @seti-primary-highlight;
+          color: @seti-primary-text;
+        }
+      }
+
+      &:hover {
+        background-color: @grey;
+      }
+    }
+  }
+
   .native-key-bindings.breadcrumb {
     background: @grey-dark;
     font-family: 'Roboto-Thin';
