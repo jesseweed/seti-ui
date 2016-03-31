@@ -22,73 +22,88 @@
 }
 
 .icon-char(@filename) {
-	@bower: '\E001';
-	@c-sharp: '\E002';
-	@c: '\E003';
-	@cake_php: '\E004';
-	@cjsx: '\E005';
-	@coffee: '\E006';
-	@coffee_erb: '\E007';
-	@coldfusion: '\E008';
-	@config: '\E009';
-	@cpp: '\E00A';
-	@css: '\E00B';
-	@csv: '\E00C';
-	@default: '\E00D';
-	@deprecation-cop: '\E00E';
-	@docker: '\E00F';
-	@editorconfig: '\E010';
-	@ejs: '\E011';
-	@error: '\E012';
-	@favicon: '\E013';
-	@folder: '\E014';
-	@font: '\E015';
-	@git_folder: '\E016';
-	@git_ignore: '\E017';
-	@github: '\E018';
-	@go: '\E019';
-	@go2: '\E01A';
-	@grunt: '\E01B';
-	@gulp: '\E01C';
-	@haml: '\E01D';
-	@haskell: '\E01E';
-	@heroku: '\E01F';
-	@html: '\E020';
-	@html_erb: '\E021';
-	@ignored: '\E022';
-	@illustrator: '\E023';
-	@image: '\E024';
-	@jade: '\E025';
-	@javascript: '\E026';
-	@js_erb: '\E027';
-	@json: '\E028';
-	@julia: '\E029';
-	@karma: '\E02A';
-	@less: '\E02B';
-	@license: '\E02C';
-	@markdown: '\E02D';
-	@mustache: '\E02E';
-	@npm: '\E02F';
-	@npm_ignored: '\E030';
-	@pdf: '\E031';
-	@photoshop: '\E032';
-	@php: '\E033';
-	@project: '\E034';
-	@python: '\E035';
-	@rails: '\E036';
-	@react: '\E037';
-	@ruby: '\E038';
-	@sass: '\E039';
-	@search: '\E03A';
-	@settings: '\E03B';
-	@shell: '\E03C';
-	@stylus: '\E03D';
-	@svg: '\E03E';
-	@swift: '\E03F';
-	@time-cop: '\E040';
-	@typescript: '\E041';
-	@xml: '\E042';
-	@yml: '\E043';
+	@audio: '\E001';
+	@bower: '\E002';
+	@c-sharp: '\E003';
+	@c: '\E004';
+	@cake_php: '\E005';
+	@cjsx: '\E006';
+	@coffee: '\E007';
+	@coffee_erb: '\E008';
+	@coldfusion: '\E009';
+	@config: '\E00A';
+	@cpp: '\E00B';
+	@css: '\E00C';
+	@csv: '\E00D';
+	@default: '\E00E';
+	@deprecation-cop: '\E00F';
+	@docker: '\E010';
+	@editorconfig: '\E011';
+	@ejs: '\E012';
+	@error: '\E013';
+	@favicon: '\E014';
+	@folder: '\E015';
+	@font: '\E016';
+	@git_folder: '\E017';
+	@git_ignore: '\E018';
+	@github: '\E019';
+	@go: '\E01A';
+	@go2: '\E01B';
+	@grails: '\E01C';
+	@grunt: '\E01D';
+	@gulp: '\E01E';
+	@hacklang: '\E01F';
+	@haml: '\E020';
+	@haskell: '\E021';
+	@heroku: '\E022';
+	@html: '\E023';
+	@html_erb: '\E024';
+	@ignored: '\E025';
+	@illustrator: '\E026';
+	@image: '\E027';
+	@jade: '\E028';
+	@java: '\E029';
+	@javascript: '\E02A';
+	@js_erb: '\E02B';
+	@json: '\E02C';
+	@julia: '\E02D';
+	@karma: '\E02E';
+	@less: '\E02F';
+	@license: '\E030';
+	@liquid: '\E031';
+	@livescript: '\E032';
+	@lua: '\E033';
+	@markdown: '\E034';
+	@mustache: '\E035';
+	@npm: '\E036';
+	@npm_ignored: '\E037';
+	@ocaml: '\E038';
+	@pdf: '\E039';
+	@perl: '\E03A';
+	@photoshop: '\E03B';
+	@php: '\E03C';
+	@project: '\E03D';
+	@puppet: '\E03E';
+	@python: '\E03F';
+	@rails: '\E040';
+	@react: '\E041';
+	@ruby: '\E042';
+	@rust: '\E043';
+	@sass: '\E044';
+	@sbt: '\E045';
+	@scala: '\E046';
+	@search: '\E047';
+	@settings: '\E048';
+	@shell: '\E049';
+	@stylus: '\E04A';
+	@svg: '\E04B';
+	@swift: '\E04C';
+	@time-cop: '\E04D';
+	@typescript: '\E04E';
+	@vala: '\E04F';
+	@video: '\E050';
+	@xml: '\E051';
+	@yml: '\E052';
 	
 	content: @@filename;
 }
@@ -103,6 +118,9 @@
 	}
 }
 
+.icon-audio {
+	.icon(audio);
+}
 .icon-bower {
 	.icon(bower);
 }
@@ -181,11 +199,17 @@
 .icon-go2 {
 	.icon(go2);
 }
+.icon-grails {
+	.icon(grails);
+}
 .icon-grunt {
 	.icon(grunt);
 }
 .icon-gulp {
 	.icon(gulp);
+}
+.icon-hacklang {
+	.icon(hacklang);
 }
 .icon-haml {
 	.icon(haml);
@@ -214,6 +238,9 @@
 .icon-jade {
 	.icon(jade);
 }
+.icon-java {
+	.icon(java);
+}
 .icon-javascript {
 	.icon(javascript);
 }
@@ -235,6 +262,15 @@
 .icon-license {
 	.icon(license);
 }
+.icon-liquid {
+	.icon(liquid);
+}
+.icon-livescript {
+	.icon(livescript);
+}
+.icon-lua {
+	.icon(lua);
+}
 .icon-markdown {
 	.icon(markdown);
 }
@@ -247,8 +283,14 @@
 .icon-npm_ignored {
 	.icon(npm_ignored);
 }
+.icon-ocaml {
+	.icon(ocaml);
+}
 .icon-pdf {
 	.icon(pdf);
+}
+.icon-perl {
+	.icon(perl);
 }
 .icon-photoshop {
 	.icon(photoshop);
@@ -258,6 +300,9 @@
 }
 .icon-project {
 	.icon(project);
+}
+.icon-puppet {
+	.icon(puppet);
 }
 .icon-python {
 	.icon(python);
@@ -271,8 +316,17 @@
 .icon-ruby {
 	.icon(ruby);
 }
+.icon-rust {
+	.icon(rust);
+}
 .icon-sass {
 	.icon(sass);
+}
+.icon-sbt {
+	.icon(sbt);
+}
+.icon-scala {
+	.icon(scala);
 }
 .icon-search {
 	.icon(search);
@@ -297,6 +351,12 @@
 }
 .icon-typescript {
 	.icon(typescript);
+}
+.icon-vala {
+	.icon(vala);
+}
+.icon-video {
+	.icon(video);
 }
 .icon-xml {
 	.icon(xml);
