@@ -9,8 +9,8 @@
     }
 }
 
-// SET ICON FOR VARIOUS LOCATIONS
-.icon-tab( @extension, @file, @color) {
+// SET ICON FILE BASED ON DATA NAME
+.icon-set( @extension, @file, @color) {
 
   .icon-file-binary, .icon-file-pdf, .icon-file-text, .icon-book, .icon-file-media, .icon-markdown, .title {
     &[data-name$="@{extension}"] {
@@ -19,6 +19,14 @@
   }
 
 }
+
+// SET ICON FOR TAB BASED ON DATA TYPE
+.tab-icon(@data-type, @file-type, @color) {
+  &[data-type="@{data-type}"] .icon {
+    .icon(@file-type, @color);
+  }
+}
+
 
 // MINI EDITOR - LARGE
 .input(@bg: #000; @color: @white; @padding: 10px;) {
@@ -63,18 +71,6 @@
 
     .lines .cursors .cursor {
       border-color: @color !important;
-    }
-  }
-}
-
-.set-theme(@seti-primary-highlight) {
-  &.seti-theme-purple {
-    .tab > .title.active::after {
-      background: @color;
-    }
-    .placeholder {
-      background-color: @color;
-      &::after {background-color: @color;}
     }
   }
 }
