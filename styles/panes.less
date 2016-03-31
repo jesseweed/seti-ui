@@ -8,9 +8,7 @@ atom-panel-container.modal {
 
     .tree-view-dialog {
       label.icon-file-add {
-        font-family: "Roboto-Thin";
         font-size: 20px;
-        font-weight: 100;
         &:before {
           display: none;
         }
@@ -31,6 +29,10 @@ atom-panel-container.modal {
       margin-bottom: 0;
     }
 
+    .error-message {
+      padding: 10px;
+    }
+
     .list-group {
       margin: 0;
       .two-lines, .event, .grammar-selector, li {
@@ -39,7 +41,6 @@ atom-panel-container.modal {
         margin-bottom: 1px;
         padding: 10px;
         color: @white;
-        font-weight: 100;
         letter-spacing: 0.06em;
 
         .icon-book,
@@ -80,9 +81,6 @@ atom-panel-container.modal {
         &.selected {
           background: @black;
           color: @seti-primary;
-          .character-match {
-            font-weight: 100;
-          }
           &::before {
             display: none;
           }

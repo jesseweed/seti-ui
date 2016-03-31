@@ -1,9 +1,8 @@
 .preview-pane {
   .panel-heading {
     .preview-count {
-      font-family: 'Roboto-Thin';
+      font-family: @font-family;
       font-size: 30px;
-      font-weight: 100;
     }
     .highlight-info {
       color: @seti-primary;
@@ -17,20 +16,7 @@
       &.collapsed {
         border-bottom: solid 1px @black;
       }
-
-      // .icon-file-media, .icon-file-pdf, .icon-file-binary, .icon-file-text, .icon-book, .icon-file-media {
-      //   &::before {
-      //     font-size: 22px;
-      //     top:6px;
-      //     margin-right: 10px;
-      //   }
-      // }
       &.selected {
-        // .icon-file-media, .icon-file-pdf, .icon-file-binary, .icon-file-text, .icon-book, .icon-file-media {
-        //   &::before {
-        //     color: @seti-primary-text;
-        //   }
-        // }
         .path-details.list-item {
           background: @seti-primary;
           color: @seti-primary-text;
