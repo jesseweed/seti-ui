@@ -3,14 +3,19 @@
 // - - - - - - - - - - - - - -
 
 // DEFAULT ICON
-.icon-file-binary, .icon-file-pdf, .icon-file-text, .icon-book, .icon-file-media, .icon-markdown, .title {
-  .icon('default', @white)
+.icon:not(.seti-no-icons) {
+  .icon-file-binary, .icon-file-pdf, .icon-file-text, .icon-book, .icon-file-media, .icon-markdown, .title {
+    .icon('default', @white)
+  }
 }
 
 .icon-tab('.cpp', 'default', @blue);
 
 // C
 .icon-tab('.c', 'c', @blue);
+
+// C#
+.icon-tab('.cs', 'c-sharp', @blue);
 
 // C++
 .icon-tab('.cpp', 'cpp', @blue);
@@ -23,7 +28,7 @@
 .icon-tab('.coffee', 'coffee', @yellow);
 
 // CONFIG
-.icon-tab('.config', 'config', @grey);
+.icon-tab('.config', 'config', @grey-light);
 
 // CSON
 .icon-tab('.cson', 'json', @yellow);
@@ -47,7 +52,10 @@
 .icon-tab('.gitignore', 'github', @grey);
 
 // GO
-.icon-tab('.go', 'go', @blue);
+.icon-tab('.go', 'go2', @blue);
+.icon-tab('.slide', 'go', @blue);
+.icon-tab('.article', 'go', @blue);
+
 
 // HAML
 .icon-tab('.haml', 'haml', @red);
@@ -56,6 +64,10 @@
 .icon-tab('.handlebars', 'mustache', @orange);
 .icon-tab('.hbs', 'mustache', @orange);
 .icon-tab('.hjs', 'mustache', @orange);
+
+// HASKELL
+.icon-tab('.hs', 'haskell', @purple);
+.icon-tab('.lhs', 'haskell', @purple);
 
 // HTML
 .icon-tab('.html', 'html', @orange);
@@ -96,6 +108,7 @@
 
 // PHP
 .icon-tab('.php', 'php', @purple);
+.icon-tab('.php.inc', 'php', @purple);
 
 // PYTHON
 .icon-tab('.py', 'python', @blue);
@@ -113,6 +126,9 @@
 
 // STYLUS
 .icon-tab('.styl', 'stylus', @green);
+
+// SWIFT
+.icon-tab('.swift', 'swift', @orange);
 
 // TEXT
 .icon-tab('.txt', 'default', @white);
@@ -181,18 +197,18 @@
 .icon-tab('DOCKERFILE', 'docker', @blue);
 
 // GRUNT
-.icon-tab('GRUNTFILE.js', 'grunt', @orange);
 .icon-tab('Gruntfile.js', 'grunt', @orange);
+.icon-tab('gruntfile.babel.js', 'grunt', @orange);
+.icon-tab('Gruntfile.babel.js', 'grunt', @orange);
 .icon-tab('gruntfile.js', 'grunt', @orange);
-.icon-tab('GRUNTFILE.coffee', 'grunt', @orange);
 .icon-tab('Gruntfile.coffee', 'grunt', @orange);
 .icon-tab('gruntfile.coffee', 'grunt', @orange);
 
 // GULP
-.icon-tab('GULPFILE.js', 'gulp', @red);
 .icon-tab('Gulpfile.js', 'gulp', @red);
 .icon-tab('gulpfile.js', 'gulp', @red);
-.icon-tab('GULPFILE.coffee', 'gulp', @red);
+.icon-tab('gulpfile.babel.js', 'gulp', @red);
+.icon-tab('Gulpfile.babel.js', 'gulp', @red);
 .icon-tab('Gulpfile.coffee', 'gulp', @red);
 .icon-tab('gulpfile.coffee', 'gulp', @red);
 
@@ -201,9 +217,10 @@
 .icon-tab('.jscsrc', 'javascript', @blue);
 
 // MISC SETTING
-.icon-tab('.env', 'settings', @white);
-.icon-tab('.static', 'settings', @white);
-.icon-tab('.editorconfig', 'settings', @blue);
+.icon-tab('.direnv', 'config', @grey-light);
+.icon-tab('.env', 'config', @grey-light);
+.icon-tab('.static', 'config', @grey-light);
+.icon-tab('.editorconfig', 'editorconfig', @blue);
 
 // LICENSE FILE
 .icon-tab('LICENSE', 'license', @yellow);
@@ -211,9 +228,7 @@
 .icon-tab('license', 'license', @yellow);
 
 // PROCFILE
-.icon-tab('PROCFILE', 'heroku', @purple);
 .icon-tab('Procfile', 'heroku', @purple);
-.icon-tab('procfile', 'heroku', @purple);
 
 
 // - - - - - - -
@@ -234,7 +249,7 @@
   .tab > .title {
     padding: 13px 5px;
     &::before {
-      display: none !important;
+      // display: none !important;
     }
   }
 
