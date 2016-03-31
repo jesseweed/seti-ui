@@ -56,60 +56,7 @@ atom-panel.left {
         display: none;
       }
     }
-
   }
-
-  // SIEBAR ICONS
-  .icon-book,
-  .icon-file-binary,
-  .icon-file-pdf,
-  .icon-file-text,
-  .icon-file-media {
-    &::before {
-      font-size: 22px;
-      height: 22px;
-      left: 2px;
-      position: relative;
-      top: 7px;
-      width: 22px;
-    }
-  }
-
-
-  // DIRECTORIES
-  .directory.entry.list-nested-item {
-
-    // IGNORED FILES
-    &.status-ignored {
-      .icon-file-directory[data-name$=".git"], {
-        .icon('github', @ignore);
-        top: -6px;
-      }
-      .list-item {
-        &::before {
-          position: relative;
-          top: -6px;
-        }
-      }
-      &::before {
-        height: 35px;
-        margin-top: 0px;
-      }
-      padding-bottom: 0;
-      .icon-file-directory, {
-        .icon('ignored', @ignore);
-        position: relative;
-        top: -7px;
-        &::before {
-          font-size: 27px;
-          height: 22px;
-          top: 10px;
-          left: -7px;
-        }
-      }
-    }
-  }
-
 }
 
 

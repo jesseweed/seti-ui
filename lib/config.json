@@ -5,8 +5,8 @@
     "title": "User Interface",
     "properties": {
       "fileIcons": {
-        "title": "Display file icons",
-        "description": "Disable this if you are using file-icons or another atom file icon package (or simply don't want icons)",
+        "title": "Custom Icons",
+        "description": "Disable this if you are using file-icons or another atom file icon package (or simply don't want custom icons)",
         "type": "boolean",
         "default": true
       },

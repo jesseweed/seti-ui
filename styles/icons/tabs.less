@@ -1,0 +1,22 @@
+.tab-bar .tab {
+
+  // SET ICON SIZE
+  .title::before {
+    float: left;
+    font-size: 20px;
+    line-height: 15px;
+  }
+
+  // IGNORED FILES
+  .file.status-ignored .icon {
+    .icon('ignored', @ignore);
+  }
+
+  // SET ICONS FOR ATOM VIEWS
+  .tab-icon("SettingsView", 'settings', @seti-primary);
+  .tab-icon("MarkdownPreviewView", 'markdown', @blue);
+  .tab-icon("DeprecationCopView", 'deprecation-cop', @seti-primary);
+  .tab-icon("TimecopView", 'time-cop', @seti-primary);
+  .tab-icon("ResultsPaneView", 'search', @seti-primary);
+
+}
