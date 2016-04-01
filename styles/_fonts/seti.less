@@ -22,89 +22,93 @@
 }
 
 .icon-char(@filename) {
-	@audio: '\E001';
-	@bower: '\E002';
-	@c-sharp: '\E003';
-	@c: '\E004';
-	@cake_php: '\E005';
-	@cjsx: '\E006';
-	@coffee: '\E007';
-	@coffee_erb: '\E008';
-	@coldfusion: '\E009';
-	@config: '\E00A';
-	@cpp: '\E00B';
-	@css: '\E00C';
-	@csv: '\E00D';
-	@default: '\E00E';
-	@deprecation-cop: '\E00F';
-	@docker: '\E010';
-	@editorconfig: '\E011';
-	@ejs: '\E012';
-	@error: '\E013';
-	@favicon: '\E014';
-	@folder: '\E015';
-	@font: '\E016';
-	@git_folder: '\E017';
-	@git_ignore: '\E018';
-	@github: '\E019';
-	@go: '\E01A';
-	@go2: '\E01B';
-	@grails: '\E01C';
-	@grunt: '\E01D';
-	@gulp: '\E01E';
-	@hacklang: '\E01F';
-	@haml: '\E020';
-	@haskell: '\E021';
-	@heroku: '\E022';
-	@html: '\E023';
-	@html_erb: '\E024';
-	@ignored: '\E025';
-	@illustrator: '\E026';
-	@image: '\E027';
-	@jade: '\E028';
-	@java: '\E029';
-	@javascript: '\E02A';
-	@js_erb: '\E02B';
-	@json: '\E02C';
-	@julia: '\E02D';
-	@karma: '\E02E';
-	@less: '\E02F';
-	@license: '\E030';
-	@liquid: '\E031';
-	@livescript: '\E032';
-	@lua: '\E033';
-	@markdown: '\E034';
-	@mustache: '\E035';
-	@new-file: '\E036';
-	@npm: '\E037';
-	@npm_ignored: '\E038';
-	@ocaml: '\E039';
-	@pdf: '\E03A';
-	@perl: '\E03B';
-	@photoshop: '\E03C';
-	@php: '\E03D';
-	@project: '\E03E';
-	@puppet: '\E03F';
-	@python: '\E040';
-	@rails: '\E041';
-	@react: '\E042';
-	@ruby: '\E043';
-	@rust: '\E044';
-	@sass: '\E045';
-	@sbt: '\E046';
-	@scala: '\E047';
-	@search: '\E048';
-	@settings: '\E049';
-	@shell: '\E04A';
-	@stylus: '\E04B';
-	@svg: '\E04C';
-	@swift: '\E04D';
-	@time-cop: '\E04E';
-	@typescript: '\E04F';
-	@vala: '\E050';
-	@video: '\E051';
-	@xml: '\E052';
-	@yml: '\E053';
+	@apple: '\E001';
+	@audio: '\E002';
+	@bower: '\E003';
+	@c-sharp: '\E004';
+	@c: '\E005';
+	@cake_php: '\E006';
+	@cjsx: '\E007';
+	@coffee: '\E008';
+	@coffee_erb: '\E009';
+	@coldfusion: '\E00A';
+	@config: '\E00B';
+	@cpp: '\E00C';
+	@css: '\E00D';
+	@csv: '\E00E';
+	@default: '\E00F';
+	@deprecation-cop: '\E010';
+	@docker: '\E011';
+	@editorconfig: '\E012';
+	@ejs: '\E013';
+	@error: '\E014';
+	@favicon: '\E015';
+	@folder: '\E016';
+	@font: '\E017';
+	@git_folder: '\E018';
+	@git_ignore: '\E019';
+	@github: '\E01A';
+	@go: '\E01B';
+	@go2: '\E01C';
+	@grails: '\E01D';
+	@grunt: '\E01E';
+	@gulp: '\E01F';
+	@hacklang: '\E020';
+	@haml: '\E021';
+	@haskell: '\E022';
+	@heroku: '\E023';
+	@html: '\E024';
+	@html_erb: '\E025';
+	@ignored: '\E026';
+	@illustrator: '\E027';
+	@image: '\E028';
+	@jade: '\E029';
+	@java: '\E02A';
+	@javascript: '\E02B';
+	@js_erb: '\E02C';
+	@json: '\E02D';
+	@julia: '\E02E';
+	@karma: '\E02F';
+	@less: '\E030';
+	@license: '\E031';
+	@liquid: '\E032';
+	@livescript: '\E033';
+	@lua: '\E034';
+	@markdown: '\E035';
+	@mustache: '\E036';
+	@new-file: '\E037';
+	@npm: '\E038';
+	@npm_ignored: '\E039';
+	@ocaml: '\E03A';
+	@pdf: '\E03B';
+	@perl: '\E03C';
+	@photoshop: '\E03D';
+	@php: '\E03E';
+	@project: '\E03F';
+	@puppet: '\E040';
+	@python: '\E041';
+	@rails: '\E042';
+	@react: '\E043';
+	@ruby: '\E044';
+	@rust: '\E045';
+	@sass: '\E046';
+	@sbt: '\E047';
+	@scala: '\E048';
+	@search: '\E049';
+	@settings: '\E04A';
+	@shell: '\E04B';
+	@slim: '\E04C';
+	@smarty: '\E04D';
+	@stylus: '\E04E';
+	@svg: '\E04F';
+	@swift: '\E050';
+	@time-cop: '\E051';
+	@todo: '\E052';
+	@typescript: '\E053';
+	@vala: '\E054';
+	@video: '\E055';
+	@xml: '\E056';
+	@yml: '\E057';
 	
 	content: @@filename;
 }
@@ -119,6 +123,9 @@
 	}
 }
 
+.icon-apple {
+	.icon(apple);
+}
 .icon-audio {
 	.icon(audio);
 }
@@ -341,6 +348,12 @@
 .icon-shell {
 	.icon(shell);
 }
+.icon-slim {
+	.icon(slim);
+}
+.icon-smarty {
+	.icon(smarty);
+}
 .icon-stylus {
 	.icon(stylus);
 }
@@ -352,6 +365,9 @@
 }
 .icon-time-cop {
 	.icon(time-cop);
+}
+.icon-todo {
+	.icon(todo);
 }
 .icon-typescript {
 	.icon(typescript);
