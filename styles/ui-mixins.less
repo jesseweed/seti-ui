@@ -12,11 +12,13 @@
 // SET ICON FILE BASED ON DATA NAME
 .icon-set( @extension, @file, @color) {
 
-  .icon.icon-file-binary, .icon.icon-file-pdf, .icon.icon-file-text, .icon.icon-book, .icon.icon-file-media, .icon.icon-markdown, .title {
+  .icon:not(.icon-file-directory),
+  .title {
     &[data-name$="@{extension}"] {
       .icon(@file, @color)
     }
   }
+
 
 }
 
