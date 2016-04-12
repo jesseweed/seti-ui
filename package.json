@@ -3,12 +3,15 @@
   "theme": "ui",
   "version": "1.0.0",
   "description": "A dark colored UI theme for Atom with custom file icons.",
-  "main": "lib/seti",
+  "main": "lib/main",
   "license": "MIT",
   "repository": "https://github.com/jesseweed/seti-ui",
   "engines": {
     "atom": ">1.6.0"
   },
+  "devDependencies": {
+   "coffeelint": "^1.9.7"
+ },
   "configSchema": {
     "ui": {
       "order": 1,
@@ -48,10 +51,5 @@
         }
       }
     }
-  },
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-iconfont": "^6.0.0",
-    "gulp-iconfont-css": "^2.1.0"
   }
 }

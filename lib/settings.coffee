@@ -1,12 +1,11 @@
-Dom = require('./dom')
-Utility = require('./utility')
+Dom = require(atom.packages.getLoadedPackage('seti-ui').path + '/lib/dom')
+Utility = require(atom.packages.getLoadedPackage('seti-ui').path + '/lib/utility')
 
 module.exports =
+
   init: (state) ->
 
     self = @
-
-    console.log 'Seti UI Loaded', atom.config.get('seti-ui.ui')
 
     # TAB SIZE
     self.tabSize atom.config.get('seti-ui.ui.compactView')
@@ -26,21 +25,15 @@ module.exports =
   # RELOAD WHEN SETTINGS CHANGE
   refresh: ->
     self = @
-    console.log 'reload theme'
     self.package.deactivate()
     setImmediate ->
       return self.package.activate()
 
   # SET THEME COLOR
   setTheme: (theme, previous, reload) ->
-    self = this
     el = Dom.query('atom-workspace')
     fs = require('fs')
     path = require('path')
-
-    console.log 'theme color', theme
-    console.log 'previous', previous
-    console.log 'reload', reload
 
     # GET OUR PACKAGE INFO
     pkg = atom.packages.getLoadedPackage('seti-ui')
