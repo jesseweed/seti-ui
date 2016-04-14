@@ -1,6 +1,6 @@
 # Seti UI
 
-[![Join the chat at https://gitter.im/jesseweed/seti-ui](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jesseweed/seti-ui?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?maxAge=2592000?style=flat-square)](https://gitter.im/jesseweed/seti-ui) [![apm](https://img.shields.io/apm/dm/vim-mode.svg?maxAge=2592000?style=flat-square)](https://atom.io/themes/seti-ui) [![apm](https://img.shields.io/apm/v/vim-mode.svg?maxAge=2592000?style=flat-square)](https://atom.io/themes/seti-ui) [![apm](https://img.shields.io/apm/l/vim-mode.svg?maxAge=2592000?style=flat-square)](https://atom.io/themes/seti-ui) [![Gratipay Team](https://img.shields.io/gratipay/team/shields.svg?maxAge=2592000?style=flat-square)](https://gratipay.com/Atom-Seti-UI/)
 
 
 This is the latest version of the Seti UI theme. It's a dark interface theme crafted especially for [Atom](http://atom.io), with subtle colors that are meant to be easy on the eyes. It includes custom file icons, and new user configurable settings. [Seti Syntax](https://atom.io/themes/seti-syntax) is also available for all your codez.
@@ -135,9 +135,9 @@ Once everything is setup, follow these steps any time you want to add a new icon
 
 
   While, you _can_ add additional colors to [styles/ui-variable.less](styles/ui-variable.less), but please do not do this unless you find it _absolutely_ necessary. If you do add another color, please make sure that matches the general feel of the other colors. If you add something really bright or really pale, your pull request will likely be declined.
-  
+
   You will need to do this once for every extension, you want to target. For example, ir you want to target both **.sass** and **.scss** extensions, you would add the following:
-  
+
 ```
 .icon-set('.sass', 'sass', @pink);
 .icon-set('.scss', 'sass', @pink);
