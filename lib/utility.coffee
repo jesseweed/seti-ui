@@ -1,9 +1,10 @@
-Dom = require('./dom')
+Dom = require(atom.packages.getLoadedPackage('seti-ui').path + '/lib/dom')
 
 module.exports =
 
   # ADD CLASS WHEN CONDITIONAL IS FALSE
   addWhenFalse: (obj) ->
+
 
     # CONVERT TO AN ARRAY IF NOT
     if !Array.isArray(obj.el)
@@ -22,6 +23,7 @@ module.exports =
   # ADD CLASS WHEN CONDITIONAL IS TRUE
   addWhenTrue: (obj) ->
 
+
     # CONVERT TO AN ARRAY IF NOT
     if !Array.isArray(obj.el)
       obj.el = [ obj.el ]
@@ -37,6 +39,7 @@ module.exports =
 
 
   applySetting: (obj) ->
+
 
     # APPLY A NEW SETTING
     atom.config.set obj.config, obj.val
