@@ -118,7 +118,7 @@ Once everything is setup, follow these steps any time you want to add a new icon
 
   2. Navigate to the _seti-ui_ folder in your terminal and run `gulp fonts` (this will add the new svg file to our icon font, update our file as well as the less file with the mixins we'll need to link to the icon later.)
 
-  3. Lastly, open [styles/icons.less](styles/icons.less) and create a link for the icon you just added with the `.icon-set` mixin. Assuming you were adding an icon for Sass it might look something like this: ```.icon-set('.scss', 'sass', @pink)```
+  3. Lastly, open [styles/icons/mapping.less](styles/icons/mapping.less) and create a link for the icon you just added with the `.icon-set` mixin. Assuming you were adding an icon for Sass it might look something like this: ```.icon-set('.scss', 'sass', @pink)```
 
   The first parameter `'.scss'` is the file extension you want to target, the second parameter `'sass'` is the name of the icon you just created, without the extension (sass.svg), and the last parameter `@pink` indicated what color the icon should be.
 
@@ -134,9 +134,9 @@ Once everything is setup, follow these steps any time you want to add a new icon
     - @yellow
 
 
-  While, you _can_ add additional colors to [styles/ui-variable.less](styles/ui-variable.less), but please do not do this unless you find it _absolutely_ necessary. If you do add another color, please make sure that matches the general feel of the other colors. If you add something really bright or really pale, your pull request will likely be declined.
+  While, you _can_ add additional colors to [styles/ui-variables.less](styles/ui-variables.less), but please do not do this unless you find it _absolutely_ necessary. If you do add another color, please make sure that matches the general feel of the other colors. If you add something really bright or really pale, your pull request will likely be declined.
 
-  You will need to do this once for every extension, you want to target. For example, ir you want to target both **.sass** and **.scss** extensions, you would add the following:
+  You will need to do this once for every extension, you want to target. For example, if you want to target both **.sass** and **.scss** extensions, you would add the following:
 
 ```
 .icon-set('.sass', 'sass', @pink);
