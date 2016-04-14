@@ -2,7 +2,7 @@
 
 [![Join the chat at https://gitter.im/jesseweed/seti-ui](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jesseweed/seti-ui?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-## Note: I plan to release 1.0 by Apr 3, holding on merging any new pull requests until that is complete.
+## Note: I plan to release 1.0 by mid Apr, holding on merging any new pull requests to master until that is complete.
 
 A dark colored UI theme for Atom with custom file icons. [Seti Syntax](https://atom.io/themes/seti-syntax) also available.
 
