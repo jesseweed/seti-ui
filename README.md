@@ -8,7 +8,7 @@ A dark colored UI theme for Atom with custom file icons. [Seti Syntax](https://a
 
 ##### Note: Keep an eye out for 1.0 coming _very_ soon with some big updates. You can keep an eye on the [1.0-beta branch](https://github.com/jesseweed/seti-ui/tree/1.0-beta) if you'd like to follow the progress.
 
-![Screenshot](https://github.com/jesseweed/seti-ui/raw/master/screenshot.png)
+![Screenshot](https://github.com/jesseweed/seti-ui/raw/master/screenshot-01.png)
 
 
 ### Custom App Icons
