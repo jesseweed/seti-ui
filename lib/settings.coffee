@@ -7,16 +7,16 @@ module.exports =
     self = @
 
     # TAB SIZE
-    self.tabSize atom.config.get('seti-ui.ui.compactView')
+    self.tabSize atom.config.get('seti-ui.compactView')
     # DISPLAY IGNORED FILES
-    self.ignoredFiles atom.config.get('seti-ui.ui.displayIgnored')
+    self.ignoredFiles atom.config.get('seti-ui.displayIgnored')
     # DISPLAY FILE ICONS
-    self.fileIcons atom.config.get('seti-ui.ui.fileIcons')
+    self.fileIcons atom.config.get('seti-ui.fileIcons')
     # HIDE TABS
-    self.hideTabs atom.config.get('seti-ui.ui.hideTabs')
+    self.hideTabs atom.config.get('seti-ui.hideTabs')
     # SET THEME
-    self.setTheme atom.config.get('seti-ui.ui.themeColor'), false, false
-    atom.config.onDidChange 'seti-ui.ui.themeColor', (value) ->
+    self.setTheme atom.config.get('seti-ui.themeColor'), false, false
+    atom.config.onDidChange 'seti-ui.themeColor', (value) ->
       self.setTheme value.newValue, value.oldValue, true
 
   package: atom.packages.getLoadedPackage('seti-ui'),
@@ -44,7 +44,7 @@ module.exports =
     themeData = themeData + '@seti-primary-highlight: @' + theme.toLowerCase() + '-highlight;'
 
     # SAVE TO ATOM CONFIG
-    atom.config.set 'seti-ui.ui.themeColor', theme
+    atom.config.set 'seti-ui.themeColor', theme
 
     # SAVE USER THEME FILE
     fs.writeFile pkg.path + '/styles/user-theme.less', themeData, (err) ->
@@ -59,7 +59,7 @@ module.exports =
   tabSize: (val) ->
     Utility.applySetting
       action: 'addWhenTrue'
-      config: 'seti-ui.ui.compactView'
+      config: 'seti-ui.compactView'
       el: [
         'atom-workspace-axis.vertical .tab-bar'
         'atom-workspace-axis.vertical .tabs-bar'
@@ -75,7 +75,7 @@ module.exports =
   hideTabs: (val) ->
     Utility.applySetting
       action: 'addWhenTrue'
-      config: 'seti-ui.ui.hideTabs'
+      config: 'seti-ui.hideTabs'
       el: [
         '.tab-bar'
         '.tabs-bar'
@@ -89,7 +89,7 @@ module.exports =
   fileIcons: (val) ->
     Utility.applySetting
       action: 'addWhenTrue'
-      config: 'seti-ui.ui.fileIcons'
+      config: 'seti-ui.fileIcons'
       el: [ 'atom-workspace' ]
       className: 'seti-icons'
       val: val
@@ -100,7 +100,7 @@ module.exports =
   ignoredFiles: (val) ->
     Utility.applySetting
       action: 'addWhenFalse'
-      config: 'seti-ui.ui.displayIgnored'
+      config: 'seti-ui.displayIgnored'
       el: [
         '.file.entry.list-item.status-ignored'
         '.directory.entry.list-nested-item.status-ignored'
