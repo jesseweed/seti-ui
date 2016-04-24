@@ -1,5 +1,74 @@
 # Changelog
 
+## 1.0.0
+- UI Overhaul:
+  - Larger tabs
+  - More space in sidebar
+  - File icons now display in fuzzy finder & find & replace
+  - Improve system views such as settings & panels
+  - New styling for Find & Replace
+  - Pin project folder to top
+  - Additional theme color options:
+    - Blue (Default)
+    - Green
+    - Orange
+    - Pink
+    - Purple
+    - Steel
+    - Yellow
+  - Add Roboto font for UI text
+  - Custom styling for plugins:
+    - Autocomplete Plus
+    - Deprecation Cop
+    - Linter
+    - Pigments
+    - Time Cop
+- Refactor code base:
+  - Add config for user settings:
+    - Disable compact mode
+    - Enable/Disable Icons
+    - Set theme color
+    - Enable hiding tabs
+    - Enable fully hiding cvs hidden files
+  - Add gulp script for building file icons
+- Add CONTRIBUTING.md for directions on how to contribute
+- Update README
+- Update screenshots
+- Add file icons:
+  - php.inc
+  - Swift
+  - .gitattributes
+  - C
+  - C++
+  - Rust
+  - gulpfile.babel.js
+  - Grails
+  - PerlScript
+  - ECMAScript
+  - Scale
+  - Java
+  - SBT
+  - jscs
+  - jshint
+  - direnv
+  - editorconfig
+  - LaTeX
+  - Ocaml
+  - LiveScript
+  - Vala
+  - HackLang
+  - Shell
+  - Puppet
+  - Haskell
+  - Lua
+  - Typescript
+  - Go
+  - C#
+  - liquid
+  - Haml
+  - Media Files (audio, video, image)
+  - Font Files
+
 ## 0.9.2
 - Add cold fusion support
 - Add Haml icon
@@ -17,7 +86,7 @@
 
 ## 0.8.0
 - Update settings view
-- Limit CPU usage of <progress> elements
+- Limit CPU usage of `<progress>` elements
 - Add .yaml as extension for YAML file icon
 - Alias .es and .es6 to js
 
