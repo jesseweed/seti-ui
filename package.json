@@ -26,7 +26,16 @@
       "title": "Theme Color",
       "description": "Select a default theme color. If you don't notice a difference, you may have to reload Atom to see them.",
       "type": "string",
-      "enum": ["Blue", "Green", "Orange", "Pink", "Purple", "Red", "Steel", "Yellow"],
+      "enum": [
+        "Blue",
+        "Green",
+        "Orange",
+        "Pink",
+        "Purple",
+        "Red",
+        "Steel",
+        "Yellow"
+      ],
       "default": "Blue"
     },
     "hideTabs": {
@@ -41,5 +50,10 @@
       "type": "boolean",
       "default": true
     }
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-iconfont": "^6.0.0",
+    "gulp-iconfont-css": "^2.1.0"
   }
 }
