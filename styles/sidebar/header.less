@@ -5,6 +5,17 @@
    }
 }
 
+
+.project-root:first-child {
+  & > .header {
+    border-bottom: solid 1px #000;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2;
+  }
+}
+
 // PROJECT HEADER
 .project-root > .header {
   background: @tree-view-header-color;
@@ -14,9 +25,9 @@
   height: @top-bar;
   left: 0;
   padding: 15px 0 0 8px;
-  position: fixed;
-  right: 0;
-  top: 0;
+  // position: fixed;
+  // right: 0;
+  // top: 0;
   z-index: 1;
 
   &:hover {
