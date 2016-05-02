@@ -3,6 +3,31 @@ autocomplete-suggestion-list {
   &.select-list.popover-list {
     background: @black;
     color: @white;
+
+    ol.list-group {
+      li {
+        color: @white;
+        &.selected {
+          background: @seti-primary;
+          color: @seti-primary-text;
+          .word {
+            .character-match {
+              color: @seti-primary-highlight;
+            }
+          }
+          &::before {
+            display: none;
+          }
+        }
+        .word {
+          color: @white !important;
+          .character-match {
+            color: @seti-primary;
+          }
+        }
+      }
+    }
+
     .suggestion-description {
       background: lighten(@black, 3%);
       border: solid 1px @black;
@@ -16,28 +41,6 @@ autocomplete-suggestion-list {
         color: @seti-primary;
         font-family: @font-family;
         font-size: 0.9em;
-      }
-    }
-  }
-
-  li {
-    color: @white;
-
-    &.selected {
-      background: @seti-primary;
-      .word .character-match {
-        color: @seti-primary-highlight;
-    
-      }
-      &::before {
-        display: none;
-      }
-    }
-
-    .word {
-      color: @white !important;
-      .character-match {
-        color: @seti-primary;
       }
     }
   }

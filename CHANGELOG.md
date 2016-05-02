@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.4
+- Change header positioning to support top-aligned tool-bar
+- Fix autocomplete-plus highlight style
+
 ## 1.0.3
 - Use css ison for .sss file
 - Add .icon-partial mixin for better partial name matching
