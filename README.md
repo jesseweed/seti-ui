@@ -42,6 +42,8 @@ File icons will now show up in the file search (`cmd+ p`) dialog in addition to 
 -----
 
 ### Settings
+_To get here, Go to "Atom > Preferences" Select "Themes"  and click the settings icon next to "Seti" under UI Theme dropdown_
+
 With 1.0 you can now adjust some of the more commonly requested features directly in Atom's settings view (Settings > Themes > Click the gear icon next to Seti).
 
 + **File Icons:** Probably the most frequet requests has been a simpler way to disable the file icons for those of you using other file icon packages. Now you can :)
