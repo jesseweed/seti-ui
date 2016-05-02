@@ -29,7 +29,7 @@ Seti UI has been updated with a cleaner, more streamlined interface, a slightly 
 -----
 
 ### More colors
-Seti now has 8 base colors to choose from:
+Seti now has 8 theme colors to choose from:
 ![Screenshot](https://github.com/jesseweed/seti-ui/raw/1.0-beta/screenshot-colors.png)
 
 -----
@@ -149,6 +149,10 @@ Once everything is setup, follow these steps any time you want to add a new icon
 .icon-set('.scss', 'sass', @pink);
 ```
 
+-----
+
+## Current Icons
+![Screenshot](https://github.com/jesseweed/seti-ui/raw/1.0-beta/screenshot-icons.png)
 
 -----
 
