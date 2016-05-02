@@ -10,8 +10,12 @@
   & > .header {
     position: fixed;
     right: 0;
-    top: 0;
+    margin-top: -@top-bar;
     z-index: 2;
+
+	&.seti-compact {
+	    margin-top: -@top-bar-small;
+	}
   }
 }
 
