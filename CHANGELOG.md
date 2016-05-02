@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.3
+- Use css ison for .sss file
+- Add .icon-partial mixin for better partial name matching
+- Remove border from site root folder
+
 ## 1.0.2
 - Fix lint label
 

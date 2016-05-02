@@ -19,6 +19,17 @@
     }
   }
 
+}
+
+// SET ICON FILE BASED ON DATA NAME
+.icon-partial( @extension, @file, @color) {
+
+  .icon:not(.icon-file-directory),
+  .title {
+    &[data-name*="@{extension}"] {
+      .icon(@file, @color)
+    }
+  }
 
 }
 

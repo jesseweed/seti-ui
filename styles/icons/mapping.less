@@ -37,6 +37,7 @@
 // CSS
 .icon-set('.css', 'css', @blue);
 .icon-set('.css.map', 'css', @blue);
+.icon-set('.sss', 'css', @blue);
 
 // CSV
 .icon-set('.csv', 'csv', @green);
@@ -264,9 +265,9 @@
 .icon-set('.bowerrc', 'bower', @orange);
 
 // BOWER
-.icon-set('dockerfile', 'docker', @blue);
-.icon-set('Dockerfile', 'docker', @blue);
-.icon-set('DOCKERFILE', 'docker', @blue);
+.icon-partial('dockerfile', 'docker', @blue);
+.icon-partial('Dockerfile', 'docker', @blue);
+.icon-partial('DOCKERFILE', 'docker', @blue);
 
 // GRUNT
 .icon-set('Gruntfile.js', 'grunt', @orange);
@@ -277,12 +278,9 @@
 .icon-set('gruntfile.coffee', 'grunt', @orange);
 
 // GULP
-.icon-set('Gulpfile.js', 'gulp', @red);
-.icon-set('gulpfile.js', 'gulp', @red);
-.icon-set('gulpfile.babel.js', 'gulp', @red);
-.icon-set('Gulpfile.babel.js', 'gulp', @red);
-.icon-set('Gulpfile.coffee', 'gulp', @red);
-.icon-set('gulpfile.coffee', 'gulp', @red);
+.icon-partial('GULPFILE', 'gulp', @red);
+.icon-partial('Gulpfile', 'gulp', @red);
+.icon-partial('gulpfile', 'gulp', @red);
 
 // LICENSE FILE
 .icon-set('.jshintrc', 'javascript', @blue);
@@ -297,15 +295,15 @@
 .icon-set('.tmp', 'clock', @grey-light);
 
 // LICENSE FILE
-.icon-set('LICENSE', 'license', @yellow);
-.icon-set('License', 'license', @yellow);
-.icon-set('license', 'license', @yellow);
+.icon-partial('LICENSE', 'license', @yellow);
+.icon-partial('License', 'license', @yellow);
+.icon-partial('license', 'license', @yellow);
 
 // PROCFILE
-.icon-set('Procfile', 'heroku', @purple);
+.icon-partial('Procfile', 'heroku', @purple);
 
 // TODO
-.icon-set('TODO', 'todo', @seti-primary);
+.icon-partial('TODO', 'todo', @seti-primary);
 
 
 // - - - - - - -
