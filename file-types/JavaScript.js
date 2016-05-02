@@ -43,34 +43,22 @@ class Bread {
 
 }
 
-class Sandwhich extends Bread {
-
-  var self = this,
-      truth = false,
-      foo = 'bar',
-      num = 000042,
-      obj = {
-        one: 'string',
-        two: true,
-        three: function (param) {
-          return param;
-        }
-      };
+class Sandwich extends Bread {
 
   constructor(slices) {
-    self.bread = super(slices);
-    self.toppings = [];
+    this.bread = super(slices);
+    this.toppings = [];
   }
 
   toppings( ingredients ) {
     ingredients.forEach(function(value, index) {
-      self.toppings.push( value );
+      this.toppings.push( value );
     });
   }
 
 }
 
-var Club = new Sandwhich(3).toppings(['roast beef', 'turkey']);
+var Club = new Sandwich(3).toppings(['roast beef', 'turkey']);
 
 
 /*
@@ -117,7 +105,7 @@ testFunction('one', 'two', [1,2,3], {key: 'value'} );
 
 */
 
-import { ham as turkey } from 'mySandwhich.js';
+import { ham as turkey } from 'mySandwich.js';
 
 var isFunction;
 
