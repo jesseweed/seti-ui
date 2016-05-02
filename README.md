@@ -24,14 +24,20 @@ If these are not the droids you're looking for, may I point you in the drection 
 ## What's New? 1.0 Update
 Seti UI has been updated with a cleaner, more streamlined interface, a slightly tweaked color scheme, additional icons and new user settings, as well as a handful of other small ui improvements and a refactored code base.
 
-![Screenshot](https://github.com/jesseweed/seti-ui/raw/1.0-beta/screenshot-01.png)
+![Screenshot](https://github.com/jesseweed/seti-ui/raw/1.0-beta/screenshot.png)
+
+-----
+
+### More colors
+Seti now has 8 base colors to choose from:
+![Screenshot](https://github.com/jesseweed/seti-ui/raw/1.0-beta/screenshot-colors.png)
 
 -----
 
 ### More icons
 File icons will now show up in the file search (`cmd+ p`) dialog in addition to the side bar and tabs. This should make for easier grokking when you're searching for a file.
 
-![Screenshot](https://github.com/jesseweed/seti-ui/raw/1.0-beta/screenshot-02.png)
+![Screenshot](https://github.com/jesseweed/seti-ui/raw/1.0-beta/screenshot-search.png)
 
 -----
 
@@ -43,7 +49,7 @@ With 1.0 you can now adjust some of the more commonly requested features directl
 + **Ignored Files:** By default, ignored files are shown as a muted grey. However, if you'd like to hide them altogether you can use this.
 + **Hide Tabs:** Lastly (for now), there have been a few requests to be able to hide tabs altogether. This is of course disabled by default, but if you're the anti-tab type, you can hide them here.
 
-![Screenshot](https://github.com/jesseweed/seti-ui/raw/1.0-beta/screenshot-03.png)
+![Screenshot](https://github.com/jesseweed/seti-ui/raw/1.0-beta/screenshot-settings.png)
 
 Setting are brand new, and still have a few kinks to be worked out. If you run into any problems with them, or would like to request an additional setting, please file an issue!
 
