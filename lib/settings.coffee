@@ -1,5 +1,6 @@
 Dom = require('./dom')
 Utility = require('./utility')
+Headers = require('./headers')
 
 module.exports =
   init: (state) ->
