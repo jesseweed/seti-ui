@@ -16,6 +16,16 @@ module.exports =
     self.hideTabs atom.config.get('seti-ui.hideTabs')
     # SET THEME
     self.setTheme atom.config.get('seti-ui.themeColor'), false, false
+
+    # FONT FAMILY
+    self.font atom.config.get('seti-ui.font'), false
+
+    # ANIMATIONS
+    self.animate atom.config.get('seti-ui.disableAnimations')
+
+    atom.config.onDidChange 'seti-ui.font', (value) ->
+      self.font atom.config.get('seti-ui.font'), true
+
     atom.config.onDidChange 'seti-ui.themeColor', (value) ->
       self.setTheme value.newValue, value.oldValue, true
 
@@ -27,6 +37,18 @@ module.exports =
     self.package.deactivate()
     setImmediate ->
       return self.package.activate()
+
+  # SET FONT FAMILY
+  font: (val, reload) ->
+    self = this
+    el = Dom.query('atom-workspace')
+
+    console.log 'change font'
+
+    if val == 'Roboto'
+      el.classList.add 'seti-roboto'
+    else
+      el.classList.remove 'seti-roboto'
 
   # SET THEME COLOR
   setTheme: (theme, previous, reload) ->
@@ -51,9 +73,21 @@ module.exports =
       if !err
         if previous
           el.classList.remove 'seti-theme-' + previous.toLowerCase()
-        el.classList.add 'seti-theme-' + theme.toLowerCase()
+          el.classList.add 'seti-theme-' + theme.toLowerCase()
         if reload
           self.refresh()
+
+  # SET TAB SIZE
+  animate: (val) ->
+    Utility.applySetting
+      action: 'addWhenFalse'
+      config: 'seti-ui.disableAnimations'
+      el: [
+        'atom-workspace'
+      ]
+      className: 'seti-animate'
+      val: val
+      cb: @animate
 
   # SET TAB SIZE
   tabSize: (val) ->
@@ -61,11 +95,7 @@ module.exports =
       action: 'addWhenTrue'
       config: 'seti-ui.compactView'
       el: [
-        'atom-workspace-axis.vertical .tab-bar'
-        'atom-workspace-axis.vertical .tabs-bar'
-        'atom-panel-container.left'
-        'atom-panel-container.left .project-root > .header'
-        '.entries.list-tree'
+        'atom-workspace'
       ]
       className: 'seti-compact'
       val: val
@@ -77,8 +107,7 @@ module.exports =
       action: 'addWhenTrue'
       config: 'seti-ui.hideTabs'
       el: [
-        '.tab-bar'
-        '.tabs-bar'
+        'atom-workspace'
       ]
       className: 'seti-hide-tabs'
       val: val

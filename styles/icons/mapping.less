@@ -3,10 +3,8 @@
 // - - - - - - - - - - - - - -
 
 // DEFAULT ICON
-.icon:not(.seti-no-icons) {
-  .icon-file-binary, .icon-file-pdf, .icon-file-text, .icon-book, .icon-file-media, .icon-markdown, .title {
-    .icon('default', @white)
-  }
+.icon-file-binary, .icon-file-pdf, .icon-file-text, .icon-book, .icon-file-media, .icon-markdown, .title {
+  .icon('default', @white)
 }
 
 .icon-set('.cpp', 'default', @blue);
@@ -318,42 +316,3 @@
 
 .icon-set('npm-debug.log', 'npm_ignored', @ignore);
 .icon-set('.DS_Store', 'ignored', @ignore);
-
-
-// - - - - - - -
-// USER SETTINGS
-// - - - - - - -
-
-// HIDE TAB ICONS
-.tab-bar.seti-no-icons {
-  // @import "tabs";
-  .tab > .title {
-    padding: 13px 5px;
-    &::before {
-      // display: none !important;
-    }
-  }
-
-  &.seti-compact {
-    .tab > .title {
-      padding: 18px 5px;
-    }
-    .tab[data-type="SettingsView"] > .title {
-      padding: 14px 5px;
-    }
-  }
-}
-
-// HIDE SIDEBAR ICONS
-atom-panel-container.left.seti-no-icons {
-
-  .icon-file-media, .icon-file-text, .icon-file-binary, .icon-file-pdf, .icon-book {
-    padding-left: 4px;
-  }
-
-  .icon-file-media, .icon-file-text, .icon-file-binary, .icon-file-pdf, .icon-book {
-    &::before {
-      display: none;
-    }
-  }
-}
