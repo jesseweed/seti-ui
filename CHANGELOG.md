@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.1.2
+- Fix Linter rule link badge
+
 ## 1.1.1
 - Fix selected directory style in compact mode
 
