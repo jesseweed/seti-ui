@@ -1,6 +1,9 @@
 # Changelog
 
-## 1.1
+## 1.1.1
+- Fix selected directory style in compact mode
+
+## 1.1.0
 - Adjust compact view
   - Settings vies: remove padding & reduce font size
   - Apply compact view to split panel
