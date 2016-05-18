@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.3
+- Remove hover cursor in tree view
+
 ## 1.2.1
 - Fix auto-complete overlay for spell check #242
 - Fix selected state in tree view for compact and no icon modes. #283
