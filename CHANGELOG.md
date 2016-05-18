@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.2
+- Change input color to black
+- Compact mode adjustments:
+  - Smaller status bar
+  - Less space around icons
+- Add Twig icon #282
+- Add Elm icon #281
+- Add sticky project root headers #273
+- Change font setting to say "Default Atom Font" instead of "SF UI Text" to make it more clear it is using the default.
+
 ## 1.1.2
 - Fix Linter rule link badge
 
