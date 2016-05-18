@@ -48,7 +48,7 @@
     "disableAnimations": {
       "title": "Disable Animations",
       "order": 4,
-      "description": "Uncheck this if you want to disable animations.",
+      "description": "Select this if you want to disable animations.",
       "type": "boolean",
       "default": false
     },
