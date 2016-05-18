@@ -34,7 +34,7 @@
       "type": "string",
       "enum": [
         "Roboto",
-        "SF UI Text"
+        "Default Atom Font"
       ],
       "default": "Roboto"
     },
