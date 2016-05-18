@@ -44,8 +44,6 @@ module.exports =
     self = this
     el = Dom.query('atom-workspace')
 
-    console.log 'change font'
-
     if val == 'Roboto'
       el.classList.add 'seti-roboto'
     else
