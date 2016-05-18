@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.1
+- Fix auto-complete overlay for spell check #242
+- Fix selected state in tree view for compact and no icon modes. #283
+- Fix wording on setting to disable animations
+
+
 ## 1.2
 - Change input color to black
 - Compact mode adjustments:
