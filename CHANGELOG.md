@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.2.3
+## 1.2.2
 - Remove hover cursor in tree view
 
 ## 1.2.1
