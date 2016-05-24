@@ -1,6 +1,7 @@
 # Seti UI
 
-[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=flat-square)](https://gitter.im/jesseweed/seti-ui) [![apm](https://img.shields.io/apm/dm/vim-mode.svg?style=flat-square)](https://atom.io/themes/seti-ui) [![apm](https://img.shields.io/apm/v/vim-mode.svg?style=flat-square)](https://atom.io/themes/seti-ui) [![apm](https://img.shields.io/apm/l/vim-mode.svg?style=flat-square)](https://atom.io/themes/seti-ui) [![Gratipay Team](https://img.shields.io/gratipay/team/atom-seti-ui.svg?style=flat-square)](https://gratipay.com/Atom-Seti-UI/)
+[![Gitter](https://img.shields.io/gitter/room/jesseweed/seti-ui.svg?style=flat-square)](https://gitter.im/jesseweed/seti-ui) [![apm](https://img.shields.io/apm/dm/seti-ui.svg?style=flat-square)](https://atom.io/themes/seti-ui) [![apm](https://img.shields.io/apm/v/seti-ui.svg?style=flat-square)](https://atom.io/themes/seti-ui) [![apm](https://img.shields.io/apm/l/seti-ui.svg?style=flat-square)](https://atom.io/themes/seti-ui)
+[![Gratipay Team](https://img.shields.io/gratipay/team/atom-seti-ui.svg?style=flat-square)](https://gratipay.com/Atom-Seti-UI/)
 
 
 This is the latest version of the Seti UI theme. It's a dark interface theme crafted especially for [Atom](http://atom.io), with subtle colors that are meant to be easy on the eyes. It includes custom file icons, and new user configurable settings. [Seti Syntax](https://atom.io/themes/seti-syntax) is also available for all your codez.
