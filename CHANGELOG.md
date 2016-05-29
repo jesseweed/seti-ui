@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.2.3
+- Adjust project find result for compact #289
+- Add icons for mp3 and ogg audio files
+- Add ionic icon
+- Update Objective C files #294
+- Add Gradle icon
+- Add Terraform icon
+
 ## 1.2.2
 - Remove hover cursor in tree view
 
