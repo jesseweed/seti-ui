@@ -110,3 +110,48 @@
   }
 
 }
+
+atom-workspace.seti-compact {
+
+  .preview-pane {
+    .panel-heading {
+      padding: 0px;
+      .preview-count {
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+    .results-view {
+      padding: 0 5px;
+
+      // GROUP
+      .path.list-nested-item {
+        margin-bottom: 0px;
+
+        // GROUP HEADER
+        .path-details.list-item {
+          padding: 0 5px;
+          span.path-name {
+            font-size: 13px;
+          }
+        }
+
+        // GROUP LIST
+        .matches.list-tree {
+          .search-result.list-item {
+            padding: 4px 8px;
+            &.selected {
+              .highlight-error {
+                padding: 2px 4px;
+              }
+              .highlight-success {
+                padding: 2px 4px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
