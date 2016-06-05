@@ -54,6 +54,7 @@ atom-workspace {
 
         &:hover {
           background-color: @grey;
+          color: @white;
         }
       }
 
@@ -63,13 +64,22 @@ atom-workspace {
       }
     }
 
+    .native-key-bindings {
 
+      .is-user {
+        background: @seti-primary;
+        color: @seti-primary-text;
+        .source {
+          color: @seti-primary-text;
+        }
+      }
 
-    .native-key-bindings.breadcrumb {
-      background: @grey-dark;
-      font-family: @seti-font-family;
-      font-size: 30px;
-      font-weight: 100;
+      &.breadcrumb {
+        background: @grey-dark;
+        font-family: @seti-font-family;
+        font-size: 30px;
+        font-weight: 100;
+      }
     }
 
     a {
@@ -134,6 +144,7 @@ atom-workspace {
         &.active a {
           background: @black;
           cursor: default;
+          border-left: solid 2px @seti-primary;
         }
 
       }
