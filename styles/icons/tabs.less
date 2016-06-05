@@ -3,8 +3,9 @@
   // SET ICON SIZE
   .title::before {
     float: left;
-    font-size: 21px;
-    line-height: 16px;
+    font-size: 22px;
+    margin-right: 1px;
+    line-height: 17px;
   }
 
   // IGNORED FILES
@@ -13,14 +14,20 @@
   }
 
   // SET ICONS FOR ATOM VIEWS
-  .tab-icon("SettingsView", 'settings', @seti-primary);
-  .tab-icon("MarkdownPreviewView", 'markdown', @blue);
-  .tab-icon("DeprecationCopView", 'deprecation-cop', @seti-primary);
-  .tab-icon("TimecopView", 'time-cop', @seti-primary);
-  .tab-icon("ResultsPaneView", 'search', @seti-primary);
+  .tab-icon('SettingsView', 'settings', @seti-primary);
+  .tab-icon('MarkdownPreviewView', 'markdown', @blue);
+  .tab-icon('DeprecationCopView', 'deprecation-cop', @seti-primary);
+  .tab-icon('TimecopView', 'time-cop', @seti-primary);
+  .tab-icon('ResultsPaneView', 'search', @seti-primary);
+  .tab-icon('AboutView', 'info', @seti-primary);
 
   // NEW FILES
-  &[data-type="TextEditor"] .title:not([data-name]) {
+  &[data-type='GitControlView'] .title:not([data-name]) {
+    .icon('github', @seti-primary);
+  }
+
+  // NEW FILES
+  &[data-type='TextEditor'] .title:not([data-name]) {
     .icon('new-file', @green);
   }
 

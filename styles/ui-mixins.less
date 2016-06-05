@@ -37,6 +37,9 @@
 .tab-icon(@data-type, @file-type, @color) {
   &[data-type="@{data-type}"] .icon {
     .icon(@file-type, @color);
+    &::before {
+      margin-right: 7px;
+    }
   }
 }
 
