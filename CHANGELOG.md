@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.1
+- Tone down styles for tree-view-git-branch
+- Update terminal-plus styles
+
 ## 1.3.0
 - Add styles for [tree-view-git-branch](https://atom.io/packages/tree-view-git-branch)
 - Set background colors for terminal plus
