@@ -26,3 +26,17 @@
 @import "styles/plugins/linter";
 @import "styles/plugins/tree-view-git-branch";
 @import "styles/plugins/time-cop";
+
+.terminal-plus .xterm {
+  background-color: @black-dark;
+  color: @seti-primary-text;
+
+  ::selection {
+    background-color: @seti-primary;
+    color: @seti-primary-text;
+  }
+
+  .terminal-cursor {
+    background-color: @seti-primary;
+  }
+}
