@@ -5,71 +5,23 @@ atom-panel-container.left, atom-panel-container.right {
   .entries.list-tree {
     li[is="tree-view-git-branch-list"] {
       padding: 10px 0 0 0;
-      position: relative;
-      top: -3px;
-      &::before {
-        background: @black;
-        color: @seti-primary-text;
-        height: @height1;
-        left: 0;
-        right: 0;
-      }
-
-      &.collapsed {
-        &::before {
-          background: @black;
-          height: @height2;
-        }
-      }
-
-      &.list-nested-item.entry.directory.collapsed:not(.selected) {
-        &::before {
-          background: @black;
-          color: @seti-primary-text;
-        }
-      }
-
-      &.list-nested-item.entry.directory.expanded {
-        .header.list-item {
-          color: @seti-primary-text;
-        }
-        &::before {
-          background: @seti-primary;
-        }
-      }
-
 
       .header.list-item {
         padding-left: 18px;
-      }
-
-      &.selected{
-        &::before {
-          height: @height2 !important;
-        }
-        .name.icon-git-branch {
-          line-height: @height1;
-          padding: 0;
-        }
-      }
-
-      .name.icon-git-branch {
-        line-height: @height1;
+        line-height: 30px;
       }
 
       ol.entries.list-tree {
-        left: 0;
-        padding: 0;
-        // padding-bottom: 5px;
-        margin: 0;
-        margin-bottom: -5px;
         background: rgba(0,0,0,0.25);
         border-bottom: solid 1px rgba(0,0,0,0.2);
         box-shadow: 0px 3px 1px 0px rgba(0,0,0,0.15);
+        left: 0;
+        margin: 0;
+        margin-bottom: -5px;
+        padding: 0;
 
         li[is="tree-view-git-branch"] {
           padding: 0 0 0 29px;
-          // padding: 0 0 0 4px;
           line-height: 25px;
           margin: 0 0 0 0px;
 
@@ -78,15 +30,9 @@ atom-panel-container.left, atom-panel-container.right {
             height: 30px;
 
             .name.icon {
-              padding: 0;
               .icon('github', darken(@tree-view-text-color, 50%));
-              // .icon('github', darken(@seti-primary, 30%));
+              padding: 0;
               line-height: 16px;
-              &:before {
-                // content: '';
-                // font-size: 14px;
-                // top: 3px;
-              }
             }
 
             &:before {
@@ -98,14 +44,12 @@ atom-panel-container.left, atom-panel-container.right {
 
             // ACTIVE BRANCH
             &:not(.status-ignored) {
+              margin-left: 6px;
 
               &.selected{
-                padding-left: 17px;
-                &::before {
-                }
+                padding-left: 33px;
               }
-              // padding-left: 10px;
-              margin-left: 6px;
+
               .name.icon {
                 color: @seti-primary;
                 line-height: 22px;
@@ -113,7 +57,6 @@ atom-panel-container.left, atom-panel-container.right {
                 left: -4px;
                 .icon('checkbox', @seti-primary);
                 &:before {
-                  // content: '';
                   font-size: 16px;
                   top: 4px;
                   left: -3px;
@@ -122,17 +65,12 @@ atom-panel-container.left, atom-panel-container.right {
               }
               &:before {
                 background: @black;
-                // border-left: solid 6px @seti-primary;
               }
             }
-
           }
-
         }
       }
-
     }
-
   }
 }
 
