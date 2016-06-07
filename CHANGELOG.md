@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.3.2
+- Update status bar styles for 1.8
+
 ## 1.3.1
 - Tone down styles for tree-view-git-branch
 - Update terminal-plus styles
