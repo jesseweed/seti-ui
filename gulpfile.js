@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     iconfont = require('gulp-iconfont'),
     iconfontCss = require('gulp-iconfont-css'),
+    svgmin = require('gulp-svgmin'),
     fontName = 'seti';
 
 gulp.task('font', function(){
@@ -19,5 +20,11 @@ gulp.task('font', function(){
     .pipe(gulp.dest('./styles/_fonts/seti/'));
 });
 
-gulp.task('icon', ['font']);
-gulp.task('icons', ['font']);
+gulp.task('svg', function() {
+  gulp.src('./icons/*.svg')
+    .pipe(svgmin())
+    .pipe(gulp.dest('./icons'));
+});
+
+gulp.task('icon', ['svg', 'font']);
+gulp.task('icons', ['svg', 'font']);

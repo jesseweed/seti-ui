@@ -1,16 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
-<g>
-	<text transform="matrix(1 0 0 1 11.0209 16.6191)" fill="#FFFFFF" font-family="'SourceCodePro-Black'" font-size="1.8293">C</text>
-	<text transform="matrix(1 0 0 1 11.6508 16.2497)" fill="#FFFFFF" font-family="'Roboto-Black'" font-size="0.7317">++</text>
-</g>
-<g>
-	<rect x="7" y="7.1" fill="#41535B" width="18" height="17.8"/>
-</g>
-<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" points="9.8,9.4 11.7,10.9 9.8,12.5 "/>
-<rect x="9.8" y="14" fill="#FFFFFF" width="11.6" height="1.3"/>
-<rect x="9.8" y="17.7" fill="#FFFFFF" width="7.3" height="1.3"/>
-<rect x="9.8" y="21.3" fill="#FFFFFF" width="9.7" height="1.3"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g fill="#FFF"><text transform="translate(11.02 16.62)" font-family="'SourceCodePro-Black'" font-size="1.829">C</text><text transform="translate(11.65 16.25)" font-family="'Roboto-Black'" font-size=".732">++</text></g><path fill="#41535B" d="M7 7.1h18v17.8H7z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#FFF" d="M9.8 9.4l1.9 1.5-1.9 1.6z"/><path fill="#FFF" d="M9.8 14h11.6v1.3H9.8zm0 3.7h7.3V19H9.8zm0 3.6h9.7v1.3H9.8z"/></svg>
