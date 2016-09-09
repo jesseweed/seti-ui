@@ -117,7 +117,7 @@ Once you're done working locally and ready to install the production version aga
 -----
 
 ## Adding File Icons
-The process of adding file icons is still a bit complex, but it _has_ been greatly simplified in 1.0. It does howevere require that you have [node](https://nodejs.org/en/) and [gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md) installed.
+The process of adding file icons is still a bit complex, but it _has_ been greatly simplified in 1.0. It does however require that you have [node](https://nodejs.org/en/) and [gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md) installed.
 
 Once you have these, you will need to open a terminal window, navigate to the _seti-ui_ folder and run `npm install` (note you only need to do this once).
 
