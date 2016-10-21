@@ -17,7 +17,7 @@ The easiest way to install Seti is to do as follows:
 Alternatively you can use the [Atom Package Manager](https://github.com/atom/apm):
 
 ```bash
-apm install seti-ui-super-compact
+apm install seti-super-compact-ui
 ```
 
 

@@ -1,3 +1,3 @@
 module.exports =
   activate: (state) ->
-    require( atom.packages.getLoadedPackage('seti-ui').path + '/lib/settings').init()
+    require( atom.packages.getLoadedPackage('seti-super-compact-ui').path + '/lib/settings').init()
