@@ -1,11 +1,11 @@
 {
-  "name": "seti-ui-super-compact",
+  "name": "seti-super-compact-ui",
   "theme": "ui",
   "version": "0.0.0",
   "description": "A compact UI Theme forked from seti-ui",
   "main": "lib/main",
   "license": "",
-  "repository": "https://github.com/mdonnalley/seti-ui-super-compact",
+  "repository": "https://github.com/mdonnalley/seti-super-compact-ui",
   "engines": {
     "atom": ">1.8.0"
   },
