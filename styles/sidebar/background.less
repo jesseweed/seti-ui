@@ -8,6 +8,23 @@ atom-panel-container.left, atom-panel-container.right {
   }
 
   .tool-panel { background: none; }
-  .tree-view { padding: 0; }
+  .tree-view {
+    padding: 0;
+    .icon:before{
+        display:none;
+    }
+    &.list-tree.has-collapsable-children .list-nested-item {
+        // > .list-item:before{
+        //     content: "\f05b";
+        // }
+        // &.collapsed > .list-item:before{
+        //     content: "\f05a";
+        // }
+        > .list-tree > li {
+            padding-left: 7.5px;
+        }
+    }
+    font-size: 9px;
+  }
 
 }
