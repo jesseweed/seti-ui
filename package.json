@@ -1,7 +1,7 @@
 {
   "name": "seti-super-compact-ui",
   "theme": "ui",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "A compact UI Theme forked from seti-super-compact-ui",
   "main": "lib/main",
   "license": "",
