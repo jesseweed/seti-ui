@@ -10,26 +10,9 @@
     "atom": ">1.8.0"
   },
   "configSchema": {
-    "themeColor": {
-      "title": "Theme Color",
-      "order": 1,
-      "description": "Select a default theme color. If you don't notice a difference, you may have to reload Atom to see them.",
-      "type": "string",
-      "enum": [
-        "Blue",
-        "Green",
-        "Orange",
-        "Pink",
-        "Purple",
-        "Red",
-        "Steel",
-        "Yellow"
-      ],
-      "default": "Blue"
-    },
     "font": {
       "title": "Font Family",
-      "order": 2,
+      "order": 1,
       "description": "Select default UI font.",
       "type": "string",
       "enum": [
@@ -38,37 +21,23 @@
       ],
       "default": "Roboto"
     },
-    "compactView": {
-      "title": "Compact Mode",
-      "order": 3,
-      "description": "Enable this is you prefer less padding in your workspace.",
-      "type": "boolean",
-      "default": false
-    },
     "disableAnimations": {
       "title": "Disable Animations",
-      "order": 4,
+      "order": 2,
       "description": "Select this if you want to disable animations.",
       "type": "boolean",
       "default": false
     },
-    "fileIcons": {
-      "title": "Custom Icons",
-      "order": 5,
-      "description": "Disable this if you are using file-icons or another atom file icon package (or simply don't want custom icons)",
-      "type": "boolean",
-      "default": true
-    },
     "displayIgnored": {
       "title": "Display Ignored Files",
-      "order": 6,
+      "order": 3,
       "description": "Enable this if you would like to not see ignored files at all (as opposed to simple muting the style)",
       "type": "boolean",
       "default": true
     },
     "hideTabs": {
       "title": "Hide Tabs",
-      "order": 7,
+      "order": 4,
       "description": "Enable this if you prefer to rely on the sidebar for nagivation and don't want to see tabs at all.",
       "type": "boolean",
       "default": false
