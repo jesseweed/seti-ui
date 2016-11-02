@@ -8,29 +8,29 @@ module.exports =
     self = @
 
     # TAB SIZE
-    self.tabSize atom.config.get('seti-ui.compactView')
+    self.tabSize atom.config.get('seti-super-compact-ui.compactView')
     # DISPLAY IGNORED FILES
-    self.ignoredFiles atom.config.get('seti-ui.displayIgnored')
+    self.ignoredFiles atom.config.get('seti-super-compact-ui.displayIgnored')
     # DISPLAY FILE ICONS
-    self.fileIcons atom.config.get('seti-ui.fileIcons')
+    self.fileIcons atom.config.get('seti-super-compact-ui.fileIcons')
     # HIDE TABS
-    self.hideTabs atom.config.get('seti-ui.hideTabs')
+    self.hideTabs atom.config.get('seti-super-compact-ui.hideTabs')
     # SET THEME
-    self.setTheme atom.config.get('seti-ui.themeColor'), false, false
+    self.setTheme atom.config.get('seti-super-compact-ui.themeColor'), false, false
 
     # FONT FAMILY
-    self.font atom.config.get('seti-ui.font'), false
+    self.font atom.config.get('seti-super-compact-ui.font'), false
 
     # ANIMATIONS
-    self.animate atom.config.get('seti-ui.disableAnimations')
+    self.animate atom.config.get('seti-super-compact-ui.disableAnimations')
 
-    atom.config.onDidChange 'seti-ui.font', (value) ->
-      self.font atom.config.get('seti-ui.font'), true
+    atom.config.onDidChange 'seti-super-compact-ui.font', (value) ->
+      self.font atom.config.get('seti-super-compact-ui.font'), true
 
-    atom.config.onDidChange 'seti-ui.themeColor', (value) ->
+    atom.config.onDidChange 'seti-super-compact-ui.themeColor', (value) ->
       self.setTheme value.newValue, value.oldValue, true
 
-  package: atom.packages.getLoadedPackage('seti-ui'),
+  package: atom.packages.getLoadedPackage('seti-super-compact-ui'),
 
   # RELOAD WHEN SETTINGS CHANGE
   refresh: ->
@@ -57,7 +57,7 @@ module.exports =
     path = require('path')
 
     # GET OUR PACKAGE INFO
-    pkg = atom.packages.getLoadedPackage('seti-ui')
+    pkg = atom.packages.getLoadedPackage('seti-super-compact-ui')
 
     # THEME DATA
     themeData = '@seti-primary: @' + theme.toLowerCase() + ';'
@@ -65,7 +65,7 @@ module.exports =
     themeData = themeData + '@seti-primary-highlight: @' + theme.toLowerCase() + '-highlight;'
 
     # SAVE TO ATOM CONFIG
-    atom.config.set 'seti-ui.themeColor', theme
+    atom.config.set 'seti-super-compact-ui.themeColor', theme
 
     # SAVE USER THEME FILE
     fs.writeFile pkg.path + '/styles/user-theme.less', themeData, (err) ->
@@ -80,7 +80,7 @@ module.exports =
   animate: (val) ->
     Utility.applySetting
       action: 'addWhenFalse'
-      config: 'seti-ui.disableAnimations'
+      config: 'seti-super-compact-ui.disableAnimations'
       el: [
         'atom-workspace'
       ]
@@ -91,12 +91,12 @@ module.exports =
   # SET TAB SIZE
   tabSize: (val) ->
     Utility.applySetting
-      action: 'addWhenTrue'
-      config: 'seti-ui.compactView'
+      action: 'addCompact'
+      config: 'seti-super-compact-ui.compactView'
       el: [
         'atom-workspace'
       ]
-      className: 'seti-compact'
+      className: Utility.getClassNames val
       val: val
       cb: @tabSize
 
@@ -104,7 +104,7 @@ module.exports =
   hideTabs: (val) ->
     Utility.applySetting
       action: 'addWhenTrue'
-      config: 'seti-ui.hideTabs'
+      config: 'seti-super-compact-ui.hideTabs'
       el: [
         'atom-workspace'
       ]
@@ -117,7 +117,7 @@ module.exports =
   fileIcons: (val) ->
     Utility.applySetting
       action: 'addWhenTrue'
-      config: 'seti-ui.fileIcons'
+      config: 'seti-super-compact-ui.fileIcons'
       el: [ 'atom-workspace' ]
       className: 'seti-icons'
       val: val
@@ -128,7 +128,7 @@ module.exports =
   ignoredFiles: (val) ->
     Utility.applySetting
       action: 'addWhenFalse'
-      config: 'seti-ui.displayIgnored'
+      config: 'seti-super-compact-ui.displayIgnored'
       el: [
         '.file.entry.list-item.status-ignored'
         '.directory.entry.list-nested-item.status-ignored'

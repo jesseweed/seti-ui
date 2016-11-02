@@ -1,10 +1,17 @@
 .project-find, .find-and-replace {
-
   // INPUTS
+
+  // Mike's Stuff
+  padding: 0 0 0 0;
+  font-size: 11px;
+  //
   .input-small(@input-background-color, @input-text-color);
 
   // HEADER
   .header {
+    // Mike's Stuff
+    padding: 0 0 0 0;
+    //
     &-item.description {
       color: @white;
       .subtle-info-message {
@@ -13,10 +20,27 @@
     }
   }
 
+  .input-block {
+    height: 30px;
+  }
+
+  section:last-of-type {
+    margin-bottom: 5px;
+  }
+
+  atom-text-editor[mini],
+    .project-find atom-text-editor[mini]::shadow,
+    .find-and-replace atom-text-editor[mini]::shadow {
+      font-size: 11px;
+      height: 25px;
+      padding-top: 0;
+  }
+
   // BUTTONS
   .btn-group {
-    .btn { transition: background 0.3s; }
+    .btn { transition: background 0.3s; height: 24px;}
     &-find .btn {
+    height: 24px;
     background: @seti-primary;
     color: @seti-primary-text;
     &:hover {
@@ -25,6 +49,7 @@
     }
     }
     &-replace .btn {
+      height: 24px;
       background: darken(@bad, 20%);
       color: @white;
       &:hover {
@@ -32,6 +57,7 @@
       }
     }
     &-replace-all .btn {
+      height: 24px;
       background: @bad;
       color: @white;
       &:hover {

@@ -102,6 +102,15 @@ atom-workspace.seti-compact atom-workspace-axis.vertical .tab-bar {
     height: @top-bar-small;
     padding: 7px 10px;
     letter-spacing: inherit;
+    max-width: 120px;
+  }
+
+  .icon:before {
+    padding-top: 1px;
+    margin-right: 3px;
+    height: 12px;
+    width: 12px;
+    font-size: 12px;
   }
 
   .close-icon {
@@ -126,6 +135,53 @@ atom-workspace.seti-compact atom-workspace-axis.vertical .tab-bar {
       .close-icon {
         border-color: @seti-primary;
         top: 15px;
+      }
+    }
+  }
+}
+
+// SUPER COMPACT MODE
+atom-workspace.seti-super-compact atom-workspace-axis.vertical .tab-bar {
+  // SMALL TABS
+  height: @top-bar-super-small;
+
+  .tab {
+    height: @top-bar-super-small;
+    padding: 0px 5px;
+    letter-spacing: inherit;
+    max-width: 120px;
+  }
+
+  .icon:before {
+    padding-top: 1px;
+    margin-right: 3px;
+    height: 12px;
+    width: 12px;
+    font-size: 12px;
+  }
+
+  .close-icon {
+    top: 5px;
+    right: 5px
+  }
+
+  .placeholder {
+    height: @top-bar-super-small;
+    &::after {
+      top: @top-bar-super-small;
+    }
+  }
+
+  .modified {
+    .close-icon {
+      top: 5px;
+      right: 5px
+    }
+
+    &:not(:hover) {
+      .close-icon {
+        border-color: @seti-primary;
+        top: 9px;
         right: 9px;
       }
     }
