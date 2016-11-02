@@ -79,7 +79,28 @@ atom-workspace.seti-compact {
       & > .header {
         font-size: 13px;
         height: @top-bar-small;
-        // padding: 7px 0 0 5px;
+        padding: 7px 0 0 5px;
+
+        .icon-repo {
+          &::before {
+            height: 25px;
+            margin-bottom: -7px;
+            width: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// SUPER COMPACT MODE
+atom-workspace.seti-super-compact {
+  atom-panel-container {
+    .project-root {
+      padding-top: @top-bar-super-small;
+      & > .header {
+        font-size: 13px;
+        height: @top-bar-super-small;
         padding: 0 0 0 5px;
 
         .icon-repo {

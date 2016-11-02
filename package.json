@@ -41,9 +41,14 @@
     "compactView": {
       "title": "Compact Mode",
       "order": 3,
-      "description": "Enable this is you prefer less padding in your workspace.",
-      "type": "boolean",
-      "default": false
+      "description": "Select the level of compactness you desire.",
+      "type": "string",
+      "enum": [
+        "Normal",
+        "Compact",
+        "Super Compact"
+      ],
+      "default": "Normal"
     },
     "disableAnimations": {
       "title": "Disable Animations",

@@ -91,12 +91,12 @@ module.exports =
   # SET TAB SIZE
   tabSize: (val) ->
     Utility.applySetting
-      action: 'addWhenTrue'
+      action: 'addCompact'
       config: 'seti-super-compact-ui.compactView'
       el: [
         'atom-workspace'
       ]
-      className: 'seti-compact'
+      className: Utility.getClassNames val
       val: val
       cb: @tabSize
 
