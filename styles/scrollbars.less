@@ -1,12 +1,25 @@
 .scrollbars-visible-always {
-  /deep/ ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
+  /deep/::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+    z-index: 99999;
   }
-
-  /deep/ ::-webkit-scrollbar-thumb {
-    background: @seti-primary;
-    border-radius: 5px;
-    box-shadow: none;
+  /deep/::-webkit-scrollbar-corner,
+  /deep/::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  /deep/::-webkit-scrollbar-thumb {
+    background: fade(@seti-primary, 40%);
+    border-radius: 0;
+    border: none;
+  }
+  &.panel-contrast {
+    .nuclide-ui-panel-component-scroller,
+    .remote-ftp-view > .scroller,
+    .tree-view-scroller {
+      &::-webkit-scrollbar-track {
+        background: darken(@app-background-color, 2%);
+      }
+    }
   }
 }

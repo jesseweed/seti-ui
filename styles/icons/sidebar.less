@@ -1,5 +1,22 @@
-.file .icon {
-  .icon('default', @grey);
+&.seti-compact {
+  .entries.list-tree {
+    // SIDEBAR ICONS
+    .file .icon {
+      &::before {
+        font-size: 16px;
+        height: 16px;
+        position: relative;
+        top: 4px;
+        width: 16px;
+      }
+    }
+  }
+}
+
+atom-panel-container > atom-panel {
+  .file .icon {
+    .icon('default', @grey);
+  }
 }
 
 .entries.list-tree {

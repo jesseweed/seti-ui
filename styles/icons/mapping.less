@@ -3,10 +3,8 @@
 // - - - - - - - - - - - - - -
 
 // DEFAULT ICON
-.icon:not(.seti-no-icons) {
-  .icon-file-binary, .icon-file-pdf, .icon-file-text, .icon-book, .icon-file-media, .icon-markdown, .title {
-    .icon('default', @white)
-  }
+.icon-file-binary, .icon-file-pdf, .icon-file-text, .icon-book, .icon-file-media, .icon-markdown, .title {
+  .icon('default', @white)
 }
 
 .icon-set('.cpp', 'default', @blue);
@@ -37,6 +35,7 @@
 // CSS
 .icon-set('.css', 'css', @blue);
 .icon-set('.css.map', 'css', @blue);
+.icon-set('.sss', 'css', @blue);
 
 // CSV
 .icon-set('.csv', 'csv', @green);
@@ -47,11 +46,15 @@
 // EJS
 .icon-set('.ejs', 'ejs', @yellow);
 
+// ELM
+.icon-set('.elm', 'elm', @blue);
+
 // FAVICON
 .icon-set('.ico', 'favicon', @yellow);
 
 // GITIGNORE
 .icon-set('.gitignore', 'github', @white);
+.icon-set('.gitconfig', 'github', @white);
 .icon-set('.gitkeep', 'github', @white);
 .icon-set('.gitattributes', 'github', @white);
 
@@ -59,6 +62,9 @@
 .icon-set('.go', 'go2', @blue);
 .icon-set('.slide', 'go', @blue);
 .icon-set('.article', 'go', @blue);
+
+// GRADLE
+.icon-set('.gradle', 'gradle', @green);
 
 // GRAILS
 .icon-set('.groovy', 'grails', @green);
@@ -133,8 +139,8 @@
 .icon-set('.npmignore', 'npm', @red);
 
 // OBJECTIVE C
-.icon-set('.h', 'apple', @white);
-.icon-set('.m', 'apple', @white);
+.icon-set('.h', 'c', @purple);
+.icon-set('.m', 'c', @yellow);
 
 // OCAML
 .icon-set('.ml', 'ocaml', @orange);
@@ -160,11 +166,14 @@
 
 // REACT
 .icon-set('.jsx', 'react', @blue);
-.icon-set('.cjsx', 'cjsx', @blue);
+.icon-set('.cjsx', 'react', @blue);
+.icon-set('.tsx', 'react', @blue);
 
 // RUBY
 .icon-set('.rb', 'ruby', @red);
 .icon-set('.erb', 'ruby', @red);
+.icon-set('.erb.html', 'ruby', @red);
+.icon-set('.html.erb', 'ruby', @red);
 
 // RUST
 .icon-set('.rs', 'rust', @grey-light);
@@ -191,8 +200,22 @@
 // SWIFT
 .icon-set('.swift', 'swift', @orange);
 
+// TERRAFORM
+.icon-set('.tf', 'terraform', @purple);
+.icon-set('.tf.json', 'terraform', @purple);
+
+// TEX
+.icon-set('.tex', 'tex', @blue);
+.icon-set('.sty', 'tex', @yellow);
+.icon-set('.cls', 'tex', @red);
+.icon-set('.dtx', 'tex', @orange);
+.icon-set('.ins', 'tex', @white);
+
 // TEXT
 .icon-set('.txt', 'default', @white);
+
+// TWIG
+.icon-set('.twig', 'twig', @green);
 
 // TYPESCRIPT
 .icon-set('.ts', 'typescript', @blue);
@@ -248,7 +271,9 @@
 .icon-set('.mp4', 'video', @pink);
 
 // AUDIO FILES
-.icon-set('.wav', 'audio', @green);
+.icon-set('.mp3', 'audio', @purple);
+.icon-set('.ogg', 'audio', @purple);
+.icon-set('.wav', 'audio', @purple);
 
 // - - - - - - - - -
 //  NAME BASED ICONS
@@ -260,9 +285,9 @@
 .icon-set('.bowerrc', 'bower', @orange);
 
 // BOWER
-.icon-set('dockerfile', 'docker', @blue);
-.icon-set('Dockerfile', 'docker', @blue);
-.icon-set('DOCKERFILE', 'docker', @blue);
+.icon-partial('dockerfile', 'docker', @blue);
+.icon-partial('Dockerfile', 'docker', @blue);
+.icon-partial('DOCKERFILE', 'docker', @blue);
 
 // GRUNT
 .icon-set('Gruntfile.js', 'grunt', @orange);
@@ -273,14 +298,17 @@
 .icon-set('gruntfile.coffee', 'grunt', @orange);
 
 // GULP
-.icon-set('Gulpfile.js', 'gulp', @red);
-.icon-set('gulpfile.js', 'gulp', @red);
-.icon-set('gulpfile.babel.js', 'gulp', @red);
-.icon-set('Gulpfile.babel.js', 'gulp', @red);
-.icon-set('Gulpfile.coffee', 'gulp', @red);
-.icon-set('gulpfile.coffee', 'gulp', @red);
+.icon-partial('GULPFILE', 'gulp', @red);
+.icon-partial('Gulpfile', 'gulp', @red);
+.icon-partial('gulpfile', 'gulp', @red);
 
-// LICENSE FILE
+// IONIC
+.icon-set('ionic.config.json', 'ionic', @blue);
+.icon-set('Ionic.config.json', 'ionic', @blue);
+.icon-set('ionic.project', 'ionic', @blue);
+.icon-set('Ionic.project', 'ionic', @blue);
+
+// JSHINT
 .icon-set('.jshintrc', 'javascript', @blue);
 .icon-set('.jscsrc', 'javascript', @blue);
 
@@ -293,16 +321,13 @@
 .icon-set('.tmp', 'clock', @grey-light);
 
 // LICENSE FILE
-.icon-set('LICENSE', 'license', @yellow);
-.icon-set('License', 'license', @yellow);
-.icon-set('license', 'license', @yellow);
+.icon-partial('LICENSE', 'license', @yellow);
 
 // PROCFILE
-.icon-set('Procfile', 'heroku', @purple);
+.icon-partial('Procfile', 'heroku', @purple);
 
 // TODO
-.icon-set('TODO', 'todo', @seti-primary);
-
+.icon-partial('TODO', 'todo', @seti-primary);
 
 // - - - - - - -
 // IGNORED FILES
@@ -310,42 +335,3 @@
 
 .icon-set('npm-debug.log', 'npm_ignored', @ignore);
 .icon-set('.DS_Store', 'ignored', @ignore);
-
-
-// - - - - - - -
-// USER SETTINGS
-// - - - - - - -
-
-// HIDE TAB ICONS
-.tab-bar.seti-no-icons {
-  // @import "tabs";
-  .tab > .title {
-    padding: 13px 5px;
-    &::before {
-      // display: none !important;
-    }
-  }
-
-  &.seti-compact {
-    .tab > .title {
-      padding: 18px 5px;
-    }
-    .tab[data-type="SettingsView"] > .title {
-      padding: 14px 5px;
-    }
-  }
-}
-
-// HIDE SIDEBAR ICONS
-atom-panel-container.left.seti-no-icons {
-
-  .icon-file-media, .icon-file-text, .icon-file-binary, .icon-file-pdf, .icon-book {
-    padding-left: 4px;
-  }
-
-  .icon-file-media, .icon-file-text, .icon-file-binary, .icon-file-pdf, .icon-book {
-    &::before {
-      display: none;
-    }
-  }
-}

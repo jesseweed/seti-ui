@@ -18,3 +18,6 @@ gulp.task('font', function(){
      }))
     .pipe(gulp.dest('./styles/_fonts/seti/'));
 });
+
+gulp.task('icon', ['font']);
+gulp.task('icons', ['font']);
