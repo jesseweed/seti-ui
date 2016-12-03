@@ -61,7 +61,7 @@
           clear: both;
           margin: 0;
           padding: 10px;
-          height: 45px;
+          min-height: 45px;
           &:nth-child(odd) {
             background: lighten(@grey-dark, 5%);
           }
@@ -71,7 +71,6 @@
           display: inline-block;
           margin: 0;
           padding: 0;
-          float: right;
           .btn {
             background: @seti-primary;
             color: @seti-primary-text;
@@ -80,20 +79,21 @@
         }
 
         .deprecation-message {
-          float: left;
+          // float: left;
+          // width: 90%;
+          margin-bottom: 10px;
         }
 
         .text-warning {
           float: left;
-          margin: 0;
           &::before {
             font-size: 25px;
           }
         }
 
         code {
-          color: @seti-primary;
-          background: @seti-primary-text;
+          color: @black;
+          background: @white;
           font-size: 12px;
           margin: 0 2px;
         }
@@ -160,10 +160,4 @@
   }
 
 
-}
-
-.deprecation-cop-status {
-  .icon.icon-alert::before {
-    // color: @warn !important;
-  }
 }
