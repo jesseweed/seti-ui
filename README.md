@@ -25,7 +25,7 @@ If these are not the droids you're looking for, may I point you in the drection 
 ## What's New? 1.0 Update
 Seti UI has been updated with a cleaner, more streamlined interface, a slightly tweaked color scheme, additional icons and new user settings, as well as a handful of other small ui improvements and a refactored code base.
 
-![Screenshot](https://github.com/jesseweed/seti-ui/raw/master/screenshot.png)
+![Screenshot](https://github.com/jesseweed/seti-ui/raw/master/screenshot-01.png)
 
 -----
 
