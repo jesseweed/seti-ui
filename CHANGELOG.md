@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.3.3
+- bump atom target version to 1.12
+- Update scrollbars
+- Update workspace.less
+- Use npm icon for .npmrc
+- Change preview settings icons background colors for todo-show package
+- Correct link to icon mapping file
+- Update autocomplete-plus labels
+- Add icons for .bat,.cmd
+
 ## 1.3.2
 - Update status bar styles for 1.8
 
