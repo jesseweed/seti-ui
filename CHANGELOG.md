@@ -1,7 +1,8 @@
 # Changelog
 
-## 1.3.3
+## 1.4.0
 - bump atom target version to 1.12
+- minify icons
 - Update scrollbars
 - Update workspace.less
 - Use npm icon for .npmrc
