@@ -125,7 +125,7 @@ Once everything is setup, follow these steps any time you want to add a new icon
 
   1. Create an SVG icon with the name of the language, and save it to the `icons` folder _(do not use any spaces or special characters)_
 
-  2. Navigate to the _seti-ui_ folder in your terminal and run `gulp fonts` (this will add the new svg file to our icon font, update our file as well as the less file with the mixins we'll need to link to the icon later.)
+  2. Navigate to the _seti-ui_ folder in your terminal and run `gulp font` (this will add the new svg file to our icon font, update our file as well as the less file with the mixins we'll need to link to the icon later.)
 
   3. Lastly, open [styles/icons/mapping.less](styles/icons/mapping.less) and create a link for the icon you just added with the `.icon-set` mixin. Assuming you were adding an icon for Sass it might look something like this: ```.icon-set('.scss', 'sass', @pink)```
 
