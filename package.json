@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": "https://github.com/jesseweed/seti-ui",
   "engines": {
-    "atom": ">1.8.0"
+    "atom": ">1.12.0"
   },
   "configSchema": {
     "themeColor": {
