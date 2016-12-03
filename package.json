@@ -78,5 +78,8 @@
     "gulp": "^3.9.1",
     "gulp-iconfont": "^6.0.0",
     "gulp-iconfont-css": "^2.1.0"
+  },
+  "dependencies": {
+    "gulp-svgmin": "^1.2.3"
   }
 }
