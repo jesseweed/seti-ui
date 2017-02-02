@@ -8,7 +8,7 @@ If you're keen to contribute, start by [forking](https://github.com/jesseweed/se
 
 **Note:** To use the development version, you must first install the production version (`apm uninstall seti-ui`), then and run the following commands:
 
-```bash
+```sh
 # To install the local version as an Atom Theme
 apm link .
 
@@ -63,7 +63,7 @@ Once everything is setup, follow these steps any time you want to add a new icon
 
   1. Create an SVG icon with the name of the language, and save it to the `icons` folder _(do not use any spaces or special characters)_
 
-  2. Navigate to the _seti-ui_ folder in your terminal and run `gulp fonts` (this will add the new svg file to our icon font, update our file as well as the less file with the mixins we'll need to link to the icon later.)
+  2. Navigate to the _seti-ui_ folder in your terminal and run `gulp font` (this will add the new svg file to our icon font, update our file as well as the less file with the mixins we'll need to link to the icon later.)
 
   3. Lastly, open [styles/icons/mapping.less](styles/icons/mapping.less) and create a link for the icon you just added with the `.icon-set` mixin. Assuming you were adding an icon for Sass it might look something like this: ```.icon-set('.scss', 'sass', @pink)```
 
@@ -85,7 +85,7 @@ Once everything is setup, follow these steps any time you want to add a new icon
 
   You will need to do this once for every extension, you want to target. For example, ir you want to target both **.sass** and **.scss** extensions, you would add the following:
 
-```
+```less
 .icon-set('.sass', 'sass', @pink);
 .icon-set('.scss', 'sass', @pink);
 ```
