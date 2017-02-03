@@ -11,17 +11,27 @@
 .icon-set('.bsl', 'bsl', @red);
 .icon-set('.mdo', 'mdo', @red);
 
-.icon-set('.cpp', 'default', @blue);
+// Assembly
+.icon-set('.asm', 'asm', @red);
+.icon-set('.s', 'asm', @red);
 
 // C
 .icon-set('.c', 'c', @blue);
+.icon-set('.h', 'c', @purple);
+.icon-set('.m', 'c', @yellow);
 
-// C#
+// C♯
 .icon-set('.cs', 'c-sharp', @blue);
 
 // C++
 .icon-set('.cc', 'cpp', @blue);
 .icon-set('.cpp', 'cpp', @blue);
+.icon-set('.cxx', 'cpp', @blue);
+.icon-set('.c++', 'cpp', @blue);
+.icon-set('.hh', 'cpp', @purple);
+.icon-set('.hpp', 'cpp', @purple);
+.icon-set('.hxx', 'cpp', @purple);
+.icon-set('.h++', 'cpp', @purple);
 
 // COLDFUSION
 .icon-set('.cfc', 'coldfusion', @blue);
@@ -32,6 +42,8 @@
 
 // CONFIG
 .icon-set('.config', 'config', @grey-light);
+.icon-set('.cfg', 'config', @grey-light);
+.icon-set('.conf', 'config', @grey-light);
 
 // CSON
 .icon-set('.cson', 'json', @yellow);
@@ -49,6 +61,9 @@
 
 // CAKE PHP
 .icon-set('.ctp', 'cake_php', @red);
+
+// D
+.icon-set('.d', 'd', @red);
 
 // EJS
 .icon-set('.ejs', 'ejs', @yellow);
@@ -82,9 +97,6 @@
 // GRAILS
 .icon-set('.groovy', 'grails', @green);
 .icon-set('.gsp', 'grails', @green);
-
-// HACKLANG
-.icon-set('.hh', 'hacklang', @orange);
 
 // HAML
 .icon-set('.haml', 'haml', @red);
@@ -159,10 +171,6 @@
 .icon-set('.npm-debug.log', 'npm', @ignore);
 .icon-set('.npmignore', 'npm', @red);
 .icon-set('.npmrc', 'npm', @red);
-
-// OBJECTIVE C
-.icon-set('.h', 'c', @purple);
-.icon-set('.m', 'c', @yellow);
 
 // OCAML
 .icon-set('.ml', 'ocaml', @orange);
@@ -283,6 +291,7 @@
 .icon-set('.zsh', 'shell', @grey);
 .icon-set('.fish', 'shell', @grey);
 .icon-set('.zshrc', 'shell', @grey);
+.icon-set('.bashrc', 'shell', @grey);
 
 // VIDEO FILES
 .icon-set('.mov', 'video', @pink);
@@ -364,8 +373,28 @@
 .icon-set('.slugignore', 'config', @grey-light);
 .icon-set('.tmp', 'clock', @grey-light);
 
-// LICENSE FILE
+// LICENSE FILES
 .icon-partial('LICENSE', 'license', @yellow);
+.icon-partial('LICENCE', 'license', @yellow);
+.icon-partial('COPYING', 'license', @yellow);
+.icon-partial('COMPILING', 'license', @orange);
+.icon-partial('CONTRIBUTING', 'license', @red);
+.icon-partial('README', 'markdown', @pink);
+
+// MAKEFILES
+.icon-partial('MAKEFILE', 'makefile', @orange);
+.icon-partial('Makefile', 'makefile', @orange);
+.icon-partial('makefile', 'makefile', @orange);
+.icon-partial('QMAKEFILE', 'makefile', @purple);
+.icon-partial('QMakefile', 'makefile', @purple);
+.icon-partial('qmakefile', 'makefile', @purple);
+.icon-partial('OMAKEFILE', 'makefile', @grey-light);
+.icon-partial('OMakefile', 'makefile', @grey-light);
+.icon-partial('omakefile', 'makefile', @grey-light);
+.icon-partial('CMAKELISTS.TXT', 'makefile', @blue);
+.icon-partial('CMAKELISTS.txt', 'makefile', @blue);
+.icon-partial('CMakeLists.txt', 'makefile', @blue);
+.icon-partial('cmakelists.txt', 'makefile', @blue);
 
 // PROCFILE
 .icon-partial('Procfile', 'heroku', @purple);
