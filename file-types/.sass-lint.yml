@@ -1,0 +1,84 @@
+# Linter Options
+options:
+  merge-default-rules: false
+
+# File Options
+files:
+  include: 'public/css/**/*.s+(a|c)ss'
+  ignore: 'public/css/vendor/**'
+
+# Rule Configuration
+rules:
+  brace-style:
+    -
+      allow-single-line: false
+  class-name-format:
+    - 2
+    -
+      convention: hyphenatedlowercase
+      allow-leading-underscore: false
+  empty-line-between-blocks:
+    - 2
+    - include: true
+    - allow-single-line-rulesets: false
+  extends-before-mixins: 1
+  extends-before-declarations: 2
+  indentation:
+    - 2
+    -
+      size: 2
+  leading-zero:
+    - 2
+    -
+      include: true
+  mixins-before-declarations:
+    - 2
+    -
+      exclude:
+        - breakpoint
+        - mq
+  no-mergeable-selectors:
+    - 1
+    -
+      exclude: []
+  no-color-keywords: 0
+  no-invalid-hex: 1
+  no-trailing-zero: 2
+  no-warn: 1
+  no-debug: 1
+  no-ids: 0
+  one-declaration-per-line: 2
+  placeholder-in-extend: true
+  quotes:
+    - 1
+    -
+      style: single
+  shorthand-values:
+    - 1
+    - allowed-shortcuts: [1, 2, 3]
+  space-after-colon:
+    - 2
+    - include: true
+  space-after-comma:
+    - 2
+    - include: true
+  space-around-operator: 2
+  space-before-brace:
+    - 2
+    - include: true
+  trailing-semicolon:
+    - 2
+    - include: true
+  variable-for-property:
+    - 0
+    -
+      properties:
+        - color
+        - background-color
+        - border-color
+  variable-name-format:
+    - 1
+    - convention: hyphenatedlowercase
+  zero-unit:
+    - 1
+    - include: false
