@@ -2,14 +2,17 @@
 
 ## 1.5.0
 - Bump atom target version to 1.13
+- Fix typo in README
 - Fix deprecation warnings
   - Remove shadow psudo-selector
   - Prepend syntax selectors with syntax--
 - Add additional icons:
-  - Babel
-  - ESLint
-  - Rollup
-  - Yarn
+  - .babelrc
+  - .eslintrc
+  - .gitmodules
+  - rollup.config.js
+  - yarn.lock
+  - yarn.clean
 
 ## 1.4.0
 - Bump atom target version to 1.12
