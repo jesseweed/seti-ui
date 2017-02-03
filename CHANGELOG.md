@@ -1,8 +1,19 @@
 # Changelog
 
+## 1.5.0
+- Bump atom target version to 1.13
+- Fix deprecation warnings
+  - Remove shadow psudo-selector
+  - Prepend syntax selectors with syntax--
+- Add additional icons:
+  - Babel
+  - ESLint
+  - Rollup
+  - Yarn
+
 ## 1.4.0
-- bump atom target version to 1.12
-- minify icons
+- Bump atom target version to 1.12
+- Minify icons
 - Update scrollbars
 - Update workspace.less
 - Use npm icon for .npmrc
