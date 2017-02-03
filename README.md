@@ -91,7 +91,7 @@ Anyone is welcome to contribute to the development of this theme. If can be a lo
 ### 1. Fork
 If you're keen to contribute, start by [forking](https://github.com/jesseweed/seti-ui/tree/1.0-beta#fork-destination-box) the repo and cloning it to your computer.
 
-**Note:** To use the development version, you must first install the production version (`apm uninstall seti-ui`), then and run the following commands:
+**Note:** To use the development version, you must first uninstall the production version (`apm uninstall seti-ui`), then and run the following commands:
 
 ```bash
 # To install the local version as an Atom Theme
