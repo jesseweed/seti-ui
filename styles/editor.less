@@ -1,7 +1,7 @@
 @import "ui-variables";
 @import "ui-mixins";
 
-atom-text-editor[mini], atom-text-editor[mini]::shadow {
+atom-text-editor[mini], atom-text-editor[mini].editor {
   color: @input-text-color;
   background-color: @input-background-color-selected;
   border: 1px solid @input-border-color;
@@ -13,7 +13,7 @@ atom-text-editor[mini], atom-text-editor[mini]::shadow {
   .selection .region { background-color: darken(@input-background-color, 10%); }
 }
 
-atom-text-editor[mini].is-focused, atom-text-editor[mini].is-focused::shadow {
+atom-text-editor[mini].is-focused, atom-text-editor[mini].is-focused.editor {
   color: @input-text-color-selected;
   background-color: @input-background-color;
   .selection .region { background-color: desaturate(@background-color-info, 50%); }
