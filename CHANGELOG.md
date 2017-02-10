@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.6.1
+- Add additional file icons:
+  - Excel
+  - Maven
+  - Spring
+  - SQL
+  - Word
+
+## 1.6.0
+- Bump version to fix incorrect publish
+
 ## 1.5.0
 - Bump atom target version to 1.13
 - Fix typo in README
