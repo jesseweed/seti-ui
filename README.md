@@ -12,7 +12,7 @@ This is the latest version of the Seti UI theme. It's a dark interface theme cra
 
 This is for the _interface_ of the Atom editor. I also have [Seti Syntax](https://atom.io/themes/seti-syntax) for theming the _code view_ in Atom. In addition, there is a new [Seti theme](https://www.npmjs.com/package/seti-hyper) for [Hyper](https://hyper.is/).
 
-If these are not the droids you're looking for, may I point you in the drection of these great ports:
+If these are not the droids you're looking for, may I point you in the direction of these great ports:
 
 + [Emacs](https://github.com/caisah/seti-theme)
 + [iTerm](https://github.com/willmanduffy/seti-iterm)
@@ -43,11 +43,11 @@ File icons will now show up in the file search (`cmd+ p`) dialog in addition to 
 -----
 
 ### Settings
-_To get here, Go to "Atom > Preferences" Select "Themes"  and click the settings icon next to "Seti" under UI Theme dropdown_
+_To get here, Go to "Atom > Preferences" Select "Themes" and click the settings icon next to "Seti" under UI Theme dropdown_
 
 With 1.0 you can now adjust some of the more commonly requested features directly in Atom's settings view (Settings > Themes > Click the gear icon next to Seti).
 
-+ **File Icons:** Probably the most frequet requests has been a simpler way to disable the file icons for those of you using other file icon packages. Now you can :)
++ **File Icons:** Probably the most frequent request has been a simpler way to disable the file icons for those of you using other file icon packages. Now you can :)
 + **Compact Mode :** Seti 1.0's face-lift brings a cleaner, less cramped interface, which also happens to take up a bit more space. If you prefer the old more compact version, you can revert it here.
 + **Ignored Files:** By default, ignored files are shown as a muted grey. However, if you'd like to hide them altogether you can use this.
 + **Hide Tabs:** Lastly (for now), there have been a few requests to be able to hide tabs altogether. This is of course disabled by default, but if you're the anti-tab type, you can hide them here.
@@ -60,7 +60,7 @@ Setting are brand new, and still have a few kinks to be worked out. If you run i
 -----
 
 ## Bugs
-If you find a bug, please do [add a bug](https://github.com/jesseweed/seti-ui/issues). However, first make sure it is for Seti UI in Atom. I only support the Atom versions, please check the links above to report a bug on another platforms.
+If you find a bug, please do [add a bug](https://github.com/jesseweed/seti-ui/issues). However, first make sure it is for Seti UI in Atom. I only support the Atom versions, please check the links above to report a bug on another platform.
 
 ##### Seti 1.0 has been optimized to work with Atom 1.6 and above:
 ###### Including the 1.7 beta
@@ -86,12 +86,12 @@ apm install seti-ui
 -----
 
 ## Contributing
-Anyone is welcome to contribute to the development of this theme. If can be a lot of work to keep up on, and I'll take help wherever i can get it :)
+Anyone is welcome to contribute to the development of this theme. If can be a lot of work to keep up on, and I'll take help wherever I can get it :)
 
 ### 1. Fork
 If you're keen to contribute, start by [forking](https://github.com/jesseweed/seti-ui/tree/1.0-beta#fork-destination-box) the repo and cloning it to your computer.
 
-**Note:** To use the development version, you must first uninstall the production version (`apm uninstall seti-ui`), then and run the following commands:
+**Note:** To use the development version, you must first uninstall the production version (`apm uninstall seti-ui`), then run the following commands:
 
 ```bash
 # To install the local version as an Atom Theme
