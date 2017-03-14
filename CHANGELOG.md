@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.7.0
+- Fix small README.md typos
+- Futureproof theme against impending jQuery removal
+- Add additional file icons:
+  - ESLint
+  - Salesforce
+  - Sublime
+  - VueJS
+
 ## 1.6.1
 - Add additional file icons:
   - Excel
