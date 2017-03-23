@@ -14,6 +14,7 @@ gulp.task('font', function(){
     }))
     .pipe(iconfont({
       normalize: true,
+      fontHeight: 1000,
       fontName: fontName,
       formats: ['ttf', 'eot', 'woff', 'woff2', 'svg']
      }))
