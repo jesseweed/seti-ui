@@ -1,1 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g fill="#FFF"><text transform="translate(11.02 16.62)" font-family="'SourceCodePro-Black'" font-size="1.829">C</text><text transform="translate(11.65 16.25)" font-family="'Roboto-Black'" font-size=".732">++</text></g><path fill="#41535B" d="M7 7.1h18v17.8H7z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#FFF" d="M9.8 9.4l1.9 1.5-1.9 1.6z"/><path fill="#FFF" d="M9.8 14h11.6v1.3H9.8zm0 3.7h7.3V19H9.8zm0 3.6h9.7v1.3H9.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <path fill="#41535B" d="M 6.7256163,7.2368013 V 25.037583 H 24.725616 V 7.2368013 Z m 2.8007812,2.3007812 1.8984375,1.5000005 -1.8984375,1.599609 z m 0,4.5996095 H 21.126007 v 1.300781 H 9.5263975 Z m 0,3.699219 h 7.2988275 v 1.300781 H 9.5263975 Z m 0,3.601562 h 9.6992185 v 1.298828 H 9.5263975 Z" />
+</svg>
+
