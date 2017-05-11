@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.8.0
+- Update Icons
+  - Docker Icons
+  - F#
+  - Powershell
+  - Jenkins
+  - Pug (updated)
+  - Changelog (updated)
+  - Readme (updated)
+  - CSV (updated)
+  - Eslint (updated)
+  - Editorconfig (updated)
+  - VueJS (update)
+
 ## 1.7.0
 - Fix small README.md typos
 - Futureproof theme against impending jQuery removal
