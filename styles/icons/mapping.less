@@ -133,10 +133,15 @@
 // JAVASCRIPT
 .icon-set('.js', 'javascript', @yellow);
 .icon-set('.js.map', 'javascript', @yellow);
+.icon-set('.spec.js', 'javascript', @orange);
 .icon-set('.es', 'javascript', @yellow);
 .icon-set('.es5', 'javascript', @yellow);
 .icon-set('.es6', 'javascript', @yellow);
 .icon-set('.es7', 'javascript', @yellow);
+
+
+// JENKINS
+.icon-set('Jenkinsfile', 'jenkins', @red);
 
 // JSON
 .icon-set('.json', 'json', @yellow);
@@ -163,6 +168,16 @@
 // MARKDOWN
 .icon-set('.markdown', 'markdown', @blue);
 .icon-set('.md', 'markdown', @blue);
+
+// README
+.icon-set('README.md', 'info', @blue);
+
+// CHANGELOG
+.icon-set('CHANGELOG.md', 'clock', @blue);
+.icon-set('CHANGELOG', 'clock', @blue);
+.icon-set('VERSION.md', 'clock', @blue);
+.icon-set('VERSION', 'clock', @blue);
+
 
 // MAVEN
 .icon-set('mvnw', 'maven', @red);
@@ -203,7 +218,7 @@
 .icon-set('.psm1', 'powershell', @blue);
 
 // PUG
-.icon-set('.pug', 'pug', @blue);
+.icon-set('.pug', 'pug', @red);
 
 // PUPPET .pp
 .icon-set('.pp', 'puppet', @yellow);
@@ -359,6 +374,13 @@
 .icon-partial('dockerfile', 'docker', @blue);
 .icon-partial('Dockerfile', 'docker', @blue);
 .icon-partial('DOCKERFILE', 'docker', @blue);
+.icon-partial('.dockerignore', 'docker', @grey);
+.icon-partial('docker-healthcheck', 'docker', @green);
+.icon-partial('docker-compose.yml', 'docker', @pink);
+
+
+// BABEL
+.icon-set('.codeclimate.yml', 'code-climate', @green);
 
 // ESLINT
 .icon-set('.eslintrc', 'eslint', @purple);
@@ -366,7 +388,7 @@
 .icon-set('.eslintrc.yaml', 'eslint', @purple);
 .icon-set('.eslintrc.yml', 'eslint', @purple);
 .icon-set('.eslintrc.json', 'eslint', @purple);
-.icon-set('.eslintignore', 'eslint', @purple);
+.icon-set('.eslintignore', 'eslint', @grey);
 
 // GRUNT
 .icon-set('Gruntfile.js', 'grunt', @orange);
@@ -407,9 +429,10 @@
 .icon-set('.direnv', 'config', @grey-light);
 .icon-set('.env', 'config', @grey-light);
 .icon-set('.static', 'config', @grey-light);
-.icon-set('.editorconfig', 'editorconfig', @blue);
+.icon-set('.editorconfig', 'config', @grey-light);
 .icon-set('.slugignore', 'config', @grey-light);
 .icon-set('.tmp', 'clock', @grey-light);
+.icon-set('.htaccess', 'config', @grey-light);
 
 // LICENSE FILES
 .icon-partial('LICENSE', 'license', @yellow);
@@ -417,7 +440,6 @@
 .icon-partial('COPYING', 'license', @yellow);
 .icon-partial('COMPILING', 'license', @orange);
 .icon-partial('CONTRIBUTING', 'license', @red);
-.icon-partial('README', 'markdown', @pink);
 
 // MAKEFILES
 .icon-partial('MAKEFILE', 'makefile', @orange);
