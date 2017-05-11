@@ -60,7 +60,7 @@ Setting are brand new, and still have a few kinks to be worked out. If you run i
 -----
 
 ## Bugs
-If you find a bug, please do [add a bug](https://github.com/jesseweed/seti-ui/issues). However, first make sure it is for Seti UI in Atom. I only support the Atom versions, please check the links above to report a bug on another platform.
+If you find a bug, please do [add a bug report](https://github.com/jesseweed/seti-ui/issues). However, first make sure it is for Seti UI in Atom. I only support the Atom versions, please check the links above to report a bug on another platform.
 
 ##### Seti 1.0 has been optimized to work with Atom 1.6 and above:
 ###### Including the 1.7 beta
