@@ -1,0 +1,35 @@
+.tab-bar .tab {
+
+  // SET ICON SIZE
+  .title::before {
+    float: left;
+    font-size: 22px;
+    margin-right: 1px;
+    line-height: @tab-height;
+  }
+
+  // IGNORED FILES
+  .file.status-ignored .icon {
+    .icon('ignored', @ignore);
+  }
+
+  // SET ICONS FOR ATOM VIEWS
+  .tab-icon('SettingsView', 'settings', @seti-primary);
+  .tab-icon('MarkdownPreviewView', 'markdown', @blue);
+  .tab-icon('DeprecationCopView', 'deprecation-cop', @seti-primary);
+  .tab-icon('TimecopView', 'time-cop', @seti-primary);
+  .tab-icon('ResultsPaneView', 'search', @seti-primary);
+  .tab-icon('AboutView', 'info', @seti-primary);
+
+  // NEW FILES
+  &[data-type='GitControlView'] .title:not([data-name]) {
+    .icon('github', @seti-primary);
+  }
+
+  // NEW FILES
+  &[data-type='TextEditor'] .title:not([data-name]) {
+    .icon('new-file', @green);
+  }
+
+
+}

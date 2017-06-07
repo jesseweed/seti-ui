@@ -1,0 +1,55 @@
+&.seti-compact {
+  .entries.list-tree {
+    // SIDEBAR ICONS
+    .file .icon {
+      &::before {
+        font-size: 16px;
+        height: 16px;
+        position: relative;
+        top: 4px;
+        width: 16px;
+      }
+    }
+  }
+}
+
+atom-panel-container > atom-panel {
+  .file .icon {
+    .icon('default', @grey);
+  }
+}
+
+.entries.list-tree {
+
+  // SIDEBAR ICONS
+  .file .icon {
+    &::before {
+      font-size: 22px;
+      height: 22px;
+      position: relative;
+      top: 7px;
+      width: 22px;
+    }
+  }
+
+  // IGNORED FILES
+  .file.status-ignored .icon {
+    .icon('ignored', @ignore);
+  }
+
+  // GIT DIRECTORY
+  .icon.icon-file-directory {
+    &[data-name$=".git"], {
+      .icon('github', @ignore);
+      &::before {
+        display: none;
+        font-size: 25px;
+        margin-top: -10px;
+        left: -5px;
+        position: relative;
+        top: 9px;
+      }
+    }
+  }
+
+}

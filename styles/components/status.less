@@ -1,0 +1,33 @@
+.text-error, .highlight-error {
+  color: @text-color-error;
+  &::before {
+    color: @text-color-error;
+  }
+}
+
+.text-warning, .status-modified, .highlight-warning {
+  color: @text-color-warning;
+  &::before {
+    color: @text-color-warning;
+  }
+}
+
+.text-success, .status-added, icon-diff-added {
+  color: @text-color-success;
+  &::before {
+    color: @text-color-success;
+  }
+}
+
+.text-info, .highlight-info {
+  color: @text-color-info;
+  &::before {
+    color: @text-color-info;
+  }
+}
+
+.git-view {
+  .git-branch {
+    color: @white;
+  }
+}

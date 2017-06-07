@@ -3,12 +3,12 @@
   "theme": "ui",
   "version": "1.8.0",
   "description": "A dark colored UI theme for Atom with custom file icons.",
-  "main": "lib/main",
   "license": "MIT",
   "repository": "https://github.com/jesseweed/seti-ui",
   "engines": {
     "atom": ">1.13.0"
   },
+  "main": "lib/main",
   "configSchema": {
     "themeColor": {
       "title": "Theme Color",
@@ -26,17 +26,6 @@
         "Yellow"
       ],
       "default": "Blue"
-    },
-    "font": {
-      "title": "Font Family",
-      "order": 2,
-      "description": "Select default UI font.",
-      "type": "string",
-      "enum": [
-        "Roboto",
-        "Default Atom Font"
-      ],
-      "default": "Roboto"
     },
     "compactView": {
       "title": "Compact Mode",
@@ -70,6 +59,27 @@
       "title": "Hide Tabs",
       "order": 7,
       "description": "Enable this if you prefer to rely on the sidebar for nagivation and don't want to see tabs at all.",
+      "type": "boolean",
+      "default": false
+    },
+    "hideDocumentTitle": {
+      "title": "Hide Current Document Title",
+      "order": 8,
+      "description": "Enable this if you want to hide the main window title",
+      "type": "boolean",
+      "default": true
+    },
+    "hideTitleBar": {
+      "title": "Hide Title Bar",
+      "order": 9,
+      "description": "Enable this if you want to completely hide the main window title bar",
+      "type": "boolean",
+      "default": true
+    },
+    "hideProjectTab": {
+      "title": "Hide Project Tab",
+      "order": 10,
+      "description": "Enable this if you want to remove the 'project' tab from the sidebar",
       "type": "boolean",
       "default": false
     }

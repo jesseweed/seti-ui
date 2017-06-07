@@ -1,0 +1,100 @@
+// SET COLOR & HOVER EFFECT FOR A LINK
+.link-color(@color: @seti-primary) {
+    color: @color;
+    transition: 0.25s color;
+    &:hover {
+      color: lighten(@color, 15%);
+      cursor: pointer;
+      text-decoration: none;
+    }
+}
+
+// SET ICON FILE BASED ON DATA NAME
+.icon-set( @extension, @file, @color) {
+
+  .icon:not(.icon-file-directory),
+  .title {
+    &[data-name$="@{extension}"] {
+      .icon(@file, @color)
+    }
+  }
+
+}
+
+// SET ICON FILE BASED ON DATA NAME
+.icon-partial( @extension, @file, @color) {
+
+  .icon:not(.icon-file-directory),
+  .title {
+    &[data-name*="@{extension}"] {
+      .icon(@file, @color)
+    }
+  }
+
+}
+
+// SET ICON FOR TAB BASED ON DATA TYPE
+.tab-icon(@data-type, @file-type, @color) {
+  &[data-type="@{data-type}"] .icon {
+    .icon(@file-type, @color);
+    &::before {
+      margin-right: 7px;
+    }
+  }
+}
+
+
+// MINI EDITOR - LARGE
+.input(@bg: #000; @color: @white; @padding: 10px;) {
+  atom-text-editor[mini] {
+    background: @bg;
+    color: @color;
+    font-family: @seti-font-family;
+    font-size: 14px;
+    font-weight: 300;
+    height: 45px;
+    letter-spacing: 0.05em;
+    max-height: 60px;
+    padding: @padding;
+    margin: 0;
+
+    .syntax--text.syntax--plain {
+      color: @color;
+    }
+
+    .highlights .highlight.selection .region {
+      background: @seti-primary;
+      color: @white;
+    }
+
+    .lines .cursors .cursor {
+      border-color: @color !important;
+    }
+  }
+}
+
+// MINI EDITOR - SMALL
+.input-small(@bg: #000; @color: @white; @padding: 1px 7px;) {
+  atom-text-editor[mini] {
+    background: @bg;
+    color: @color;
+    font-family: @seti-font-family;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    padding: @padding;
+
+    .syntax--text.syntax--plain {
+      color: @color;
+    }
+
+    .highlights .highlight.selection .region {
+      background: @seti-primary;
+      color: @seti-primary-text !important;
+    }
+
+    .lines .cursors .cursor {
+      border-color: @color !important;
+    }
+  }
+}
