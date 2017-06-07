@@ -1,0 +1,52 @@
+atom-workspace atom-panel.bottom.tool-panel,
+atom-workspace atom-panel.footer.tool-panel {
+  background: @grey-dark;
+  border-top: solid 1px rgba(0,0,0,0.5);
+  padding: 1px 3px 0px 3px;
+
+  &:first-child {
+    box-shadow: 0px -5px 1px 0px rgba(0,0,0,0.1);
+  }
+
+  &:last-child {
+    background: @panel-background-color;
+    box-shadow: none;
+    border-top: solid 1px rgba(0,0,0,0.5);
+  }
+
+  .status-bar {
+    .flexbox-repaint-hack {
+      padding: 0;
+    }
+    .status-bar-left {
+      padding: 0;
+    }
+
+    .highlight {
+      background: none;
+    }
+
+  }
+
+  a {
+    .link-color();
+  }
+
+}
+
+
+// ALL BOTTOM PANELS
+atom-workspace:not(.seti-compact) atom-panel.bottom.tool-panel {
+  padding: 5px;
+}
+
+
+// STATUS BAR SPECIFICALLY
+
+atom-workspace atom-panel.footer.tool-panel.panel-footer {
+  background: @black;
+}
+
+atom-workspace:not(.seti-compact) atom-panel.footer.tool-panel {
+  padding: 10px;
+}

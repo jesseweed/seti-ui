@@ -1,0 +1,43 @@
+.project-find, .find-and-replace {
+
+  // INPUTS
+  .input-small(@input-background-color, @input-text-color);
+
+  // HEADER
+  .header {
+    &-item.description {
+      color: @white;
+      .subtle-info-message {
+        color: @grey-light;
+      }
+    }
+  }
+
+  // BUTTONS
+  .btn-group {
+    .btn { transition: background 0.3s; }
+    &-find .btn {
+    background: @seti-primary;
+    color: @seti-primary-text;
+    &:hover {
+      background-color: @seti-primary-highlight;
+      color: @seti-primary-text;
+    }
+    }
+    &-replace .btn {
+      background: darken(@bad, 20%);
+      color: @white;
+      &:hover {
+        background-color: darken(@bad, 30%);
+      }
+    }
+    &-replace-all .btn {
+      background: @bad;
+      color: @white;
+      &:hover {
+        background-color: lighten(@bad, 10%);
+      }
+    }
+  }
+
+}

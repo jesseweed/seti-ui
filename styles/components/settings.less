@@ -1,0 +1,382 @@
+atom-workspace.seti-compact {
+
+  .settings-view .section {
+    padding: 20px;
+  }
+
+  atom-pane-container atom-pane .item-views .pane-item {
+    .section-heading {
+      font-size: 2em;
+      font-weight: 300;
+    }
+    .sub-section-heading {
+      .section-heading {
+        font-size: 1.5em;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .item-views .pane-item .native-key-bindings.breadcrumb {
+    font-size: 1.5em;
+    font-weight: 300;
+    padding: 5px 10px;
+  }
+
+}
+
+atom-workspace {
+
+  atom-pane-container atom-pane .item-views .pane-item {
+    background: @black;
+    color: @white;
+
+    .themes-label {
+      font-weight: 300;
+    }
+
+    .search-container {
+      button.btn {
+        background: @grey-dark;
+        color: @white;
+        height: 43px;
+        padding: 10px 20px;
+        transition: background 0.3s;
+
+        &.selected {
+          background: @seti-primary;
+          color: @seti-primary-text;
+          &:hover {
+            background-color: @seti-primary-highlight;
+            color: @seti-primary-text;
+          }
+        }
+
+        &:hover {
+          background-color: @grey;
+          color: @white;
+        }
+      }
+
+      .alert-info.search-message {
+        background: @black-dark;
+        color: @white;
+      }
+    }
+
+    .native-key-bindings {
+
+      .is-user {
+        background: @seti-primary;
+        color: @seti-primary-text;
+        .source {
+          color: @seti-primary-text;
+        }
+      }
+
+      &.breadcrumb {
+        background: @grey-dark;
+        font-family: @seti-font-family;
+        font-size: 30px;
+        font-weight: 100;
+      }
+    }
+
+    a {
+      .link-color();
+      &:before {
+        .link-color();
+      }
+    }
+
+    .input();
+
+    .text {
+      line-height: 150%;
+    }
+
+    // LEFT MENU
+    .config-menu {
+      background: @tree-view-header-color;
+      border: 0;
+      color: #848c89;
+      padding: 0;
+
+      button.btn {
+        background: @seti-primary;
+        color: @seti-primary-text;
+        transition: background 0.3s;
+
+        &:hover {
+          background-color: @seti-primary-highlight;
+          color: @seti-primary-text;
+        }
+      }
+
+      li {
+
+        a {
+          transition: ease 0.5s background;
+          &.icon {
+            color: @white;
+            &::before {
+              color: @grey;
+              width: 25px;
+            }
+          }
+          &.icon-settings {
+            &::before {
+              font-size: 28px;
+              width: 30px;
+              height: 30px;
+              padding: 0;
+              position: relative;
+              margin-top: -13px;
+              left: -2px;
+              top: 9px;
+            }
+          }
+          &:hover {
+            background: lighten(@black, 5%);
+          }
+        }
+
+        &.active a {
+          background: @black;
+          cursor: default;
+          border-left: solid 2px @seti-primary;
+        }
+
+      }
+
+    }
+
+    .section {
+
+      &-container {
+        &.package-detail-view {
+          p {
+            margin-left: 2px;
+          }
+        }
+        &.updates-container, .package-container {
+          div.alert {
+            background: @black-dark;
+            color: @white;
+
+            &.icon{
+              padding-top: 5px;
+              &::before {
+                font-size: 30px;
+                position: relative;
+                top: 5px;
+                margin-right: 15px;
+              }
+            }
+
+            &.icon-heart {
+              &::before {
+                color: @red;
+              }
+            }
+
+            &.icon-hourglass {
+              padding-top: 15px;
+              &::before {
+                font-size: 16px;
+                margin-right: 10px;
+                top: 0px;
+                color: @grey;
+              }
+            }
+          }
+        }
+      }
+      &-body {
+        .control-group {
+          background: @grey-dark;
+          padding: 5px 10px;
+          margin: 0;
+
+          .setting-title {
+
+          }
+        }
+      }
+      &-heading {
+        font-family: @seti-font-family;
+        font-size: 3.5em;
+        font-weight: 100;
+        color: @white;
+
+        &.icon::before {
+          display: none;
+        }
+
+        &-count {
+          background: @seti-primary;
+          color: @white;
+          font-size: 0.5em;
+        }
+
+        &-title {
+          color: @white;
+          font-size: 1.5em;
+          margin: -3px 0 5px 0 ;
+        }
+
+        &-description {
+          color: @white;
+          color: rgba(255,255,255,0.5);
+          font-family: @seti-font-family;
+          font-size: 13px;
+        }
+
+        &::before {
+          height: 35px;
+          width: 35px;
+          position: relative;
+          top: -3px;
+          font-size: 35px;
+          color: @grey;
+        }
+      }
+
+    }
+
+    .sub-section {
+      margin: 0;
+
+      &-body {
+        margin: 0;
+      }
+
+      &-heading {
+        color: @white;
+        font-size: 2em;
+        font-weight: 100;
+
+        &::before {
+          height: 25px;
+          width: 25px;
+          font-size: 25px;
+          color: @grey;
+        }
+      }
+    }
+
+    // PACKAGE CONTAINERS
+    .package {
+      &-container {
+      }
+      &-card {
+        background: @black-dark;
+        border: none;
+        .card-name a {
+          color: @seti-primary;
+        }
+      }
+
+      .meta-user {
+        a.author {.link-color();}
+      }
+
+      // README
+      &-readme {
+        color: @white;
+        h1, h2, h3, h4, h5, h6 {
+          font-weight: 100;
+          line-height: 150%;
+          color: @white;
+        }
+        h6 {
+          font-weight: 300;
+        }
+        p, li {
+          color: darken(@white, 20%);
+          line-height: 150%;
+        }
+        strong {
+          font-family: @seti-font-family;
+          font-weight: 500;
+        }
+        code {
+          color: @seti-primary;
+          background: @seti-primary-text;
+          font-size: 12px;
+          font-weight: 100;
+          margin: 0 2px;
+        }
+      }
+
+    }
+
+    button.btn {
+      border: 0;
+      margin-right: 2px;
+      // BUTTON FOR THEME SETTINGS
+      &.active-theme-settings.icon-gear, &.active-syntax-settings.icon-gear {
+        background: none;
+        &::before {
+          font-size: 22px;
+          margin-top: 5px;
+          margin-left: -2px;
+          transition: 0.25s background;
+        }
+        &:hover::before {
+          color: @seti-primary;
+        }
+      }
+      &.settings {
+        // background: @seti-primary-highlight;
+      }
+      &.uninstall-button {
+        background: @red;
+        transition: background 0.3s;
+
+        &:hover {
+          background-color: darken(@red, 10%);
+          color: @white;
+        }
+      }
+      &.install-button {
+        // font-weight: 500;
+        background: @seti-primary;
+        color: @white;
+        transition: background 0.3s;
+        &:hover {
+          background-color: darken(@seti-primary, 10%);
+          color: @seti-primary-text;
+        }
+      }
+    }
+  }
+
+
+
+  // INPUTS
+  .settings-view input[type="checkbox"]:checked {
+    background-color: @seti-primary;
+  }
+
+  .control-label {
+    font-weight: 300;
+    .setting-title.themes-label {
+      font-size: 1.5em;
+      margin-bottom: 3px;
+    }
+  }
+
+  .settings-view {
+    .select-container .form-control {
+      background: @grey;
+      transition: 0.25s background;
+      &:hover {
+        background: @grey-dark;
+        cursor: pointer;
+      }
+    }
+
+  }
+
+}

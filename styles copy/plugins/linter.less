@@ -1,0 +1,32 @@
+.linter-highlight {
+  &.badge {
+    background-color: @seti-primary;
+    color: @seti-primary-text;
+  }
+}
+
+.linter-message-item .badge {
+  background: @seti-primary-text;
+  color: @seti-primary;
+}
+
+linter-panel {
+  .badge {
+    color: @white;
+  }
+  linter-message-line {
+
+  }
+  .linter-message-link {
+    .link-color();
+  }
+}
+
+linter-bottom-tab {
+  background: @black;
+  color: @grey;
+  &.active {
+    background: @seti-primary;
+    color: @seti-primary-text;
+  }
+}

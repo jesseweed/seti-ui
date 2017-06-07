@@ -1,0 +1,98 @@
+atom-panel-container {
+
+  // HOVER TEXT FOR EXPANDED STATE
+  .project-root.expanded {
+     > .header:hover:after {
+       content: 'close';
+     }
+  }
+
+  // PROJECT ROOT
+  .project-root {
+    background:     @tree-view-header-color;
+    &:nth-child(2)  { background: lighten(@tree-view-header-color, 1%); }
+    &:nth-child(3)  { background: lighten(@tree-view-header-color, 2%); }
+    &:nth-child(4)  { background: lighten(@tree-view-header-color, 3%); }
+    &:nth-child(5)  { background: lighten(@tree-view-header-color, 4%); }
+    &:nth-child(6)  { background: lighten(@tree-view-header-color, 5%); }
+    &:nth-child(7)  { background: lighten(@tree-view-header-color, 6%); }
+    &:nth-child(8)  { background: lighten(@tree-view-header-color, 7%); }
+    &:nth-child(9)  { background: lighten(@tree-view-header-color, 8%); }
+    &:nth-child(10) { background: lighten(@tree-view-header-color, 9%); }
+  }
+
+  // PROJECT HEADER
+  .project-root > .header {
+    color:       @tree-view-header-text-color;
+    font-size:   15px;
+    font-weight: 300;
+    width:       100%;
+    height:      @top-bar;
+    line-height: @top-bar;
+    padding:     15px 0 0 8px;
+
+    &:hover {
+      background: #000;
+      cursor:     pointer;
+      transition: 0.5s ease all;
+
+      &:after {
+        color:       #40525a;
+        content:     'open';
+        font-size:   11px;
+        font-weight: 500;
+        margin-left: 10px;
+        position:    relative;
+        top:         -1px;
+        opacity:     0.5;
+      }
+    }
+
+    &.list-item {
+      &::before {
+        display: none !important;
+        content: '';
+      }
+    }
+
+    .icon-repo, .icon-file-directory {
+      margin-top: 5px;
+      &::before {
+        background:    url('atom://seti-ui/icons/project.svg') no-repeat;
+        content:       '';
+        height:        24px;
+        margin-bottom: -7px;
+        width:         30px;
+        margin-right:  -5px;
+      }
+    }
+  }
+
+  // ANCHORED PROJECT HEADER
+  .project-root.is--anchored > .header {
+    position: absolute;
+    top:      auto; bottom: 0;
+  }
+}
+
+// COMPACT MODE
+atom-workspace.seti-compact {
+  atom-panel-container {
+    .project-root {
+
+      & > .header {
+        font-size:         13px;
+        height:            @top-bar-small;
+        padding:           7px 0 0 5px;
+
+        .icon-repo {
+          &::before {
+            height:        25px;
+            margin-bottom: -7px;
+            width:         25px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+atom-workspace-axis.vertical .tab-bar {
+
+  // TAB BACKGROUND
+  height: @top-bar;
+  border-bottom: solid 2px rgba(0,0,0,0.3);
+  background: lighten(@tree-view-header-color, 7%);
+
+  // SINGLE TAB
+  .tab {
+    background-color: @tab-background-color;
+    border-bottom: solid 2px rgba(0,0,0,0.4);
+    border-right: solid 1px rgba(0,0,0,0.4);
+    color: @tab-text-color;
+    height: @top-bar;
+    line-height: @tab-height;
+
+    &.active {
+      background: #111213;
+      &::after {
+        width: 100%;
+        left: 0px;
+        opacity: 1;
+        background: @seti-primary;
+      }
+    }
+
+    &:hover .close-icon {
+      color: @red;
+    }
+
+    &.modified {
+
+      &:not(:hover) .close-icon {
+        border-color: @yellow;
+        top: 26px;
+        right: 14px;
+      }
+
+    }
+
+    // HIGHLIGHT BORDER
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      z-index: 999;
+      bottom: -2px;
+      left: 50%;
+      opacity: 0;
+    }
+
+  }
+
+}
+
+// COMPACT
+atom-workspace.seti-compact atom-workspace-axis.vertical .tab-bar {
+  height: @top-bar-small;
+
+  .tab {
+    height: @top-bar-small;
+    line-height: @top-bar-small;
+    .title::before {
+      line-height: @top-bar-small;
+    }
+    &.modified {
+
+      &:not(:hover) .close-icon {
+        border-color: @yellow;
+        top: 16px;
+        right: 14px;
+      }
+
+    }
+  }
+
+}
+
+
+// ENABLE TAB ANIMATION
+atom-workspace.seti-animate {
+  atom-workspace-axis.vertical .tab-bar {
+    .tab::after {
+      transition: linear 0.3s width, linear 0.3s left, linear 0.3s opacity;
+    }
+  }
+}
+
+// HIDE TABS
+atom-workspace.seti-hide-tabs {
+  atom-workspace-axis.vertical .tab-bar {
+    display: none;
+  }
+}

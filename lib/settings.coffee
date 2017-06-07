@@ -1,6 +1,6 @@
 Dom = require('./dom')
 Utility = require('./utility')
-Headers = require('./headers')
+# Headers = require('./headers')
 
 module.exports =
   init: (state) ->
@@ -9,6 +9,12 @@ module.exports =
 
     # TAB SIZE
     self.tabSize atom.config.get('seti-ui.compactView')
+    # TITLE BAR
+    self.hideTitleBar atom.config.get('seti-ui.hideTitleBar')
+    # SHOW DOCUMENT TITLE
+    self.hideDocumentTitle atom.config.get('seti-ui.hideDocumentTitle')
+    # PROJECT TAB
+    self.hideProjectTab atom.config.get('seti-ui.hideProjectTab')
     # DISPLAY IGNORED FILES
     self.ignoredFiles atom.config.get('seti-ui.displayIgnored')
     # DISPLAY FILE ICONS
@@ -17,15 +23,8 @@ module.exports =
     self.hideTabs atom.config.get('seti-ui.hideTabs')
     # SET THEME
     self.setTheme atom.config.get('seti-ui.themeColor'), false, false
-
-    # FONT FAMILY
-    self.font atom.config.get('seti-ui.font'), false
-
     # ANIMATIONS
     self.animate atom.config.get('seti-ui.disableAnimations')
-
-    atom.config.onDidChange 'seti-ui.font', (value) ->
-      self.font atom.config.get('seti-ui.font'), true
 
     atom.config.onDidChange 'seti-ui.themeColor', (value) ->
       self.setTheme value.newValue, value.oldValue, true
@@ -38,16 +37,6 @@ module.exports =
     self.package.deactivate()
     setImmediate ->
       return self.package.activate()
-
-  # SET FONT FAMILY
-  font: (val, reload) ->
-    self = this
-    el = Dom.query('atom-workspace')
-
-    if val == 'Roboto'
-      el.classList.add 'seti-roboto'
-    else
-      el.classList.remove 'seti-roboto'
 
   # SET THEME COLOR
   setTheme: (theme, previous, reload) ->
@@ -99,6 +88,43 @@ module.exports =
       className: 'seti-compact'
       val: val
       cb: @tabSize
+
+  # HIDE TITLE BAR
+  hideTitleBar: (val) ->
+    Utility.applySetting
+      action: 'addWhenTrue'
+      config: 'seti-ui.hideTitleBar'
+      el: [
+        'atom-workspace'
+      ]
+      className: 'hide-title-bar'
+      val: val
+      cb: @hideTitleBar
+
+  # HIDE DOCUMENT TITLE
+  hideDocumentTitle: (val) ->
+    Utility.applySetting
+      action: 'addWhenTrue'
+      config: 'seti-ui.hideDocumentTitle'
+      el: [
+        'atom-workspace'
+      ]
+      className: 'hide-document-title'
+      val: val
+      cb: @hideDocumentTitle
+
+  # HIDE DOCUMENT TITLE
+  hideProjectTab: (val) ->
+    Utility.applySetting
+      action: 'addWhenTrue'
+      config: 'seti-ui.hideProjectTab'
+      el: [
+        'atom-workspace'
+      ]
+      className: 'hide-project-tab'
+      val: val
+      cb: @hideProjectTab
+
 
   # SET WHETHER WE SHOW TABS
   hideTabs: (val) ->

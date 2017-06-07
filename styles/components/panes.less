@@ -1,0 +1,132 @@
+atom-panel-container.modal {
+
+  atom-panel.modal {
+    background-color: rgba(0,0,0,0.8);
+    border: solid 1px rgba(0,0,0,0.5);
+    color: @white;
+    padding: 10px;
+
+    .tree-view-dialog {
+      label.icon-file-add {
+        font-size: 20px;
+        &:before {
+          display: none;
+        }
+      }
+    }
+
+    // COMMAND PALLETTE
+    .fuzzy-finder .list-group  {
+      .two-lines, .event, .grammar-selector, li {
+        padding: 5px 10px;
+      }
+    }
+
+    // MINI EDITOR
+    .input(@input-background-color, @input-text-color);
+
+    .atom-text-editor[mini] {
+      margin-bottom: 0;
+    }
+
+    .error-message {
+      padding: 10px;
+    }
+
+    .list-group {
+      margin: 0;
+      .two-lines, .event, .grammar-selector, li {
+        background: @grey-dark;
+        height: 45px;
+        margin-bottom: 1px;
+        padding: 10px;
+        color: @white;
+        letter-spacing: 0.06em;
+
+        .icon-book,
+        .icon-file-binary,
+        .icon-file-pdf,
+        .icon-file-text,
+        .icon-file-media {
+          &::before {
+            font-size: 22px;
+            height: 22px;
+            position: relative;
+            top: 7px;
+            width: 22px;
+          }
+        }
+
+        .character-match {
+          color: #fff;
+          font-weight: 500;
+          padding: 0px 1px;
+        }
+
+        .status {
+          &::before {
+            top: 6px;
+            left: 6px;
+          }
+          &-modified {
+            color: @warn;
+          }
+          &-added {
+            color: @good;
+          }
+        }
+
+        transition: background 0.25s;
+
+        &.selected {
+          background: @black;
+          color: @seti-primary;
+          &::before {
+            display: none;
+          }
+          .status {
+            &-modified, &-added {
+              color: @seti-primary;
+            }
+          }
+          .primary-line {
+            color: @seti-primary;
+            &.icon-book,
+            &.icon-file-binary,
+            &.icon-file-pdf,
+            &.icon-file-text,
+            &.icon-file-media {
+              &::before {
+                color: @seti-primary;
+              }
+            }
+          }
+          .secondary-line {
+            color: @seti-primary;
+          }
+        }
+
+        .status {
+          display: inline-block;
+          float: left;
+        }
+        .primary-line {
+          float: left;
+          display: inline-block;
+        }
+        .secondary-line {
+          display: inline-block;
+          float: right;
+          padding-top: 5px;
+          font-weight: 300;
+          color: @grey-light;
+        }
+        clear: both;
+      }
+    }
+
+    .select-list {
+      background-color: @black;
+    }
+  }
+}

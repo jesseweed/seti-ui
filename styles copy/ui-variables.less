@@ -1,0 +1,166 @@
+// - - - - - - - - - - - - - - - - - - - - - - - -
+// - - - - - - - - - - - - - - - - - - - - - - - -
+// - - - - - - - CUSTOM VARIABLES  - - - - - - - -
+// - - - - - - - - - - - - - - - - - - - - - - - -
+// - - - - - - - - - - - - - - - - - - - - - - - -
+
+@import "default-theme"; // SET DEFAULT THEME COLORS IN CASE USE HASN'T SET THEM.
+@import "user-theme"; // OVERRIDE DEFAULT COLORS WITH USER THEME
+
+// BASE COLORS
+@black: #0e1112;
+@black-dark: #090b0d;
+@white: #d4d7d6;
+@grey: #4d5a5e;
+@grey-dark: #1f2326;
+@grey-light: #6d8086;
+
+// THEME COLORS
+@blue: #519aba;
+@blue-highlight: #1d5b91;
+@blue-text: #ffffff;
+@blue-secondary: @purple;
+
+@green: #8dc149;
+@green-highlight: #436b24;
+@green-text: #ffffff;
+@blue-secondary: @purple;
+
+@orange: #e37933;
+@orange-highlight: #b55421;
+@orange-text: #ffffff;
+
+@pink: #f55385;
+@pink-highlight: #63213f;
+@pink-text: #ffffff;
+
+@purple: #a074c4;
+@purple-highlight: #4f397c;
+@purple-text: #ffffff;
+
+@red: #cc3e44;
+@red-highlight: #7c1c20;
+@red-text: #ffffff;
+
+@steel: #7494a3;
+@steel-highlight: #293c44;
+@steel-text: #ffffff;
+
+@yellow: #cbcb41;
+@yellow-highlight: #a2852f;
+@yellow-text: #13181b;
+
+// BASE COLORS
+@base-color: @seti-primary;
+@base-background-color: @black;
+@base-border-color: #060708;
+@app-background-color: @black;
+
+// SIDEBAR
+@tree-view-background-color: lighten(@black, 3%);
+@tree-view-border-color: @base-border-color;
+@tree-view-highlight: lighten(@black, 10%);
+@tree-view-header-color: #090b0d;
+@tree-view-header-text-color: @white;
+@tree-view-text-color: @white;
+
+// TAB
+@top-bar: 60px;
+@top-bar-small: 40px;
+@tab-bar-background-color: lighten(@black, 3%);
+@tab-bar-border-color: @base-border-color;
+@tab-background-color: @grey-dark;
+@tab-text-color: #d4d7d6;
+@tab-background-color-active: #111213;
+@tab-border-color: @base-border-color;
+@tab-height: @top-bar;
+
+// PANELS
+@panel-background-color: @tab-bar-background-color;
+
+@good: @green;
+@bad: @red;
+@warn: @yellow;
+@hidden: @grey-dark;
+@ignore: #41535b;
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - -
+// - - - - - - - - - - - - - - - - - - - - - - - -
+// - - - - - - - ATOM BASE VARIABLES - - - - - - -
+// - - - - - - - - - - - - - - - - - - - - - - - -
+// - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+// SITE COLORS
+@ui-site-color-1: @seti-primary;
+@ui-site-color-2: @green;
+@ui-site-color-3: @seti-primary-highlight;
+@ui-site-color-4: @yellow;
+@ui-site-color-5: @red;
+
+
+// Text colors
+@text-color: @white;
+@text-color-subtle: #aaaaaa;
+@text-color-highlight: @white;
+@text-color-selected: @seti-primary;
+@text-color-info: @seti-primary;
+@text-color-success: @good;
+@text-color-warning: @warn;
+@text-color-error: @bad;
+@text-color-ignored: @ignore;
+
+
+// BACKGROUND
+@background-color-highlight: @seti-primary;
+@background-color-selected: @seti-primary;
+@background-color-info: @seti-primary;
+@background-color-success: @green;
+@background-color-warning: @yellow;
+@background-color-error: @red;
+
+
+// COMPONENT COLORS
+@component-border-radius:0;
+@component-padding: 10px;
+@component-icon-padding: 5px;
+@component-icon-size: 16px;
+@component-line-height: 25px;
+
+// INPUT
+@input-background-color: @black-dark;
+@input-text-color: @white;
+@input-border-color: @base-border-color;
+
+// PANE
+@pane-item-background-color: @base-background-color;
+@pane-item-border-color: @base-border-color;
+
+// PANELS
+@tool-panel-background-color: @base-background-color;
+@tool-panel-border-color: @base-border-color;
+@inset-panel-background-color: @base-background-color;
+@inset-panel-border-color: @base-border-color;
+@panel-heading-background-color: @base-background-color;
+@panel-heading-border-color: fadein(@base-border-color, 10%);
+
+// OVERLAY
+@overlay-background-color: @base-background-color;
+@overlay-border-color: @base-border-color;
+
+// BUTTONS
+@button-background-color: @grey;
+@button-background-color-hover: @grey-dark;
+@button-background-color-selected: @seti-primary;
+@button-border-color: @base-border-color;
+
+
+// MISC
+@seti-font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+@font-size: 12px;
+@disclosure-arrow-size: 12px;
+
+// SCROLLBARS
+@scrollbar-background-color: rgba(42, 42, 42, 0.5);
+@scrollbar-color: rgba(92, 92, 92, 0.5);

@@ -61,93 +61,95 @@
 	@favicon: '\E025';
 	@folder: '\E026';
 	@font: '\E027';
-	@git_folder: '\E028';
-	@git_ignore: '\E029';
-	@github: '\E02A';
-	@go: '\E02B';
-	@go2: '\E02C';
-	@gradle: '\E02D';
-	@grails: '\E02E';
-	@grunt: '\E02F';
-	@gulp: '\E030';
-	@hacklang: '\E031';
-	@haml: '\E032';
-	@haskell: '\E033';
-	@heroku: '\E034';
-	@hex: '\E035';
-	@html: '\E036';
-	@html_erb: '\E037';
-	@ignored: '\E038';
-	@illustrator: '\E039';
-	@image: '\E03A';
-	@info: '\E03B';
-	@ionic: '\E03C';
-	@jade: '\E03D';
-	@java: '\E03E';
-	@javascript: '\E03F';
-	@jenkins: '\E040';
-	@js_erb: '\E041';
-	@json: '\E042';
-	@julia: '\E043';
-	@karma: '\E044';
-	@less: '\E045';
-	@license: '\E046';
-	@liquid: '\E047';
-	@livescript: '\E048';
-	@lua: '\E049';
-	@makefile: '\E04A';
-	@markdown: '\E04B';
-	@maven: '\E04C';
-	@mdo: '\E04D';
-	@mustache: '\E04E';
-	@new-file: '\E04F';
-	@npm: '\E050';
-	@npm_ignored: '\E051';
-	@nunjucks: '\E052';
-	@ocaml: '\E053';
-	@pdf: '\E054';
-	@perl: '\E055';
-	@photoshop: '\E056';
-	@php: '\E057';
-	@powershell: '\E058';
-	@project: '\E059';
-	@pug: '\E05A';
-	@puppet: '\E05B';
-	@python: '\E05C';
-	@rails: '\E05D';
-	@react: '\E05E';
-	@rollup: '\E05F';
-	@ruby: '\E060';
-	@rust: '\E061';
-	@salesforce: '\E062';
-	@sass: '\E063';
-	@sbt: '\E064';
-	@scala: '\E065';
-	@search: '\E066';
-	@settings: '\E067';
-	@shell: '\E068';
-	@slim: '\E069';
-	@smarty: '\E06A';
-	@spring: '\E06B';
-	@stylus: '\E06C';
-	@sublime: '\E06D';
-	@svg: '\E06E';
-	@swift: '\E06F';
-	@terraform: '\E070';
-	@tex: '\E071';
-	@time-cop: '\E072';
-	@todo: '\E073';
-	@twig: '\E074';
-	@typescript: '\E075';
-	@vala: '\E076';
-	@video: '\E077';
-	@vue: '\E078';
-	@windows: '\E079';
-	@word: '\E07A';
-	@xls: '\E07B';
-	@xml: '\E07C';
-	@yarn: '\E07D';
-	@yml: '\E07E';
+	@git: '\E028';
+	@git_folder: '\E029';
+	@git_ignore: '\E02A';
+	@github: '\E02B';
+	@go: '\E02C';
+	@go2: '\E02D';
+	@gradle: '\E02E';
+	@grails: '\E02F';
+	@grunt: '\E030';
+	@gulp: '\E031';
+	@hacklang: '\E032';
+	@haml: '\E033';
+	@haskell: '\E034';
+	@heroku: '\E035';
+	@hex: '\E036';
+	@html: '\E037';
+	@html_erb: '\E038';
+	@ignored: '\E039';
+	@illustrator: '\E03A';
+	@image: '\E03B';
+	@info: '\E03C';
+	@ionic: '\E03D';
+	@jade: '\E03E';
+	@java: '\E03F';
+	@javascript: '\E040';
+	@jenkins: '\E041';
+	@js_erb: '\E042';
+	@json: '\E043';
+	@julia: '\E044';
+	@karma: '\E045';
+	@less: '\E046';
+	@license: '\E047';
+	@liquid: '\E048';
+	@livescript: '\E049';
+	@lock: '\E04A';
+	@lua: '\E04B';
+	@makefile: '\E04C';
+	@markdown: '\E04D';
+	@maven: '\E04E';
+	@mdo: '\E04F';
+	@mustache: '\E050';
+	@new-file: '\E051';
+	@npm: '\E052';
+	@npm_ignored: '\E053';
+	@nunjucks: '\E054';
+	@ocaml: '\E055';
+	@pdf: '\E056';
+	@perl: '\E057';
+	@photoshop: '\E058';
+	@php: '\E059';
+	@powershell: '\E05A';
+	@project: '\E05B';
+	@pug: '\E05C';
+	@puppet: '\E05D';
+	@python: '\E05E';
+	@rails: '\E05F';
+	@react: '\E060';
+	@rollup: '\E061';
+	@ruby: '\E062';
+	@rust: '\E063';
+	@salesforce: '\E064';
+	@sass: '\E065';
+	@sbt: '\E066';
+	@scala: '\E067';
+	@search: '\E068';
+	@settings: '\E069';
+	@shell: '\E06A';
+	@slim: '\E06B';
+	@smarty: '\E06C';
+	@spring: '\E06D';
+	@stylus: '\E06E';
+	@sublime: '\E06F';
+	@svg: '\E070';
+	@swift: '\E071';
+	@terraform: '\E072';
+	@tex: '\E073';
+	@time-cop: '\E074';
+	@todo: '\E075';
+	@twig: '\E076';
+	@typescript: '\E077';
+	@vala: '\E078';
+	@video: '\E079';
+	@vue: '\E07A';
+	@windows: '\E07B';
+	@word: '\E07C';
+	@xls: '\E07D';
+	@xml: '\E07E';
+	@yarn: '\E07F';
+	@yml: '\E080';
 	
 	content: @@filename;
 }
@@ -279,6 +281,9 @@
 .icon-font {
 	.icon(font);
 }
+.icon-git {
+	.icon(git);
+}
 .icon-git_folder {
 	.icon(git_folder);
 }
@@ -377,6 +382,9 @@
 }
 .icon-livescript {
 	.icon(livescript);
+}
+.icon-lock {
+	.icon(lock);
 }
 .icon-lua {
 	.icon(lua);
@@ -540,4 +548,3 @@
 .icon-yml {
 	.icon(yml);
 }
-
