@@ -1,4 +1,33 @@
 # Changelog
+## 1.9.0
+- Better support for multiple project folders
+- Improve dock styling
+- Style tree-view toggle buttons
+- Fix broken search results #427
+- Fix undefined error in header.coffee #415 #424 #434
+- Update git files to use Git logo #341 #437
+- Map .toml files to config icon #429
+- Remove font option from settings
+- Default to blue theme
+- Fix button styles
+- Add new theme settings:
+  - Hide Title Bar
+  - Hide Document Title
+  - Hide Project
+- New Icons & Extensions
+  - .firebaserc
+  - .cert
+  - .jar
+  - .jinja/.jinja2
+  - .key
+  - .pxm
+  - .toml
+  - .travis.yml
+  - .zip
+  - firebase.json
+  - geckodriver
+  - jenkinsfile
+  - mime.types
 
 ## 1.8.0
 - Update Icons
@@ -21,7 +50,7 @@
   - ESLint
   - Salesforce
   - Sublime
-  - VueJS
+  - VueJS #316 #352
 
 ## 1.6.1
 - Add additional file icons:
