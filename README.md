@@ -19,6 +19,7 @@ If these are not the droids you're looking for, may I point you in the direction
 + [JetBrains](https://github.com/zchee/Seti_JetBrains)
 + [Sublime Text 3](https://packagecontrol.io/packages/Seti_UI)
 + [Vim](https://github.com/trusktr/seti.vim)
++ [Visual Studio Code](https://github.com/Microsoft/vscode/tree/master/extensions/theme-seti) - but, PRs are still submitted here
 
 -----
 
