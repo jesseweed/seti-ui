@@ -1,6 +1,6 @@
 atom-panel-container.left, atom-panel-container.right {
-  background: @tree-view-background-color;
   padding: 0;
+  background: @tree-view-header-color;
 
   // HIDE OPEN/CLOSE SELECTOR FOR PROJECT ROOT
   .directory.entry.list-nested-item.project-root.selected:before {
@@ -15,4 +15,8 @@ atom-panel-container.left, atom-panel-container.right {
    }
   }
 
+}
+
+.full-menu.list-tree {
+  background: @tree-view-header-color;
 }
