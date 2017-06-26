@@ -5,7 +5,13 @@ atom.packages.activatePackage('tree-view').then (tree) ->
   projectRoots = treeView.roots
 
   updateTreeViewHeaderPosition = ->
-    yScrollPosition = (treeView.scroller[0] ? treeView.scroller).scrollTop
+
+    if treeView.scroller
+      position = treeView.scroller[0] ? treeView.scroller
+    else
+      position = 0
+
+    yScrollPosition = (position).scrollTop
 
     for project in projectRoots
       projectHeaderHeight = project.header.offsetHeight
