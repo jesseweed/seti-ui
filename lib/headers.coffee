@@ -5,7 +5,10 @@ atom.packages.activatePackage('tree-view').then (tree) ->
   projectRoots = treeView.roots
 
   updateTreeViewHeaderPosition = ->
-    yScrollPosition = (treeView.scroller[0] ? treeView.scroller).scrollTop
+    # Sometimes scroller ends up being undefined???
+    # https://github.com/jesseweed/seti-ui/issues/424
+    scroller = treeView.scroller?[0] ? treeView.scroller
+    yScrollPosition = scroller?.scrollTop || 0
 
     for project in projectRoots
       projectHeaderHeight = project.header.offsetHeight
