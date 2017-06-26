@@ -67,14 +67,14 @@
       "order": 8,
       "description": "Enable this if you want to hide the main window title",
       "type": "boolean",
-      "default": true
+      "default": false
     },
     "hideTitleBar": {
       "title": "Hide Title Bar",
       "order": 9,
       "description": "Enable this if you want to completely hide the main window title bar",
       "type": "boolean",
-      "default": true
+      "default": false
     },
     "hideProjectTab": {
       "title": "Hide Project Tab",
