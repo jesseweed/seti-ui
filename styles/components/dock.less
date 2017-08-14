@@ -23,12 +23,26 @@ atom-workspace.hide-title-bar {
 }
 
 atom-workspace.hide-project-tab {
+
   // SINGLE TAB
   .tab {
     &[data-type="TreeView"] {
       display: none;
     }
   }
+
+  &:not(.seti-compact) {
+    .tool-panel.tree-view {
+      top: -1 * @top-bar;
+    }
+  }
+  
+  &.seti-compact {
+    .tool-panel.tree-view {
+      top: -1 * @top-bar-small;
+    }
+  }
+
 }
 
 // COMPACT
