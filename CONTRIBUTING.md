@@ -1,5 +1,5 @@
 # Contributing
-Anyone is welcome to contribute to the development of this theme. If can be a lot of work to keep up on, and I'll take help wherever i can get it :)
+Anyone is welcome to contribute to the development of this theme. It can be a lot of work to keep up on, and I'll take help wherever i can get it :)
 
 ## Getting The Code
 
