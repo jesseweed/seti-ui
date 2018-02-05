@@ -12,7 +12,6 @@
 - Fix font family variable
 - Typo fix
 
-# Changelog
 ## 1.9.0
 - Better support for multiple project folders
 - Improve dock styling
