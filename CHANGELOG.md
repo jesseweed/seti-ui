@@ -1,5 +1,5 @@
 # Changelog
-## 1.9.1
+## 1.10.0
 - New Icons & Extensions:
   - Ethererum/Solidity
   - Packaged Web App (Widget)
