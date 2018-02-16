@@ -1,0 +1,34 @@
+.platformio-ide-terminal.terminal-view {
+  .input-block {
+    padding-top: 0;
+    padding-right: 0;
+    padding-left: 0;
+
+    .btn-toolbar {
+      margin-left: 0;
+      padding: 0;
+    }
+
+    .btn-group {
+      margin: 0;
+    }
+
+    .btn {
+      width: 45px;
+      height: 35px;
+      padding: 0;
+      background-color: @tab-background-color-active;
+    }
+
+    .btn::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    .btn.icon-screen-full::before {
+      top: 15px;
+    }
+  }
+}
