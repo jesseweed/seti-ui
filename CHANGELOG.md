@@ -1,4 +1,23 @@
 # Changelog
+
+## 1.11.0
+- Fix Windows icon padding #467
+- Added styling for platformio-ide-terminal
+- Catch more webpack filenames
+- New Icons:
+  - WebAssembly
+  - Argdown
+  - Kotlin
+- New Mappings
+  - CHANGES.md
+  - CONTRIBUTING.md
+  - swagger.(json/yml/yaml)
+  - .flac
+  - .3ds
+  - .3dm
+  - .stl
+  - .keep
+
 ## 1.10.0
 - New Icons & Extensions:
   - Ethererum/Solidity
