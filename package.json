@@ -82,6 +82,15 @@
       "description": "Enable this if you want to remove the 'project' tab from the sidebar",
       "type": "boolean",
       "default": false
+    },
+    "changeThemeFontSize": {
+      "title": "Change Theme Font Size",
+      "order": 11,
+      "description": "need to restart atom to see changes",
+      "type": "integer",
+      "default": 11,
+      "minimum":10,
+      "maximum":40
     }
   },
   "devDependencies": {

@@ -25,6 +25,8 @@ module.exports =
     self.setTheme atom.config.get('seti-ui.themeColor'), false, false
     # ANIMATIONS
     self.animate atom.config.get('seti-ui.disableAnimations')
+    # Theme Font Size
+    self.setFontSize atom.config.get('seti-ui.changeThemeFontSize')
 
     atom.config.onDidChange 'seti-ui.themeColor', (value) ->
       self.setTheme value.newValue, value.oldValue, true
@@ -64,6 +66,21 @@ module.exports =
           el.classList.add 'seti-theme-' + theme.toLowerCase()
         if reload
           self.refresh()
+
+  # SAVE Font Size to ui_variables file
+  setFontSize: (value) ->
+    pkg = atom.packages.getLoadedPackage('seti-ui')
+    fs = require('fs')
+    path = require('path')
+
+    fs.readFile pkg.path + '/styles/ui-variables.less', 'utf8', (err, data) ->
+      data = data.toString()
+      value = value.toString()
+      newFont = '@font-size: ' + value + 'px;'
+      newData = data.replace(/@font\-size: \d*px;/,newFont)
+
+      fs.writeFile pkg.path + '/styles/ui-variables.less', newData,'utf8'
+
 
   # SET TAB SIZE
   animate: (val) ->
