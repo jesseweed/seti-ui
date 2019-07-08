@@ -126,23 +126,21 @@ Once everything is setup, follow these steps any time you want to add a new icon
 
   1. Create an SVG icon with the name of the language, and save it to the `icons` folder _(do not use any spaces or special characters)_
 
-  2. Navigate to the _seti-ui_ folder in your terminal and run `gulp font` (this will add the new svg file to our icon font, update our file as well as the less file with the mixins we'll need to link to the icon later.)
-
-  3. Lastly, open [styles/components/icons/mapping.less](styles/components/icons/mapping.less) and create a link for the icon you just added with the `.icon-set` mixin. Assuming you were adding an icon for Sass it might look something like this: ```.icon-set('.scss', 'sass', @pink)```
+  2. Open [styles/components/icons/mapping.less](styles/components/icons/mapping.less) and create a link for the icon you just added with the `.icon-set` mixin. Assuming you were adding an icon for Sass it might look something like this: ```.icon-set('.scss', 'sass', @pink)```
 
   The first parameter `'.scss'` is the file extension you want to target, the second parameter `'sass'` is the name of the icon you just created, without the extension (sass.svg), and the last parameter `@pink` indicated what color the icon should be.
 
   There are currently 9 supported icon colors:
-    - @blue
-    - @grey
-    - @green
-    - @orange
-    - @pink
-    - @purple
-    - @red
-    - @white
-    - @yellow
-
+  
+    - `@blue`
+    - `@grey`
+    - `@green`
+    - `@orange`
+    - `@pink`
+    - `@purple`
+    - `@red`
+    - `@white`
+    - `@yellow`
 
   While, you _can_ add additional colors to [styles/ui-variables.less](styles/ui-variables.less), but please do not do this unless you find it _absolutely_ necessary. If you do add another color, please make sure that matches the general feel of the other colors. If you add something really bright or really pale, your pull request will likely be declined.
 
@@ -152,6 +150,10 @@ Once everything is setup, follow these steps any time you want to add a new icon
 .icon-set('.sass', 'sass', @pink);
 .icon-set('.scss', 'sass', @pink);
 ```
+
+## Deploying
+
+Run `npm publish`
 
 -----
 

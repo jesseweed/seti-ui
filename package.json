@@ -9,6 +9,9 @@
     "atom": ">1.13.0"
   },
   "main": "lib/main",
+  "scripts": {
+    "prepublishOnly": "gulp icons"
+  },
   "configSchema": {
     "themeColor": {
       "title": "Theme Color",
