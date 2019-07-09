@@ -122,6 +122,11 @@ The process of adding file icons is still a bit complex, but it _has_ been great
 
 Once you have these, you will need to open a terminal window, navigate to the _seti-ui_ folder and run `npm install` (note you only need to do this once).
 
+Icon Style:
+
+ - Use a single color, it will be overwritten when shipped
+ - Aim for an 18 x 18 bounding box
+
 Once everything is setup, follow these steps any time you want to add a new icon:
 
   1. Create an SVG icon with the name of the language, and save it to the `icons` folder _(do not use any spaces or special characters)_
