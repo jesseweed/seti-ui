@@ -118,14 +118,15 @@ Once you're done working locally and ready to install the production version aga
 -----
 
 ## Adding File Icons
+
 The process of adding file icons is still a bit complex, but it _has_ been greatly simplified in 1.0. It does however require that you have [node](https://nodejs.org/en/) and [gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md) installed.
 
 Once you have these, you will need to open a terminal window, navigate to the _seti-ui_ folder and run `npm install` (note you only need to do this once).
 
 Icon Style:
 
- - Use a single color, it will be overwritten when shipped
- - Aim for an 18 x 18 bounding box
+ - Use a single color, the colors will be overwritten to one of the 9 below when shipped
+ - You want to aim for a frame of 32x32 with the icon centered at and being about 18 x 18 big. There's a sketch file with examples in [this repo](./svgs.sketch).
 
 Once everything is setup, follow these steps any time you want to add a new icon:
 
@@ -151,10 +152,24 @@ Once everything is setup, follow these steps any time you want to add a new icon
 
   You will need to do this once for every extension, you want to target. For example, if you want to target both **.sass** and **.scss** extensions, you would add the following:
 
-```
-.icon-set('.sass', 'sass', @pink);
-.icon-set('.scss', 'sass', @pink);
-```
+  ```
+  .icon-set('.sass', 'sass', @pink);
+  .icon-set('.scss', 'sass', @pink);
+  ```
+
+  3. Run `gulp svg` to minimize the svg files.
+
+## Previewing in VS Code
+
+This is a bit of work, but the steps:
+
+1. Make your changes, and run `gulp icon`
+1. Clone VS Code, and make sure that it has the same parent as seti-ui
+1. Follow the [VS Code instructions](https://github.com/Microsoft/vscode/wiki/How-to-Contribute#build-and-run) to set up a local dev copy
+1. Once you've confirmed that, you need to update the icons. cd to `extensions/theme-seti` and run `node build/update-icon-theme.js`
+1. Make sure that inside `extensions/theme-seti/build/update-icon-theme.js` - `let FROM_DISK` is set to true
+
+Then, you can make you SVG changes, re-run `gulp icon`, `node build/update-icon-theme.js` and re-launch your dev copy of VS Code.
 
 ## Deploying
 
