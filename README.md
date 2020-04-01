@@ -3,10 +3,11 @@
 [![Gitter](https://img.shields.io/gitter/room/jesseweed/seti-ui.svg?style=flat-square)](https://gitter.im/jesseweed/seti-ui) [![apm](https://img.shields.io/apm/dm/seti-ui.svg?style=flat-square)](https://atom.io/themes/seti-ui) [![apm](https://img.shields.io/apm/v/seti-ui.svg?style=flat-square)](https://atom.io/themes/seti-ui) [![apm](https://img.shields.io/apm/l/seti-ui.svg?style=flat-square)](https://atom.io/themes/seti-ui)
 [![Gratipay Team](https://img.shields.io/gratipay/team/atom-seti-ui.svg?style=flat-square)](https://gratipay.com/Atom-Seti-UI/)
 
+### Seti-UI Theme, and VS Code icon pack
+ 
+This repo contains the latest version of the Seti UI theme. It's a dark interface theme crafted especially for [Atom](http://atom.io), with subtle colors that are meant to be easy on the eyes. It includes custom file icons, and new user configurable settings. [Seti Syntax](https://atom.io/themes/seti-syntax) is also available for all your codez.
 
-This is the latest version of the Seti UI theme. It's a dark interface theme crafted especially for [Atom](http://atom.io), with subtle colors that are meant to be easy on the eyes. It includes custom file icons, and new user configurable settings. [Seti Syntax](https://atom.io/themes/seti-syntax) is also available for all your codez.
-
------
+The icons in this repo are used as the defaults in the file explorer in VS Code also.
 
 ##### **Please Note:** This is the Seti interface theme for [Atom](http://atom.io) only
 
@@ -119,7 +120,9 @@ Once you're done working locally and ready to install the production version aga
 
 ## Adding File Icons
 
-The process of adding file icons is still a bit complex, but it _has_ been greatly simplified in 1.0. It does however require that you have [node](https://nodejs.org/en/) and [gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md) installed.
+Given that changes to this repo are included in VS Code, we are somewhat conservative with adding new file icons because it can affect the performence for everyone. This means we only accept PRs for file icons for popular languages or toolsets. For example does your langauge/tool have package downloads or vscode extensions with thousands of users? If no, then there's a possibility we will deny your pull request.
+
+Adding an icon requires you have [node](https://nodejs.org/en/) and [gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md) installed.
 
 Once you have these, you will need to open a terminal window, navigate to the _seti-ui_ folder and run `npm install` (note you only need to do this once).
 
@@ -170,6 +173,8 @@ This is a bit of work, but the steps:
 1. Make sure that inside `extensions/theme-seti/build/update-icon-theme.js` - `let FROM_DISK` is set to true
 
 Then, you can make you SVG changes, re-run `gulp icon`, `node build/update-icon-theme.js` and re-launch your dev copy of VS Code.
+
+Please don't include the built files in your Pull Requests, because it can cause conflicts between PRs and we only need to do this during deploys otherwise.
 
 ## Deploying
 
