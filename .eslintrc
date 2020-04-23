@@ -1,0 +1,17 @@
+{
+  "ignorePatterns": ["file-types/", "node_modules/"],
+  "plugins": ["@typescript-eslint", "prettier"],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint"
+  ],
+  "rules": {
+    "no-console": ["warn"],
+    "prettier/prettier": ["error"],
+    "object-shorthand": ["error", "always"],
+    "eol-last": ["error", "always"],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-non-null-assertion": "off"
+  }
+}

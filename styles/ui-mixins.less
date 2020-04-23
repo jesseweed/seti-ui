@@ -9,28 +9,45 @@
     }
 }
 
-// SET ICON FILE BASED ON DATA NAME
-.icon-set( @extension, @file, @color) {
+.svg-icon(@filename, @attr: ~'', @insert: before) {
+	@pseudo-selector: ~'::@{insert}';
 
-  .icon:not(.icon-file-directory),
-  .title {
-    &[data-name$="@{extension}"] {
-      .icon(@file, @color)
+  .icon-file-text, .icon-file-zip, .icon-file-media, .icon-book, .icon-file-pdf {
+    &@{attr}@{pseudo-selector} {
+      content: ' ';
+      background-image: url("http://localhost:5000/icons/@{filename}.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      height: 16px;
+      width: 16px;
     }
   }
-
 }
 
 // SET ICON FILE BASED ON DATA NAME
-.icon-partial( @extension, @file, @color) {
+.icon-default(@file) {
+  .svg-icon(@file);
+}
 
-  .icon:not(.icon-file-directory),
-  .title {
-    &[data-name*="@{extension}"] {
-      .icon(@file, @color)
-    }
-  }
+.icon-default(@file, @color) {
+  .svg-icon("@{file}_@{color}");
+}
 
+.icon-ext(@extension, @file) {
+  .svg-icon(@file, ~'[data-name$="@{extension}"]');
+}
+
+.icon-ext(@extension, @file, @color) {
+  .svg-icon("@{file}_@{color}", ~'[data-name$="@{extension}"]');
+}
+
+.icon-name(@name, @file) {
+  .svg-icon(@file, ~'[data-name*="@{name}"]');
+}
+
+.icon-name(@name, @file, @color) {
+  .svg-icon("@{file}_@{color}", ~'[data-name*="@{name}"]');
 }
 
 // SET ICON FOR TAB BASED ON DATA TYPE

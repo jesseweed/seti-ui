@@ -1,0 +1,37 @@
+---
+env:
+  browser: true
+  node: true
+  jquery: true
+globals:
+  ENV: true
+extends: standard
+plugins:
+- standard
+rules:
+  indent:
+  - error
+  - 2
+  - SwitchCase: 1
+    VariableDeclarator:
+      var: 2
+      let: 2
+      const: 3
+  key-spacing: 'off'
+  eol-last: 'off'
+  prefer-template: 'warn'
+  no-multi-spaces: 'off'
+  no-multiple-empty-lines: 'off'
+  no-path-concat: 'off'
+  no-unused-vars: error
+  one-var:
+  - warn
+  - always
+  padded-blocks: 'off'
+  quotes:
+  - error
+  - single
+  semi:
+  - 2
+  - always
+  space-before-function-paren: 'off'

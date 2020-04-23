@@ -1,11 +1,17 @@
 .tab-bar .tab {
-
   // SET ICON SIZE
-  .title::before {
-    float: left;
-    font-size: 22px;
-    margin-right: 1px;
-    line-height: @tab-height;
+  .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &::before {
+      float: left;
+      font-size: 22px;
+      margin-right: 1px;
+      height: 16px;
+      width: 16px;
+    }
   }
 
   // IGNORED FILES
@@ -30,6 +36,4 @@
   &[data-type='TextEditor'] .title:not([data-name]) {
     .icon('new-file', @green);
   }
-
-
 }

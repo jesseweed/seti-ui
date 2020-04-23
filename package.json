@@ -8,9 +8,22 @@
   "engines": {
     "atom": ">1.13.0"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint --fix"
+    }
+  },
   "main": "lib/main",
   "scripts": {
-    "prepublishOnly": "gulp icons"
+    "build:ts": "rm -rf lib && tsc --project tsconfig.project.json --rootDir src --outDir lib",
+    "build:svg": "ts-node --files ./scripts/transform.ts",
+    "build": "run-p build:ts build:svg",
+    "lint": "eslint . --ext .ts",
+    "prepublishOnly": "npm run build",
+    "vs-theme": "ts-node --files ./scripts/vs-theme.ts",
+    "watch:ts": "npm run build:ts -w",
+    "watch:svg": "ICONS_WATCH=true ts-node --files ./scripts/transform.ts",
+    "watch": "run-p watch:ts watch:svg"
   },
   "configSchema": {
     "themeColor": {
@@ -88,9 +101,33 @@
     }
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-iconfont": "8.0.1",
-    "gulp-iconfont-css": "^2.1.0",
-    "gulp-svgmin": "^1.2.3"
+    "@types/atom": "^1.40.2",
+    "@types/color": "^3.0.1",
+    "@types/jsdom": "^16.2.1",
+    "@types/node": "^13.13.2",
+    "@types/node-fetch": "^2.5.6",
+    "@types/svgo": "^1.3.2",
+    "@typescript-eslint/eslint-plugin": "^2.29.0",
+    "@typescript-eslint/parser": "^2.29.0",
+    "chalk": "^4.0.0",
+    "color": "^3.1.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "husky": "^4.2.5",
+    "jsdom": "^16.2.2",
+    "moment": "^2.24.0",
+    "node-fetch": "^2.6.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.5",
+    "rxjs": "^6.5.5",
+    "svg-autocrop": "github:mzdunek93/svg-autocrop#mzdunek-svg-autocrop-v1.0.0-gitpkg",
+    "svgo": "^1.3.2",
+    "ts-node": "^8.9.0",
+    "tslib": "^1.11.1",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "node-html-parser": "^1.2.16"
   }
 }
