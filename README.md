@@ -120,7 +120,7 @@ Once you're done working locally and ready to install the production version aga
 
 ## Adding File Icons
 
-Given that changes to this repo are included in VS Code, we are somewhat conservative with adding new file icons because it can affect the performence for everyone. This means we only accept PRs for file icons for popular languages or toolsets. For example does your langauge/tool have package downloads or vscode extensions with thousands of users? If no, then there's a possibility we will deny your pull request.
+Given that changes to this repo are included in VS Code, we are somewhat conservative with adding new file icons because it can affect the performence for everyone. This means we only accept PRs for file icons for popular languages or toolsets. For example does your langauge/tool have package downloads or vscode extensions with tens of thousands of users? If no, then there's a possibility we will deny your pull request.
 
 Adding an icon requires you have [node](https://nodejs.org/en/) and [gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md) installed.
 
