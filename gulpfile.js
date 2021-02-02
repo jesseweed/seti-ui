@@ -1,11 +1,11 @@
-var fontName    = 'seti',
-    gulp        = require('gulp'),
-    iconfont    = require('gulp-iconfont'),
-    iconfontCss = require('gulp-iconfont-css'),
-    svgmin      = require('gulp-svgmin');
+var fontName = 'seti',
+  gulp = require('gulp'),
+  iconfont = require('gulp-iconfont'),
+  iconfontCss = require('gulp-iconfont-css'),
+  svgmin = require('gulp-svgmin');
 
-gulp.task('font', function(){
-  gulp.src(['./icons/*.svg'])
+exports.font = function font () {
+  return gulp.src(['./icons/*.svg'])
     .pipe(iconfontCss({
       fontName: fontName,
       path: './styles/_fonts/_template.less',
@@ -17,15 +17,14 @@ gulp.task('font', function(){
       fontHeight: 1000,
       fontName: fontName,
       formats: ['ttf', 'eot', 'woff', 'woff2', 'svg']
-     }))
+    }))
     .pipe(gulp.dest('./styles/_fonts/seti/'));
-});
+};
 
-gulp.task('icon', ['svg', 'font']);
-gulp.task('icons', ['svg', 'font']);
+exports.svg = function svg () {
+  return gulp.src('./icons/*.svg')
+    .pipe(svgmin())
+    .pipe(gulp.dest('./icons'));
+};
 
-gulp.task('svg', function() {
-  gulp.src('./icons/*.svg')
-      .pipe(svgmin())
-      .pipe(gulp.dest('./icons'));
-});
+exports.default = exports.icon = exports.icons = gulp.series([exports.svg, exports.font]);
