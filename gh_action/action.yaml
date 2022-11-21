@@ -134,7 +134,7 @@ runs:
         INPUT_UPLOAD_SERIES: ${{ inputs.upload-series }}
 
     - name: Upload annotations as artifact
-      if: inputs.save-annotations == 'true'
+      if: always() && inputs.save-annotations == 'true'
       uses: actions/upload-artifact@v3
       with:
         name: trunk-annotations
