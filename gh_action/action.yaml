@@ -161,12 +161,35 @@ runs:
     #     path: /tmp/annotations.bin
 
     - name: Download artifact
-      id: download-artifact
-      uses: dawidd6/action-download-artifact@v2
+      uses: actions/github-script@v3.1.0
       with:
-        run-id: ${{ github.event.workflow_run.id }}
-        name: trunk-annotations
-        path: /tmp/annotations.bin
+        script: |
+          var artifacts = await github.actions.listWorkflowRunArtifacts({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              run_id: ${{github.event.workflow_run.id }},
+          });
+          var matchArtifact = artifacts.data.artifacts.filter((artifact) => {
+            return artifact.name == "trunk-annotations"
+          })[0];
+          var download = await github.actions.downloadArtifact({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              artifact_id: matchArtifact.id,
+              archive_format: 'zip',
+          });
+          var fs = require('fs');
+          fs.writeFileSync('${{github.workspace}}/trunk-annotations.zip', Buffer.from(download.data));
+
+    - run: unzip trunk-annotations.zip && mv annotations.bin /tmp && rm trunk-annotations.zip
+
+    # - name: Download artifact
+    #   id: download-artifact
+    #   uses: dawidd6/action-download-artifact@v2
+    #   with:
+    #     run-id: ${{ github.event.workflow_run.id }}
+    #     name: trunk-annotations
+    #     path: /tmp/annotations.bin
 
     - name: Upload annotations
       if: inputs.upload-annotations == 'true'
