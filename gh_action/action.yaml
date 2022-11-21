@@ -153,10 +153,18 @@ runs:
         INPUT_ARGUMENTS: ${{ inputs.arguments }}
         INPUT_LABEL: ${{ inputs.label }}
 
-    - name: Download annotations as artifact
-      if: inputs.upload-annotations == 'true'
-      uses: actions/download-artifact@v3
+    # - name: Download annotations as artifact
+    #   if: inputs.upload-annotations == 'true'
+    #   uses: actions/download-artifact@v3
+    #   with:
+    #     name: trunk-annotations
+    #     path: /tmp/annotations.bin
+
+    - name: Download artifact
+      id: download-artifact
+      uses: dawidd6/action-download-artifact@v2
       with:
+        run-id: ${{ github.event.workflow_run.id }}
         name: trunk-annotations
         path: /tmp/annotations.bin
 
