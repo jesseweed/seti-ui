@@ -4,18 +4,16 @@ options:
 
 # File Options
 files:
-  include: 'public/css/**/*.s+(a|c)ss'
-  ignore: 'public/css/vendor/**'
+  include: "public/css/**/*.s+(a|c)ss"
+  ignore: "public/css/vendor/**"
 
 # Rule Configuration
 rules:
   brace-style:
-    -
-        allow-single-line: false
+    - allow-single-line: false
   class-name-format:
     - 2
-    -
-      convention: hyphenatedlowercase
+    - convention: hyphenatedlowercase
       allow-leading-underscore: false
   empty-line-between-blocks:
     - 2
@@ -25,22 +23,18 @@ rules:
   extends-before-declarations: 2
   indentation:
     - 2
-    -
-      size: 2
+    - size: 2
   leading-zero:
     - 2
-    -
-      include: true
+    - include: true
   mixins-before-declarations:
     - 2
-    -
-      exclude:
+    - exclude:
         - breakpoint
         - mq
   no-mergeable-selectors:
     - 1
-    -
-      exclude: []
+    - exclude: []
   no-color-keywords: 0
   no-invalid-hex: 1
   no-trailing-zero: 2
@@ -51,8 +45,7 @@ rules:
   placeholder-in-extend: true
   quotes:
     - 1
-    -
-      style: single
+    - style: single
   shorthand-values:
     - 1
     - allowed-shortcuts: [1, 2, 3]
@@ -71,8 +64,7 @@ rules:
     - include: true
   variable-for-property:
     - 0
-    -
-      properties:
+    - properties:
         - color
         - background-color
         - border-color
