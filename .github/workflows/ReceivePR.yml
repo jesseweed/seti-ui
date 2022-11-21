@@ -1,27 +1,19 @@
-name: Receive PR
-
-# read-only repo token
-# no access to secrets
-on:
-  pull_request:
+name: Pull Request
+on: [pull_request, workflow_dispatch]
+concurrency:
+  group: ${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
 
 jobs:
-  build:
+  trunk_check:
+    name: Trunk Check Runner
     runs-on: ubuntu-latest
 
-    steps:        
-      - uses: actions/checkout@v2
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      # imitation of a build process
-      # - name: Build
-      #   run: /bin/bash ./build.sh
-
-      - name: Save PR number
-        run: |
-          mkdir -p ./pr
-          echo ${{ github.event.number }} > ./pr/NR
-      - uses: actions/upload-artifact@v2
+      - name: Trunk Check
+        uses: ./gh_action
         with:
-          name: pr
-          path: pr/
-
+          save-annotations: true
