@@ -182,6 +182,7 @@ runs:
           fs.writeFileSync('${{github.workspace}}/trunk-annotations.zip', Buffer.from(download.data));
 
     - run: unzip trunk-annotations.zip && mv annotations.bin /tmp && rm trunk-annotations.zip
+      shell: bash
 
     # - name: Download artifact
     #   id: download-artifact
