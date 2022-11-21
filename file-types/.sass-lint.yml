@@ -11,7 +11,7 @@ files:
 rules:
   brace-style:
     -
-      allow-single-line: false
+        allow-single-line: false
   class-name-format:
     - 2
     -
