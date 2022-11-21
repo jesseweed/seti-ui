@@ -15,8 +15,7 @@ inputs:
     required: false
 
   label:
-    description:
-      Label to append to the check run name (useful if running Trunk Check on multiple platforms)
+    description: Label to append to the check run name (useful if running Trunk Check on multiple platforms)
     deprecationMessage: "Use `arguments: --github-label=value` instead."
     required: false
 
@@ -172,7 +171,7 @@ runs:
         GITHUB_SHA: ${{ github.sha }}
         GITHUB_TOKEN: ${{ github.token }}
         INPUT_ARGUMENTS: ${{ inputs.arguments }}
-        INPUT_LABEL: ${{ inputs.label }}mv 
+        INPUT_LABEL: ${{ inputs.label }}mv
 
     - name: Cleanup temporary files
       if: always()

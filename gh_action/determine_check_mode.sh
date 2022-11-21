@@ -18,4 +18,3 @@ if [[ -z ${check_mode} ]]; then
 fi
 
 echo "TRUNK_CHECK_MODE=${check_mode}" >>"${GITHUB_ENV}"
-
