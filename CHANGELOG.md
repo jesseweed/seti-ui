@@ -1,5 +1,7 @@
 # Changelog
 
+
+
 ## 1.11.0
 - Fix Windows icon padding #467
 - Added styling for platformio-ide-terminal
