@@ -1,14 +1,14 @@
 # Seti UI
 
-[![Gitter](https://img.shields.io/gitter/room/jesseweed/seti-ui.svg?style=flat-square)](https://gitter.im/jesseweed/seti-ui) [![apm](https://img.shields.io/apm/dm/seti-ui.svg?style=flat-square)](https://atom.io/themes/seti-ui) [![apm](https://img.shields.io/apm/v/seti-ui.svg?style=flat-square)](https://atom.io/themes/seti-ui) [![apm](https://img.shields.io/apm/l/seti-ui.svg?style=flat-square)](https://atom.io/themes/seti-ui)
-[![Gratipay Team](https://img.shields.io/gratipay/team/atom-seti-ui.svg?style=flat-square)](https://gratipay.com/Atom-Seti-UI/)
+[![Gitter](https://img.shields.io/gitter/room/jesseweed/seti-ui.svg?style=flat-square)](https://gitter.im/jesseweed/seti-ui)
+[![GitHub](https://img.shields.io/github/license/jesseweed/seti-ui?style=flat-square)](https://github.com/jesseweed/seti-ui/blob/master/LICENSE.md)
 
 
 ### Seti-UI Theme, and VS Code icon pack
  
-This repo contains the latest version of the Seti UI theme. It contains the default icons used in VS Code and the seti-ui theme for Atom.
+This repo contains the latest version of the Seti UI theme. It contains the default icons used in [VS Code](https://code.visualstudio.com/).
 
-The theme is a dark interface theme crafted especially for [Atom](http://atom.io), with subtle colors that are meant to be easy on the eyes. It includes custom file icons, and new user configurable settings. [Seti Syntax](https://atom.io/themes/seti-syntax) is also available for all your code.
+The theme is a dark interface theme crafted originally for [Atom](http://atom.io), with subtle colors that are meant to be easy on the eyes. It includes custom file icons, and new user configurable settings.
 
 ## Adding File Icons
 
@@ -70,12 +70,10 @@ Please don't include the built files in your Pull Requests, because it can cause
 
 
 
-##### **Please Note:** This is the Seti interface theme for [Atom](http://atom.io) only
-
-This is for the _interface_ of the Atom editor. I also have [Seti Syntax](https://atom.io/themes/seti-syntax) for theming the _code view_ in Atom. In addition, there is a new [Seti theme](https://www.npmjs.com/package/seti-hyper) for [Hyper](https://hyper.is/).
+##### **Please Note:** This is the Seti interface theme for [VS Code](https://code.visualstudio.com/) only
 
 If these are not the droids you're looking for, may I point you in the direction of these great ports:
-
++ [Hyper](https://hyper.is/)
 + [Emacs](https://github.com/caisah/seti-theme)
 + [iTerm](https://github.com/willmanduffy/seti-iterm)
 + [JetBrains](https://github.com/zchee/Seti_JetBrains)
@@ -85,66 +83,14 @@ If these are not the droids you're looking for, may I point you in the direction
 
 -----
 
-## What's New? 1.0 Update
-Seti UI has been updated with a cleaner, more streamlined interface, a slightly tweaked color scheme, additional icons and new user settings, as well as a handful of other small ui improvements and a refactored code base.
-
-![Screenshot](https://github.com/jesseweed/seti-ui/raw/master/screenshot.png)
-
------
-
-### More colors
-Seti now has 8 theme colors to choose from:
-![Screenshot](https://github.com/jesseweed/seti-ui/raw/master/screenshot-colors.png)
-
------
-
-### More icons
-File icons will now show up in the file search (`cmd+ p`) dialog in addition to the side bar and tabs. This should make for easier grokking when you're searching for a file.
-
-![Screenshot](https://github.com/jesseweed/seti-ui/raw/master/screenshot-search.png)
-
------
-
-### Settings
-_To get here, Go to "Atom > Preferences" Select "Themes" and click the settings icon next to "Seti" under UI Theme dropdown_
-
-With 1.0 you can now adjust some of the more commonly requested features directly in Atom's settings view (Settings > Themes > Click the gear icon next to Seti).
-
-+ **File Icons:** Probably the most frequent request has been a simpler way to disable the file icons for those of you using other file icon packages. Now you can :)
-+ **Compact Mode :** Seti 1.0's face-lift brings a cleaner, less cramped interface, which also happens to take up a bit more space. If you prefer the old more compact version, you can revert it here.
-+ **Ignored Files:** By default, ignored files are shown as a muted grey. However, if you'd like to hide them altogether you can use this.
-+ **Hide Tabs:** Lastly (for now), there have been a few requests to be able to hide tabs altogether. This is of course disabled by default, but if you're the anti-tab type, you can hide them here.
-
-![Screenshot](https://github.com/jesseweed/seti-ui/raw/master/screenshot-settings.png)
-
-Setting are brand new, and still have a few kinks to be worked out. If you run into any problems with them, or would like to request an additional setting, please file an issue!
-
-
------
 
 ## Bugs
-If you find a bug, please do [add a bug report](https://github.com/jesseweed/seti-ui/issues). However, first make sure it is for Seti UI in Atom. I only support the Atom versions, please check the links above to report a bug on another platform.
-
-##### Seti 1.0 has been optimized to work with Atom 1.6 and above:
-###### Including the 1.7 beta
-Most if not everything should work on older versions as well, but if you see something that doesn't look quite right, make sure you have the latest version of Atom installed before filling a bug.
+If you find a bug, please do [add a bug report](https://github.com/jesseweed/seti-ui/issues). However, first make sure it is for Seti UI in VS Code. I only support the VS Code versions, please check the links above to report a bug on another platform.
 
 -----
 
 ## Installation
-The easiest way to install Seti is to do as follows:
-
-+ Go to Atom > Settings
-+ Click "+ Install"
-+ Search for `seti ui` and click `themes` button to search.
-+ Browse for `Seti UI` and click `install`
-
-Alternatively you can use the [Atom Package Manager](https://github.com/atom/apm):
-
-```bash
-apm install seti-ui
-```
-
+Seti is pre-installed in VS Code, so no need to install it.
 
 -----
 
@@ -154,19 +100,10 @@ Anyone is welcome to contribute to the development of this theme. If can be a lo
 ### 1. Fork
 If you're keen to contribute, start by [forking](https://github.com/jesseweed/seti-ui/tree/1.0-beta#fork-destination-box) the repo and cloning it to your computer.
 
-**Note:** To use the development version, you must first uninstall the production version (`apm uninstall seti-ui`), then run the following commands:
-
-```bash
-# To install the local version as an Atom Theme
-apm link .
-
-# Open with dev mode:
-atom --dev .
-```
 
 ### 2. Make Some Changes
 
-Once this is complete you will be able to edit seti files directly in Atom and see your changes in real time.
+Once this is complete you will be able to edit seti files directly in VS Code and see your changes in real time.
 
 ### 3. Create a Pull Request
 
