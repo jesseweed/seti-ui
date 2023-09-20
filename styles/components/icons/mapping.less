@@ -28,6 +28,14 @@
 // Bicep
 .icon-set(".bicep", "bicep", @blue);
 
+// Bazel
+.icon-set(".bzl", "bazel", @green);
+.icon-set(".bazel", "bazel", @green);
+.icon-set(".BUILD", "bazel", @green);
+.icon-set(".WORKSPACE", "bazel", @green);
+.icon-set(".bazelignore", "bazel", @green);
+.icon-set(".bazelversion", "bazel", @green);
+
 // C
 .icon-set(".c", "c", @blue);
 .icon-set(".h", "c", @purple);
@@ -129,6 +137,8 @@
 .icon-set(".gitkeep", "git", @ignore);
 .icon-set(".gitattributes", "git", @ignore);
 .icon-set(".gitmodules", "git", @ignore);
+.icon-set("COMMIT_EDITMSG", "git", @ignore);
+.icon-set("MERGE_MSG", "git", @ignore);
 
 // GO
 .icon-set(".go", "go2", @blue);
@@ -152,6 +162,9 @@
 .icon-set(".gql", "graphql", @pink);
 .icon-set(".graphql", "graphql", @pink);
 .icon-set(".graphqls", "graphql", @pink);
+
+// HACK
+.icon-set(".hack", "hacklang", @orange);
 
 // HAML
 .icon-set(".haml", "haml", @red);
@@ -179,7 +192,7 @@
 
 // JAVA
 .icon-set(".java", "java", @red);
-.icon-set(".class", "java", @red);
+.icon-set(".class", "java", @blue);
 .icon-set(".classpath", "java", @red);
 .icon-set(".properties", "java", @red);
 
@@ -236,16 +249,23 @@
 
 // README
 .icon-set("README.md", "info", @blue);
+.icon-set("README.txt", "info", @blue);
+.icon-set("README", "info", @blue);
 
 // CHANGELOG
 .icon-set('CHANGELOG.md', 'clock', @blue);
+.icon-set('CHANGELOG.txt', 'clock', @blue);
 .icon-set('CHANGELOG', 'clock', @blue);
 .icon-set('CHANGES.md', 'clock', @blue);
+.icon-set('CHANGES.txt', 'clock', @blue);
+.icon-set('CHANGES', 'clock', @blue);
 .icon-set('VERSION.md', 'clock', @blue);
+.icon-set('VERSION.txt', 'clock', @blue);
 .icon-set('VERSION', 'clock', @blue);
 
 // MAVEN
 .icon-set("mvnw", "maven", @red);
+.icon-set("pom.xml", "maven", @red);
 
 // MUSTACHE
 .icon-set(".mustache", "mustache", @orange);
@@ -322,11 +342,16 @@
 .icon-set(".spec.jsx", "react", @orange);
 .icon-set(".test.jsx", "react", @orange);
 .icon-set(".cjsx", "react", @blue);
-.icon-set(".spec.tsx", "react", @yellow);
-.icon-set(".test.tsx", "react", @yellow);
+.icon-set(".tsx", "react", @blue);
+.icon-set(".spec.tsx", "react", @orange);
+.icon-set(".test.tsx", "react", @orange);
 
 // REASONML
 .icon-set(".re", "reasonml", @red);
+
+// ReScript
+.icon-set(".res", "rescript", @red);
+.icon-set(".resi", "rescript", @pink);
 
 // R
 .icon-set('.R', 'R', @blue);
@@ -385,6 +410,7 @@
 .icon-set(".tf", "terraform", @purple);
 .icon-set(".tf.json", "terraform", @purple);
 .icon-set(".tfvars", "terraform", @purple);
+.icon-set(".tfvars.json", "terraform", @purple);
 
 // TEX
 .icon-set(".tex", "tex", @blue);
@@ -403,9 +429,8 @@
 
 // TYPESCRIPT
 .icon-set(".ts", "typescript", @blue);
-.icon-set(".tsx", "typescript", @blue);
-.icon-set(".spec.ts", "typescript", @yellow);
-.icon-set(".test.ts", "typescript", @yellow);
+.icon-set(".spec.ts", "typescript", @orange);
+.icon-set(".test.ts", "typescript", @orange);
 
 // TSCONFIG
 .icon-set("tsconfig.json", "tsconfig", @blue);
@@ -439,6 +464,9 @@
 // PROLOG
 .icon-set('.pro', 'prolog', @orange);
 
+// ZIG
+.icon-set(".zig", "zig", @orange);
+
 // - - - - - - - - - - - - - - - - - - -
 //  GENERIC FILE TYPES - EXTENSION BASED
 // - - - - - - - - - - - - - - - - - - -
@@ -460,6 +488,7 @@
 .icon-set(".woff2", "font", @red);
 
 // IMAGE FILES
+.icon-set(".avif", "image", @purple);
 .icon-set(".gif", "image", @purple);
 .icon-set(".jpg", "image", @purple);
 .icon-set(".jpeg", "image", @purple);
@@ -478,11 +507,11 @@
 .icon-set(".code-search", "code-search", @purple);
 
 // SHELL
-.icon-set(".sh", "shell", @grey);
-.icon-set(".zsh", "shell", @grey);
-.icon-set(".fish", "shell", @grey);
-.icon-set(".zshrc", "shell", @grey);
-.icon-set(".bashrc", "shell", @grey);
+.icon-set(".sh", "shell", @green);
+.icon-set(".zsh", "shell", @green);
+.icon-set(".fish", "shell", @green);
+.icon-set(".zshrc", "shell", @green);
+.icon-set(".bashrc", "shell", @green);
 
 // VIDEO FILES
 .icon-set(".mov", "video", @pink);
@@ -527,6 +556,13 @@
 .icon-set("babel.config.json", "babel", @yellow);
 .icon-set("babel.config.cjs", "babel", @yellow);
 
+// BAZEL
+.icon-set("BUILD", "bazel", @green);
+.icon-set("BUILD.bazel", "bazel", @green);
+.icon-set("WORKSPACE", "bazel", @green);
+.icon-set("WORKSPACE.bazel", "bazel", @green);
+.icon-set(".bazelrc", "bazel", @grey);
+
 // BOWER
 .icon-set("bower.json", "bower", @orange);
 .icon-set("Bower.json", "bower", @orange);
@@ -549,6 +585,7 @@
 // ESLINT
 .icon-set(".eslintrc", "eslint", @purple);
 .icon-set(".eslintrc.js", "eslint", @purple);
+.icon-set(".eslintrc.cjs", "eslint", @purple);
 .icon-set(".eslintrc.yaml", "eslint", @purple);
 .icon-set(".eslintrc.yml", "eslint", @purple);
 .icon-set(".eslintrc.json", "eslint", @purple);
@@ -560,6 +597,9 @@
 
 // GECKODRIVER
 .icon-set("geckodriver", "firefox", @orange);
+
+// GITLAB
+.icon-set(".gitlab-ci.yml", "gitlab", @orange);
 
 // GRUNT
 .icon-set("Gruntfile.js", "grunt", @orange);
@@ -609,10 +649,20 @@
 
 // WEBPACK
 .icon-set("webpack.config.js", "webpack", @blue);
+.icon-set("webpack.config.cjs", "webpack", @blue);
+.icon-set("webpack.config.ts", "webpack", @blue);
 .icon-set("webpack.config.build.js", "webpack", @blue);
+.icon-set("webpack.config.build.cjs", "webpack", @blue);
+.icon-set("webpack.config.build.ts", "webpack", @blue);
 .icon-set("webpack.common.js", "webpack", @blue);
+.icon-set("webpack.common.cjs", "webpack", @blue);
+.icon-set("webpack.common.ts", "webpack", @blue);
 .icon-set("webpack.dev.js", "webpack", @blue);
+.icon-set("webpack.dev.cjs", "webpack", @blue);
+.icon-set("webpack.dev.ts", "webpack", @blue);
 .icon-set("webpack.prod.js", "webpack", @blue);
+.icon-set("webpack.prod.cjs", "webpack", @blue);
+.icon-set("webpack.prod.ts", "webpack", @blue);
 
 // MISC SETTING
 .icon-set(".direnv", "config", @grey-light);
@@ -624,15 +674,26 @@
 .icon-set(".htaccess", "config", @grey-light);
 .icon-set(".key", "lock", @green);
 .icon-set(".cert", "lock", @green);
+.icon-set(".cer", "lock", @green);
+.icon-set(".crt", "lock", @green);
+.icon-set(".pem", "lock", @green);
 
 // LICENSE FILES
 .icon-partial("LICENSE", "license", @yellow);
 .icon-partial("LICENCE", "license", @yellow);
+.icon-partial("LICENSE.txt", "license", @yellow);
+.icon-partial("LICENCE.txt", "license", @yellow);
 .icon-partial("LICENSE.md", "license", @yellow);
 .icon-partial("LICENCE.md", "license", @yellow);
 .icon-partial("COPYING", "license", @yellow);
+.icon-partial("COPYING.txt", "license", @yellow);
+.icon-partial("COPYING.md", "license", @yellow);
 .icon-partial("COMPILING", "license", @orange);
+.icon-partial("COMPILING.txt", "license", @orange);
+.icon-partial("COMPILING.md", "license", @orange);
 .icon-partial("CONTRIBUTING", "license", @red);
+.icon-partial("CONTRIBUTING.txt", "license", @red);
+.icon-partial("CONTRIBUTING.md", "license", @red);
 
 // MAKEFILES
 .icon-partial("MAKEFILE", "makefile", @orange);
@@ -654,6 +715,8 @@
 
 // TODO
 .icon-partial("TODO", "todo", @seti-primary);
+.icon-partial("TODO.txt", "todo", @seti-primary);
+.icon-partial("TODO.md", "todo", @seti-primary);
 
 // - - - - - - -
 // IGNORED FILES
