@@ -93,6 +93,6 @@
     "gulp-iconfont": "^11.0.0",
     "gulp-iconfont-css": "^3.0.0",
     "gulp-svgmin": "3.0.0",
-    "lodash": "^4.17.20"
+    "lodash": "^4.17.21"
   }
 }
